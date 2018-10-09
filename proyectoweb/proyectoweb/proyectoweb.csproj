@@ -563,7 +563,9 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="imagenes\grupos\giecom.jpg" />
     <Content Include="imagenes\grupos\giecom.png" />
+    <Content Include="imagenes\grupos\GIIE.png" />
     <Content Include="imagenes\grupos\picardie.png" />
+    <Content Include="imagenes\grupos\quimica.PNG" />
     <Content Include="imagenes\grupos\sara.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
