@@ -596,11 +596,10 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Views\FormularioDePagina.aspx" />
     <Content Include="Views\FormularioDePagina1.aspx" />
-    <Content Include="Views\FormularioDePagina2.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\principal.aspx" />
+    <Content Include="Views\ViewsUser\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Views\web.config" />
@@ -675,26 +674,12 @@
     <Compile Include="Views\administracion.Master.designer.cs">
       <DependentUpon>administracion.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormularioDePagina.aspx.cs">
-      <DependentUpon>FormularioDePagina.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina.aspx.designer.cs">
-      <DependentUpon>FormularioDePagina.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormularioDePagina1.aspx.cs">
       <DependentUpon>FormularioDePagina1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\FormularioDePagina1.aspx.designer.cs">
       <DependentUpon>FormularioDePagina1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina2.aspx.cs">
-      <DependentUpon>FormularioDePagina2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina2.aspx.designer.cs">
-      <DependentUpon>FormularioDePagina2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -709,6 +694,13 @@
     </Compile>
     <Compile Include="Views\principal.aspx.designer.cs">
       <DependentUpon>principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsUser\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsUser\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
