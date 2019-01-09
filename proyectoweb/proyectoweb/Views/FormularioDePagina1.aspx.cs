@@ -26,9 +26,8 @@ namespace proyectoweb.Views
             DataTable dt = grupo.consultargrupoModel(grupo);
             if (dt.Rows.Count>0)
             {
-              
-                grupo.mision = dt.Rows[0]["mision_grupo"].ToString();
                 grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
+                grupo.mision = dt.Rows[0]["mision_grupo"].ToString();
                 grupo.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();
                 grupo.ProgramaGrupo = dt.Rows[0]["programa_grupo"].ToString();
                 grupo.quienesSomos = dt.Rows[0]["quien_somos_grupo"].ToString();

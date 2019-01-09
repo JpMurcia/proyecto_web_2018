@@ -23,7 +23,7 @@
 <body>
         <div class="wrapper ">
 
-            <div class="sidebar" data-color="rose" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+            <div class="sidebar" data-color="green" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
                 <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -77,7 +77,7 @@
                     <ul class="nav">
 
                         <li class="nav-item active ">
-                            <a class="nav-link" href="dashboard.html">
+                            <a class="nav-link" href="principal.aspx">
                                 <i class="material-icons">dashboard</i>
                                 <p>Mis Paginas</p>
                             </a>
@@ -87,7 +87,7 @@
                             <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
                                 <i class="material-icons">image</i>
                                 <p>
-                                    Pages
+                                    Paginas
                        <b class="caret"></b>
                                 </p>
                             </a>
@@ -260,7 +260,7 @@
                             <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
                                 <i class="material-icons">grid_on</i>
                                 <p>
-                                    Tables
+                                    Noticias
                        <b class="caret"></b>
                                 </p>
                             </a>
@@ -268,15 +268,15 @@
                             <div class="collapse" id="tablesExamples">
                                 <ul class="nav">
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="tables/regular.html">
+                                        <a class="nav-link" href="NoticiaNueva.aspx">
                                             <span class="sidebar-mini">RT </span>
-                                            <span class="sidebar-normal">Regular Tables </span>
+                                            <span class="sidebar-normal">Nueva Noticia </span>
                                         </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="tables/extended.html">
+                                        <a class="nav-link" href="NoticiaPublicada.aspx">
                                             <span class="sidebar-mini">ET </span>
-                                            <span class="sidebar-normal">Extended Tables </span>
+                                            <span class="sidebar-normal">Noticias Publicadas </span>
                                         </a>
                                     </li>
                                     <li class="nav-item ">
@@ -288,7 +288,6 @@
                                 </ul>
                             </div>
                         </li>
-
                         <li class="nav-item ">
                             <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
                                 <i class="material-icons">place</i>
@@ -337,9 +336,9 @@
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="calendar.html">
+                            <a class="nav-link" href="Actividades.aspx">
                                 <i class="material-icons">date_range</i>
-                                <p>Calendar </p>
+                                <p>Actividades</p>
                             </a>
                         </li>
 
@@ -473,7 +472,7 @@
 <script src="/Content/assetsAdministracion/js/plugins/jquery.bootstrap-wizard.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/jquery-jvectormap.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/jasny-bootstrap.min.js"></script>
-<script src="/Content/assetsAdministracion/js/plugins/fullcalendar.min.js"></script>
+<%--<script src="/Content/assetsAdministracion/js/plugins/fullcalendar.min.js"></script>--%>
 <script src="/Content/assetsAdministracion/js/plugins/chartist.min.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/bootstrap-tagsinput.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/bootstrap-selectpicker.js"></script>
