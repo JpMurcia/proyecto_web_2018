@@ -300,97 +300,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer"  data-background-color="black">
   <div class="container">
-    <nav class="float-left">
-      <ul>
-        <li>
-          <a href="https://www.creative-tim.com/">
-              Creative Tim
-          </a>
-        </li>
-        <li>
-          <a href="https://creative-tim.com/presentation">
-              About Us
-          </a>
-        </li>
-        <li>
-          <a href="http://blog.creative-tim.com/">
-              Blog
-          </a>
-        </li>
-        <li>
-          <a href="https://www.creative-tim.com/license">
-              Licenses
-          </a>
-        </li>
-      </ul>
-    </nav>
     <div class="copyright float-right">
         &copy;
         <script>
             document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> for a better web.
+        </script>, Hecho con amor  <i class="material-icons">favorite</i> Por
+        <a href="https://www.creative-tim.com/" target="_blank">Yisus y JP</a> por una UDLA mejor.
     </div>
   </div>
 </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-  $(document).ready(function(){
-
-
-    var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-46172202-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-    var ga = document.createElement('script');
-    ga.type = 'text/javascript';
-    ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(ga, s);
-})();
-
-    // Facebook Pixel Code Don't Delete
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','../../connect.facebook.net/en_US/fbevents.js');
-
-try{
-  fbq('init', '111649226022273');
-  fbq('track', "PageView");
-
-}catch(err) {
-  console.log('Facebook Track Error:', err);
-}
-
-  });
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-src="../../www.facebook.com/tr5c3c.gif?id=111649226022273&amp;ev=PageView&amp;noscript=1"
-/>
-
-</noscript>
 
 
 

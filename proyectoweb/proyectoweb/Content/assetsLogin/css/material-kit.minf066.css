@@ -16963,7 +16963,7 @@ thead.thead-inverse th {
 .card .card-header-rose,
 .card.card-rotate.bg-rose .back,
 .card.card-rotate.bg-rose .front {
-	background: linear-gradient(60deg, #ec407a, #c2185b)
+    background: linear-gradient(60deg,#2ce64f, #25d546)
 }
 
 .card .card-header-primary {
@@ -16975,7 +16975,7 @@ thead.thead-inverse th {
 }
 
 .card .card-header-rose {
-	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(233, 30, 99, .6)
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(99, 233, 32, .6)
 }
 
 .card .card-header-warning {
