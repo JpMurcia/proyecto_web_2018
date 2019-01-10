@@ -45,7 +45,7 @@ namespace proyectoweb.Models.ModeloSigepi
                 ParameterDirection.Input
                 ));
                 
-            return conect.ExecuteProcedure("consultagrupo", p);
+            return conect.ExecuteProcedure("proced_consul_grupo", p);
 
         }
     }

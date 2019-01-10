@@ -48,7 +48,7 @@ namespace proyectoweb.Models.ModeloSigepi
                 ParameterDirection.Input
                 ));
 
-            return conect.ExecuteProcedure("validar_user", p);
+            return conect.ExecuteProcedure("proced_validar_user", p);
 
         }
         
