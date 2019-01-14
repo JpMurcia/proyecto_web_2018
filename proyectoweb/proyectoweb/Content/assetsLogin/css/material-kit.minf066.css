@@ -3003,7 +3003,7 @@ tbody.collapse.show {
 .collapsing,
 .dropdown,
 .dropup {
-	position: relative
+	position: absolute
 }
 
 .dropdown-toggle:after {
@@ -3024,7 +3024,7 @@ tbody.collapse.show {
 }
 
 .dropdown-menu {
-	position: absolute;
+	position: relative;
 	top: 100%;
 	left: 0;
 	z-index: 1000;
