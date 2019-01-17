@@ -32,6 +32,20 @@ namespace proyectoweb.Models.ModeloSigepi
         {
         }
 
+        public DataTable  Consultar(modelUsuario obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "idUser",
+                obj.id,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+            
+
+            return conect.ExecuteProcedure("proced_consul_user", p);
+        }
+
         public DataTable validarUsuario(modelUsuario obj)
         {
             List<Parametro> p = new List<Parametro>();

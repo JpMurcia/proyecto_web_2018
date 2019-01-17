@@ -12,6 +12,7 @@ namespace proyectoweb.Views
     public partial class FormularioDePagina1 : System.Web.UI.Page
     {
         Grupo_inve_semillero grupo = new Grupo_inve_semillero();
+        Grupo_inve_semillero semillero = new Grupo_inve_semillero();
         protected void Page_Load(object sender, EventArgs e)
         {
             llenarDatos();
@@ -24,6 +25,10 @@ namespace proyectoweb.Views
             grupo.nombreGrupo = Request.QueryString["grupo"];
             Console.Write("epa hijuemadre");
             DataTable dt = grupo.consultargrupoModel(grupo);
+
+            semillero.nombreGrupo = Request.QueryString["semillero"];
+            DataTable dt2 = semillero.consultargrupoModel(semillero);
+
             if (dt.Rows.Count>0)
             {
                 grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
@@ -46,6 +51,57 @@ namespace proyectoweb.Views
                 QuienSomos.Text = grupo.quienesSomos;
                 imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
                 Vision.Text = grupo.vision;
+
+
+                if (dt2.Rows.Count > 0) {
+                    ////////////////////////////////////semilleros////////
+                    for (int i=0; i < dt2.Rows.Count; i++) {
+                        semillero.justificacion = dt2.Rows[i]["justif_grupo"].ToString();
+                        semillero.mision = dt2.Rows[i]["mision_grupo"].ToString();
+                        semillero.objetivo = dt2.Rows[i]["objetivo_grupo"].ToString();
+                        semillero.ProgramaGrupo = dt2.Rows[i]["programa_grupo"].ToString();
+                        semillero.quienesSomos = dt2.Rows[i]["quien_somos_grupo"].ToString();
+                        semillero.siglas = dt2.Rows[i]["sigla_signif_grupo"].ToString();
+                        semillero.urlLogo = dt2.Rows[i]["url_logo_grupo"].ToString();
+                        semillero.vision = dt2.Rows[i]["vision_grupo"].ToString();
+
+                        Console.Write("epa hijuemadre");
+
+                        NombreSemillero.Text = semillero.nombreGrupo;
+                        JustificacionSemillero.Text = semillero.justificacion;
+                        MisionSemiller.Text = semillero.mision;
+                        ObjetivoSemillero.Text = semillero.objetivo;
+                        programa.Text = semillero.ProgramaGrupo;
+                        sigSiglas.Text = semillero.siglas;
+                        QuinesSomosSemillero.Text = semillero.quienesSomos;
+                        imagenDeSemillero.Src = "../imagenes/semilleros/" + semillero.urlLogo;
+                        Vision.Text = semillero.vision;
+                    }
+                    //semillero.justificacion = dt2.Rows[0]["justif_grupo"].ToString();
+                    //semillero.mision = dt2.Rows[0]["mision_grupo"].ToString();
+                    //semillero.objetivo = dt2.Rows[0]["objetivo_grupo"].ToString();
+                    //semillero.ProgramaGrupo = dt2.Rows[0]["programa_grupo"].ToString();
+                    //semillero.quienesSomos = dt2.Rows[0]["quien_somos_grupo"].ToString();
+                    //semillero.siglas = dt2.Rows[0]["sigla_signif_grupo"].ToString();
+                    //semillero.urlLogo = dt2.Rows[0]["url_logo_grupo"].ToString();
+                    //semillero.vision = dt2.Rows[0]["vision_grupo"].ToString();
+
+                    //Console.Write("epa hijuemadre");
+
+                    //nombreGrupo.Text = semillero.nombreGrupo;
+                    //Justificacion.Text = semillero.justificacion;
+                    //Mision.Text = semillero.mision;
+                    //Objetivo.Text = semillero.objetivo;
+                    //programa.Text = semillero.ProgramaGrupo;
+                    //sigSiglas.Text = semillero.siglas;
+                    //QuienSomos.Text = semillero.quienesSomos;
+                    //imagenDeGrupo.Src = "../imagenes/grupos/" + semillero.urlLogo;
+                    //Vision.Text = semillero.vision;
+
+
+                }
+
+                
             }
             
             
