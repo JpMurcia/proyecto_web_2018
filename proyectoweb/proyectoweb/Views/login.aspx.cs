@@ -13,6 +13,8 @@ namespace proyectoweb.Views
 {
     public partial class login : System.Web.UI.Page
     {
+       
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,12 +27,33 @@ namespace proyectoweb.Views
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
+
+            
+
             if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")
             {
                 //Response.Write("<script>alert('Hola perro mir que si putito')</script>");
                 //Response.Write("<script>alert('Otra cosa')</script>");
 
-                Response.Redirect("principal.aspx");
+                Session.Add("usuario", "valorASD");
+
+                Session["nom"] = a.nombre;
+                Session["contra"] = a.contrasena;
+                Session["tipo"] = a.tipo;
+                
+
+                if (Session.["nom"] = "")
+                {
+                    string script = @"<script type='text/javascript'>
+                            alerta(6);
+                        </script>";
+
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                    
+                }
+                else {
+                    
+                }
             }
             else
             {

@@ -16,12 +16,22 @@ namespace proyectoweb.Views
 
         protected void verGiecom_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
+            if (Session("usuario") = "")
+            {
+                Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
+
+            }
+            else {
+                Response.Redirect("FormularioDePagina1.aspx?grupo=giie");
+            }
+          
+            
+
         }
 
         protected void verSara_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=sara");
+            Response.Redirect("FormularioDePagina1.aspx?grupo=giie");
         }
 
         protected void verPicardie_Click(object sender, EventArgs e)
