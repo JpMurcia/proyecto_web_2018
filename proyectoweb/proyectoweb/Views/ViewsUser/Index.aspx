@@ -2,9 +2,8 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<html lang="es" >
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 
 <!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:51:59 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -14,12 +13,9 @@
 ViewGroup
 
 </title>
-
     <link href="../../Content/assetsLogin/css/css8393.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/material-kit.minf066.css" rel="stylesheet" />
-    <link href="../../Content/assetsLogin/css/owl.carousel.css" rel="stylesheet" />
-    <link href="../../Content/assetsLogin/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/owl.theme.default.min.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/demo/demo.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/demo/docs.min.css" rel="stylesheet" />
@@ -28,28 +24,10 @@ ViewGroup
     <a href="../../Content/assetsLogin/fonts/fontawesome-webfont3e6e.svg"></a>
 
 
-
 <!-- Google Tag Manager -->
 
 
-<script>
-    
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:5
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:1
-        }
-    }
-});</script>
+
 
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -90,43 +68,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-
-
-
-                <li class="dropdown nav-item">
-                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                      <i class="material-icons">apps</i> Components
-                  </a>
-                  <div class="dropdown-menu dropdown-with-icons">
-                    <a href="index.html" class="dropdown-item">
-                        <i class="material-icons">layers</i> All Components
-                    </a>
-                    <a href="docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                        <i class="material-icons">content_paste</i> Documentation
-                    </a>
-                  </div>
-                </li>
-
-
-
-              
-
-               
-
                 <li class="button-container nav-item iframe-extern">
                     <a href="../login.aspx" target="_blank" >
 
                         <i class="material-icons">portrait</i> Iniciar Sesion
                     </a>
                 </li>
-
-
-
-
-
-
-
-
             </ul>
         </div>
         
@@ -153,94 +100,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="main main-raised">
      <div class="section section-basic">
+         <h1>DFDfasfs</h1>
 
-<!-- Classic Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">clear</i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-				</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-link">Nice Button</button>
-                <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+         <div class="container">
+<div class="page-header">
+  <h3>Carousel multiple item for Boostrap</h3>
 </div>
-<!--  End Modal -->
-<!-- notice modal -->
-<div class="modal fade" id="noticeModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-notice" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">How Do You Become an Affiliate?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="material-icons">clear</i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="instruction">
-                    <div class="row">
-                        <div class="col-md-8">
-                             <strong>1. Register</strong>
-                             <p>The first step is to create an account at <a href="http://www.creative-tim.com/">Creative Tim</a>. You can choose a social network or go for the classic version, whatever works best for you.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="picture">
-                                <img src="assets/img/dg1.jpg" alt="Thumbnail Image" class="rounded img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="instruction">
-                    <div class="row">
-                        <div class="col-md-8">
-                                <strong>2. Apply</strong>
-                                <p>The first step is to create an account at <a href="http://www.creative-tim.com/">Creative Tim</a>. You can choose a social network or go for the classic version, whatever works best for you.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="picture">
-                                <img src="assets/img/dg2.jpg" alt="Thumbnail Image" class="rounded img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>If you have more questions, don&apos;t hesitate to contact us or send us a tweet @creativetim. We&apos;re here to help!</p>
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn btn-info btn-round" data-dismiss="modal">Sounds good!</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end notice modal -->
 
-<!-- small modal -->
+<div class="row">
+<div class="col-xs-12">
+  <div class="carousel slide" id="myCarousel" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/E8117F/ffffff?text=1" class="img-responsive"></a>
+          </div>
+            <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/31B0D5/ffffff?text=2" class="img-responsive"></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/94EF23/ffffff?text=3" class="img-responsive"></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/FFA602/ffffff?text=4" class="img-responsive"></a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/E8117F/ffffff?text=5" class="img-responsive" ></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/31B0D5/ffffff?text=6" class="img-responsive" ></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/94EF23/ffffff?text=7" class="img-responsive" ></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="#"><img src="http://placehold.it/300x200/FFA602/ffffff?text=8" class="img-responsive" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <button type="button" class="btn btn-primary btn-round btn-xs">
+        <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span>
+      </button>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <button type="button" class="btn btn-primary btn-round btn-xs">
+        <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
+      </button>
+    </a>
+  </div>
+</div>
+</div>
+  </div>
+
+
          </div>
 </div>
 
@@ -262,8 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-        <script src="../../Content/assetsLogin/js/buttons.js"></script>
+    <%--    <script src="../../Content/assetsLogin/js/buttons.js"></script>
         <script src="../../Content/assetsLogin/js/jquery.min.js"></script>
         <script src="../../Content/assetsLogin/js/material-kit.minf066.js"></script>
         <script src="../../Content/assetsLogin/js/plugins/nouislider.min.js"></script>
@@ -278,8 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script src="../../Content/assetsLogin/js/core/bootstrap-material-design.min.js"></script>
         <script src="../../Content/assetsLogin/demo/vertical-nav.js"></script>
         <script src="../../Content/assetsLogin/demo/modernizr.js"></script>
-        <script src="../../Content/assetsLogin/demo/demo.js"></script>
-
+        <script src="../../Content/assetsLogin/demo/demo.js"></script>--%>
 
   <script>
   $(document).ready(function() {
@@ -317,9 +236,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     </body>
-
-
-<!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:53:21 GMT -->
-</html>
-
 </html>

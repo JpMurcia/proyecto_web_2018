@@ -23,7 +23,7 @@
                                 <div id="accordion" role="tablist">
                                     <div class="card card-collapse">
                                         <div class="card-header" role="tab" id="headingOne">
-                                            <h5 class="mb-0">
+                                         zz   <h5 class="mb-0">
                                                 <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Super Usuario
           <i class="material-icons">keyboard_arrow_down</i>
                                                 </a>
@@ -31,7 +31,7 @@
                                         </div>
                                         <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                             <div class="card-body">
-                                                Este usuario tiene acceso a todas las opciones del aplictivo.
+                                                Este usuario tiene acceso a todas las opciones del aplicativo.
                                             </div>
                                         </div>
                                     </div>
@@ -45,11 +45,13 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                                             <div class="card-body">
-                                                Este usuario tiene acceso a:
+                                                <pre>
+          Este usuario tiene acceso a:
           -Publicar,editar y eliminar paginas.
           -Asignar y quitar permisos de rol de administrador  a estudiantes.
           -Publicar,editar y eliminar noticias.
           -Publicar,editar y eliminar actividades.
+                                                    </pre>
                                             </div>
                                         </div>
                                     </div>
@@ -63,8 +65,10 @@
                                         </div>
                                         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                                             <div class="card-body">
-                                                Este usuario tiene acceso a:
+                                                <pre>
+           Este usuario tiene acceso a:
           -Consultar actividades y eventos, y realizar la entrega de los y las mismas.
+                                                    </pre>
                                             </div>
                                         </div>
                                     </div>
