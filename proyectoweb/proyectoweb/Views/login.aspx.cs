@@ -27,33 +27,50 @@ namespace proyectoweb.Views
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
-
+            a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
             
 
             if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")
             {
-                //Response.Write("<script>alert('Hola perro mir que si putito')</script>");
-                //Response.Write("<script>alert('Otra cosa')</script>");
-
-                Session.Add("usuario", "valorASD");
-
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
                 Session["nom"] = a.nombre;
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;
-                
 
-                if (Session.["nom"] = "")
-                {
-                    string script = @"<script type='text/javascript'>
-                            alerta(6);
-                        </script>";
+                if (Session["tipo"].ToString() == "2") {
 
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-                    
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+
+                    Response.Redirect("principal.aspx");
+
                 }
                 else {
-                    
+                    Response.Redirect("principal.aspx");
                 }
+
+
+                //Response.Write("<script>alert('Hola perro mir que si putito')</script>");
+                //Response.Write("<script>alert('Otra cosa')</script>");
+
+                //Session.Add("usuario", "valorASD");
+
+                //Session["nom"] = a.nombre;
+                //Session["contra"] = a.contrasena;
+                //Session["tipo"] = a.tipo;
+
+
+                //if (Session.["nom"] = "")
+                //{
+                //    string script = @"<script type='text/javascript'>
+                //            alerta(6);
+                //        </script>";
+
+                //    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+
+                //}
+                //else {
+
+                //}
             }
             else
             {
