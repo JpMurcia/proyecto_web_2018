@@ -26,8 +26,8 @@ namespace proyectoweb.Views
             Console.Write("epa hijuemadre");
             DataTable dt = grupo.consultargrupoModel(grupo);
 
-            semillero.nombreGrupo = Request.QueryString["semillero"];
-            DataTable dt2 = semillero.consultargrupoModel(semillero);
+            semillero.nombreGrupo = Request.QueryString["grupo"];
+            DataTable dt2 = semillero.consultarsemilleroModel(semillero);
 
             if (dt.Rows.Count>0)
             {
@@ -56,6 +56,7 @@ namespace proyectoweb.Views
                 if (dt2.Rows.Count > 0) {
                     ////////////////////////////////////semilleros////////
                     for (int i=0; i < dt2.Rows.Count; i++) {
+                        semillero.nombreGrupo = dt2.Rows[i]["nom_grupo"].ToString();
                         semillero.justificacion = dt2.Rows[i]["justif_grupo"].ToString();
                         semillero.mision = dt2.Rows[i]["mision_grupo"].ToString();
                         semillero.objetivo = dt2.Rows[i]["objetivo_grupo"].ToString();

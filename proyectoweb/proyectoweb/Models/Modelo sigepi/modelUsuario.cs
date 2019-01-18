@@ -15,7 +15,7 @@ namespace proyectoweb.Models.ModeloSigepi
         public string nombre { get; set; }
         public string contrasena { get; set; }
         public string foto { get; set; }
-        public tipoUsuario tipo { get; set; }
+        public string tipo { get; set; }
 
 
 
