@@ -10,20 +10,26 @@ namespace proyectoweb.Controllers
 {
     public class loginController
     {
-        private modelUsuario usuario = new modelUsuario();
-        private usuario usuario1 = new usuario();
+        private modelUsuario usuarioSigepi = new modelUsuario();
+        private usuario usuarioVG = new usuario();
 
         public loginController()
         {
         }
 
+        public DataTable Consultar(usuario usu)
+        {
+            return usuarioVG.ConsultarUser(usu);
+        }
+
         public DataTable iniciarSesion(modelUsuario usu)
         {
-            return usuario.validarUsuario(usu);
+            return usuarioSigepi.validarUsuario(usu);
         }
+
         public DataTable crearUsuario(usuario usu)
         {
-            return usuario1.crearUsuario(usu);
+            return usuarioVG.crearUsuario(usu);
         }
     }
 }

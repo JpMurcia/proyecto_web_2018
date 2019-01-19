@@ -43,14 +43,18 @@ namespace proyectoweb.Views
                 Console.Write("epa hijuemadre");
 
                 nombreGrupo.Text = grupo.nombreGrupo;
-                Justificacion.Text = grupo.justificacion;
-                Mision.Text = grupo.mision;
                 Objetivo.Text = grupo.objetivo;
-                programa.Text = grupo.ProgramaGrupo;
                 sigSiglas.Text = grupo.siglas;
-                QuienSomos.Text = grupo.quienesSomos;
-                imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
+                Mision.Text = grupo.mision;
                 Vision.Text = grupo.vision;
+                Justificacion.Text = grupo.justificacion;
+                QuienSomos.Text = grupo.quienesSomos;
+                programa.Text = grupo.ProgramaGrupo;
+                imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
+
+
+
+
 
 
                 if (dt2.Rows.Count > 0) {
@@ -73,32 +77,12 @@ namespace proyectoweb.Views
                         MisionSemiller.Text = semillero.mision;
                         ObjetivoSemillero.Text = semillero.objetivo;
                         programa.Text = semillero.ProgramaGrupo;
-                        sigSiglas.Text = semillero.siglas;
+                        siglaSemillero.Text = semillero.siglas;
                         QuinesSomosSemillero.Text = semillero.quienesSomos;
                         imagenDeSemillero.Src = "../imagenes/semilleros/" + semillero.urlLogo;
-                        Vision.Text = semillero.vision;
+                        VisionSemillero.Text = semillero.vision;
                     }
-                    //semillero.justificacion = dt2.Rows[0]["justif_grupo"].ToString();
-                    //semillero.mision = dt2.Rows[0]["mision_grupo"].ToString();
-                    //semillero.objetivo = dt2.Rows[0]["objetivo_grupo"].ToString();
-                    //semillero.ProgramaGrupo = dt2.Rows[0]["programa_grupo"].ToString();
-                    //semillero.quienesSomos = dt2.Rows[0]["quien_somos_grupo"].ToString();
-                    //semillero.siglas = dt2.Rows[0]["sigla_signif_grupo"].ToString();
-                    //semillero.urlLogo = dt2.Rows[0]["url_logo_grupo"].ToString();
-                    //semillero.vision = dt2.Rows[0]["vision_grupo"].ToString();
-
-                    //Console.Write("epa hijuemadre");
-
-                    //nombreGrupo.Text = semillero.nombreGrupo;
-                    //Justificacion.Text = semillero.justificacion;
-                    //Mision.Text = semillero.mision;
-                    //Objetivo.Text = semillero.objetivo;
-                    //programa.Text = semillero.ProgramaGrupo;
-                    //sigSiglas.Text = semillero.siglas;
-                    //QuienSomos.Text = semillero.quienesSomos;
-                    //imagenDeGrupo.Src = "../imagenes/grupos/" + semillero.urlLogo;
-                    //Vision.Text = semillero.vision;
-
+                    
 
                 }
 

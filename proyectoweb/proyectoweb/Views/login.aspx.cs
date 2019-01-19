@@ -1,5 +1,6 @@
 ﻿using proyectoweb.Controllers;
 using proyectoweb.Models.ModeloSigepi;
+using proyectoweb.Models.ModelosViewGroup;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,17 +23,37 @@ namespace proyectoweb.Views
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
+            usuario b = new usuario();
             modelUsuario a = new modelUsuario();
             a.nombre = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
-            a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
+            
             
 
-            if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")
+            if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")      
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
+                DataTable Consul_dato = controlador.Consultar(b);
+
+                if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
+                {
+
+                    Session["nom"] = a.nombre;
+                    Session["contra"] = a.contrasena;
+                    Session["tipo"] = a.tipo;
+
+                }
+                else {
+                    
+                    DataTable CreandoUser = controlador.crearUsuario(b);
+                    
+
+                }
+                
+                a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
+
                 Session["nom"] = a.nombre;
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;
@@ -49,28 +70,7 @@ namespace proyectoweb.Views
                 }
 
 
-                //Response.Write("<script>alert('Hola perro mir que si putito')</script>");
-                //Response.Write("<script>alert('Otra cosa')</script>");
-
-                //Session.Add("usuario", "valorASD");
-
-                //Session["nom"] = a.nombre;
-                //Session["contra"] = a.contrasena;
-                //Session["tipo"] = a.tipo;
-
-
-                //if (Session.["nom"] = "")
-                //{
-                //    string script = @"<script type='text/javascript'>
-                //            alerta(6);
-                //        </script>";
-
-                //    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
-
-                //}
-                //else {
-
-                //}
+                
             }
             else
             {
