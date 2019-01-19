@@ -12,7 +12,7 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string idUsuario { get; set; }
         public string nom_usuario { get; set; }
         public string url_foto_usuario { get; set; }
-
+        public string fk_tipo_user { get; set; }
 
         private Conexion conect = new Conexion();
 
@@ -32,7 +32,19 @@ namespace proyectoweb.Models.ModelosViewGroup
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
+            p.Add(new Parametro(
+               "tipo_user",
+               obj.fk_tipo_user,
+               "INT",
+               ParameterDirection.Input
+               ));
 
+            p.Add(new Parametro(
+               "id_user",
+               obj.idUsuario,
+               "INT",
+               ParameterDirection.Input
+               ));
             return conect.ExecuteProcedure("proced_create_usuario", p);
 
         }
