@@ -14,8 +14,8 @@ namespace proyectoweb.Models.ModeloSigepi
         public string nombreGrupo { get; set; }
         public string siglas { get; set; }
         public string objetivo { get; set; }
-        public string ProgramaGrupo  { get; set; }
-        public string urlLogo  { get; set; }
+        public string ProgramaGrupo { get; set; }
+        public string urlLogo { get; set; }
         public string mision { get; set; }
         public string vision { get; set; }
         public string justificacion { get; set; }
@@ -44,8 +44,22 @@ namespace proyectoweb.Models.ModeloSigepi
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
-                
+
             return conect.ExecuteProcedure("proced_consul_grupo", p);
+
+        }
+
+        public DataTable consultarsemilleroModel(Grupo_inve_semillero obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "nombre",
+                obj.nombreGrupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_semilleros", p);
 
         }
     }
