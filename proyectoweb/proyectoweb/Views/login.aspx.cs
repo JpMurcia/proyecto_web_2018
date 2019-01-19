@@ -14,7 +14,7 @@ namespace proyectoweb.Views
 {
     public partial class login : System.Web.UI.Page
     {
-       
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,10 +29,10 @@ namespace proyectoweb.Views
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
-            
-            
 
-            if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")      
+
+
+            if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")
             {
                 b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
                 DataTable Consul_dato = controlador.Consultar(b);
@@ -45,36 +45,39 @@ namespace proyectoweb.Views
                     Session["tipo"] = a.tipo;
 
                 }
-                else {
-                    
+                else
+                {
+
                     DataTable CreandoUser = controlador.crearUsuario(b);
-                    
+
 
                 }
-                
+
                 a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
 
                 Session["nom"] = a.nombre;
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;
 
-                if (Session["tipo"].ToString() == "2") {
+                if (Session["tipo"].ToString() == "2")
+                {
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                    
 
                     Response.Redirect("principal.aspx");
 
                 }
-                else {
+                else
+                {
                     Response.Redirect("principal.aspx");
                 }
 
 
-                
+
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this,this.GetType(),"hwa", "modalError();", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
             }
 
 

@@ -148,6 +148,7 @@
     <Content Include="Content\assetsAdministracion\img\sidebar-2.jpg" />
     <Content Include="Content\assetsAdministracion\img\sidebar-3.jpg" />
     <Content Include="Content\assetsAdministracion\img\sidebar-4.jpg" />
+    <Content Include="Content\assetsAdministracion\js\Calendar.js" />
     <Content Include="Content\assetsAdministracion\js\core\bootstrap-material-design.min.js" />
     <Content Include="Content\assetsAdministracion\js\core\jquery.min.js" />
     <Content Include="Content\assetsAdministracion\js\core\popper.min.js" />
@@ -468,6 +469,27 @@
     <Content Include="Content\assetsLogin\OwlCarousel\test\index.html" />
     <Content Include="Content\assetsLogin\OwlCarousel\test\unit\autoplay.js" />
     <Content Include="Content\assetsLogin\OwlCarousel\test\unit\core.js" />
+    <Content Include="Content\assetsWizard\css\bootstrap.min.css" />
+    <Content Include="Content\assetsWizard\css\demo.css" />
+    <Content Include="Content\assetsWizard\css\material-bootstrap-wizard.css" />
+    <Content Include="Content\assetsWizard\img\apple-icon.png" />
+    <Content Include="Content\assetsWizard\img\default-avatar.png" />
+    <Content Include="Content\assetsWizard\img\favicon.png" />
+    <Content Include="Content\assetsWizard\img\new_logo.png" />
+    <Content Include="Content\assetsWizard\img\thumb_list_boat.png" />
+    <Content Include="Content\assetsWizard\img\thumb_list_place.png" />
+    <Content Include="Content\assetsWizard\img\thumb_register.png" />
+    <Content Include="Content\assetsWizard\img\tim_80x80.png" />
+    <Content Include="Content\assetsWizard\img\wizard-book.jpg" />
+    <Content Include="Content\assetsWizard\img\wizard-city.jpg" />
+    <Content Include="Content\assetsWizard\img\wizard-profile.jpg" />
+    <Content Include="Content\assetsWizard\js\bootstrap.min.js" />
+    <Content Include="Content\assetsWizard\js\jquery-2.2.4.min.js" />
+    <Content Include="Content\assetsWizard\js\jquery.bootstrap.js" />
+    <Content Include="Content\assetsWizard\js\jquery.validate.min.js" />
+    <Content Include="Content\assetsWizard\js\material-bootstrap-wizard.js" />
+    <Content Include="Content\Carousel\carousel.css" />
+    <Content Include="Content\Carousel\carousel.js" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -560,6 +582,32 @@
     <Content Include="Content\assetsLogin\OwlCarousel\src\scss\_theme.scss" />
     <Content Include="Content\assetsLogin\OwlCarousel\src\scss\_video.scss" />
     <Content Include="Content\assetsLogin\OwlCarousel\_config.json" />
+    <Content Include="Content\assetsWizard\css\.DS_Store" />
+    <Content Include="Content\assetsWizard\img\.DS_Store" />
+    <Content Include="Content\assetsWizard\js\.DS_Store" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\mixins\_buttons.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\mixins\_inputs.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\mixins\_vendor-prefixes.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_buttons.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_card.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_checkboxes.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_colors.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_footers.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_inputs-size.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_inputs.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_misc.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_mixins.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_navs-pagination.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_radios.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_responsive.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_ripples.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_shadows.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_tooltips.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_typography.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_variables.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_variables_bootstrap.scss" />
+    <Content Include="Content\assetsWizard\scss\material-bootstrap-wizard\_wizard-card.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="imagenes\grupos\giecom.jpg" />
     <Content Include="imagenes\grupos\giecom.png" />
@@ -567,9 +615,6 @@
     <Content Include="imagenes\grupos\picardie.png" />
     <Content Include="imagenes\grupos\quimica.PNG" />
     <Content Include="imagenes\grupos\sara.jpg" />
-    <Content Include="imagenes\semilleros\picardie.png" />
-    <Content Include="imagenes\semilleros\quimica.PNG" />
-    <Content Include="imagenes\semilleros\sara.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -600,11 +645,11 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Actividades.aspx" />
-    <Content Include="Views\FormularioDePagina.aspx" />
     <Content Include="Views\FormularioDePagina1.aspx" />
-    <Content Include="Views\FormularioDePagina2.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\NoticiaNueva.aspx" />
+    <Content Include="Views\permisos.aspx" />
+    <Content Include="Views\PaginaPublicada.aspx" />
     <Content Include="Views\NoticiaPublicada.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\ViewsUser\Index.aspx" />
@@ -689,26 +734,12 @@
     <Compile Include="Views\administracion.Master.designer.cs">
       <DependentUpon>administracion.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormularioDePagina.aspx.cs">
-      <DependentUpon>FormularioDePagina.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina.aspx.designer.cs">
-      <DependentUpon>FormularioDePagina.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\FormularioDePagina1.aspx.cs">
       <DependentUpon>FormularioDePagina1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\FormularioDePagina1.aspx.designer.cs">
       <DependentUpon>FormularioDePagina1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina2.aspx.cs">
-      <DependentUpon>FormularioDePagina2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\FormularioDePagina2.aspx.designer.cs">
-      <DependentUpon>FormularioDePagina2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -723,6 +754,20 @@
     </Compile>
     <Compile Include="Views\NoticiaNueva.aspx.designer.cs">
       <DependentUpon>NoticiaNueva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\permisos.aspx.cs">
+      <DependentUpon>permisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\permisos.aspx.designer.cs">
+      <DependentUpon>permisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaginaPublicada.aspx.cs">
+      <DependentUpon>PaginaPublicada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PaginaPublicada.aspx.designer.cs">
+      <DependentUpon>PaginaPublicada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\NoticiaPublicada.aspx.cs">
       <DependentUpon>NoticiaPublicada.aspx</DependentUpon>

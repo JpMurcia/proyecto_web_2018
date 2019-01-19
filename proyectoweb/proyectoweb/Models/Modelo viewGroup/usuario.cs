@@ -37,25 +37,25 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
-        public DataTable ValidarUsuario(usuario obj)
-        {
-            List<Parametro> p = new List<Parametro>();
-            p.Add(new Parametro(
-                "nombre_user",
-                obj.nom_usuario,
-                "VARCHAR",
-                ParameterDirection.Input
-                ));
-            p.Add(new Parametro(
-                "url_foto_user",
-                obj.url_foto_usuario,
-                "VARCHAR",
-                ParameterDirection.Input
-                ));
+        //public DataTable ValidarUsuario(usuario obj)
+        //{
+        //    List<Parametro> p = new List<Parametro>();
+        //    p.Add(new Parametro(
+        //        "nombre_user",
+        //        obj.nom_usuario,
+        //        "VARCHAR",
+        //        ParameterDirection.Input
+        //        ));
+        //    p.Add(new Parametro(
+        //        "url_foto_user",
+        //        obj.url_foto_usuario,
+        //        "VARCHAR",
+        //        ParameterDirection.Input
+        //        ));
 
-            return conect.ExecuteProcedure("proced_create_usuario", p);
+        //    return conect.ExecuteProcedure("proced_create_usuario", p);
 
-        }
+        //}
 
         public DataTable ConsultarUser(usuario obj)
         {
