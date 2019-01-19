@@ -15,7 +15,7 @@ namespace proyectoweb.Models.ModeloSigepi
         public string nombre { get; set; }
         public string contrasena { get; set; }
         public string foto { get; set; }
-        public tipoUsuario tipo { get; set; }
+        public string tipo { get; set; }
 
 
 
@@ -30,6 +30,20 @@ namespace proyectoweb.Models.ModeloSigepi
 
         public modelUsuario()
         {
+        }
+
+        public DataTable Consultar(modelUsuario obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "idUser",
+                obj.id,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+
+            return conect.ExecuteProcedure("proced_consul_user", p);
         }
 
         public DataTable validarUsuario(modelUsuario obj)
@@ -48,10 +62,10 @@ namespace proyectoweb.Models.ModeloSigepi
                 ParameterDirection.Input
                 ));
 
-            return conect.ExecuteProcedure("validar_user", p);
+            return conect.ExecuteProcedure("proced_validar_user", p);
 
         }
-        
+
 
 
     }
