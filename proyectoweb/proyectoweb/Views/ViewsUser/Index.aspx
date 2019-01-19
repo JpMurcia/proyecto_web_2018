@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="main main-raised">
      <div class="section section-basic">
-         <h1>DFDfasfs</h1>
+         <h1>Hola Mundo</h1>
 
          <div class="container">
 <div class="page-header">
