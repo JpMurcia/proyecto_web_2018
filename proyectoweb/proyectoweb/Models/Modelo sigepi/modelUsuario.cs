@@ -32,7 +32,7 @@ namespace proyectoweb.Models.ModeloSigepi
         {
         }
 
-        public DataTable  Consultar(modelUsuario obj)
+        public DataTable Consultar(modelUsuario obj)
         {
             List<Parametro> p = new List<Parametro>();
             p.Add(new Parametro(
@@ -41,7 +41,7 @@ namespace proyectoweb.Models.ModeloSigepi
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
-            
+
 
             return conect.ExecuteProcedure("proced_consul_user", p);
         }
@@ -65,7 +65,7 @@ namespace proyectoweb.Models.ModeloSigepi
             return conect.ExecuteProcedure("proced_validar_user", p);
 
         }
-        
+
 
 
     }
