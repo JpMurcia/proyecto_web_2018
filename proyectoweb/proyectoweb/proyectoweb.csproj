@@ -488,8 +488,6 @@
     <Content Include="Content\assetsWizard\js\jquery.bootstrap.js" />
     <Content Include="Content\assetsWizard\js\jquery.validate.min.js" />
     <Content Include="Content\assetsWizard\js\material-bootstrap-wizard.js" />
-    <Content Include="Content\Carousel\carousel.css" />
-    <Content Include="Content\Carousel\carousel.js" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
