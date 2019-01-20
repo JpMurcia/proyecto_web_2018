@@ -21,7 +21,7 @@ namespace proyectoweb.Views
 
         protected void verSara_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=sara");
+            Response.Redirect("FormularioDePagina1.aspx?grupo=giie");
         }
 
         protected void verPicardie_Click(object sender, EventArgs e)
