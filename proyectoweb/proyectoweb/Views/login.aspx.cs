@@ -40,7 +40,7 @@ namespace proyectoweb.Views
                 if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                 {
 
-                   
+                    Response.Redirect("principal.aspx");
 
                 }
                 else
@@ -80,6 +80,7 @@ namespace proyectoweb.Views
             else
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                Response.Redirect("principal.aspx");
             }
 
 
