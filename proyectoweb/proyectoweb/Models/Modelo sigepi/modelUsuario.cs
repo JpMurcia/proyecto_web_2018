@@ -12,6 +12,7 @@ namespace proyectoweb.Models.ModeloSigepi
 
         private Conexion conect = new Conexion();
         public string id { get; set; }
+        public string email_usuario { get; set; }
         public string nombre { get; set; }
         public string contrasena { get; set; }
         public string foto { get; set; }
@@ -50,8 +51,8 @@ namespace proyectoweb.Models.ModeloSigepi
         {
             List<Parametro> p = new List<Parametro>();
             p.Add(new Parametro(
-                "usuari",
-                obj.nombre,
+                "email_usuari",
+                obj.email_usuario,
                 "VARCHAR",
                 ParameterDirection.Input
                 ));

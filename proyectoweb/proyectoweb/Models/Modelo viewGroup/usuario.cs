@@ -14,7 +14,7 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string url_foto_usuario { get; set; }
         public string fk_tipo_user { get; set; }
 
-        private Conexion conect = new Conexion();
+        private ConexionPropio conect = new ConexionPropio();
 
 
         public DataTable crearUsuario(usuario obj)
