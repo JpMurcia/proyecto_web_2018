@@ -689,6 +689,7 @@
     </Compile>
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\conexion\conexion.cs" />
+    <Compile Include="Models\conexion\conexionPropio.cs" />
     <Compile Include="Models\conexion\Parametro.cs" />
     <Compile Include="Models\Modelo sigepi\Grupo_inve_semillero.cs" />
     <Compile Include="Models\Modelo sigepi\integranteGrupo.cs" />

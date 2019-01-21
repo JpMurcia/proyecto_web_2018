@@ -25,7 +25,7 @@ namespace proyectoweb.Views
         {
             usuario b = new usuario();
             modelUsuario a = new modelUsuario();
-            a.nombre = usuarioNombre.Text;
+            a.email_usuario = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
@@ -46,9 +46,9 @@ namespace proyectoweb.Views
                 else
                 {
                     b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
-                    b.nom_usuario= datoRegreso.Rows[0]["nombreeee"].ToString();
-                    b.url_foto_usuario=datoRegreso.Rows[0]["foto_perfil"].ToString();
-                   
+                    b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
+                    b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
+
                     b.fk_tipo_user = datoRegreso.Rows[0]["tipo"].ToString();
                     DataTable CreandoUser = controlador.crearUsuario(b);
 
@@ -64,9 +64,9 @@ namespace proyectoweb.Views
                 if (Session["tipo"].ToString() == "2")
                 {
 
-                    
 
-                    Response.Redirect("FormularioDePgina1.aspx");
+
+                    Response.Redirect("FormularioDePagina1.aspx");
 
                 }
                 else
@@ -79,8 +79,10 @@ namespace proyectoweb.Views
             }
             else
             {
+                
+
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
-                Response.Redirect("principal.aspx");
+              
             }
 
 
