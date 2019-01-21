@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb.Views
 {
-    public partial class NoticiaPublicada : System.Web.UI.Page
+    public partial class Permisos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

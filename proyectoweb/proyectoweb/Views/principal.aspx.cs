@@ -16,7 +16,7 @@ namespace proyectoweb.Views
 
         protected void verGiecom_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
+            Response.Redirect("FormularioDePagina1.aspx?grupo=giie");
         }
 
         protected void verSara_Click(object sender, EventArgs e)

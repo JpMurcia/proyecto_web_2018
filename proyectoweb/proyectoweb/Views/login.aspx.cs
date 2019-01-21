@@ -40,9 +40,7 @@ namespace proyectoweb.Views
                 if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                 {
 
-                    Session["nom"] = a.nombre;
-                    Session["contra"] = a.contrasena;
-                    Session["tipo"] = a.tipo;
+                   
 
                 }
                 else
