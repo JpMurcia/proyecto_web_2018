@@ -646,12 +646,14 @@
     <Content Include="Views\FormularioDePagina1.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\NoticiaNueva.aspx" />
-    <Content Include="Views\permisos.aspx" />
-    <Content Include="Views\PaginaPublicada.aspx" />
     <Content Include="Views\NoticiaPublicada.aspx" />
+    <Content Include="Views\PaginaPublicada.aspx" />
+    <Content Include="Views\permisos.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\ViewsUser\Index.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="Views\web.config" />
     <Content Include="Views\administracion.Master" />
@@ -753,12 +755,12 @@
     <Compile Include="Views\NoticiaNueva.aspx.designer.cs">
       <DependentUpon>NoticiaNueva.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\permisos.aspx.cs">
-      <DependentUpon>permisos.aspx</DependentUpon>
+    <Compile Include="Views\NoticiaPublicada.aspx.cs">
+      <DependentUpon>NoticiaPublicada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\permisos.aspx.designer.cs">
-      <DependentUpon>permisos.aspx</DependentUpon>
+    <Compile Include="Views\NoticiaPublicada.aspx.designer.cs">
+      <DependentUpon>NoticiaPublicada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PaginaPublicada.aspx.cs">
       <DependentUpon>PaginaPublicada.aspx</DependentUpon>
@@ -767,12 +769,12 @@
     <Compile Include="Views\PaginaPublicada.aspx.designer.cs">
       <DependentUpon>PaginaPublicada.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\NoticiaPublicada.aspx.cs">
-      <DependentUpon>NoticiaPublicada.aspx</DependentUpon>
+    <Compile Include="Views\permisos.aspx.cs">
+      <DependentUpon>permisos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\NoticiaPublicada.aspx.designer.cs">
-      <DependentUpon>NoticiaPublicada.aspx</DependentUpon>
+    <Compile Include="Views\permisos.aspx.designer.cs">
+      <DependentUpon>permisos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\principal.aspx.cs">
       <DependentUpon>principal.aspx</DependentUpon>

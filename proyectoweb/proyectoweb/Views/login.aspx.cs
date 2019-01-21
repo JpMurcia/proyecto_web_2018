@@ -40,16 +40,14 @@ namespace proyectoweb.Views
                 if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                 {
 
-                    Session["nom"] = a.nombre;
-                    Session["contra"] = a.contrasena;
-                    Session["tipo"] = a.tipo;
+                    Response.Redirect("principal.aspx");
 
                 }
                 else
                 {
                     b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
                     b.nom_usuario= datoRegreso.Rows[0]["nombreeee"].ToString();
-                    b.url_foto_usuario=datoRegreso.Rows[0]["foto_perfi"].ToString();
+                    b.url_foto_usuario=datoRegreso.Rows[0]["foto_perfil"].ToString();
                    
                     b.fk_tipo_user = datoRegreso.Rows[0]["tipo"].ToString();
                     DataTable CreandoUser = controlador.crearUsuario(b);
@@ -82,6 +80,7 @@ namespace proyectoweb.Views
             else
             {
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                Response.Redirect("principal.aspx");
             }
 
 
