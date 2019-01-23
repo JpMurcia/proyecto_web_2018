@@ -42,10 +42,8 @@ REPLACE INTO `grupo_inve_semillero` (`id_grupo`, `nom_grupo`, `sigla_signif_grup
 	(113, 'Giecom Semillero', 'hola singf invtiga3', 'objetivofhdskjha3', 'programa3', 'kjlkjdoanm.jpg', 'misio_grupo1dfsfsafsfs   3', 'vison     3', 'justificasion   3', 'quienes somos     3', 111),
 	(114, 'Sara', 'hola singf invtiga4', 'objetivofhdskjha4', 'programa4', 'sara.jpg', 'misio_grupo1dfsfsafsfs   4', 'vison     4', 'justificasion   4', 'quienes somos     4', 115),
 	(115, 'GIIE', 'GRUPO DE INVESTIGACION EN INFORMATICA EDUCATIVA', 'Construir el grupo de investigación encargado de liderar los procesos investigativos en el área de la informática educativa en la Universidad de la Amazonia, por medio del cual se generen resultados con claridad y pertinencia, representados en productos tales como publicaciones científicas, procesos de formación y trabajos de investigación.', 'sistema', 'kjlkjdoanm.jpg', 'Generar procesos de ciencia y tecnologia que contribuyan al desarrollo científico de la informática Educativa en la región Amazónica.', 'El grupo de investigación de desarrollará los elementos constitutivos en el área de la informática educativa de lineas de investigación de la Uniamazonia tales como: Educación Ambiental, Pedagogía y Didáctica, Administración y Educación, etc.', 'justificasion   5', 'quienes somos     5', 115),
-	(116, 'nom_grupo6', 'hola singf invtiga6', 'objetivofhdskjha6', 'programa2', 'kjlkjdoanm.jpg', 'misio_grupo1dfsfsafsfs   6', 'vison     6', 'justificasion   6', 'quienes somos     6', 119),
 	(117, 'ECQ', 'Estrategias Computacionales en Química', 'objetivofhdskjha8', 'Quimica', 'quimica.png', 'La misión del grupo de investigación ¿Estrategias Computacionales en Química¿ es ampliar el conocimiento sobre los sistemas químicos empleando simulaciones computacionales. El grupo promueve la formación de talento humano con la capacidad de emplear los modelos computacionales modernos y desarrollar nuevas metodologías teóricas. Los proyectos de investigación están enfocados en proponer, predecir, analizar y aplicar las propiedades físicas, químicas y biológicas de compuestos químicos de interés regional, nacional o mundial.', 'Para el año 2020 nuestro grupo se habrá consolidado como uno de los grupos líderes en Colombia en el área de la química computacional. Contará con un amplio número de estudiantes de pregrado y posgrado. Los proyectos realizados por el grupo estarán estrechamente relacionados con estudios experimentales de punta, en el marco de colaboraciones interdisciplinares.', 'justificasion   8', 'quienes somos     8', 117),
 	(118, 'ESTRATEGÍAS COMPUTACIONALES ', '', 'El semillero de investigación Estrategias Computacionales a puesto atención a los problemas de la región amazónica intentando brindar soluciones mediante la utilización de herramienta informáticas propias de la química, los cuales en la mayoría son libre acceso, generando propuesta de de investigación de bahjo costos de financiación pero de gran interés para la región amazónica.', 'Quimica', 'quimica.png', 'El semillero de investigación Estrategias Computacionales, buscamos la generación de nuevos conocimientos utilizando una gran variedad de herramientas computacionales de libre acceso que pueden ser de gran utilidad para la predicción de las propiedades físicas y químicas de compuestos desconocidos o difíciles de caracterizar experimentalmente, así como el análisis de las propiedades físicas y químicas de compuestos existentes, interpretando información experimental o prediciendo propiedades aún no determinadas', 'El semillero Estrategias Computacionales familiarizar a sus nuevos integrantes con las herramientas computaciones de interés químico y corroborando los resultados teóricos obtenidos con los datos experimentales reportados en la literatura. Actualmente nuestro semillero está enfocado en el estudio de la resistencia del vector del dengue, chicunguya y Zica, Aedes aegyty, utilizando para ello tanto herramientas experimentales como teóricas. Esperando obtener resultados que puedan ser de utilidad para la solución de los problemas de salud pública.', 'justificasion   7', 'quienes somos     7', 117),
-	(119, 'nom_grupo9', 'hola singf invtiga9', 'objetivofhdskjha9', 'programa5', 'kjlkjdoanm.jpg', 'misio_grupo1dfsfsafsfs   9', 'vison     9', 'justificasion   9', 'quienes somos     9', 119),
 	(120, 'PICARDIE', 'Producir, Integrar, Compartir para Aprender con Recursos Didácticos E-learning', ' objetivo picardie', 'programa1', 'picardie.png', 'misio_grupo1dfsfsafsfs   20', 'vison     20', 'justificasion   20', 'quienes somos     20', 115),
 	(121, 'Semillero de programacion', NULL, 'Elevar el nivel de algoritmia ', 'Sistemas', 'semillero_programacion.png', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', NULL, NULL, 111);
 /*!40000 ALTER TABLE `grupo_inve_semillero` ENABLE KEYS */;
@@ -69,10 +67,8 @@ REPLACE INTO `integrante_has_grupo_inve_semillero` (`usuario_id_usuario`, `grupo
 	(14, 113),
 	(13, 114),
 	(17, 115),
-	(11, 116),
 	(16, 117),
 	(13, 118),
-	(15, 119),
 	(11, 120);
 /*!40000 ALTER TABLE `integrante_has_grupo_inve_semillero` ENABLE KEYS */;
 
@@ -148,13 +144,21 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcando datos para la tabla sigepi.usuario: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 REPLACE INTO `usuario` (`id_usuario`, `email_usuario`, `nom_usuario`, `contra_usuario`, `url_foto_usuario`, `fk_tipo_usuario`) VALUES
-	(11, 'a.leal@udla.edu.co', 'antonio', 'contra_antorio', 'url.../dsajk', 1),
-	(12, 'c.carlos@udla.edu.co', 'carlos', '12345', 'url.../dsajk', 2),
-	(13, 'c.carlos2@udla.edu.co', 'carlos2', '12345', 'url.../dsajk', 2),
-	(14, 'b.yisus@udla.edu.co', 'brayan', 'yisus', 'url.../dsajk', 3),
-	(15, 'h.ing@udla.edu.co', 'heri', 'giecom', 'gieco', 1),
-	(16, 'm.agilar@udla.edu.co', 'micht', 'giecom1', 'url.../dsajk', 2),
-	(17, 'j.alcalde@udla.edu.co', 'alcalde', 'giecom2', 'url.../dsajk', 2);
+	(10, 'h.ing@udla.edu.co', 'heriberto', 'giecom', '1 - copia (1).png', 1),
+	(11, 'a.leal@udla.edu.co', 'antonio', 'contra_antorio', '1 - copia (1).png', 2),
+	(12, 'c.carlos@udla.edu.co', 'carlos', '12345', '1 - copia (1).png', 2),
+	(13, 'c.carlos2@udla.edu.co', 'carlos2', '12345', '1 - copia (1).png', 2),
+	(14, 'b.yisus@udla.edu.co', 'brayan', 'yisus', '1 - copia (1).png', 2),
+	(15, 'd.doctor@udla.edu.co', 'Doctor Quimico', 'quimico', '1 - copia (1).png', 1),
+	(16, 'm.agilar@udla.edu.co', 'micht', 'giecom1', '1 - copia (1).png', 2),
+	(17, 'j.alcalde@udla.edu.co', 'alcalde', 'giecom2', '1 - copia (1).png', 2),
+	(18, 'c.doctor@udla.edu.co', 'quimico', 'quimico', '1 - copia (1).png', 1),
+	(19, 'c.laura@udla.edu.co', 'laura camila ', 'minato', '1 - copia (1).png', 2),
+	(20, 'm.ing@udla.edu.co', 'Millan', 'giie', '1 - copia (1).png', 1),
+	(21, 'j.juan@udla.edu.co', 'juanes ', 'giie', '1 - copia (1).png', 2),
+	(22, 'd.antonio@udla.edu.co', 'johan', 'giie', '1 - copia (1).png', 2),
+	(23, 'd.antonieta@udla.edu.co', 'antonieta', 'giie', '1 - copia (1).png', 2),
+	(24, 'a.cuellar@udla.edu.co', 'angela', 'cuellar', '1 - copia (1).png', 2);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.usuario_has_proyecto
@@ -564,19 +568,11 @@ DROP TABLE IF EXISTS `actividad`;
 CREATE TABLE IF NOT EXISTS `actividad` (
   `id_Actividad` int(11) NOT NULL,
   `fk_id_produc` int(11) DEFAULT NULL,
-  `fk_id_sub_actividad` int(11) DEFAULT NULL,
   `nom_actividad` varchar(255) DEFAULT NULL,
   `descripcion_actividad` varchar(255) DEFAULT NULL,
   `fecha_actividad` date DEFAULT NULL,
-  `entregas_actividad` varchar(255) DEFAULT NULL,
-  `conclusion_actividad` varchar(45) DEFAULT NULL,
-  `avanze_actividad` varchar(45) DEFAULT NULL,
-  `apreciacion_actividad` varchar(45) DEFAULT NULL,
-  `estado_actividad` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id_Actividad`),
   KEY `fk_id_producto` (`fk_id_produc`),
-  KEY `fk_id_actividad` (`fk_id_sub_actividad`),
-  CONSTRAINT `fk_id_actividad` FOREIGN KEY (`fk_id_sub_actividad`) REFERENCES `actividad` (`id_Actividad`),
   CONSTRAINT `fk_id_producto` FOREIGN KEY (`fk_id_produc`) REFERENCES `producto` (`id_produc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -584,24 +580,18 @@ CREATE TABLE IF NOT EXISTS `actividad` (
 /*!40000 ALTER TABLE `actividad` DISABLE KEYS */;
 /*!40000 ALTER TABLE `actividad` ENABLE KEYS */;
 
--- Volcando estructura para tabla viewgroup.actividad_has_usuario
-DROP TABLE IF EXISTS `actividad_has_usuario`;
-CREATE TABLE IF NOT EXISTS `actividad_has_usuario` (
-  `pk_fk_id_Actividad` int(11) NOT NULL,
-  `pk_fk_id_usuario` int(11) NOT NULL,
-  `fecha_asigna` date DEFAULT NULL,
-  `descripcion_tarea` varchar(255) DEFAULT NULL,
-  `asistencia` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`pk_fk_id_Actividad`,`pk_fk_id_usuario`),
-  KEY `fk_Actividad_has_usuario_usuario1_idx` (`pk_fk_id_usuario`),
-  KEY `fk_Actividad_has_usuario_Actividad1_idx` (`pk_fk_id_Actividad`),
-  CONSTRAINT `fk_Actividad_has_usuario_Actividad1` FOREIGN KEY (`pk_fk_id_Actividad`) REFERENCES `mydb`.`actividad` (`id_Actividad`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Actividad_has_usuario_usuario1` FOREIGN KEY (`pk_fk_id_usuario`) REFERENCES `mydb`.`usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+-- Volcando estructura para tabla viewgroup.auditoria
+DROP TABLE IF EXISTS `auditoria`;
+CREATE TABLE IF NOT EXISTS `auditoria` (
+  `id_auditoria` int(11) NOT NULL,
+  `quien_actualizo` int(11) DEFAULT NULL,
+  `Columna 3` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.actividad_has_usuario: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `actividad_has_usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `actividad_has_usuario` ENABLE KEYS */;
+-- Volcando datos para la tabla viewgroup.auditoria: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `auditoria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auditoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.diseno
 DROP TABLE IF EXISTS `diseno`;
@@ -619,21 +609,6 @@ CREATE TABLE IF NOT EXISTS `diseno` (
 -- Volcando datos para la tabla viewgroup.diseno: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `diseno` DISABLE KEYS */;
 /*!40000 ALTER TABLE `diseno` ENABLE KEYS */;
-
--- Volcando estructura para tabla viewgroup.fases_cronogra
-DROP TABLE IF EXISTS `fases_cronogra`;
-CREATE TABLE IF NOT EXISTS `fases_cronogra` (
-  `id_fases_cronogra` int(11) NOT NULL,
-  `nom_fases_cronogra` varchar(255) DEFAULT NULL,
-  `producto_id_produc` int(11) NOT NULL,
-  PRIMARY KEY (`id_fases_cronogra`,`producto_id_produc`),
-  KEY `fk_fases_cronogra_producto1_idx` (`producto_id_produc`),
-  CONSTRAINT `fk_fases_cronogra_producto1` FOREIGN KEY (`producto_id_produc`) REFERENCES `mydb`.`producto` (`id_produc`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Volcando datos para la tabla viewgroup.fases_cronogra: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `fases_cronogra` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fases_cronogra` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.grupo_invest
 DROP TABLE IF EXISTS `grupo_invest`;
@@ -677,22 +652,6 @@ CREATE TABLE IF NOT EXISTS `informacion_integrantes_proyecto` (
 /*!40000 ALTER TABLE `informacion_integrantes_proyecto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `informacion_integrantes_proyecto` ENABLE KEYS */;
 
--- Volcando estructura para tabla viewgroup.menu
-DROP TABLE IF EXISTS `menu`;
-CREATE TABLE IF NOT EXISTS `menu` (
-  `pk_fk_permiso` int(11) NOT NULL,
-  `pk_fk_usuario` int(11) NOT NULL,
-  `nom_menu` varchar(50) NOT NULL,
-  PRIMARY KEY (`pk_fk_permiso`,`pk_fk_usuario`),
-  KEY `FK_menu_usuario` (`pk_fk_usuario`),
-  CONSTRAINT `FK_menu_permiso` FOREIGN KEY (`pk_fk_permiso`) REFERENCES `permisos` (`id_permisos`),
-  CONSTRAINT `FK_menu_usuario` FOREIGN KEY (`pk_fk_usuario`) REFERENCES `usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Volcando datos para la tabla viewgroup.menu: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
-
 -- Volcando estructura para tabla viewgroup.pagina_web
 DROP TABLE IF EXISTS `pagina_web`;
 CREATE TABLE IF NOT EXISTS `pagina_web` (
@@ -710,18 +669,6 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
 -- Volcando datos para la tabla viewgroup.pagina_web: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pagina_web` ENABLE KEYS */;
-
--- Volcando estructura para tabla viewgroup.permisos
-DROP TABLE IF EXISTS `permisos`;
-CREATE TABLE IF NOT EXISTS `permisos` (
-  `id_permisos` int(11) NOT NULL,
-  `nom_perimisos` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_permisos`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Volcando datos para la tabla viewgroup.permisos: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `permisos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `permisos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.plantilla
 DROP TABLE IF EXISTS `plantilla`;
@@ -757,34 +704,22 @@ CREATE TABLE IF NOT EXISTS `producto` (
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
--- Volcando estructura para tabla viewgroup.roles
-DROP TABLE IF EXISTS `roles`;
-CREATE TABLE IF NOT EXISTS `roles` (
-  `id_rol` int(11) NOT NULL,
-  `nom_rol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id_rol`)
+-- Volcando estructura para tabla viewgroup.solicitar_modulo
+DROP TABLE IF EXISTS `solicitar_modulo`;
+CREATE TABLE IF NOT EXISTS `solicitar_modulo` (
+  `id_solicitar_modulo` int(11) NOT NULL,
+  `nom_modulo` varchar(50) NOT NULL,
+  `descripcion_modulo` varchar(500) NOT NULL,
+  `fecha_solicitud` date NOT NULL,
+  `fk_id_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`id_solicitar_modulo`),
+  KEY `FK_solicitar_modulo_usuario` (`fk_id_usuario`),
+  CONSTRAINT `FK_solicitar_modulo_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.roles: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
-
--- Volcando estructura para tabla viewgroup.roles_permisos
-DROP TABLE IF EXISTS `roles_permisos`;
-CREATE TABLE IF NOT EXISTS `roles_permisos` (
-  `roles_id_rol` int(11) NOT NULL,
-  `permisos_id_permisos` int(11) NOT NULL,
-  `fecha_permiso` datetime DEFAULT NULL,
-  PRIMARY KEY (`roles_id_rol`,`permisos_id_permisos`),
-  KEY `fk_roles_has_permisos_permisos1_idx` (`permisos_id_permisos`),
-  KEY `fk_roles_has_permisos_roles1_idx` (`roles_id_rol`),
-  CONSTRAINT `fk_roles_has_permisos_permisos1` FOREIGN KEY (`permisos_id_permisos`) REFERENCES `mydb`.`permisos` (`id_permisos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_roles_has_permisos_roles1` FOREIGN KEY (`roles_id_rol`) REFERENCES `mydb`.`roles` (`id_rol`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Volcando datos para la tabla viewgroup.roles_permisos: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `roles_permisos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `roles_permisos` ENABLE KEYS */;
+-- Volcando datos para la tabla viewgroup.solicitar_modulo: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `solicitar_modulo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `solicitar_modulo` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.soporte
 DROP TABLE IF EXISTS `soporte`;
@@ -811,7 +746,7 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.tipo_usuario: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.tipo_usuario: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
 REPLACE INTO `tipo_usuario` (`id_user`, `nombre_user`) VALUES
 	(1, 'Lider'),
