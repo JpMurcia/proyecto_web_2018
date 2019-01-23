@@ -73,7 +73,7 @@ namespace proyectoweb.Views
                         semillero.vision = dt2.Rows[i]["vision_grupo"].ToString();
 
                         Console.Write("epa hijuemadre");
-
+                        
                         NombreSemillero.Text = semillero.nombreGrupo;
                         JustificacionSemillero.Text = semillero.justificacion;
                         MisionSemiller.Text = semillero.mision;

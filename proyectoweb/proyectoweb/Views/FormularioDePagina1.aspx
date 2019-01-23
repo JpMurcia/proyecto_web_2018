@@ -140,7 +140,9 @@
 
                                         <div class="card card-plain">
                                             <div class="card-header" role="tab" id="headingFour">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Semillero #1
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    
+                                                    Semillero #1
 
                                                    
 
