@@ -40,7 +40,7 @@ namespace proyectoweb.Views
                 if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                 {
 
-                    Response.Redirect("principal.aspx");
+                   
 
                 }
                 else
