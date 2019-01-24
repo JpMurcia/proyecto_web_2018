@@ -53,9 +53,7 @@ namespace proyectoweb.Views
                 imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
 
 
-                Repeater1.DataSource = dt2;
 
-                Repeater1.DataBind();
 
 
 
@@ -75,16 +73,16 @@ namespace proyectoweb.Views
                         semillero.vision = dt2.Rows[i]["vision_grupo"].ToString();
 
                         Console.Write("epa hijuemadre");
-                        
-                        //NombreSemillero.Text = semillero.nombreGrupo;
-                        //JustificacionSemillero.Text = semillero.justificacion;
-                        //MisionSemiller.Text = semillero.mision;
-                        //ObjetivoSemillero.Text = semillero.objetivo;
-                        //programa.Text = semillero.ProgramaGrupo;
-                        //siglaSemillero.Text = semillero.siglas;
-                        //QuinesSomosSemillero.Text = semillero.quienesSomos;
-                        //imagenDeSemillero.Src = "../imagenes/semilleros/" + semillero.urlLogo;
-                        //VisionSemillero.Text = semillero.vision;
+
+                        NombreSemillero.Text = semillero.nombreGrupo;
+                        JustificacionSemillero.Text = semillero.justificacion;
+                        MisionSemiller.Text = semillero.mision;
+                        ObjetivoSemillero.Text = semillero.objetivo;
+                        programa.Text = semillero.ProgramaGrupo;
+                        siglaSemillero.Text = semillero.siglas;
+                        QuinesSomosSemillero.Text = semillero.quienesSomos;
+                        imagenDeSemillero.Src = "../imagenes/semilleros/" + semillero.urlLogo;
+                        VisionSemillero.Text = semillero.vision;
                     }
 
 

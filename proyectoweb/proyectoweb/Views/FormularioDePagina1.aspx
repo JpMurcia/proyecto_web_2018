@@ -136,12 +136,9 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="tab-pane" id="Semilleros">
 
                                         <div class="card card-plain">
-                                            <asp:Repeater ID="Repeater1" runat="server">
-                                                <ItemTemplate>
                                             <div class="card-header" role="tab" id="headingFour">
                                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Semillero #1
 
@@ -150,97 +147,95 @@
                                                     <i class="material-icons">keyboard_arrow_down</i>
                                                 </a>
                                             </div>
-                                            
-                                                    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
-                                                        <div class="card-body">
+                                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                <div class="card-body">
 
-                                                            <div class="card card-plain">
-                                                                <div class="card-header" role="tab" id="headingFive">
-                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
+                                                    <div class="card card-plain">
+                                                        <div class="card-header" role="tab" id="headingFive">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
 
                                                                
 
                                                                 <i class="material-icons">keyboard_arrow_down</i>
-                                                                    </a>
+                                                            </a>
+                                                        </div>
+
+                                                        <div id="collapseFive" id="collapseStyle" class="collapse show" style:color role="tabpanel" aria-labelledby="headingFive">
+
+                                                            <div class="card-body">
+                                                                <asp:TextBox disabled="disabled" ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                                <asp:TextBox disabled="disabled" ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                                <div class="form-group">
+                                                                    <label for="exampleFormControlTextarea1">Objetivos</label>
+                                                                    <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="exampleFormControlTextarea1">Misión</label>
+                                                                    <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="exampleFormControlTextarea1">Visión</label>
+                                                                    <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="exampleFormControlTextarea1">Justificación</label>
+                                                                    <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
+                                                                    <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                </div>
+                                                                <div class="col-sm-2 ">
+                                                                    <h4>Imagen de Grupo</h4>
+                                                                    <img runat="server" id="imagenDeSemillero" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
                                                                 </div>
 
-                                                                <div id="collapseFive" id="collapseStyle" class="collapse show" style:color role="tabpanel" aria-labelledby="headingFive">
-
-                                                                    <div class="card-body">
-                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("sigla_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
-                                                                        <div class="form-group">
-                                                                            <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="exampleFormControlTextarea1">Misión</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("mision_grupo") %>' Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="exampleFormControlTextarea1">Visión</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                        </div>
-                                                                        <div class="col-sm-2 ">
-                                                                            <h4>Imagen de Grupo</h4>
-                                                                            <img runat="server" text='<%#Eval("url_logo_grupo") %>' id="imagenDeSemillero" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
                                                             </div>
-
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text">
-                                                                            <i class="material-icons">mail</i>
-                                                                        </span>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" placeholder="Correo Electronico">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text">
-                                                                            <i class="material-icons">phone_iphone</i>
-                                                                        </span>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" placeholder="Telefono">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text">
-                                                                            <i class="material-icons">place</i>
-                                                                        </span>
-                                                                    </div>
-                                                                    <input type="text" placeholder="Dirección" class="form-control" />
-                                                                </div>
-                                                            </div>
-
-
                                                         </div>
                                                     </div>
-                                               
+
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="material-icons">mail</i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Correo Electronico">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="material-icons">phone_iphone</i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Telefono">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="material-icons">place</i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" placeholder="Dirección" class="form-control" />
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
                                         </div>
-                                                     </ItemTemplate>
-                                            </asp:Repeater>
 
 
-                                </div>
-                                <div class="tab-pane" id="captain">
+
+
+                                    </div>
+                                    <div class="tab-pane" id="captain">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
