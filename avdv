@@ -1,0 +1,481 @@
+[33mcommit 2f7aafb53d7056ae65ae52e11d60fba2734ecc58[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 079e0ea 287172c
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Thu Jan 24 13:24:50 2019 -0500
+
+    Merge branch 'el-camino-del-señor'
+
+[33mcommit 079e0ea273598716619a388b46d1271c6c500cc9[m
+Merge: 967e029 531e440
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Thu Jan 24 13:23:40 2019 -0500
+
+    Merge branch 'master' of https://github.com/JpMurcia/proyecto_web_2018
+
+[33mcommit 531e4406deb2e24c15303300fbc5c6f253281327[m
+Merge: 334c10e fd528b7
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Wed Jan 23 22:35:07 2019 -0500
+
+    Merge pull request #23 from JpMurcia/lado_oscuro
+    
+    miiiierda
+
+[33mcommit fd528b7a0fc36593b1a7b68e9bdae391b3917e0d[m[33m ([m[1;31morigin/lado_oscuro[m[33m)[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Wed Jan 23 22:33:09 2019 -0500
+
+    miiiierda
+
+[33mcommit 967e029e7277a7546a5d3b03f7493d720adaa790[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Wed Jan 23 22:06:46 2019 -0500
+
+    asdf
+
+[33mcommit 334c10edc1a9c9a68470603df1f071de4ac5633e[m
+Merge: 83e5131 db9c7ce
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Wed Jan 23 17:42:10 2019 -0500
+
+    Merge pull request #22 from JpMurcia/lado_oscuro
+    
+    no actualize wey ojo con lo que hace
+
+[33mcommit db9c7cec999017d6fe4a649f13b3fd6f0cdd7eaa[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Wed Jan 23 17:41:30 2019 -0500
+
+    no actualize wey ojo con lo que hace
+    
+    fjdkslajflksjdalkfjsadlkfkjsdfkjhsdjk
+
+[33mcommit 83e51319cd702dfb0166fae4549fb0a0a98e36da[m
+Merge: 03decb3 4c1a145
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Tue Jan 22 21:45:55 2019 -0500
+
+    Merge pull request #21 from JpMurcia/lado_oscuro
+    
+    wey aqui ya esta la base de datos
+
+[33mcommit 4c1a145848979dddb1fd6971bdd529427c19a122[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Tue Jan 22 21:28:58 2019 -0500
+
+    wey aqui ya esta la base de datos
+    
+    el sql "22_01_2019_basededatos.sql"
+
+[33mcommit 287172cc3d4ca8e3e1ba7f61916aec3d4f817904[m[33m ([m[1;31morigin/el-camino-del-señor[m[33m, [m[1;32mel-camino-del-señor[m[33m)[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Tue Jan 22 12:58:27 2019 -0500
+
+    dsfsdf
+
+[33mcommit 03decb377551e107a317c427b2c3ce19e76a63c1[m
+Merge: b253f1c b524f03
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 21 15:36:16 2019 -0500
+
+    Merge pull request #19 from JpMurcia/lado_oscuro
+    
+    wey esta full hd, ya registra usuario
+
+[33mcommit b524f03ecd0d8200107682c2c27bea7f2780d8a9[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 21 15:34:51 2019 -0500
+
+    wey esta full hd, ya registra usuario
+    
+    recuerde que debe actualizar la base de datos
+
+[33mcommit b253f1ceaa9d9db4ba1424fc75255044f8073176[m
+Merge: 75e02a4 022cf55
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 21 14:06:32 2019 -0500
+
+    Merge pull request #18 from JpMurcia/lado_oscuro
+    
+    Lado oscuro
+
+[33mcommit 022cf554fc3cd706f189c1e8ba5f75db31abe002[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 21 13:59:31 2019 -0500
+
+    espere intenot cosas
+    
+    algodsjaojdf
+
+[33mcommit e5afd5a826aa2f86b11f7f89976b9faa8f433f24[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 21 09:58:16 2019 -0500
+
+    funciona ahora si wwweeey bueno toca cambia la base de datos
+    
+    dasdasd
+
+[33mcommit 464df55329efdb061af7289165adb1639990f50d[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 20 14:53:48 2019 -0500
+
+    no he podido borrar el puto cache
+    
+    mr cago en la puta
+
+[33mcommit 75e02a4270a94918e3868c4942cd720ce1c761ce[m
+Merge: f916a98 c5436de
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Sat Jan 19 18:52:35 2019 -0500
+
+    Merge pull request #17 from JpMurcia/el-camino-del-señor
+    
+    cambiosito
+
+[33mcommit c5436de7b27117f7d044a1a2ae9d85d5035fee19[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:51:14 2019 -0500
+
+    cambiosito
+
+[33mcommit f916a98158254bf3491436d59220faa3d457808e[m
+Merge: 8cf3fed 8e617ed
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Sat Jan 19 18:47:58 2019 -0500
+
+    Merge pull request #16 from JpMurcia/el-camino-del-señor
+    
+    cambios
+
+[33mcommit 8e617ed9d345cdb165b36a69f7bc28fb119bc760[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:46:50 2019 -0500
+
+    cambios
+
+[33mcommit 8cf3feddde8c2ad66dc0601d84a54af7b29a5889[m
+Merge: 3ac7128 d1a5953
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Sat Jan 19 18:37:41 2019 -0500
+
+    Merge pull request #15 from JpMurcia/el-camino-del-señor
+    
+    puebas ultima
+
+[33mcommit d1a59532df5671617a0bfe76d106a5b27510d630[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:36:26 2019 -0500
+
+    puebas ultima
+    
+    pueba ultima
+
+[33mcommit 3ac7128fa617fef680268e712fda225ea2f2307d[m
+Merge: 51ba38f 5030303
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Sat Jan 19 18:33:03 2019 -0500
+
+    Merge pull request #14 from JpMurcia/pr/11
+    
+    Pr/11
+
+[33mcommit 5030303c2d21d18b368c0db669e9ae249ebd3d6f[m[33m ([m[1;32mpr/11[m[33m)[m
+Merge: 5a92eb8 5972e49
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:32:13 2019 -0500
+
+    Merge branch 'el-camino-del-señor' into pr/11
+
+[33mcommit 5a92eb8708bcf334603240cd37a5f4ad87ee5968[m
+Merge: 5e79cb2 51ba38f
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:31:51 2019 -0500
+
+    Merge branch 'master' into pr/11
+
+[33mcommit 5972e4905fdb52b433042b9e0ee5b047876694cf[m
+Merge: 1285cc6 51ba38f
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:30:29 2019 -0500
+
+    Merge branch 'master' into el-camino-del-señor
+
+[33mcommit 1285cc636400d48d3e0f082f863b8e96ea1761d6[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:23:31 2019 -0500
+
+    nuevo intento
+    
+    algonuevo
+
+[33mcommit 51ba38f03dac6e0d6329fd86e68785d3dbc3c0a6[m
+Merge: c0c4568 01bd4db
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sat Jan 19 18:16:47 2019 -0500
+
+    Merge pull request #13 from JpMurcia/lado_oscuro
+    
+    Lado oscuro
+
+[33mcommit 5e79cb2bdd78095ddb49f0ea211076b7bcba109a[m
+Merge: 40f9c28 a252f90
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:13:37 2019 -0500
+
+    Merge branch 'master' into el-camino-del-señor
+
+[33mcommit a252f900183d658a953f75875d5e9f1e294b4672[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Sat Jan 19 18:06:51 2019 -0500
+
+    funciona maldita hija de puta
+    
+    fdfdlkssjfkljsdfkjaklsdf
+
+[33mcommit 01bd4db29594d0bc01461e3ac982ead13ce1edfc[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sat Jan 19 15:52:02 2019 -0500
+
+    ultima actualizacion wwwweeey
+    
+    fdsfsdf
+
+[33mcommit 2a326a5d96be110d2692cc6f5afb023a9a509292[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Fri Jan 18 19:11:17 2019 -0500
+
+    lo que mediana mente hise para las validadciones de registro
+    
+    afdfasdfasf
+
+[33mcommit 0caeba6d995a52c5d1e86500828b8e3708dddb9c[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Fri Jan 18 14:48:14 2019 -0500
+
+    imagen del semillero deprogrmJ
+    
+    Y BASE DE DATOS
+
+[33mcommit c0c45684d791c85b78bffc05bf3f7807c4a2ca19[m
+Merge: 7663483 d106f0e
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Fri Jan 18 13:15:14 2019 -0500
+
+    Merge pull request #10 from JpMurcia/lado_oscuro
+    
+    ojo wey que esta mierda puede dañar todo :v
+
+[33mcommit d106f0e68bb8010a252ea27adcd36ffa56c1338c[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Fri Jan 18 13:10:28 2019 -0500
+
+    ojo wey que esta mierda puede dañar todo :v
+    
+    dsadasd
+
+[33mcommit 4542d327611dcedcaa5de5534947f5f59667dee3[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Thu Jan 17 17:14:45 2019 -0500
+
+    ojihiuh
+
+[33mcommit 40f9c28a0322df602889e48a2b883507124cae0f[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Thu Jan 17 16:56:36 2019 -0500
+
+    Le aparece ?
+
+[33mcommit 7663483f43f5246b760a53d7fa6bdd1d709a388e[m
+Merge: 728996a 77eabeb
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Thu Jan 17 13:45:28 2019 -0500
+
+    Merge pull request #8 from JpMurcia/lado_oscuro
+    
+    no he avanzado ni mierda
+
+[33mcommit 77eabeb5c7c91015f97ba1f856a835f5d549df44[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Thu Jan 17 13:12:17 2019 -0500
+
+    no he avanzado ni mierda
+    
+    jdslafjl dsj
+
+[33mcommit cb5ac21b38fddf67363cd701278335f840634ac4[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Mon Jan 14 12:08:05 2019 -0500
+
+    Aun no puedeo con el carrusel del Index :(
+
+[33mcommit 744b4b175370fcb132c9e53e43afb66279f89bd4[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Wed Jan 9 21:37:40 2019 -0500
+
+    listo
+    
+    fjkljafkldsmnfmnfmnsdlnf
+
+[33mcommit 4ebdc2d9ed93de5e75a068e1ab219465a4f1ff09[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Wed Jan 9 20:08:25 2019 -0500
+
+    fadfsad
+    
+    fdfadf
+
+[33mcommit ab34b9583d3e9b751b90d1c7b1b0b2a57930791b[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Wed Jan 9 19:42:09 2019 -0500
+
+    soy un pendejo
+    
+    fdhsjhfdshfkj
+
+[33mcommit 728996a710c2c45ae2e0e08580303c8d907fc511[m
+Merge: 4f2c0da 744b4b1
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Wed Jan 9 16:40:02 2019 -0500
+
+    Merge pull request #6 from JpMurcia/el-camino-del-señor
+    
+    listo
+
+[33mcommit 4f2c0daab496bd4a7e928a671b852886040eab54[m
+Merge: 7755d78 4ebdc2d
+Author: brayaneider1 <b.alvarez@udla.edu.co>
+Date:   Wed Jan 9 15:09:41 2019 -0500
+
+    Merge pull request #5 from JpMurcia/el-camino-del-señor
+    
+    compra care verga
+
+[33mcommit 7755d78d7dc355de1471d2913fe5db6b0f14bf76[m
+Merge: 18a36ad 804d29b
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Wed Jan 9 11:06:08 2019 -0500
+
+    Merge pull request #4 from JpMurcia/lado_oscuro
+    
+    actalizacion
+
+[33mcommit 804d29bd25b8fc642a6983094026e6c63c185a9b[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Wed Jan 9 11:04:36 2019 -0500
+
+    actalizacion
+    
+    fchgfhgfhg
+
+[33mcommit 780c6e0d1dfb05875d9fafbcb605e103cde3766b[m
+Author: yisus <b.alavarez@udla.edu.co>
+Date:   Tue Jan 8 03:08:48 2019 -0500
+
+    Pagina principal
+
+[33mcommit 18a36ad9cf6b579c8c1ac63eaca0a0b3da9d3f2a[m
+Merge: 8702ceb e218d48
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 7 14:59:32 2019 -0500
+
+    Merge pull request #3 from JpMurcia/lado_oscuro
+    
+    Lado oscuro
+
+[33mcommit e218d482d579ac96c71550f0118abc8cf40631b9[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Mon Jan 7 14:54:57 2019 -0500
+
+    probar
+    
+    ojala no se cage esta mierda
+
+[33mcommit bb25899f5a2d70bec5d072411814a4ad3fce6454[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 6 19:15:26 2019 -0500
+
+    modificasion de la base de datos
+    
+    renombre de los procedimiento, vistas, y un procedimiento mas el de proyectos
+
+[33mcommit 8702cebc8e547093f2a2f7e22b8ad627dc9c06ef[m
+Merge: a5c95b0 f91ada0
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 6 13:10:15 2019 -0500
+
+    Merge pull request #2 from JpMurcia/lado_oscuro
+    
+    actualizacion
+
+[33mcommit f91ada06c5e689ce7d1aa58783fa963321cab245[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 6 13:03:22 2019 -0500
+
+    actualizacion
+    
+    actualizar los .png de la base de datos
+
+[33mcommit a5c95b076ff77def00e4a8d5cdd59e049e284ffb[m
+Merge: a7fe29c 87e9dcf
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 6 09:16:30 2019 -0500
+
+    Merge pull request #1 from JpMurcia/lado_oscuro
+    
+    las bases de datos
+
+[33mcommit 87e9dcf1caeac664f0839fb1cba7c63b55d1c0ea[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Sun Jan 6 09:10:57 2019 -0500
+
+    las bases de datos
+    
+    solo esta lade sigepi y la nuestra
+
+[33mcommit a7fe29c5ce1774f304a854040c12ded465693808[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Wed Oct 17 15:26:43 2018 -0500
+
+    sadsa
+    
+    asdsadasd
+
+[33mcommit 0ca66af10e44ba8fb15f54e51243d1f7be45c122[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Tue Oct 9 21:23:39 2018 -0500
+
+    sasad
+    
+    sadsd
+
+[33mcommit 447034f8d63b5c341b700b78bdf80488296769a4[m
+Author: oweimar <oweimar@htmail.com>
+Date:   Tue Oct 9 20:16:01 2018 -0500
+
+    vs2015
+
+[33mcommit 0fe8324a98e2679a41e45ff415a9f72036f2e966[m
+Author: oweimar <oweimar@htmail.com>
+Date:   Tue Oct 9 20:13:17 2018 -0500
+
+    vs 2015
+
+[33mcommit 985ebc279aca6e851b6dd36f6636fe605afe50b0[m
+Author: oweimar <oweimar@htmail.com>
+Date:   Tue Oct 9 19:49:00 2018 -0500
+
+    sirvio
+
+[33mcommit a543e0b32408d73f354669868a45c2a075c0eea0[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Tue Oct 9 16:50:14 2018 -0500
+
+    actualize pendejo
+    
+    subi solo imagenes, y todo lo demas es por defecto
+
+[33mcommit ca393b81185f25436b1ecbae5085f84b78e3d774[m
+Author: JpMurcia <juan.murcia@udla.edu.co>
+Date:   Tue Oct 9 12:02:13 2018 -0500
+
+    solucion
