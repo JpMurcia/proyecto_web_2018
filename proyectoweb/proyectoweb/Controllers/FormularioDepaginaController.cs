@@ -9,6 +9,7 @@ namespace proyectoweb.Controllers
 {
     public class FormularioDepaginaController
     {
+        
         private Grupo_inve_semillero grupo = new Grupo_inve_semillero();
 
         public FormularioDepaginaController()

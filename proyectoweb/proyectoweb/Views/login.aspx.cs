@@ -40,14 +40,14 @@ namespace proyectoweb.Views
                 if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                 {
 
-                    Response.Redirect("principal.aspx");
+                   
 
                 }
                 else
                 {
                     b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
                     b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
-                   // b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
+                    b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
 
                     b.fk_tipo_user = datoRegreso.Rows[0]["tipo"].ToString();
                     DataTable CreandoUser = controlador.crearUsuario(b);
