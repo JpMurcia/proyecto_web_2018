@@ -183,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-    <%--    <script src="../../Content/assetsLogin/js/buttons.js"></script>
+        <script src="../../Content/assetsLogin/js/buttons.js"></script>
         <script src="../../Content/assetsLogin/js/jquery.min.js"></script>
         <script src="../../Content/assetsLogin/js/material-kit.minf066.js"></script>
         <script src="../../Content/assetsLogin/js/plugins/nouislider.min.js"></script>
@@ -198,8 +198,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script src="../../Content/assetsLogin/js/core/bootstrap-material-design.min.js"></script>
         <script src="../../Content/assetsLogin/demo/vertical-nav.js"></script>
         <script src="../../Content/assetsLogin/demo/modernizr.js"></script>
-        <script src="../../Content/assetsLogin/demo/demo.js"></script>--%>
-
+        <script src="../../../Content/assetsLogin/demo/demo.js"></script>
+        
   <script>
   $(document).ready(function() {
     //init DateTimePickers
