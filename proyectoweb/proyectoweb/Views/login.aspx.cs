@@ -63,9 +63,6 @@ namespace proyectoweb.Views
 
                 if (Session["tipo"].ToString() == "2")
                 {
-
-
-
                     Response.Redirect("FormularioDePagina1.aspx");
 
                 }

@@ -47,7 +47,7 @@
                                             </div>
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="card-body" runat="server">
-                                                    <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>                                                    
+                                                    <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
                                                         <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
@@ -130,27 +130,24 @@
                                                     <span class="input-group-text">
                                                         <i class="material-icons">fiber_manual_record</i>
                                                         <h6>Titulos</h6>
-                                                        <div id="id"></div>
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
+                                    </div>
                                     <div class="tab-pane" id="Semilleros">
 
                                         <div class="card card-plain">
                                             <asp:Repeater ID="Repeater1" runat="server">
                                                 <ItemTemplate>
-                                            <div class="card-header" role="tab" id="headingFour">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Semillero #1
-
-                                                   
+                                                    <div class="card-header" role="tab" id="headingFour">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Semillero #1
 
                                                     <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </div>
-                                            
+                                                        </a>
+                                                    </div>
+
                                                     <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
                                                         <div class="card-body">
@@ -159,13 +156,11 @@
                                                                 <div class="card-header" role="tab" id="headingFive">
                                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
 
-                                                               
-
                                                                 <i class="material-icons">keyboard_arrow_down</i>
                                                                     </a>
                                                                 </div>
 
-                                                                <div id="collapseFive" id="collapseStyle" class="collapse show" style:color role="tabpanel" aria-labelledby="headingFive">
+                                                                <div id="collapseStyle" class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
                                                                     <div class="card-body">
                                                                         <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
@@ -206,7 +201,7 @@
                                                                             <i class="material-icons">mail</i>
                                                                         </span>
                                                                     </div>
-                                                                    <input type="text" class="form-control" placeholder="Correo Electronico">
+                                                                    <input type="text" class="form-control" placeholder="Correo Electronico" />
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
@@ -216,7 +211,7 @@
                                                                             <i class="material-icons">phone_iphone</i>
                                                                         </span>
                                                                     </div>
-                                                                    <input type="text" class="form-control" placeholder="Telefono">
+                                                                    <input type="text" class="form-control" placeholder="Telefono" />
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
@@ -229,126 +224,58 @@
                                                                     <input type="text" placeholder="Dirección" class="form-control" />
                                                                 </div>
                                                             </div>
-
-
                                                         </div>
                                                     </div>
-                                               
-                                        </div>
-                                                     </ItemTemplate>
+
+                                                    
+                                                </ItemTemplate>
                                             </asp:Repeater>
-
-
-                                </div>
-                                <div class="tab-pane" id="captain">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">supervised_user_circle</i>
-                                                    </span>
-                                                    <h6 text_align="center">Miembros</h6>
-                                                </div>
-                                            </div>
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text-center">#</th>
-                                                        <th>Nombre</th>
-                                                        <th class="text-right">Accion</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td>Andrew Mike</td>
-                                                        <td class="td-actions text-right ">
-                                                            <button type="button" rel="tooltip" class="btn btn-danger">
-                                                                <i class="material-icons">close</i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+</div>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane" id="description">
-                                        <div class="card card-plain">
-                                            <div class="card-header" role="tab" id="headingOne">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Proyectos Terminados
-
-                                                   
-
-                                                    <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </div>
-
-                                            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="card-body">
-
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text">
-                                                                <i class="material-icons">class</i>
-                                                            </span>
-                                                            <h6>Proyectos</h6>
-                                                        </div>
+                                        <div class="tab-pane" id="captain">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="material-icons">supervised_user_circle</i>
+                                                        </span>
+                                                        <h6 text_align="center">Miembros</h6>
                                                     </div>
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="text-center">#</th>
-                                                                <th>Nombre</th>
-                                                                <th class="text-right">Accion</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="text-center">1</td>
-                                                                <td>Proyecto 1</td>
-                                                                <td class="td-actions text-right ">
-                                                                    <p>
-                                                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                                                                            Editar
-                                                                       
-                                                                        </button>
-                                                                    </p>
-                                                                    <div class="collapse" id="collapseExample2">
-                                                                        <div class="card card-body">
-                                                                            <div class="form-group form-file-upload form-file-multiple">
-                                                                                <input type="file" multiple="" class="inputFileHidden">
-                                                                                <div class="input-group">
-                                                                                    <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple>
-                                                                                    <span class="input-group-btn">
-                                                                                        <button type="button" class="btn btn-fab btn-round btn-info">
-                                                                                            <i class="material-icons">layers</i>
-                                                                                        </button>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                                            </div>
-                                                                        </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-
                                                 </div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">#</th>
+                                                            <th>Nombre</th>
+                                                            <th class="text-right">Accion</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">1</td>
+                                                            <td>Andrew Mike</td>
+                                                            <td class="td-actions text-right ">
+                                                                <button type="button" rel="tooltip" class="btn btn-danger">
+                                                                    <i class="material-icons">close</i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                        <div class="card card-plain">
-                                            <div class="card-header" role="tab" id="headingThree">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Proyectos en curso
-                                                   
+                                        <div class="tab-pane" id="description">
+                                            <div class="card card-plain">
+                                                <div class="card-header" role="tab" id="headingOne">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Proyectos Terminados
+
                                                     <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </div>
-                                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="card-body">
-                                                    <div class="form-group">
+                                                    </a>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="card-body">
+
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">
@@ -371,17 +298,17 @@
                                                                     <td>Proyecto 1</td>
                                                                     <td class="td-actions text-right ">
                                                                         <p>
-                                                                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
                                                                                 Editar
-                                                                           
+                                                                       
                                                                             </button>
                                                                         </p>
-                                                                        <div class="collapse" id="collapseExample">
+                                                                        <div class="collapse" id="collapseExample2">
                                                                             <div class="card card-body">
                                                                                 <div class="form-group form-file-upload form-file-multiple">
-                                                                                    <input type="file" multiple="" class="inputFileHidden">
+                                                                                    <input type="file" multiple="" class="inputFileHidden" />
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple>
+                                                                                        <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
                                                                                         <span class="input-group-btn">
                                                                                             <button type="button" class="btn btn-fab btn-round btn-info">
                                                                                                 <i class="material-icons">layers</i>
@@ -394,46 +321,101 @@
                                                                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                                                 </div>
                                                                             </div>
+                                                                            </div>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card card-plain">
+                                                <div class="card-header" role="tab" id="headingThree">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Proyectos en curso
+                                                   
+                                                    <i class="material-icons">keyboard_arrow_down</i>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                    <div class="card-body">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text">
+                                                                        <i class="material-icons">class</i>
+                                                                    </span>
+                                                                    <h6>Proyectos</h6>
+                                                                </div>
+                                                            </div>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">#</th>
+                                                                        <th>Nombre</th>
+                                                                        <th class="text-right">Accion</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="text-center">1</td>
+                                                                        <td>Proyecto 1</td>
+                                                                        <td class="td-actions text-right ">
+                                                                            <p>
+                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    Editar
+                                                                           
+                                                                                </button>
+                                                                            </p>
+                                                                            <div class="collapse" id="collapseExample">
+                                                                                <div class="card card-body">
+                                                                                    <div class="form-group form-file-upload form-file-multiple">
+                                                                                        <input type="file" multiple="" class="inputFileHidden"/>
+                                                                                        <div class="input-group">
+                                                                                            <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" />
+                                                                                            <span class="input-group-btn">
+                                                                                                <button type="button" class="btn btn-fab btn-round btn-info">
+                                                                                                    <i class="material-icons">layers</i>
+                                                                                                </button>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="exampleFormControlTextarea1">Descripción</label>
+                                                                                        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                </form>
                                     </div>
-                                </div>
-                                <div class="wizard-footer">
-                                    <div class="pull-right">
-                                        <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
-                                    </div>
-                                    <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
 
-                            </form>
+                                    <div class="wizard-footer">
+                                        <div class="pull-right">
+                                            <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+                                            <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+                                        </div>
+                                        <div class="pull-left">
+                                            <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                              
                         </div>
-
                     </div>
-
                 </div>
             </div>
-            <!-- wizard container -->
         </div>
-    </div>
-    <!-- row -->
-    </div>
-        
-    <!--  big container -->
-    </div>
-
     
-   
-
+    
 
     <script src="/Content/assetsLogin/js/core/jquery.min.js" type="text/javascript"></script>
     <script src="/Content/assetsLogin/js/core/popper.min.js" type="text/javascript"></script>
@@ -457,7 +439,7 @@
     <script src="/Content/assetsLogin/demo/modernizr.js" type="text/javascript"></script>
     <script src="/Content/assetsLogin/demo/vertical-nav.js" type="text/javascript"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="../../buttons.github.io/buttons.js"></script>
+   <%-- <script async defer src="../../buttons.github.io/buttons.js"></script>--%>
     <!-- Js With initialisations For Demo Purpose, Don't Include it in Your Project -->
     <script src="/Content/assetsLogin/demo/demo.js" type="text/javascript"></script>
     <script src="/Content/assetsLogin/js/material-kit.minf066.js?v=2.1.0" type="text/javascript"></script>
