@@ -18,62 +18,37 @@
                         <div class="card-body">
 
 
-                            <%--      Desplegables de informacion de los diferentes tipos de permisos--%>
-                            <div class="alert alert-danger" role="alert">
-                                <div id="accordion" role="tablist">
-                                    <div class="card card-collapse">
-                                        <div class="card-header" role="tab" id="headingOne">
-                                         zz   <h5 class="mb-0">
-                                                <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Super Usuario
-          <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                                            <div class="card-body">
-                                                Este usuario tiene acceso a todas las opciones del aplicativo.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-collapse">
-                                        <div class="card-header" role="tab" id="headingTwo">
-                                            <h5 class="mb-0">
-                                                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Administrador
-          <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                                            <div class="card-body">
-                                                <pre>
-          Este usuario tiene acceso a:
+                              
+
+
+
+
+                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">notifications</i>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                    <span data-notify="message"><pre>
+          <h3>Usuario Administrador</h3> tiene acceso a:
           -Publicar,editar y eliminar paginas.
           -Asignar y quitar permisos de rol de administrador  a estudiantes.
           -Publicar,editar y eliminar noticias.
           -Publicar,editar y eliminar actividades.
-                                                    </pre>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-collapse">
-                                        <div class="card-header" role="tab" id="headingThree">
-                                            <h5 class="mb-0">
-                                                <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Estudiante
-          <i class="material-icons">keyboard_arrow_down</i>
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                            <div class="card-body">
-                                                <pre>
-           Este usuario tiene acceso a:
+            </pre></span>
+                  </div>
+
+                             <div class="alert alert-info alert-with-icon" data-notify="container">
+                    <i class="material-icons" data-notify="icon">notifications</i>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                    <span data-notify="message"><pre>           
+           <h3>Usuario Estudiante</h3> tiene acceso a:
           -Consultar actividades y eventos, y realizar la entrega de los y las mismas.
-                                                    </pre>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </pre></span>
+                  </div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -81,7 +56,6 @@
                                             <th class="text-center">#</th>
                                             <th>Nombre</th>
                                             <th>Programa</th>
-                                            <th>SuperUsuario</th>
                                             <th class="text-right">Administrador</th>
                                             <th class="text-right">Estudiante</th>
                                         </tr>
@@ -91,20 +65,11 @@
                                             <td class="text-center">1</td>
                                             <td>Estudiante Cualquiera #1</td>
                                             <td>Ingenieria de Sitemas</td>
-                                            <td>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
+                                            
                                             <td class="text-right">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
                                                         <span class="form-check-sign">
                                                             <span class="check"></span>
                                                         </span>
@@ -114,7 +79,7 @@
                                             <td class="td-actions text-right">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
                                                         <span class="form-check-sign">
                                                             <span class="check"></span>
                                                         </span>
@@ -127,16 +92,7 @@
                                             <td class="text-center">2</td>
                                             <td>Estudiante Cualquiera #2</td>
                                             <td>Ingenieria de Sistemas</td>
-                                            <td>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                        <span class="form-check-sign">
-                                                            <span class="check"></span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
+                                            
                                             <td class="text-right">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">

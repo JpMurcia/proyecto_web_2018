@@ -7800,7 +7800,7 @@ a.text-dark:focus, a.text-dark:hover {
 
             .btn.btn-primary.active.focus, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .btn.btn-primary:active.focus, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .open > .btn.btn-primary.dropdown-toggle.focus, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover, .show > .btn.btn-primary.dropdown-toggle.focus, .show > .btn.btn-primary.dropdown-toggle:focus, .show > .btn.btn-primary.dropdown-toggle:hover {
                 color: #fff;
-                background-color: #9124a3;
+                background-color: #ff0303;
                 border-color: #3f1048
             }
 
@@ -14901,7 +14901,7 @@ a {
 
             .fixed-plugin .btn.btn-primary.active.focus, .fixed-plugin .btn.btn-primary.active:focus, .fixed-plugin .btn.btn-primary.active:hover, .fixed-plugin .btn.btn-primary:active.focus, .fixed-plugin .btn.btn-primary:active:focus, .fixed-plugin .btn.btn-primary:active:hover, .open > .fixed-plugin .btn.btn-primary.dropdown-toggle.focus, .open > .fixed-plugin .btn.btn-primary.dropdown-toggle:focus, .open > .fixed-plugin .btn.btn-primary.dropdown-toggle:hover, .show > .fixed-plugin .btn.btn-primary.dropdown-toggle.focus, .show > .fixed-plugin .btn.btn-primary.dropdown-toggle:focus, .show > .fixed-plugin .btn.btn-primary.dropdown-toggle:hover {
                 color: #fff;
-                background-color: #9124a3;
+                background-color: #ff0101;
                 border-color: #3f1048
             }
 
