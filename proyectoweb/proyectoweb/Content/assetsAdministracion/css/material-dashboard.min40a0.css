@@ -13,6 +13,15 @@
 
  */
 
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
 dl, h1, h2, h3, h4, h5, h6, ol, p, pre, ul {
     margin-top: 0
 }

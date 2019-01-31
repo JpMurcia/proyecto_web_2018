@@ -6,13 +6,19 @@
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 
 <!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:51:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack --><!-- /Added by HTTrack -->
 <head runat="server">
 <title>
 
 ViewGroup
 
 </title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
     <link href="../../Content/assetsLogin/css/css8393.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/material-kit.minf066.css" rel="stylesheet" />
@@ -27,7 +33,87 @@ ViewGroup
 <!-- Google Tag Manager -->
 
 
+    <style>
+        @media (min-width: 768px) {
 
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
+    </style>
 
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,6 +151,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
+        <form class="form-inline col-md-4 ">
+                  <div class="form-group has-white bmd-form-group">
+                    <input type="text" style="color:#000000" class="form-control " placeholder="Search"/>
+                  </div>
+                  <button type="submit" class="btn btn-white btn-raised btn-fab btn-round">
+                    <i class="material-icons">search</i>
+                  </button>
+                </form>
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
@@ -100,75 +194,119 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<div class="main main-raised">
-     <div class="section section-basic">
-         <h1>Hola Mundo</h1>
+        <div class="main main-raised">
+            <div class="section section-basic">
+                <h1>Hola Mundo</h1>
 
-         <div class="container">
-<div class="page-header">
-  <h3>Carousel multiple item for Boostrap</h3>
-</div>
+                <div class="container">
 
-<div class="row">
-<div class="col-xs-12">
-  <div class="carousel slide" id="myCarousel" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="row">
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/E8117F/ffffff?text=1" class="img-responsive"></a>
-          </div>
-            <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/31B0D5/ffffff?text=2" class="img-responsive"></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/94EF23/ffffff?text=3" class="img-responsive"></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/FFA602/ffffff?text=4" class="img-responsive"></a>
-          </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+
+
+                            
+
+
+<div class="container-fluid">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3  active">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 1" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=1" alt="slide 1">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 3" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=2" alt="slide 2">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 4" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=3" alt="slide 3">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 5" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=4" alt="slide 4">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 6" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=5" alt="slide 5">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 7" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=6" alt="slide 6">
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+               <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 8" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=7" alt="slide 7">
+                    </a>
+                  </div>
+                </div>
+            </div>
+             <div class="carousel-item col-md-3  ">
+                <div class="panel panel-default">
+                  <div class="panel-thumbnail">
+                    <a href="#" title="image 2" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=8" alt="slide 8">
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/E8117F/ffffff?text=5" class="img-responsive" ></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/31B0D5/ffffff?text=6" class="img-responsive" ></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/94EF23/ffffff?text=7" class="img-responsive" ></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="#"><img src="http://placehold.it/300x200/FFA602/ffffff?text=8" class="img-responsive" ></a>
-          </div>
-        </div>
-      </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <button type="button" class="btn btn-primary btn-round btn-xs">
-        <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span>
-      </button>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <button type="button" class="btn btn-primary btn-round btn-xs">
-        <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
-      </button>
-    </a>
-  </div>
-</div>
-</div>
-  </div>
-
-
-         </div>
 </div>
 
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
 
 
 
-<footer class="footer"  data-background-color="black">
+
+        <footer class="footer"  data-background-color="black">
   <div class="container">
     <div class="copyright float-right">
         &copy;
@@ -211,6 +349,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 </script>
+        <script>
+
+            
+$('#carouselExample').on('slide.bs.carousel', function (e) {
+
+  
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $('.carousel-item').length;
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+
+
+  $('#carouselExample').carousel({ 
+                interval: 2000
+        });
+
+
+  $(document).ready(function() {
+/* show lightbox when clicking a thumbnail */
+    $('a.thumb').click(function(event){
+      event.preventDefault();
+      var content = $('.modal-body');
+      content.empty();
+        var title = $(this).attr("title");
+        $('.modal-title').html(title);        
+        content.html($(this).html());
+        $(".modal-profile").modal({show:true});
+    });
+
+  });
+        </script>
 
 
 
