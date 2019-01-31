@@ -128,6 +128,8 @@
     <Content Include="Content\assetsAdministracion\img\flags\BR.png" />
     <Content Include="Content\assetsAdministracion\img\flags\DE.png" />
     <Content Include="Content\assetsAdministracion\img\flags\GB.png" />
+    <Content Include="Content\assetsAdministracion\img\flags\plantilla-responsiva-1-200x200.jpg" />
+    <Content Include="Content\assetsAdministracion\img\flags\post-planes-de-mkt-informes-y-ebooks.png" />
     <Content Include="Content\assetsAdministracion\img\flags\RO.png" />
     <Content Include="Content\assetsAdministracion\img\flags\US.png" />
     <Content Include="Content\assetsAdministracion\img\gi.jpg" />
