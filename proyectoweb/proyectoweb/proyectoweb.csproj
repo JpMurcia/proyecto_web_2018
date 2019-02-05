@@ -1124,9 +1124,9 @@
     <Compile Include="Models\Modelo viewGroup\Actividad.cs" />
     <Compile Include="Models\Modelo viewGroup\ActividadUsuario.cs" />
     <Compile Include="Models\Modelo viewGroup\Diseño.cs" />
-    <Compile Include="Models\Modelo viewGroup\faseCronograma.cs" />
     <Compile Include="Models\Modelo viewGroup\grupo_investigacion.cs" />
     <Compile Include="Models\Modelo viewGroup\InformacionIntegrantesProyecto.cs" />
+    <Compile Include="Models\Modelo viewGroup\menu.cs" />
     <Compile Include="Models\Modelo viewGroup\pagina_web.cs" />
     <Compile Include="Models\Modelo viewGroup\permisos.cs" />
     <Compile Include="Models\Modelo viewGroup\plantilla.cs" />
@@ -1134,6 +1134,8 @@
     <Compile Include="Models\Modelo viewGroup\roles.cs" />
     <Compile Include="Models\Modelo viewGroup\soporta.cs" />
     <Compile Include="Models\Modelo viewGroup\tipoProducto.cs" />
+    <Compile Include="Models\Modelo viewGroup\tipo_has_menu.cs" />
+    <Compile Include="Models\Modelo viewGroup\tipo_usuario.cs" />
     <Compile Include="Models\Modelo viewGroup\usuario.cs" />
     <Compile Include="Models\Modelo viewGroup\vistas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -169,13 +169,20 @@
                             </ul>
                         </div>
                     </li>
+                    <asp:Repeater ID="RepeaterMenu" runat="server">
+                        <ItemTemplate>
+                            <li class="nav" title='<%#Eval("nom_menu")%>'>
+                                <a t="<%#Eval("nom_menu")%>"  class="nav-link" href="Actividades.aspx">
+                                    <i class="material-icons">date_range</i>
+                                    <p >dsadsadasd</p>
+                                    <%-- <asp:TextBox disabled="disabled" Text='<%#Eval("nom_menu")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>--%>
+                                    <%-- <p ID="menu" title='<%#Eval("nom_menu")%>' ></p>--%>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="Actividades.aspx">
-                            <i class="material-icons">date_range</i>
-                            <p>Actividades</p>
-                        </a>
-                    </li>
+         
 
                 </ul>
             </div>
