@@ -60,6 +60,7 @@ namespace proyectoweb.Views
                 Session["nom"] = a.nombre;
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;
+              
 
                 if (Session["tipo"].ToString() == "2")
                 {

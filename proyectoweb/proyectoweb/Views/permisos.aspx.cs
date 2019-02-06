@@ -13,5 +13,11 @@ namespace proyectoweb.Views
         {
 
         }
+
+        public void llenar_permisos() {
+
+
+
+        }
     }
 }

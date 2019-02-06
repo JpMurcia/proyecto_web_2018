@@ -62,6 +62,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+
                                             <td class="text-center">1</td>
                                             <td>Estudiante Cualquiera #1</td>
                                             <td>Ingenieria de Sitemas</td>
@@ -122,6 +123,7 @@
 
 
                             <button type="button" class="btn  btn-success">Actualizar</button>
+
                         </div>
                     </div>
                 </div>
