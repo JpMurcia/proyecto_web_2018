@@ -62,5 +62,19 @@ namespace proyectoweb.Models.ModeloSigepi
             return conect.ExecuteProcedure("proced_consul_semilleros", p);
 
         }
+
+        public DataTable consultarMiembros(Grupo_inve_semillero obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "nom_grupo",
+                obj.nombreGrupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_miembro_simple", p);
+
+        }
     }
 }

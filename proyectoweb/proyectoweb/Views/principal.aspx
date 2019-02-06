@@ -65,7 +65,7 @@
                                                             </div>
                                                             <div class="form-check form-check-radio col-md-3 content-center form-check-inline ml-auto mr-auto" ">
                                                                 <label class="form-check-label">
-                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Selecionar
+                                                                    <input required class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio" value="option1">Selecionar
                                                                      <span class="circle">
                                                                          <span class="check"></span>
                                                                      </span>
@@ -102,7 +102,7 @@
                                                 </div>
                                                          <div class="form-check form-check-radio form-check-inline col-md-3 ml-auto mr-auto">
                                                     <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                                                        <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio" value="option1">
                                                         Seleccionar 
                                                      <span class="circle">
                                                          <span class="check"></span>

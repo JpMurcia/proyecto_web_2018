@@ -13,6 +13,8 @@ namespace proyectoweb.Views
     {
         Grupo_inve_semillero grupo = new Grupo_inve_semillero();
         Grupo_inve_semillero semillero = new Grupo_inve_semillero();
+        modelUsuario miembros = new modelUsuario();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             llenarDatos();
@@ -28,6 +30,17 @@ namespace proyectoweb.Views
 
             semillero.nombreGrupo = Request.QueryString["grupo"];
             DataTable dt2 = semillero.consultarsemilleroModel(semillero);
+
+            DataTable dt3 = grupo.consultarMiembros(grupo);
+
+          
+
+            Repeater1.DataSource = dt2;
+
+            Repeater1.DataBind();
+
+            RepeaterMiembro.DataSource = dt3;
+            RepeaterMiembro.DataBind();
 
             if (dt.Rows.Count > 0)
             {
@@ -53,9 +66,7 @@ namespace proyectoweb.Views
                 imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
 
 
-                Repeater1.DataSource = dt2;
-
-                Repeater1.DataBind();
+               
 
 
 

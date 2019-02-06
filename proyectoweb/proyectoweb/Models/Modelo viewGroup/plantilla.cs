@@ -9,5 +9,6 @@ namespace proyectoweb.Models.ModelosViewGroup
     {
         public string id { get; set; }
         public string nombre { get; set; }
+        public string url_imagen { get; set; }
     }
 }
