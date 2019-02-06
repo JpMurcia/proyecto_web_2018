@@ -12,6 +12,5 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string urlPagina { get; set; }
         public plantilla plantilla  { get; set; }
         public Grupo_inve_semillero grupo { get; set; }
-        public Boolean estado { get; set; }
     }
 }

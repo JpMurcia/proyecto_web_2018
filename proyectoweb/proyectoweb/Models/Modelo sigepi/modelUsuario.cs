@@ -67,26 +67,6 @@ namespace proyectoweb.Models.ModeloSigepi
 
         }
 
-        public DataTable consultar_mienbros(modelUsuario obj)
-        {
-            List<Parametro> p = new List<Parametro>();
-            p.Add(new Parametro(
-                "email_usuari",
-                obj.email_usuario,
-                "VARCHAR",
-                ParameterDirection.Input
-                ));
-            p.Add(new Parametro(
-                "contra",
-                obj.contrasena,
-                "VARCHAR",
-                ParameterDirection.Input
-                ));
-
-            return conect.ExecuteProcedure("proced_validar_user", p);
-
-        }
-
 
 
     }

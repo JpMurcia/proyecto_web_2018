@@ -22,9 +22,7 @@
                                     <div class="col-md-6">
                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                             <div class="fileinput-new thumbnail img-raised">
-                                                <%--<img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="...">--%>
-                                                  <img src="https://www.granteatronacional.pe/sites/default/files/ImagenesEvento/640x480.png" alt="...">
-                                                
+                                                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="...">
                                             </div>
                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                             <div>

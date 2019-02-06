@@ -13,9 +13,7 @@ namespace proyectoweb.Views
     {
         
         menu menuD = new menu();
-        public DataTable dt;
-
-
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,15 +25,15 @@ namespace proyectoweb.Views
            // tipo_menu.pk_fk_tipo_usuario.id_tipo_usuario = "1";
            // tipo_menu.pk_fk_tipo_usuario.id_tipo_usuario = Session["tipo"].ToString();
            menuD.fk_rol= Session["tipo"].ToString();
-            menuD.fk_rol = "1";
-            dt = menuD.consultar_menu_nom(menuD);
+           
+            DataTable dt = menuD.consultar_menu_nom(menuD);
 
             
             //menuD.nom_menu = dt.Rows[0]["nom_menu"].ToString();
 
-            //RepeaterMenu.DataSource = dt;
+            RepeaterMenu.DataSource = dt;
 
-            //RepeaterMenu.DataBind();
+            RepeaterMenu.DataBind();
 
 
 

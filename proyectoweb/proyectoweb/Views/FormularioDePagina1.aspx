@@ -238,6 +238,29 @@
                                                     </ItemTemplate>
                                                 </asp:Repeater>
                                             </div>
+<<<<<<< HEAD
+=======
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">#</th>
+                                                        <th>Nombre</th>
+                                                        <th class="text-right">Accion</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">1</td>
+                                                        <td>Andrew Mike</td>
+                                                        <td class="td-actions text-right ">
+                                                            <button type="button" rel="tooltip" class="btn btn-danger">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+>>>>>>> parent of 0bdae88... ultima_actualizacion
                                         </div>
                                         <div class="tab-pane" id="captain">
                                             <div class="form-group">

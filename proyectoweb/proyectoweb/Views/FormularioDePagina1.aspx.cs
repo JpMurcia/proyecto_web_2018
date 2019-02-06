@@ -14,8 +14,11 @@ namespace proyectoweb.Views
     {
         Grupo_inve_semillero grupo = new Grupo_inve_semillero();
         Grupo_inve_semillero semillero = new Grupo_inve_semillero();
+<<<<<<< HEAD
         
 
+=======
+>>>>>>> parent of 0bdae88... ultima_actualizacion
         protected void Page_Load(object sender, EventArgs e)
         {
             llenarDatos();
@@ -42,6 +45,7 @@ namespace proyectoweb.Views
 
             semillero.nombreGrupo = Request.QueryString["grupo"];
 
+<<<<<<< HEAD
             DataTable dt2 = controlador.consultarsemilleroController(grupo);
 
             DataTable dt3 = controlador.consultarmiembroController(grupo);
@@ -66,6 +70,8 @@ namespace proyectoweb.Views
             RepeaterActivo.DataSource = dt4;
             RepeaterActivo.DataBind();
 
+=======
+>>>>>>> parent of 0bdae88... ultima_actualizacion
             if (dt.Rows.Count > 0)
             {
                 grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
@@ -90,7 +96,9 @@ namespace proyectoweb.Views
                 imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
 
 
-               
+                Repeater1.DataSource = dt2;
+
+                Repeater1.DataBind();
 
 
 

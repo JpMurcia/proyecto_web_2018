@@ -13,7 +13,6 @@ namespace proyectoweb.Models.Modelo_viewGroup
         public string nom_menu { get; set; }
         public string id_menu_padre { get; set; }
         public string url_pagina { get; set; }
-        public string icono { get; set; }
         public string fk_rol { get; set; }
 
         private ConexionPropio conect = new ConexionPropio();
@@ -31,21 +30,21 @@ namespace proyectoweb.Models.Modelo_viewGroup
                 ));
 
 
-            return conect.ExecuteProcedure("proced_consul_menu_view", p);
+            return conect.ExecuteProcedure("proced_consul_menu_nom", p);
         }
 
-        //public DataTable consultar_menu_view(menu obj)
-        //{
-        //    List<Parametro> p = new List<Parametro>();
-        //    p.Add(new Parametro(
-        //        "id_rol",
-        //        obj.fk_rol,
-        //        "VARCHAR",
-        //        ParameterDirection.Input
-        //        ));
+        public DataTable consultar_menu_view(menu obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_rol",
+                obj.fk_rol,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
 
 
-        //    return conect.ExecuteProcedure("proced_consul_menu_view", p);
-        //}
+            return conect.ExecuteProcedure("proced_consul_menu_view", p);
+        }
     }
 }

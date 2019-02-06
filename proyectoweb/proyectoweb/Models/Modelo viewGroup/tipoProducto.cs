@@ -5,9 +5,9 @@ using System.Web;
 
 namespace proyectoweb.Models.ModelosViewGroup
 {
-    public class plantilla
+    public class tipoProducto
     {
-        public string id { get; set; }
-        public string nombre { get; set; }
+        public string idtipoProducto { get; set; }
+        public string nombreTipoActividad { get; set; }
     }
 }
