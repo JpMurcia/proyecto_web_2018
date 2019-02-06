@@ -62,7 +62,7 @@ namespace proyectoweb.Models.ModeloSigepi
             return conect.ExecuteProcedure("proced_consul_semilleros", p);
 
         }
-<<<<<<< HEAD
+
 
         public DataTable consultarMiembros(Grupo_inve_semillero obj)
         {
@@ -108,7 +108,5 @@ namespace proyectoweb.Models.ModeloSigepi
 
 
 
-=======
->>>>>>> parent of 0bdae88... ultima_actualizacion
     }
 }

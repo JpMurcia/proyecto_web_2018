@@ -238,8 +238,7 @@
                                                     </ItemTemplate>
                                                 </asp:Repeater>
                                             </div>
-<<<<<<< HEAD
-=======
+
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -260,7 +259,7 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
->>>>>>> parent of 0bdae88... ultima_actualizacion
+
                                         </div>
                                         <div class="tab-pane" id="captain">
                                             <div class="form-group">
@@ -290,7 +289,7 @@
 
                                                                     <td class="td-actions text-right ">
                                                                         <button type="button" rel="tooltip" class="btn btn-danger">
-                                                                            <i class="material-icons">close</i>
+                                                                            <i class="material-icons">block</i>
                                                                         </button>
                                                                     </td>
                                                                 </tr>

@@ -137,8 +137,7 @@ namespace proyectoweb.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
-<<<<<<< HEAD
-        
+
         /// <summary>
         /// Control RepeaterMiembro.
         /// </summary>
@@ -165,7 +164,6 @@ namespace proyectoweb.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepeaterActivo;
-=======
->>>>>>> parent of 0bdae88... ultima_actualizacion
+
     }
 }
