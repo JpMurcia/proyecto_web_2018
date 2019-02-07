@@ -67,13 +67,13 @@ namespace proyectoweb.Views
             RepeaterActivo.DataSource = dt4;
             RepeaterActivo.DataBind();
 
-            List<string> lista = new List<string>();
+            //List<string> lista = new List<string>();
 
-            foreach (RepeaterItem Item in RepeaterInacti.Items)
-            {
-                DropDownList ddlist = (DropDownList)Item.FindControl("DropDownList1");
-                lista.Add(ddlist.SelectedItem.ToString());
-            }
+            //foreach (RepeaterItem Item in RepeaterInacti.Items)
+            //{
+            //    DropDownList ddlist = (DropDownList)Item.FindControl("DropDownList1");
+            //    lista.Add(ddlist.SelectedItem.ToString());
+            //}
 
             if (dt.Rows.Count > 0)
             {
