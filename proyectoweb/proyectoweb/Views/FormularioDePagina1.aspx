@@ -239,7 +239,9 @@
                                                 </asp:Repeater>
                                             </div>
 
-                                            <table class="table">
+
+
+<%--                                            <table class="table">
                                                 <thead>
                                                     <tr>
                                                         <th class="text-center">#</th>
@@ -258,7 +260,9 @@
                                                         </td>
                                                     </tr>
                                                 </tbody>
-                                            </table>
+                                            </table>--%>
+
+
 
                                         </div>
                                         <div class="tab-pane" id="captain">
