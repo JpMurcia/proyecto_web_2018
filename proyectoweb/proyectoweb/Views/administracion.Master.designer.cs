@@ -22,13 +22,13 @@ namespace proyectoweb.Views {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// Control RepeaterMenu.
+        /// Control Padre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterMenu;
+        protected global::System.Web.UI.WebControls.Repeater Padre;
         
         /// <summary>
         /// Control ContentPlaceHolder1.

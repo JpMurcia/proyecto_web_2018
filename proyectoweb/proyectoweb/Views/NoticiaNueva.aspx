@@ -44,14 +44,30 @@
                                             <span class="material-input"></span>
 
                                             <div class="dropdown show">
-                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                    Seleccione el proyecto al que pertenece la publicación
+                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Seleccione el proyecto al que pertenece la publicación
                                                 </a>
 
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                   <asp:Repeater ID="RepeaterRoducto" runat="server">
+                                                        <ItemTemplate>
+                                                            <a class="dropdown-item" href="#"><%#Eval("nom_producto")%></a>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>--
+
+
+                                                  <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                        <ItemTemplate>
+
+                                                            <a class="dropdown-item" href="#"><%#Eval("nom_grupo")%></a>
+
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>--
                                                     <a class="dropdown-item" href="#">Proyecto 1</a>
                                                     <a class="dropdown-item" href="#">Proyecto 2</a>
                                                     <a class="dropdown-item" href="#">Proyecto 3</a>
+
+
+
                                                 </div>
                                             </div>
                                         </div>
