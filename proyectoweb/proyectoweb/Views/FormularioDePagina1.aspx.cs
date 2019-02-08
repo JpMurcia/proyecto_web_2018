@@ -51,8 +51,7 @@ namespace proyectoweb.Views
             DataTable dt5 = controlador.consultarProyectoInacController(grupo);
 
 
-            // Repeater1.Items
-          
+
 
 
             Repeater1.DataSource = dt2;
@@ -67,13 +66,6 @@ namespace proyectoweb.Views
             RepeaterActivo.DataSource = dt4;
             RepeaterActivo.DataBind();
 
-            //List<string> lista = new List<string>();
-
-            //foreach (RepeaterItem Item in RepeaterInacti.Items)
-            //{
-            //    DropDownList ddlist = (DropDownList)Item.FindControl("DropDownList1");
-            //    lista.Add(ddlist.SelectedItem.ToString());
-            //}
 
             if (dt.Rows.Count > 0)
             {
