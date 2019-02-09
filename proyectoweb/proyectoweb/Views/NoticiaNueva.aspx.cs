@@ -29,14 +29,14 @@ namespace proyectoweb.Views
 
             DataTable dt = controlador.ConsultarProduc(produc);
 
-            DataTable dt2 = controlador.consultarSemillero(semillero);
+           // DataTable dt2 = controlador.consultarSemillero(semillero);
 
 
             RepeaterRoducto.DataSource = dt;
             RepeaterRoducto.DataBind();
 
-            RepeaterMiembro.DataSource = dt2;
-            RepeaterMiembro.DataBind();
+            //RepeaterMiembro.DataSource = dt2;
+            //RepeaterMiembro.DataBind();
 
 
         }

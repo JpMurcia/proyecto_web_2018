@@ -30,7 +30,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                 ParameterDirection.Input
                 ));
 
-            return conect.ExecuteProcedure("proced_consul_producto", p);
+            return conect.ExecuteProcedure("proced_consultar_product_semillero", p);
 
 
         }
