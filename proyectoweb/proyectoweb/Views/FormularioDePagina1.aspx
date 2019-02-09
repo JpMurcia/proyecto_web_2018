@@ -91,6 +91,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
@@ -146,28 +148,30 @@
                                         <div class="tab-pane" id="Semilleros">
 
                                             <div class="card card-plain">
+
                                                 <asp:Repeater ID="Repeater1" runat="server">
                                                     <ItemTemplate>
-                                                        <div class="card-header" role="tab" id="headingFour">
-                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> <%#Eval("nom_grupo")%> 
 
-                                                    <i class="material-icons">keyboard_arrow_down</i>
+                                                        <div class="card-header" role="tab" id="headingFour">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
+
+                                                                <i class="material-icons">keyboard_arrow_down</i>
                                                             </a>
                                                         </div>
 
-                                                        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                        <div id="s<%#Eval("id_grupo")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
                                                             <div class="card-body">
 
                                                                 <div class="card card-plain">
                                                                     <div class="card-header" role="tab" id="headingFive">
-                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
+                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#g<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
 
-                                                                <i class="material-icons">keyboard_arrow_down</i>
+                                                                         <i class="material-icons">keyboard_arrow_down</i>
                                                                         </a>
                                                                     </div>
 
-                                                                    <div id="collapseStyle" class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
+                                                                    <div id="g<%#Eval("id_grupo")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
                                                                         <div class="card-body">
                                                                             <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
@@ -194,73 +198,32 @@
                                                                             </div>
                                                                             <div class="col-sm-2 ">
                                                                                 <h4>Imagen de Grupo</h4>
-                                                                                <img runat="server" text='<%#Eval("url_logo_grupo") %>' id="imagenDeSemillero" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
+                                                                            
+                                                                                <img runat="server"  src='<%#Eval("url_logo_grupo") %>'  alt="Raised Image" class="img-raised rounded img-fluid"/>
                                                                             </div>
+                                                                          
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
 
-                                                                <div class="form-group">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend">
-                                                                            <span class="input-group-text">
-                                                                                <i class="material-icons">mail</i>
-                                                                            </span>
-                                                                        </div>
-                                                                        <input type="text" class="form-control" placeholder="Correo Electronico" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend">
-                                                                            <span class="input-group-text">
-                                                                                <i class="material-icons">phone_iphone</i>
-                                                                            </span>
-                                                                        </div>
-                                                                        <input type="text" class="form-control" placeholder="Telefono" />
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend">
-                                                                            <span class="input-group-text">
-                                                                                <i class="material-icons">place</i>
-                                                                            </span>
-                                                                        </div>
-                                                                        <input type="text" placeholder="Dirección" class="form-control" />
-                                                                    </div>
-                                                                </div>
+
                                                             </div>
+
                                                         </div>
 
+                                                        <br />
+                                                        <br />
 
                                                     </ItemTemplate>
                                                 </asp:Repeater>
+
                                             </div>
 
 
 
-<%--                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="text-center">#</th>
-                                                        <th>Nombre</th>
-                                                        <th class="text-right">Accion</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td>Andrew Mike</td>
-                                                        <td class="td-actions text-right ">
-                                                            <button type="button" rel="tooltip" class="btn btn-danger">
-                                                                <i class="material-icons">close</i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>--%>
+
 
 
 
@@ -278,9 +241,9 @@
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
-                                                            <th class="text-center">#</th>
+                                                           
                                                             <th>Nombre</th>
-                                                            <th class="text-right">Accion</th>
+                                                            <th class="text-right">Publico</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -288,13 +251,17 @@
                                                         <asp:Repeater ID="RepeaterMiembro" runat="server">
                                                             <ItemTemplate>
                                                                 <tr>
-                                                                    <td class="text-center">1</td>
+                                                                    
                                                                     <td><%#Eval("nom_usuario") %> </td>
 
                                                                     <td class="td-actions text-right ">
-                                                                        <button type="button" rel="tooltip" class="btn btn-danger">
-                                                                            <i class="material-icons">block</i>
-                                                                        </button>
+                                                                        <div class="togglebutton"  >
+                                                                            <label>
+                                                                                <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" >
+                                                                               
+                                                                                
+                                                                            </label>
+                                                                        </div>
                                                                     </td>
                                                                 </tr>
                                                             </ItemTemplate>
@@ -330,7 +297,7 @@
                                                         <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th class="text-center">#</th>
+                                                                    
                                                                     <th>Nombre</th>
                                                                     <th class="text-right">Accion</th>
                                                                 </tr>
@@ -343,16 +310,16 @@
 
                                                                         <tr>
 
-                                                                            <td class="text-center">1</td>
+                                                                           
                                                                             <td><%#Eval("nom_proyecto") %></td>
                                                                             <td class="td-actions text-right ">
                                                                                 <p>
-                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
                                                                                         Editar
                                                                        
                                                                                     </button>
                                                                                 </p>
-                                                                                <div class="collapse" id="collapseExample2">
+                                                                                <div class="collapse" id="p<%#Eval("id_proyecto") %>">
                                                                                     <div class="card card-body">
                                                                                         <div class="form-group form-file-upload form-file-multiple">
                                                                                             <input type="file" multiple="" class="inputFileHidden" />
@@ -407,7 +374,7 @@
                                                             <table  class="table">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th class="text-center">#</th>
+                                                                       
                                                                         <th>Nombre</th>
                                                                         <th class="text-right">Accion</th>
                                                                     </tr>
@@ -418,7 +385,6 @@
                                                                         <ItemTemplate>
 
                                                                             <tr>
-                                                                                <td class="text-center">1</td>
                                                                                 <td  ><%#Eval("nom_proyecto") %> </td>
                                                                                 <td class="td-actions text-right ">
                                                                                     <p>

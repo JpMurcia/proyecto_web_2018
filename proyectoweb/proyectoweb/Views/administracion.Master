@@ -49,35 +49,62 @@
 
             <ul class="nav">
 
-               <%-- <asp:Repeater ID="ParentRepeater" runat="server" OnItemDataBound="ItemBound">
-                    <ItemTemplate>--%>
+               <%-- <asp:Repeater ID="Padre" runat="server" OnItemDataBound="ItemBound">
+                    <ItemTemplate>
+                        
 
-                        <asp:Repeater ID="Padre" runat="server">
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                                <i class="material-icons"><%# Eval("icon")%></i>
+                                <p>
+                                    <%# Eval("nombre") %>
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
 
-                            <ItemTemplate>
-
-                                <li class="nav-item ">
-                                    <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-                                        <i class="material-icons">content_paste</i>
-                                        <p>
-                                            <%# Eval("nombre") %>
-                                            <b class="caret"></b>
-                                        </p>
-                                    </a>
-                                </li>
-                                <%# Eval("nombre") %>
-                            </ItemTemplate>
-                        </asp:Repeater>
-
-              <%--      </ItemTemplate>
-                </asp:Repeater>--%>
+                            <asp:Repeater ID="Hijo" runat="server">
+                                <ItemTemplate>
 
 
+                                    <div class="collapse" id="pagesExamples">
+                                        <ul class="nav">
+
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href=" <%# Eval("url") %>">
+                                                    <span class="sidebar-mini"><%# Eval("icon")%></span>
+                                                    <span class="sidebar-normal"> <%# Eval("nombre") %></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>--%>
+
+
+
+
+                <asp:Repeater ID="Padre" runat="server" >
+                    <ItemTemplate>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+                                <i class="material-icons"><%#Eval("icon")%></i>
+                                <p>
+                                    <%#Eval("nombre") %>
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+
+                            
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+                                  
 
 
 
 
 
+
+
+<%--
                 <li class="nav-item ">
                     <a class="nav-link" data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">content_paste</i>
@@ -103,7 +130,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li>--%>
 
 
                 <li class="nav-item ">
