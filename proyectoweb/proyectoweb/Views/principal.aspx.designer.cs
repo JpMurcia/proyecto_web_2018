@@ -10,7 +10,7 @@
 namespace proyectoweb.Views {
     
     
-    public partial class principalcopia {
+    public partial class principal {
         
         /// <summary>
         /// Control form3.

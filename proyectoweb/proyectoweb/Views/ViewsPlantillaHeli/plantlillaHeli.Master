@@ -6,7 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-
 		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/bootstrap.min.css" type="text/css" media="all"/>
 		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/font-awesome.min.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/pe-icon-7-stroke.css" type="text/css" media="all" />
@@ -61,12 +60,12 @@
 					<div class="widget">
 						<h3 class="widget-title">Enlaces Ùtiles</h3>
 						<ul>
-							<li><a href="about-us-3.html">¿Quiènes Somos?</a></li>
-							<li><a href="masonry-fullwidth-3-columns">Proyectos</a></li>
-							<li><a href="blog-grid-with-sidebar.html">Blog</a></li>
-							<li><a href="faq.html">Miembros</a></li>
-							<li><a href="faq.html">Semilleros</a></li>
-							<li><a href="contact-us.html">Contacto</a></li>
+							<li><a href="QuienesSomos.aspx">¿Quiènes Somos?</a></li>
+							<li><a href="Proyectos.aspx">Proyectos</a></li>
+							<li><a href="Blog.aspx">Blog</a></li>
+							<li><a href="Miembros.aspx">Miembros</a></li>
+							<li><a href="Semillero.aspx">Semilleros</a></li>
+							<li><a href="Contacto.aspx">Contacto</a></li>
 						</ul>
 					</div>
 				</div>
@@ -93,16 +92,16 @@
 									<div class="primary-menu">
 										<ul class="main-menu">
 											<li class="menu-item-has-children mega-menu">
-												<a href="index.html">Principal</a>
+												<a href="IndexHeli.aspx">Principal</a>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="about-us-3.html">¿Quiènes Somos?</a>
+												<a href="QuienesSomos.aspx">¿Quiènes Somos?</a>
 											</li>
 											<li class="menu-item-has-children mega-menu">
-												<a href="masonry-fullwidth-3-columns.html">Proyectos</a>
+												<a href="Proyectos.aspx">Proyectos</a>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="blog-grid-with-sidebar.html">Blog</a>
+												<a href="Blog.aspx">Blog</a>
 											</li>
 											<li class="menu-item-has-children mega-menu">
 												<a href="#">Semilleros</a>
@@ -110,20 +109,20 @@
 													<div class="col-sm-3">
 																	<div class="column-inner">
 																		<ul class="menu">
-																			<li><a href="company.html">Semillero #1</a></li>
-																			<li><a href="company.html">Semillero #2</a></li>
-																			<li><a href="company.html">Semillero #3</a></li>
-																			<li><a href="company.html">Semillero #4</a></li>
+																			<li><a href="Semillero.aspx">Semillero #1</a></li>
+																			<li><a href="Semillero.aspx">Semillero #2</a></li>
+																			<li><a href="Semillero.aspx">Semillero #3</a></li>
+																			<li><a href="Semillero.aspx">Semillero #4</a></li>
 																		</ul>
 																	</div>
 																</div>
 												</ul>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="minimal.html">Miembros</a>
+												<a href="Miembros.aspx">Miembros</a>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="contact-us-2.html">Contacto</a>
+												<a href="Contacto.aspx">Contacto</a>
 											</li>
 										</ul>
 									</div>
@@ -163,12 +162,12 @@
 						<div class="col-lg-2 col-md-6">
 							<h3 class="widget-title uppercase">Company</h3>
 							<ul class="menu">
-							<li><a href="about-us-3.html">¿Quiènes Somos?</a></li>
-							<li><a href="masonry-fullwidth-3-columns.html">Proyectos</a></li>
-							<li><a href="blog-grid-with-sidebar.html">Blog</a></li>
-							<li><a href="faq.html">Miembros</a></li>
-							<li><a href="faq.html">Semilleros</a></li>
-							<li><a href="contact-us.html">Contacto</a></li>
+							<li><a href="QuienesSomos.aspx">¿Quiènes Somos?</a></li>
+							<li><a href="Proyectos.aspx">Proyectos</a></li>
+							<li><a href="Blog.aspx">Blog</a></li>
+							<li><a href="Miembros.aspx">Miembros</a></li>
+							<li><a href="Semillero.aspx">Semilleros</a></li>
+							<li><a href="Contacto.aspx">Contacto</a></li>
 							</ul>
 							<div class="mb-5 d-block d-md-block d-lg-none"></div>
 						</div>

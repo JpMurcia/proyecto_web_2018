@@ -35,9 +35,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                             <div class="cards" id="moorphinCards">
                                 <h3 align="center ">PLANTILLAS </h3>
                                 <div class="col-md-12 ml-auto mr-auto">
@@ -56,9 +53,9 @@
                                                                         <h3 class="card-title">PLANTILLA NÙMERO 1</h3>
                                                                     </a>
                                                                     <div class="stats text-center">
-                                                                        <button class="btn btn-info">
+                                                                            <a class="btn btn-info" target="_blank" href="ViewsPlantillaHeli/IndexHeli.aspx">
                                                                             <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
-                                                                        </button>
+                                                                            </a>
                                                                     </div>
                                                                 </div>
 
