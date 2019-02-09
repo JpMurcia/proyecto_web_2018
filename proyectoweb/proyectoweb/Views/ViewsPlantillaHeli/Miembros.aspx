@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeli/plantlillaHeli.Master" AutoEventWireup="true" CodeBehind="IndexHeli.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/administracion.Master" AutoEventWireup="true" CodeBehind="Miembros.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.Miembros" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
 			<div id="main">
 				<div class="section">
 					<div class="container-fluid">

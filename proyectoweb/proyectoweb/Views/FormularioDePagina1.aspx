@@ -17,6 +17,9 @@
 </head>
 <body>
     <form runat="server">
+
+
+
         <div class="image-container set-full-height" style="background-image: url('/Content/assetsLogin/img/heliconias.jpg')">
             <a href="FormularioDePagina1.aspx"></a>
             <!--   Big container   -->
@@ -150,21 +153,13 @@
                                                     <ItemTemplate>
 
                                                         <div class="card-header" role="tab" id="headingFour">
-
                                                             <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
-
-                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour1" aria-expanded="false" aria-controls="collapseFour"> <%#Eval("nom_grupo")%> 
-
 
                                                                 <i class="material-icons">keyboard_arrow_down</i>
                                                             </a>
                                                         </div>
 
-
                                                         <div id="s<%#Eval("id_grupo")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
-
-                                                        <div id="collapseFour1" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-
 
                                                             <div class="card-body">
 
@@ -176,11 +171,7 @@
                                                                         </a>
                                                                     </div>
 
-
                                                                     <div id="g<%#Eval("id_grupo")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
-
-                                                                    <div id="collapseStyle" class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
-
 
                                                                         <div class="card-body">
                                                                             <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
@@ -212,7 +203,6 @@
                                                                             </div>
                                                                           
                                                                         </div>
-                                                                        <div></div>
                                                                     </div>
                                                                 </div>
                                                                 
