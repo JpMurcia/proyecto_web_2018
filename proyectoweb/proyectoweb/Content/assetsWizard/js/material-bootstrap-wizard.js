@@ -188,6 +188,7 @@ function refreshAnimation($wizard, index){
 
     total_steps = $wizard.find('.nav li').length;
     move_distance = $wizard.width() / total_steps;
+
     index_temp = index;
     vertical_level = 0;
 

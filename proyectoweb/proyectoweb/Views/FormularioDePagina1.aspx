@@ -31,261 +31,444 @@
                             <div class="card wizard-card" data-color="red" id="wizard">
 
 
-                                    <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
-                                    <div class="wizard-header">
+                                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+                                <div class="wizard-header">
 
-                                        <h5>Diligencie el formulario para crear su pagina web.</h5>
-                                    </div>
-                                    <div class="wizard-navigation">
-                                        <ul>
-                                            <li><a href="#details" data-toggle="tab">Informción de grupo</a></li>
-                                            <li><a href="#Semilleros" data-toggle="tab">Semilleros</a></li>
-                                            <li><a href="#captain" data-toggle="tab">Miembros</a></li>
-                                            <li><a href="#description" data-toggle="tab">Proyectos</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-content">
-                                        <div class="tab-pane" id="details">
-                                            <div class="card card-plain">
-                                                <div class="card-header" role="tab" id="headingTwo">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Documentación de SIGEPI
+                                    <h5>Diligencie el formulario para crear su pagina web.</h5>
+                                </div>
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li><a href="#details" data-toggle="tab">Informción de grupo</a></li>
+                                        <li><a href="#Semilleros" data-toggle="tab">Semilleros</a></li>
+                                        <li><a href="#captain" data-toggle="tab">Miembros</a></li>
+                                        <li><a href="#description" data-toggle="tab">Proyectos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="details">
+                                        <div class="card card-plain">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Documentación de SIGEPI
                                                    
                                                     <i class="material-icons">keyboard_arrow_down</i>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                    <div class="card-body" runat="server">
-                                                        <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Significado</label>
-                                                            <asp:TextBox disabled="disabled" ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Misión</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Visión</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Vision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Justificación</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlTextarea1">Programa</label>
-                                                            <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="programa" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                        </div>
-                                                        <div class="col-sm-2 ">
-                                                            <h4>Imagen de Grupo</h4>
-                                                            <img runat="server" id="imagenDeGrupo" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                </a>
                                             </div>
-
-
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">mail</i>
-                                                        </span>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="card-body" runat="server">
+                                                    <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Objetivos</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <asp:TextBox ID="CorreoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Correo electronico" runat="server"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">phone_iphone</i>
-                                                        </span>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Significado</label>
+                                                        <asp:TextBox disabled="disabled" ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <asp:TextBox ID="TelefonoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Telefono" runat="server"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">place</i>
-                                                        </span>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Misión</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">fiber_manual_record</i>
-                                                            <h6>Color por defecto</h6>
-                                                        </span>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Visión</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Vision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <asp:TextBox ID="Color" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">fiber_manual_record</i>
-                                                            <h6>Titulos</h6>
-                                                        </span>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Justificación</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Programa</label>
+                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="programa" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                    </div>
+                                                    <div class="col-sm-2 ">
+                                                        <h4>Imagen de Grupo</h4>
+                                                        <img runat="server" id="imagenDeGrupo" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="Semilleros">
 
-                                            <div class="card card-plain">
 
-                                                <asp:Repeater ID="Repeater1" runat="server">
-                                                    <ItemTemplate>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">mail</i>
+                                                    </span>
+                                                </div>
+                                                <asp:TextBox ID="CorreoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Correo electronico" runat="server"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">phone_iphone</i>
+                                                    </span>
+                                                </div>
+                                                <asp:TextBox ID="TelefonoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Telefono" runat="server"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">place</i>
+                                                    </span>
+                                                </div>
+                                                <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">fiber_manual_record</i>
+                                                        <h6>Color por defecto</h6>
+                                                    </span>
+                                                </div>
+                                                <asp:TextBox ID="Color" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">fiber_manual_record</i>
+                                                        <h6>Titulos</h6>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="Semilleros">
 
-                                                        <div class="card-header" role="tab" id="headingFour">
-                                                            <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
+                                        <div class="card card-plain">
 
-                                                                <i class="material-icons">keyboard_arrow_down</i>
-                                                            </a>
-                                                        </div>
+                                            <asp:Repeater ID="Repeater1" runat="server">
+                                                <ItemTemplate>
 
-                                                        <div id="s<%#Eval("id_grupo")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                    <div class="card-header" role="tab" id="headingFour">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
 
-                                                            <div class="card-body">
+                                                            <i class="material-icons">keyboard_arrow_down</i>
+                                                        </a>
+                                                    </div>
 
-                                                                <div class="card card-plain">
-                                                                    <div class="card-header" role="tab" id="headingFive">
-                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#g<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
+                                                    <div id="s<%#Eval("id_grupo")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
+
+                                                        <div class="card-body">
+
+                                                            <div class="card card-plain">
+                                                                <div class="card-header" role="tab" id="headingFive">
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#g<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
 
                                                                          <i class="material-icons">keyboard_arrow_down</i>
-                                                                        </a>
-                                                                    </div>
+                                                                    </a>
+                                                                </div>
 
-                                                                    <div id="g<%#Eval("id_grupo")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
+                                                                <div id="g<%#Eval("id_grupo")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
-                                                                        <div class="card-body">
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("sigla_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                                <asp:TextBox disabled="disabled" Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">Misión</label>
-                                                                                <asp:TextBox disabled="disabled" Text='<%#Eval("mision_grupo") %>' Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">Visión</label>
-                                                                                <asp:TextBox disabled="disabled" Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                                <asp:TextBox disabled="disabled" Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                                <asp:TextBox disabled="disabled" Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                                            </div>
-                                                                            <div class="col-sm-2 ">
-                                                                                <h4>Imagen de Grupo</h4>
-                                                                            
-                                                                                <img runat="server"  src='<%#Eval("url_logo_grupo") %>'  alt="Raised Image" class="img-raised rounded img-fluid"/>
-                                                                            </div>
-                                                                          
+                                                                    <div class="card-body">
+                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("sigla_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlTextarea1">Objetivos</label>
+                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlTextarea1">Misión</label>
+                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("mision_grupo") %>' Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlTextarea1">Visión</label>
+                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlTextarea1">Justificación</label>
+                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
+                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                        </div>
+                                                                        <div class="col-sm-2 ">
+                                                                            <h4>Imagen de Grupo</h4>
+
+                                                                            <img runat="server" src='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
-                                                                
-
-
-
                                                             </div>
+
+
+
 
                                                         </div>
 
-                                                        <br />
-                                                        <br />
-
-                                                    </ItemTemplate>
-                                                </asp:Repeater>
-
-                                            </div>
-
-
-
-
-
-
-
-                                        </div>
-                                        <div class="tab-pane" id="captain">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">
-                                                            <i class="material-icons">supervised_user_circle</i>
-                                                        </span>
-                                                        <h6 text_align="center">Miembros</h6>
                                                     </div>
-                                                </div>
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                           
-                                                            <th>Nombre</th>
-                                                            <th class="text-right">Publico</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
 
-                                                        <asp:Repeater ID="RepeaterMiembro" runat="server">
-                                                            <ItemTemplate>
-                                                                <tr>
-                                                                    
-                                                                    <td><%#Eval("nom_usuario") %> </td>
+                                                    <br />
+                                                    <br />
+                                                    <br />
 
-                                                                    <td class="td-actions text-right ">
-                                                                        <div class="togglebutton"  >
-                                                                            <label>
-                                                                                <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" >
-                                                                               
-                                                                                
-                                                                            </label>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            </ItemTemplate>
-                                                        </asp:Repeater>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
 
-
-
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
                                         </div>
-                                        <div class="tab-pane" id="description">
-                                            <div class="card card-plain">
-                                                <div class="card-header" role="tab" id="headingOne">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Proyectos Terminados
+
+
+
+
+
+
+
+                                    </div>
+                                    <div class="tab-pane" id="captain">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">supervised_user_circle</i>
+                                                    </span>
+                                                    <h6 text_align="center">Miembros</h6>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                         <div class="form-group">
+                                             <table class="table">
+                                                <thead>
+                                                    <tr>
+
+                                                        <th>Nombre</th>
+                                                        <th class="text-right">Propiedades</th>
+                                                        <th class="text-right">Publico</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
+                                                        <ItemTemplate>
+                                                            <tr>
+
+                                                                <td><%#Eval("nom_usuario") %> </td>
+
+
+                                                                <td class="td-actions text-right ">
+
+                                                                    <button type="button" class="btn btn-primary" id="boton_modal" title='<%#Eval("id_usuario")%>' onclick="ventanitaclick" data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                        <i class="material-icons">edit</i>Editar
+                                                                    </button>
+
+
+                                                                    <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-signup" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title card-title">Miembro</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                        <i class="material-icons">clear</i>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-5 ml-auto">
+                                                                                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                                                                <div class="fileinput-new thumbnail img-raised">
+
+                                                                                                    <%-- Aqui se ubica la imagen del miembro--%>
+                                                                                                    <img src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                                                                                </div>
+                                                                                                <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+
+                                                                                            </div>
+
+                                                                                            <div class="info info-horizontal">
+                                                                                                <div class="description">
+                                                                                                    <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                        </div>
+
+                                                                                        <div class="col-md-5 mr-auto">
+
+
+
+                                                                                            <form class="form" method="" action="">
+                                                                                                <h4 class="title">Escriba las habilidades de la persona</h4>
+                                                                                                <span class="form-group">
+                                                                                                    <input type="text" value="" placeholder=" habilidades" class="form-control tagsinput text-left" data-role="tagsinput" data-color="info" style="display: none;">
+                                                                                                </span>
+
+<%--                                                                                                <div class="form-group">
+                                                                                                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                                                                                                    <select multiple class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect2">
+                                                                                                        <option>1</option>
+                                                                                                        <option>2</option>
+                                                                                                        <option>3</option>
+                                                                                                        <option>4</option>
+                                                                                                        <option>5</option>
+                                                                                                    </select>
+                                                                                                </div>
+--%>
+
+                                                                                                <table class="table">
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th class="text-left">Proyecto</th>
+                                                                                                            <th class="text-right">Publicar</th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <asp:Repeater ID="InnerRepeater" runat="server">
+                                                                                                                <ItemTemplate>
+
+
+                                                                                                                    <td class="text-left"><%#Eval("proyectos")%></td>
+                                                                                                                    <td class="td-actions text-right ">
+                                                                                                                        <div class="togglebutton">
+                                                                                                                            <label>
+                                                                                                                                <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked="">
+                                                                                                                            </label>
+                                                                                                                        </div>
+                                                                                                                    </td>
+
+                                                                                                                </ItemTemplate>
+                                                                                                            </asp:Repeater>
+
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    ...
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </td>
+
+                                                                <td class="td-actions text-right ">
+                                                                    <div class="togglebutton">
+                                                                        <label>
+                                                                            <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="">
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+                                                </tbody>
+                                            </table>
+                                         </div>
+                                    </div>
+                                    <div class="tab-pane" id="description">
+                                        <div class="card card-plain">
+                                            <div class="card-header" role="tab" id="headingOne">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Proyectos Terminados
 
                                                     <i class="material-icons">keyboard_arrow_down</i>
-                                                    </a>
+                                                </a>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="card-body">
+
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">
+                                                                <i class="material-icons">class</i>
+                                                            </span>
+                                                            <h6>Proyectos</h6>
+                                                        </div>
+                                                    </div>
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+
+                                                                <th>Nombre</th>
+                                                                <th class="text-right">Accion</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+
+                                                            <asp:Repeater ID="RepeaterInacti" runat="server">
+                                                                <ItemTemplate>
+
+                                                                    <tr>
+
+
+                                                                        <td><%#Eval("nom_proyecto") %></td>
+                                                                        <td class="td-actions text-right ">
+                                                                            <p>
+                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
+                                                                                    Editar
+                                                                       
+                                                                                </button>
+                                                                            </p>
+                                                                            <div class="collapse" id="p<%#Eval("id_proyecto") %>">
+                                                                                <div class="card card-body">
+                                                                                    <div class="form-group form-file-upload form-file-multiple">
+                                                                                        <input type="file" multiple="" class="inputFileHidden" />
+                                                                                        <div class="input-group">
+                                                                                            <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
+                                                                                            <span class="input-group-btn">
+                                                                                                <button type="button" class="btn btn-fab btn-round btn-info">
+                                                                                                    <i class="material-icons">layers</i>
+                                                                                                </button>
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label for="exampleFormControlTextarea1">Descripción</label>
+                                                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+
+
+                                                                    </tr>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+
+
+
+                                                        </tbody>
+                                                    </table>
+
                                                 </div>
-
-                                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="card-body">
-
+                                            </div>
+                                        </div>
+                                        <div class="card card-plain">
+                                            <div class="card-header" role="tab" id="headingThree">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Proyectos en curso
+                                                   
+                                                    <i class="material-icons">keyboard_arrow_down</i>
+                                                </a>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="card-body">
+                                                    <div class="form-group">
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">
@@ -297,34 +480,31 @@
                                                         <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    
+
                                                                     <th>Nombre</th>
                                                                     <th class="text-right">Accion</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
 
-
-                                                                <asp:Repeater ID="RepeaterInacti" runat="server">
+                                                                <asp:Repeater ID="RepeaterActivo" runat="server">
                                                                     <ItemTemplate>
 
                                                                         <tr>
-
-                                                                           
-                                                                            <td><%#Eval("nom_proyecto") %></td>
+                                                                            <td><%#Eval("nom_proyecto") %> </td>
                                                                             <td class="td-actions text-right ">
                                                                                 <p>
-                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
+                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                                                                         Editar
-                                                                       
+                                                                           
                                                                                     </button>
                                                                                 </p>
-                                                                                <div class="collapse" id="p<%#Eval("id_proyecto") %>">
+                                                                                <div class="collapse" id="collapseExample">
                                                                                     <div class="card card-body">
                                                                                         <div class="form-group form-file-upload form-file-multiple">
                                                                                             <input type="file" multiple="" class="inputFileHidden" />
                                                                                             <div class="input-group">
-                                                                                                <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
+                                                                                                <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" />
                                                                                                 <span class="input-group-btn">
                                                                                                     <button type="button" class="btn btn-fab btn-round btn-info">
                                                                                                         <i class="material-icons">layers</i>
@@ -334,99 +514,25 @@
                                                                                         </div>
                                                                                         <div class="form-group">
                                                                                             <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                                                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </td>
-
-
                                                                         </tr>
+
                                                                     </ItemTemplate>
                                                                 </asp:Repeater>
 
 
-
                                                             </tbody>
                                                         </table>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card card-plain">
-                                                <div class="card-header" role="tab" id="headingThree">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Proyectos en curso
-                                                   
-                                                    <i class="material-icons">keyboard_arrow_down</i>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                    <div class="card-body">
-                                                        <div class="form-group">
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend">
-                                                                    <span class="input-group-text">
-                                                                        <i class="material-icons">class</i>
-                                                                    </span>
-                                                                    <h6>Proyectos</h6>
-                                                                </div>
-                                                            </div>
-                                                            <table  class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                       
-                                                                        <th>Nombre</th>
-                                                                        <th class="text-right">Accion</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <asp:Repeater ID="RepeaterActivo" runat="server">
-                                                                        <ItemTemplate>
-
-                                                                            <tr>
-                                                                                <td  ><%#Eval("nom_proyecto") %> </td>
-                                                                                <td class="td-actions text-right ">
-                                                                                    <p>
-                                                                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                                                            Editar
-                                                                           
-                                                                                        </button>
-                                                                                    </p>
-                                                                                    <div class="collapse" id="collapseExample">
-                                                                                        <div class="card card-body">
-                                                                                            <div class="form-group form-file-upload form-file-multiple">
-                                                                                                <input type="file" multiple="" class="inputFileHidden" />
-                                                                                                <div class="input-group">
-                                                                                                    <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" />
-                                                                                                    <span class="input-group-btn">
-                                                                                                        <button type="button" class="btn btn-fab btn-round btn-info">
-                                                                                                            <i class="material-icons">layers</i>
-                                                                                                        </button>
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="form-group">
-                                                                                                <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-
-                                                                        </ItemTemplate>
-                                                                    </asp:Repeater>
-
-
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
                             </div>
 
@@ -435,8 +541,8 @@
                                     <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
                                     <%--<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />--%>
 
-                                    <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish"  />
-                                  
+                                    <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
+
                                 </div>
 
                                 <div class="pull-left">

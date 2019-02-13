@@ -15,8 +15,10 @@ namespace proyectoweb.Models.ModeloSigepi
         public string email_usuario { get; set; }
         public string nombre { get; set; }
         public string contrasena { get; set; }
+        public string programa { get; set; }
         public string foto { get; set; }
         public string tipo { get; set; }
+        public string grupo { get; set; }
 
 
 
@@ -64,6 +66,26 @@ namespace proyectoweb.Models.ModeloSigepi
                 ));
 
             return conect.ExecuteProcedure("proced_validar_user", p);
+
+        }
+
+        public DataTable consultarProyecto(modelUsuario obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "grupo_perte",
+                obj.grupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "id_user",
+                obj.id,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_user_proye_grupo", p);
 
         }
 

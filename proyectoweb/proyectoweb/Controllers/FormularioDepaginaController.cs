@@ -13,6 +13,10 @@ namespace proyectoweb.Controllers
         
         private Grupo_inve_semillero grupo = new Grupo_inve_semillero();
 
+        private modelUsuario miembro = new modelUsuario();
+
+        private proyecto proye = new proyecto();
+
         public FormularioDepaginaController()
         {
 
@@ -40,6 +44,11 @@ namespace proyectoweb.Controllers
         public DataTable consultarProyectoInacController(Grupo_inve_semillero group)
         {
             return grupo.consultarProyectoInac(group);
+        }
+
+        public DataTable consultarProyectoDeMiembroController(modelUsuario user)
+        {
+            return miembro.consultarProyecto(user);
         }
     }
 }
