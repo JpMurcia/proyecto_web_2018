@@ -368,10 +368,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_has_usu`(
 
 
 
+
+
+
 )
 BEGIN
 
-select grupo.nom_grupo from grupo_inve_semillero as grupo
+select grupo.id_grupo, grupo.nom_grupo from grupo_inve_semillero as grupo
 inner join integrante_has_grupo_inve_semillero pertenece on pertenece.grupo_inve_semillero_id_grupo = grupo.id_grupo
 where pertenece.usuario_id_usuario=id_usuario;
 
@@ -728,37 +731,37 @@ DELIMITER ;
 DROP VIEW IF EXISTS `view_grupo_investi`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_grupo_investi`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_grupo_investi` AS select `grupo_inve_semillero`.`nom_grupo` AS `nom_grupo`,`grupo_inve_semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`grupo_inve_semillero`.`objetivo_grupo` AS `objetivo_grupo`,`grupo_inve_semillero`.`programa_grupo` AS `programa_grupo`,`grupo_inve_semillero`.`mision_grupo` AS `mision_grupo`,`grupo_inve_semillero`.`vision_grupo` AS `vision_grupo`,`grupo_inve_semillero`.`justif_grupo` AS `justif_grupo`,`grupo_inve_semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from `grupo_inve_semillero` where (`grupo_inve_semillero`.`id_grupo` = `grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`);
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_grupo_investi` AS select `sigepi`.`grupo_inve_semillero`.`nom_grupo` AS `nom_grupo`,`sigepi`.`grupo_inve_semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`sigepi`.`grupo_inve_semillero`.`objetivo_grupo` AS `objetivo_grupo`,`sigepi`.`grupo_inve_semillero`.`programa_grupo` AS `programa_grupo`,`sigepi`.`grupo_inve_semillero`.`mision_grupo` AS `mision_grupo`,`sigepi`.`grupo_inve_semillero`.`vision_grupo` AS `vision_grupo`,`sigepi`.`grupo_inve_semillero`.`justif_grupo` AS `justif_grupo`,`sigepi`.`grupo_inve_semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from `sigepi`.`grupo_inve_semillero` where (`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_miembro_semillero
 DROP VIEW IF EXISTS `view_miembro_semillero`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_semillero`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_miembro_semillero` AS select `usuario`.`nom_usuario` AS `nom_usuario`,`semillero`.`nom_grupo` AS `nom_grupo` from ((`grupo_inve_semillero` `semillero` join `integrante_has_grupo_inve_semillero` `integra` on((`integra`.`grupo_inve_semillero_id_grupo` = `semillero`.`id_grupo`))) join `usuario` on((`usuario`.`id_usuario` = `integra`.`usuario_id_usuario`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_semillero` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`semillero`.`nom_grupo` AS `nom_grupo` from ((`sigepi`.`grupo_inve_semillero` `semillero` join `sigepi`.`integrante_has_grupo_inve_semillero` `integra` on((`integra`.`grupo_inve_semillero_id_grupo` = `semillero`.`id_grupo`))) join `sigepi`.`usuario` on((`sigepi`.`usuario`.`id_usuario` = `integra`.`usuario_id_usuario`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_miembro_x
 DROP VIEW IF EXISTS `view_miembro_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_miembro_x` AS select `usuario`.`nom_usuario` AS `nom_usuario`,`usuario`.`id_usuario` AS `id_usuario`,`usuario_has_proyecto`.`proyecto_id_proyecto` AS `proyecto_id_proyecto` from (((`usuario` join `usuario_has_proyecto` on((`usuario`.`id_usuario` = `usuario_has_proyecto`.`usuario_id_usuario`))) join `proyecto` on((`usuario_has_proyecto`.`proyecto_id_proyecto` = `proyecto`.`id_proyecto`))) join `proyecto_has_grupo_inve_semillero` on((`proyecto`.`id_proyecto` = `proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto`))) where (`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo` = 111);
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_x` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`sigepi`.`usuario`.`id_usuario` AS `id_usuario`,`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` AS `proyecto_id_proyecto` from (((`sigepi`.`usuario` join `sigepi`.`usuario_has_proyecto` on((`sigepi`.`usuario`.`id_usuario` = `sigepi`.`usuario_has_proyecto`.`usuario_id_usuario`))) join `sigepi`.`proyecto` on((`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`proyecto`.`id_proyecto` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto`))) where (`sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo` = 111);
 
 -- Volcando estructura para vista sigepi.view_proyectos_x
 DROP VIEW IF EXISTS `view_proyectos_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_proyectos_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_proyectos_x` AS select `proyecto`.`nom_proyecto` AS `nom_proyecto`,`proyecto`.`estado_proyecto` AS `estado_proyecto` from ((`grupo_inve_semillero` join `proyecto_has_grupo_inve_semillero` on((`grupo_inve_semillero`.`id_grupo` = `proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`))) join `proyecto` on((`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto` = `proyecto`.`id_proyecto`))) where (`grupo_inve_semillero`.`nom_grupo` = 'giecom');
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_proyectos_x` AS select `sigepi`.`proyecto`.`nom_proyecto` AS `nom_proyecto`,`sigepi`.`proyecto`.`estado_proyecto` AS `estado_proyecto` from ((`sigepi`.`grupo_inve_semillero` join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`))) join `sigepi`.`proyecto` on((`sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) where (`sigepi`.`grupo_inve_semillero`.`nom_grupo` = 'giecom');
 
 -- Volcando estructura para vista sigepi.view_semilleros
 DROP VIEW IF EXISTS `view_semilleros`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semilleros`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_semilleros` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`grupo_inve_semillero` join `grupo_inve_semillero` `semillero` on((`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semilleros` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_semillero_x
 DROP VIEW IF EXISTS `view_semillero_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semillero_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_semillero_x` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`grupo_inve_semillero` join `grupo_inve_semillero` `semillero` on((`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where ((`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) and (`semillero`.`grupo_inve_semillero_id_grupo` = 111));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semillero_x` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where ((`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) and (`semillero`.`grupo_inve_semillero_id_grupo` = 111));
 
 
 -- Volcando estructura de base de datos para viewgroup
@@ -868,6 +871,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `url_pagina` varchar(500) DEFAULT NULL,
   `icono` varchar(500) DEFAULT NULL,
   `comentario` varchar(500) DEFAULT NULL,
+  `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id_menu`),
   KEY `FK_menu_menu` (`id_menu_padre`),
   CONSTRAINT `FK_menu_menu` FOREIGN KEY (`id_menu_padre`) REFERENCES `menu` (`id_menu`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -875,27 +879,27 @@ CREATE TABLE IF NOT EXISTS `menu` (
 
 -- Volcando datos para la tabla viewgroup.menu: ~20 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-REPLACE INTO `menu` (`id_menu`, `nom_menu`, `id_menu_padre`, `url_pagina`, `icono`, `comentario`) VALUES
-	(1, 'Grupo', NULL, NULL, 'group', 'solo para lider'),
-	(2, 'Mi Pagina', NULL, NULL, 'image', 'para creadores y miembro'),
-	(3, 'Crear Pagina', 2, NULL, 'CP', NULL),
-	(4, 'Actualizar Pagina', 2, NULL, 'AP', NULL),
-	(5, 'Eliminar Pagina', 2, NULL, 'EP', NULL),
-	(6, 'Las Paginas', NULL, NULL, 'grid_on', 'las paginas de todos los grupos super admi'),
-	(7, 'Lista de Miembros', NULL, NULL, 'assignment_ind', NULL),
-	(8, 'Noticias', NULL, NULL, 'event_note', NULL),
-	(9, 'Nueva Noticia', 8, 'NoticiaNueva.aspx', 'NN', NULL),
-	(10, 'Ver Noticias', 8, '', 'VN', NULL),
-	(11, 'Elinimar Noticia', 8, NULL, 'grid_on', NULL),
-	(12, 'Actividades ', NULL, NULL, 'date_range ', NULL),
-	(13, 'Ver Actividades', 12, NULL, 'VA', NULL),
-	(14, 'Crear Actividad', 12, NULL, 'CA', NULL),
-	(15, 'Modificar Actividad', 12, NULL, 'grid_on', NULL),
-	(16, 'Eliminar Actividad ', 12, NULL, 'grid_on', NULL),
-	(17, 'Reporte', NULL, NULL, 'grid_on', 'reporte interno de los grupos'),
-	(18, 'Grupos', NULL, NULL, 'grid_on', NULL),
-	(19, 'Pagina', 2, NULL, 'grid_on', 'consulta pagina 1'),
-	(20, 'Reporte de grupos', NULL, NULL, 'grid_on', 'super administrador');
+REPLACE INTO `menu` (`id_menu`, `nom_menu`, `id_menu_padre`, `url_pagina`, `icono`, `comentario`, `estado`) VALUES
+	(1, 'Grupo', NULL, NULL, 'group', 'solo para lider', NULL),
+	(2, 'Crear Pagina', NULL, NULL, 'image', 'para creadores y miembro', 1),
+	(3, 'Mi Pagina ', 2, NULL, 'image', NULL, 1),
+	(4, 'Actualizar Pagina', 2, NULL, 'AP', NULL, NULL),
+	(5, 'Eliminar Pagina', 2, NULL, 'EP', NULL, NULL),
+	(6, 'Las Paginas', NULL, NULL, 'grid_on', 'las paginas de todos los grupos super admi', NULL),
+	(7, 'Lista de Miembros', NULL, NULL, 'assignment_ind', NULL, 1),
+	(8, 'Noticias', NULL, NULL, 'event_note', NULL, NULL),
+	(9, 'Nueva Noticia', 8, 'NoticiaNueva.aspx', 'event_note', NULL, 1),
+	(10, 'Ver Noticias', 8, 'NoticiaPublicada.aspx', 'event_note', NULL, 1),
+	(11, 'Elinimar Noticia', 8, NULL, 'grid_on', NULL, NULL),
+	(12, 'Actividades ', NULL, NULL, 'date_range ', NULL, 1),
+	(13, 'Ver Actividades', 12, NULL, 'VA', NULL, NULL),
+	(14, 'Crear Actividad', 12, NULL, 'date_range ', NULL, 1),
+	(15, 'Modificar Actividad', 12, NULL, 'grid_on', NULL, NULL),
+	(16, 'Eliminar Actividad ', 12, NULL, 'grid_on', NULL, NULL),
+	(17, 'Reporte', NULL, NULL, 'grid_on', 'reporte interno de los grupos', 1),
+	(18, 'Grupos', NULL, NULL, 'grid_on', NULL, NULL),
+	(19, 'Pagina', 2, NULL, 'grid_on', 'consulta pagina 1', NULL),
+	(20, 'Reporte de grupos', NULL, NULL, 'grid_on', 'super administrador', NULL);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.pagina_web
@@ -1187,6 +1191,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
 
 
+
+
 )
 BEGIN
 
@@ -1194,7 +1200,7 @@ SELECT menu.id_menu, menu.nom_menu, menu.url_pagina,if(menu.id_menu_padre is nul
 as 'padre', menu.icono FROM menu
 RIGHT JOIN tipo_has_menu ON tipo_has_menu.pk_fk_menu=menu.id_menu
 RIGHT JOIN tipo_usuario ON tipo_usuario.id_user = tipo_has_menu.pk_fk_tipo_usuario
-WHERE tipo_usuario.id_user = id_rol
+WHERE tipo_usuario.id_user = id_rol and menu.estado<>0
 ;
 END//
 DELIMITER ;

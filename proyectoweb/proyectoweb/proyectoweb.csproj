@@ -1065,6 +1065,7 @@
     <Content Include="Views\NoticiaPublicada.aspx" />
     <Content Include="Views\PaginaPublicada.aspx" />
     <Content Include="Views\permisos.aspx" />
+    <Content Include="Views\CrearPagina.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Contacto.aspx" />
@@ -1100,6 +1101,9 @@
     </Compile>
     <Compile Include="Controllers\FormularioDepaginaController.cs" />
     <Compile Include="Controllers\loginController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\PermisosController.cs" />
+    <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1123,21 +1127,16 @@
     <Compile Include="Models\Modelo sigepi\UsuarioProducto.cs" />
     <Compile Include="Models\Modelo viewGroup\Actividad.cs" />
     <Compile Include="Models\Modelo viewGroup\ActividadUsuario.cs" />
-    <Compile Include="Models\Modelo viewGroup\Diseño.cs" />
     <Compile Include="Models\Modelo viewGroup\grupo_investigacion.cs" />
     <Compile Include="Models\Modelo viewGroup\InformacionIntegrantesProyecto.cs" />
     <Compile Include="Models\Modelo viewGroup\menu.cs" />
     <Compile Include="Models\Modelo viewGroup\pagina_web.cs" />
-    <Compile Include="Models\Modelo viewGroup\permisos.cs" />
     <Compile Include="Models\Modelo viewGroup\plantilla.cs" />
     <Compile Include="Models\Modelo viewGroup\producto.cs" />
-    <Compile Include="Models\Modelo viewGroup\roles.cs" />
     <Compile Include="Models\Modelo viewGroup\soporta.cs" />
-    <Compile Include="Models\Modelo viewGroup\tipoProducto.cs" />
     <Compile Include="Models\Modelo viewGroup\tipo_has_menu.cs" />
     <Compile Include="Models\Modelo viewGroup\tipo_usuario.cs" />
     <Compile Include="Models\Modelo viewGroup\usuario.cs" />
-    <Compile Include="Models\Modelo viewGroup\vistas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -1201,6 +1200,13 @@
     </Compile>
     <Compile Include="Views\permisos.aspx.designer.cs">
       <DependentUpon>permisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrearPagina.aspx.cs">
+      <DependentUpon>CrearPagina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearPagina.aspx.designer.cs">
+      <DependentUpon>CrearPagina.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\principal.aspx.cs">
       <DependentUpon>principal.aspx</DependentUpon>
