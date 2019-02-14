@@ -31,5 +31,12 @@ namespace proyectoweb.Controllers
         {
             return usuarioVG.crearUsuario(usu);
         }
+
+        public DataTable consultarGrupos(modelUsuario usu) {
+
+            return usuarioSigepi.consultarProyecto(usu);
+
+        }
+
     }
 }

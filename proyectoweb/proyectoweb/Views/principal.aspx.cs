@@ -13,6 +13,17 @@ namespace proyectoweb.Views
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            llenar();
+        }
+
+
+
+        public void llenar() {
+
+            
+
+
+
 
         }
 

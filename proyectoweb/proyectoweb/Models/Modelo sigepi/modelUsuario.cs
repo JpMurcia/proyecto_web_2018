@@ -89,6 +89,22 @@ namespace proyectoweb.Models.ModeloSigepi
 
         }
 
+        public DataTable cosultarGrupo(modelUsuario obj) {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_usuario",
+                obj.id,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+          
+
+            return conect.ExecuteProcedure("proced_consul_user_proye_grupo", p);
+
+
+        }
+
 
 
     }

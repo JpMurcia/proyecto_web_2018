@@ -11,6 +11,8 @@ namespace proyectoweb.Models.ModeloSigepi
     {
         private Conexion conect = new Conexion();
 
+
+        public string id_grupo { get; set; }
         public string nombreGrupo { get; set; }
         public string siglas { get; set; }
         public string objetivo { get; set; }

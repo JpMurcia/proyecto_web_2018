@@ -25,6 +25,7 @@ namespace proyectoweb.Views
         {
             usuario b = new usuario();
             modelUsuario a = new modelUsuario();
+            Grupo_inve_semillero grupo = new Grupo_inve_semillero();
             a.email_usuario = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
@@ -55,8 +56,10 @@ namespace proyectoweb.Views
 
                 }
 
+                DataTable dt = controlador.consultarGrupos(a);
                 a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
-
+                //grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
+                //grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
                 Session["nom"] = a.nombre;
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;

@@ -33,9 +33,10 @@ namespace proyectoweb.Views
 
         protected void ventanitaclick(object sender, EventArgs e) {
 
-           
+            
 
            
+
 
 
         }
@@ -91,7 +92,7 @@ namespace proyectoweb.Views
             //}
 
             
-
+           
 
 
         }
@@ -102,9 +103,13 @@ namespace proyectoweb.Views
             if (r != null)
             {
                 user.grupo = Request.QueryString["grupo"];
-                user.id = "11";
-                sender.ToString();
-                
+
+                //object algo = e.Item;
+
+                user.id = "24";
+
+               // object algo = Request.QueryString["iden"].ToString();
+
 
                 DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
                 r.DataSource = dt6;

@@ -76,14 +76,17 @@ namespace proyectoweb.Views
                 }
 
             }
-            
-            
-            Padre.DataSource = obj2;
+
+
+            Padre.DataSource = dt;
             Padre.DataBind();
 
-            
+            //Padre.DataSource = obj2;
+            //Padre.DataBind();
 
-          
+
+
+
 
 
             //menuD.nom_menu = dt.Rows[0]["nom_menu"].ToString();
@@ -112,25 +115,52 @@ namespace proyectoweb.Views
 
     }
 
-    //protected void ItemBound(object sender, RepeaterItemEventArgs args)
+    //protected void ItemBound(object sender, RepeaterItemEventArgs e)
+    //{
+    //    Repeater r = e.Item.FindControl("HIJO") as Repeater;
+    //    if (r != null)
+    //    {
+    //        menuD.grupo = Request.QueryString["tipo"];
+
+    //        //object algo = e.Item;
+
+    //        user.id = "24";
+
+    //        // object algo = Request.QueryString["iden"].ToString();
+
+
+    //        DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
+    //        r.DataSource = dt6;
+    //        r.DataBind();
+    //    }
+    //}
+
+
+    //protected void ItemBound(object sender, RepeaterItemEventArgs e)
     //{
 
-    //    Repeater rep = (Repeater)(sender);
-    //    DataTable hola = new DataTable();
 
 
-    //    if (args.Item.ItemType == ListItemType.Item || args.Item.ItemType == ListItemType.AlternatingItem)
+
+
+    //    if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+
     //    {
-    //        // Repeater childRepeater = (Repeater)args.Item.FindControl("ChildRepeater");
-    //        //DataRowView dv = (DataRowView)args.Item.DataItem;
-    //        //DataRow actualData = dv.Row;
+    //        Repeater r = e.Item.FindControl("Hijo") as Repeater;
+    //        if (r != null)
+    //        {
 
-    //        object somePropertyOrColumnValue = DataBinder.Eval(args.Item, "PropertyNameHere");
+    //            DataTable hola = new DataTable();
+    //            menu menuD = new menu();
 
-    //        Repeater Hijo = (Repeater)args.Item.FindControl("Hijo");
-    //        RepeaterItem item = args.Item;
-    //        Hijo.DataSource = ;
-    //        Hijo.DataBind();
+    //            menuD.fk_rol = "1";
+    //            hola = menuD.consultar_menu_view(menuD);
+
+    //            r.DataSource = hola;
+    //            r.DataBind();
+
+
+    //        }
     //    }
     //}
 
