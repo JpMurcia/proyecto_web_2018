@@ -263,11 +263,11 @@
                                                                 <td class="td-actions text-right ">
 
                                                                     
-                                                                    <button type="button" class="btn btn-primary" id='algo2=?<%#Eval("id_usuario")%>'  title='<%#Eval("id_usuario")%>' onclick="ventanitaclick" data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                    <button type="button" class="btn btn-primary" id='idetenti=?<%#Eval("id_usuario")%>'  title='<%#Eval("id_usuario")%>' onclick="ventanitaclick" data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </button>
                                                                 
-
+                                                                    
                                                                     <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-signup" role="document">
                                                                             <div class="modal-content">
@@ -340,7 +340,7 @@
                                                                                                                         <div class="togglebutton">
                                                                                                                             <label>
                                                                                                                              
-                                                                                                                                <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked=""  value="1" >
+                                                                                                                                <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked=""   >
                                                                                                                             </label>
                                                                                                                         </div>
                                                                                                                     </td>

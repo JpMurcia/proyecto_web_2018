@@ -19,7 +19,17 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         public DataTable crearUsuario(usuario obj)
         {
+
+
             List<Parametro> p = new List<Parametro>();
+
+            p.Add(new Parametro(
+              "id_user",
+              obj.idUsuario,
+              "INT",
+              ParameterDirection.Input
+              ));
+
             p.Add(new Parametro(
                 "nombre_user",
                 obj.nom_usuario,
@@ -39,12 +49,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                ParameterDirection.Input
                ));
 
-            p.Add(new Parametro(
-               "id_user",
-               obj.idUsuario,
-               "INT",
-               ParameterDirection.Input
-               ));
+           
             return conect.ExecuteProcedure("proced_create_usuario", p);
 
         }

@@ -91,8 +91,27 @@ namespace proyectoweb.Views
             //    lista.Add(ddlist.SelectedItem.ToString());
             //}
 
-            
-           
+            grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
+            grupo.mision = dt.Rows[0]["mision_grupo"].ToString();
+            grupo.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();
+            grupo.ProgramaGrupo = dt.Rows[0]["programa_grupo"].ToString();
+            grupo.quienesSomos = dt.Rows[0]["quien_somos_grupo"].ToString();
+            grupo.siglas = dt.Rows[0]["sigla_signif_grupo"].ToString();
+            grupo.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();
+            grupo.vision = dt.Rows[0]["vision_grupo"].ToString();
+
+            Console.Write("epa hijuemadre");
+
+            nombreGrupo.Text = grupo.nombreGrupo;
+            Objetivo.Text = grupo.objetivo;
+            sigSiglas.Text = grupo.siglas;
+            Mision.Text = grupo.mision;
+            Vision.Text = grupo.vision;
+            Justificacion.Text = grupo.justificacion;
+            QuienSomos.Text = grupo.quienesSomos;
+            programa.Text = grupo.ProgramaGrupo;
+            imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
+
 
 
         }
@@ -104,7 +123,7 @@ namespace proyectoweb.Views
             {
                 user.grupo = Request.QueryString["grupo"];
 
-                //object algo = e.Item;
+               // object algo = Session["proyemiembro"].ToString(); 
 
                 user.id = "24";
 
