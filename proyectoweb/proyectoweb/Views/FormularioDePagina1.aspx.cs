@@ -116,18 +116,47 @@ namespace proyectoweb.Views
 
         }
 
+        protected void RepiterItemCommand(object sender, RepeaterCommandEventArgs e)
+        {
+            Repeater r = e.Item.FindControl("InnerRepeater") as Repeater;
+            if (e.CommandName.Equals("botoModal"))
+            {
+
+                user.grupo = Request.QueryString["grupo"];
+
+                // object algo = Session["proyemiembro"].ToString(); 
+                user.id = "24";
+                user.id = e.CommandArgument.ToString();
+
+                
+                // object algo = Request.QueryString["iden"].ToString();
+                
+
+                 DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
+              //  RepeaterMiembro.DataSource = dt6;
+                //RepeaterMiembro.DataBind();
+            }
+        }
+
+
         protected void RepiterItem(object sender, RepeaterItemEventArgs e)
         {
             Repeater r = e.Item.FindControl("InnerRepeater") as Repeater;
             if (r != null)
             {
+
                 user.grupo = Request.QueryString["grupo"];
+                //object algo = e.Item.ID;
 
-               // object algo = Session["proyemiembro"].ToString(); 
+                //object halgo = sender.GetType().;
 
+                
+                //algo.
+                // object algo = Session["proyemiembro"].ToString(); 
                 user.id = "24";
+                //user.id = e.CommandArgument.ToString();
 
-               // object algo = Request.QueryString["iden"].ToString();
+                // object algo = Request.QueryString["iden"].ToString();
 
 
                 DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
@@ -135,6 +164,8 @@ namespace proyectoweb.Views
                 r.DataBind();
             }
         }
+
+
 
     }
 }

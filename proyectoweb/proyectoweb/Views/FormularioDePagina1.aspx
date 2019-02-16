@@ -253,7 +253,8 @@
                                                 </thead>
                                                 <tbody>
 
-                                                    <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
+                                                      <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
+                                                   <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
                                                         <ItemTemplate>
                                                             <tr>
 
@@ -263,9 +264,9 @@
                                                                 <td class="td-actions text-right ">
 
                                                                     
-                                                                    <button type="button" class="btn btn-primary" id='idetenti=?<%#Eval("id_usuario")%>'  title='<%#Eval("id_usuario")%>' onclick="ventanitaclick" data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                    <asp:LinkButton  class="btn btn-primary"  ID="Modal"  title='<%#Eval("id_usuario")%>' CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
-                                                                    </button>
+                                                                    </asp:LinkButton>
                                                                 
                                                                     
                                                                     <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -324,6 +325,7 @@
                                                                                                 <table class="table">
                                                                                                     <thead>
                                                                                                         <tr>
+                                                                                                            <p><%#Eval("nom_usuario") %></p>
                                                                                                             <th class="text-left">Proyecto</th>
                                                                                                             <th class="text-right">Publicar</th>
                                                                                                         </tr>
