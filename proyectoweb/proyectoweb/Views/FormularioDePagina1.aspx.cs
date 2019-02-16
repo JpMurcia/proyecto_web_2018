@@ -20,7 +20,24 @@ namespace proyectoweb.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            llenarDatos();
+            if (string.IsNullOrEmpty(Session["tipo"] as string))
+            {
+                //Some Stuff to initialize the variable
+                Response.Redirect("Error401.aspx");
+
+            }
+            else {
+                if ((Session["tipo"].Equals("1")) || (Session["tipo"].Equals("5")))
+                {
+
+                    llenarDatos();
+                }
+                else {
+                    Response.Redirect("Error401.aspx");
+                }
+               
+            }
+            
         }
 
         protected void Unnamed_Click(object sender, EventArgs e) {

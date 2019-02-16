@@ -83,7 +83,7 @@ namespace proyectoweb.Views
                 Session["contra"] = a.contrasena;
                 Session["tipo"] = a.tipo;
 
-                //Response.Redirect("principal.aspx");
+                Response.Redirect("principal.aspx");
 
 
 

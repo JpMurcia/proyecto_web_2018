@@ -33,9 +33,20 @@ namespace proyectoweb.Views
             //    Padre.DataSource = dt;
             //    Padre.DataBind();
             //}
-           
+            if (string.IsNullOrEmpty(Session["tipo"] as string))
+            {
+                //Some Stuff to initialize the variable
+                Response.Redirect("Error401.aspx");
 
-            llenarmenu();
+            }
+            else {
+
+                llenarmenu();
+                
+            }
+
+
+            
         }
 
         public void llenarmenu()
@@ -43,8 +54,11 @@ namespace proyectoweb.Views
 
             // tipo_menu.pk_fk_tipo_usuario.id_tipo_usuario = "1";
             // tipo_menu.pk_fk_tipo_usuario.id_tipo_usuario = Session["tipo"].ToString();
-            Session["tipo"] = "1";
+            
+
             menuD.fk_rol = Session["tipo"].ToString();
+
+
 
             dt = menuD.consultar_menu_view(menuD);
 

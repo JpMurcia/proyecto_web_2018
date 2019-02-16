@@ -18,37 +18,41 @@
                         <div class="card-body">
 
 
-                              
+
 
 
 
 
                             <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">notifications</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
-                    <span data-notify="message"><pre>
-          <h3>Usuario Administrador</h3> tiene acceso a:
-          -Publicar,editar y eliminar paginas.
-          -Asignar y quitar permisos de rol de administrador  a estudiantes.
-          -Publicar,editar y eliminar noticias.
-          -Publicar,editar y eliminar actividades.
-            </pre></span>
-                  </div>
+                                <i class="material-icons" data-notify="icon">notifications</i>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                                <span data-notify="message">
+                                    <pre>
+                                  <h3>Usuario Administrador</h3> tiene acceso a:
+                                  -Publicar,editar y eliminar paginas.
+                                  -Asignar y quitar permisos de rol de administrador  a estudiantes.
+                                  -Publicar,editar y eliminar noticias.
+                                  -Publicar,editar y eliminar actividades.
+                                    </pre>
+                                </span>
+                            </div>
 
-                             <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">notifications</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
-                    <span data-notify="message"><pre>           
+                            <div class="alert alert-info alert-with-icon" data-notify="container">
+                                <i class="material-icons" data-notify="icon">notifications</i>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="material-icons">close</i>
+                                </button>
+                                <span data-notify="icon" class="now-ui-icons ui-1_bell-53"></span>
+                                <span data-notify="message">
+                                    <pre>           
            <h3>Usuario Estudiante</h3> tiene acceso a:
           -Consultar actividades y eventos, y realizar la entrega de los y las mismas.
-            </pre></span>
-                  </div>
+            </pre>
+                                </span>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -66,7 +70,7 @@
                                             <td class="text-center">1</td>
                                             <td>Estudiante Cualquiera #1</td>
                                             <td>Ingenieria de Sitemas</td>
-                                            
+
                                             <td class="text-right">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
@@ -93,7 +97,7 @@
                                             <td class="text-center">2</td>
                                             <td>Estudiante Cualquiera #2</td>
                                             <td>Ingenieria de Sistemas</td>
-                                            
+
                                             <td class="text-right">
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">

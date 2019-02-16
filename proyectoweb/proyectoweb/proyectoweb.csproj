@@ -888,6 +888,9 @@
     <Content Include="Content\assetsWizard\js\jquery.bootstrap.js" />
     <Content Include="Content\assetsWizard\js\jquery.validate.min.js" />
     <Content Include="Content\assetsWizard\js\material-bootstrap-wizard.js" />
+    <Content Include="Content\Carousel\carousel.css" />
+    <Content Include="Content\Carousel\carousel.js" />
+    <Content Include="Content\Newstyle\Error\styleError404.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1059,6 +1062,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Actividades.aspx" />
+    <Content Include="Views\Error401.aspx" />
     <Content Include="Views\FormularioDePagina1.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\NoticiaNueva.aspx" />
@@ -1158,6 +1162,13 @@
     </Compile>
     <Compile Include="Views\administracion.Master.designer.cs">
       <DependentUpon>administracion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Error401.aspx.cs">
+      <DependentUpon>Error401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Error401.aspx.designer.cs">
+      <DependentUpon>Error401.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\FormularioDePagina1.aspx.cs">
       <DependentUpon>FormularioDePagina1.aspx</DependentUpon>
