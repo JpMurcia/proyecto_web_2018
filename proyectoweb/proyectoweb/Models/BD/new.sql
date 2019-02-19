@@ -885,22 +885,30 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.grupo_invest: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.grupo_invest: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
+REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `url_logo_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `estado_grupo`, `fk_id_programa`) VALUES
+	(1, 'afdsfdsf', 'afdfdasdffad', 'afdfadf', 'asfdsdfadf', 'afdafdfa', 1, 1),
+	(2, 'giie', 'jfkdsljafkl', 'kfjdsdslakjf', 'klfdjlkajsf', 'jfslkddjklasjfkl', 1, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.informacion_integrantes_proyecto
 DROP TABLE IF EXISTS `informacion_integrantes_proyecto`;
 CREATE TABLE IF NOT EXISTS `informacion_integrantes_proyecto` (
-  `pk_fk_id_evento` int(11) NOT NULL,
+  `pk_fk_id_produc` int(11) NOT NULL,
   `pk_fk_id_usuario` int(11) NOT NULL,
   `funcion_miembro` varchar(255) DEFAULT NULL,
   `Descrip_miembro` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`pk_fk_id_evento`,`pk_fk_id_usuario`)
+  PRIMARY KEY (`pk_fk_id_produc`,`pk_fk_id_usuario`),
+  KEY `FK_informacion_integrantes_proyecto_usuario` (`pk_fk_id_usuario`),
+  CONSTRAINT `FK_informacion_integrantes_proyecto_producto` FOREIGN KEY (`pk_fk_id_produc`) REFERENCES `producto` (`id_produc`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_informacion_integrantes_proyecto_usuario` FOREIGN KEY (`pk_fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.informacion_integrantes_proyecto: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.informacion_integrantes_proyecto: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `informacion_integrantes_proyecto` DISABLE KEYS */;
+REPLACE INTO `informacion_integrantes_proyecto` (`pk_fk_id_produc`, `pk_fk_id_usuario`, `funcion_miembro`, `Descrip_miembro`) VALUES
+	(2, 15, 'no hiso nada', 'algo');
 /*!40000 ALTER TABLE `informacion_integrantes_proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.menu
@@ -981,7 +989,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `id_produc` int(11) NOT NULL,
   `nom_producto` varchar(400) NOT NULL,
   `fecha_de_produc` date DEFAULT NULL,
-  `estado_produc` tinyint(4) DEFAULT NULL,
+  `estado_produc` tinyint(4) DEFAULT NULL COMMENT 'Activo o terminado',
   `publico_produc` tinyint(4) DEFAULT NULL,
   `fk_id_grupo_invest` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_produc`),
@@ -989,8 +997,11 @@ CREATE TABLE IF NOT EXISTS `producto` (
   CONSTRAINT `FK_producto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.producto: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.producto: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
+REPLACE INTO `producto` (`id_produc`, `nom_producto`, `fecha_de_produc`, `estado_produc`, `publico_produc`, `fk_id_grupo_invest`) VALUES
+	(1, 'producto ', '2019-02-18', 1, 1, 1),
+	(2, 'purphjb1', '2019-02-18', 1, 1, 2);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.programa
@@ -1017,16 +1028,21 @@ REPLACE INTO `programa` (`id_programa`, `nom_programa`, `fk_id_facultad`) VALUES
 DROP TABLE IF EXISTS `semillero`;
 CREATE TABLE IF NOT EXISTS `semillero` (
   `id_semillero` int(11) NOT NULL,
-  `nom_semillero` int(11) DEFAULT NULL,
-  `url_logo_semi` int(11) DEFAULT NULL,
+  `nom_semillero` varchar(500) DEFAULT NULL,
+  `url_logo_semi` varchar(500) DEFAULT NULL,
+  `estado_semillero` tinyint(4) DEFAULT NULL,
   `fk_id_grupo` int(11) NOT NULL,
   PRIMARY KEY (`id_semillero`,`fk_id_grupo`),
   KEY `FK_semillero_grupo_invest` (`fk_id_grupo`),
   CONSTRAINT `FK_semillero_grupo_invest` FOREIGN KEY (`fk_id_grupo`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.semillero: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.semillero: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `semillero` DISABLE KEYS */;
+REPLACE INTO `semillero` (`id_semillero`, `nom_semillero`, `url_logo_semi`, `estado_semillero`, `fk_id_grupo`) VALUES
+	(1, 'dsaffda', 'sdfasfd', NULL, 1),
+	(2, 'alecon', 'jfalkjfdj', NULL, 1),
+	(3, 'sara', 'sar.', NULL, 2);
 /*!40000 ALTER TABLE `semillero` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup.soporte
@@ -1159,10 +1175,11 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.usuario: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.usuario: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `estado_usuario`) VALUES
 	(12, 'carlos', '1 - copia (1).png', 1),
+	(15, 'antonio', 'fdaf', 1),
 	(21, 'fjskldajf', 'sadsad', 1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
@@ -1178,8 +1195,12 @@ CREATE TABLE IF NOT EXISTS `usuario_has_semillero` (
   CONSTRAINT `FK_usuario_has_semillero_usuario` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup.usuario_has_semillero: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup.usuario_has_semillero: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario_has_semillero` DISABLE KEYS */;
+REPLACE INTO `usuario_has_semillero` (`fk_id_usuario`, `fk_id_semillero`, `fecha`) VALUES
+	(12, 1, '2019-02-18'),
+	(12, 2, '2019-02-18'),
+	(12, 3, '2019-02-18');
 /*!40000 ALTER TABLE `usuario_has_semillero` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento viewgroup.proced_consultar_product_semillero
@@ -1187,6 +1208,7 @@ DROP PROCEDURE IF EXISTS `proced_consultar_product_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
+
 
 
 
@@ -1208,14 +1230,13 @@ where grupo.id_grupo_invest=pk_grupo
 AND
 producto.publico_produc<>0
 union ALL
-SELECT semillero.id_grupo_invest, semillero.nom_grupo, "grupo" as tipo  
+SELECT semillero.id_semillero, semillero.id_semillero, "semillero" as tipo  
 
-from grupo_invest 
-inner join grupo_invest  as semillero
-on grupo_invest.id_grupo_invest=semillero.fk_id_semillero
+from grupo_invest
+inner join semillero 
+on semillero.fk_id_grupo= grupo_invest.id_grupo_invest 
 where 
-semillero.id_grupo_invest <> semillero.fk_id_semillero 
-and
+
 grupo_invest.id_grupo_invest=pk_grupo;
 
 END//
@@ -1234,56 +1255,12 @@ LIMIT 1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup.proced_consul_menu_nom
-DROP PROCEDURE IF EXISTS `proced_consul_menu_nom`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_nom`(
-	IN `id_rol` INT
-
-
-
-)
-BEGIN
-SELECT menu.nom_menu FROM menu
-INNER JOIN tipo_has_menu ON tipo_has_menu.pk_fk_menu=menu.id_menu
-INNER JOIN tipo_usuario ON tipo_usuario.id_user = tipo_has_menu.pk_fk_tipo_usuario
-WHERE tipo_usuario.id_user = id_rol
-AND 
-menu.id_menu_padre<>null;
-END//
-DELIMITER ;
-
--- Volcando estructura para procedimiento viewgroup.proced_consul_menu_todo
-DROP PROCEDURE IF EXISTS `proced_consul_menu_todo`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_todo`(
-	IN `id_rol` INT
-
-
-
-)
-BEGIN
-
-SELECT menu.nom_menu, menu.url_pagina, menu.id_menu_padre FROM menu
-INNER JOIN tipo_has_menu ON tipo_has_menu.pk_fk_menu=menu.id_menu
-INNER JOIN tipo_usuario ON tipo_usuario.id_user = tipo_has_menu.pk_fk_tipo_usuario
-WHERE tipo_usuario.id_user = id_rol;
-
-SELECT menu.nom_menu, menu.url_pagina,menu.id_menu_padre FROM menu
-INNER JOIN tipo_has_menu ON tipo_has_menu.pk_fk_menu=menu.id_menu
-INNER JOIN tipo_usuario ON tipo_usuario.id_user = tipo_has_menu.pk_fk_tipo_usuario
-WHERE tipo_usuario.id_user = id_rol
-AND 
-menu.id_menu<>menu.id_menu_padre;
-
-END//
-DELIMITER ;
-
 -- Volcando estructura para procedimiento viewgroup.proced_consul_menu_view
 DROP PROCEDURE IF EXISTS `proced_consul_menu_view`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
+
 
 
 
@@ -1320,12 +1297,14 @@ producto.publico_produc<>0;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup.proced_consul_semillero
-DROP PROCEDURE IF EXISTS `proced_consul_semillero`;
+-- Volcando estructura para procedimiento viewgroup.proced_consul_semillero_XXX
+DROP PROCEDURE IF EXISTS `proced_consul_semillero_XXX`;
 DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero_XXX`(
 	IN `pk_grupo` INT
+
 )
+    COMMENT 'llano es necesario'
 BEGIN
 SELECT semillero.id_grupo_invest, semillero.nom_grupo, semillero.url_logo_grupo   
 
@@ -1458,17 +1437,20 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_paginajhgjhgjhjg`(
 
 
 
+
 )
 BEGIN
 
   	
    Declare num int;    
   
-   SET num = (SELECT COUNT(*)+1 from grupo_invest); 	
+
+SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
+
    
 
   
-   insert into grupo_invest VALUES(num,nom_grupo1,url_logo_grupo,email_grupo,telefo_grupo,direcc_grupo,1);
+   insert into grupo_invest VALUES(num+1,nom_grupo1,url_logo_grupo,email_grupo,telefo_grupo,direcc_grupo,1);
    
    
   
@@ -1483,18 +1465,11 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS `proced_create_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
+	IN `id_semillero` INT,
 	IN `nom_grupo1` VARCHAR(500),
 	IN `url_logo_grupo` VARCHAR(500),
-	IN `email_grupo` VARCHAR(500),
-	IN `telefo_grupo` VARCHAR(500),
-	IN `direcc_grupo` VARCHAR(500),
-	IN `estado` TINYINT
-
-
-
-
-
-
+	IN `fk_grupo` VARCHAR(500),
+	IN `estado_semillero` INT
 )
 BEGIN
 
@@ -1511,7 +1486,7 @@ set id_grupo=(select grupo_invest.id_grupo_invest from grupo_invest
 					ORDER by grupo_invest.id_grupo_invest desc
 					LIMIT 1);
   
-   insert into grupo_invest VALUES((num+1),nom_grupo1,url_logo_grupo,email_grupo,telefo_grupo,direcc_grupo,estado,id_grupo);
+   insert into grupo_invest VALUES((num+1),nom_grupo1,url_logo_grupo,1,id_grupo);
 
 
 END//
