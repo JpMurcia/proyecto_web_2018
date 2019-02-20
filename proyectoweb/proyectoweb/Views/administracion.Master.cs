@@ -62,34 +62,34 @@ namespace proyectoweb.Views
 
             dt = menuD.consultar_menu_view(menuD);
 
-            List<menuPadres> obj2 = new List<menuPadres>();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (dt.Rows[i]["padre"].ToString().Equals("Nulo"))
-                {
-                    menuPadres mp = new menuPadres();
-                    List<menuMostrar> obj = new List<menuMostrar>();
+            //List<menuPadres> obj2 = new List<menuPadres>();
+            //for (int i = 0; i < dt.Rows.Count; i++)
+            //{
+            //    if (dt.Rows[i]["padre"].ToString().Equals("Nulo"))
+            //    {
+            //        menuPadres mp = new menuPadres();
+            //        List<menuMostrar> obj = new List<menuMostrar>();
 
-                    mp.nombre = dt.Rows[i]["nom_menu"].ToString();
-                    mp.url = dt.Rows[i]["url_pagina"].ToString();
-                    mp.icon = dt.Rows[i]["icono"].ToString();
-                    for (int j = 0; j < dt.Rows.Count; j++)
-                    {
-                        if (dt.Rows[i]["id_menu"].ToString() == dt.Rows[j]["padre"].ToString())
-                        {
+            //        mp.nombre = dt.Rows[i]["nom_menu"].ToString();
+            //        mp.url = dt.Rows[i]["url_pagina"].ToString();
+            //        mp.icon = dt.Rows[i]["icono"].ToString();
+            //        for (int j = 0; j < dt.Rows.Count; j++)
+            //        {
+            //            if (dt.Rows[i]["id_menu"].ToString() == dt.Rows[j]["padre"].ToString())
+            //            {
 
-                            menuMostrar me = new menuMostrar();
-                            me.nombre = dt.Rows[j]["nom_menu"].ToString();
-                            me.url = dt.Rows[j]["url_pagina"].ToString();
-                            me.icon = dt.Rows[j]["icono"].ToString();
-                            obj.Add(me);
-                        }
-                    }
-                    mp.hijos = obj;
-                    obj2.Add(mp);
-                }
+            //                menuMostrar me = new menuMostrar();
+            //                me.nombre = dt.Rows[j]["nom_menu"].ToString();
+            //                me.url = dt.Rows[j]["url_pagina"].ToString();
+            //                me.icon = dt.Rows[j]["icono"].ToString();
+            //                obj.Add(me);
+            //            }
+            //        }
+            //        mp.hijos = obj;
+            //        obj2.Add(mp);
+            //    }
 
-            }
+            //}
 
 
             Padre.DataSource = dt;
