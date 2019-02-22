@@ -182,7 +182,7 @@ namespace proyectoweb.Views
             }
         }
 
-        protected void Modal_Command(object sender, CommandEventArgs e)
+        protected void Modal_Command1(object sender, CommandEventArgs e)
         {
 
         }

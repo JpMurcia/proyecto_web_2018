@@ -253,7 +253,7 @@
                                                         <th class="text-right">Publico</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                              <tbody>
 
                                                       <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
                                                    <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
@@ -266,28 +266,12 @@
                                                                 <td class="td-actions text-right ">
 
                                                                     
-                                                                    <asp:LinkButton  CssClass="btn btn-primary"  ID="Modal"  runat="server"  OnCommand="Modal_Command" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'   ">
+                                                                    <asp:LinkButton  class="btn btn-primary"  ID="Modal"  title='<%#Eval("id_usuario")%>' CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
                                                                 
                                                                     
-                                                        
-
-                                                                </td>
-
-                                                                <td class="td-actions text-right ">
-                                                                    <div class="togglebutton">
-                                                                        <label>
-                                                                            <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" value="1">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </ItemTemplate>
-                                                    </asp:Repeater>
-
-
-                                                                <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-signup" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
@@ -349,8 +333,8 @@
                                                                                                         </tr>
                                                                                                     </thead>
                                                                                                     <tbody>
-                                                                                                        <%--<asp:Repeater ID="InnerRepeater" runat="server">
-                                                                                                            <ItemTemplate>--%>
+                                                                                                        <asp:Repeater ID="InnerRepeater" runat="server">
+                                                                                                            <ItemTemplate>
                                                                                                                 <tr>
 
 
@@ -368,8 +352,8 @@
 
 
                                                                                                                 </tr>
-                                                                                                         <%--   </ItemTemplate>
-                                                                                                        </asp:Repeater>--%>
+                                                                                                            </ItemTemplate>
+                                                                                                        </asp:Repeater>
                                                                                                     </tbody>
                                                                                                 </table>
 
@@ -388,7 +372,21 @@
                                                                         </div>
                                                                     </div>
 
+                                                                </td>
+
+                                                                <td class="td-actions text-right ">
+                                                                    <div class="togglebutton">
+                                                                        <label>
+                                                                            <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" value="1">
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
                                                 </tbody>
+
+
                                             </table>
                                          </div>
                                     </div>
@@ -553,27 +551,7 @@
                             </div>
 
 
-                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Cancelar</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ¿Esta seguro de que desea salir?,Todo el progreso se perdera.
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar </button>
-                                                    <a href="principal.aspx">
-                                                        <button type="button" class="btn btn-primary">si</button></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
 
 
 
