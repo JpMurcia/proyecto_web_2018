@@ -59,7 +59,7 @@ namespace proyectoweb.Views
 
         protected void verPicardie_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=picardie");
+            Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
         }
     }
 }
