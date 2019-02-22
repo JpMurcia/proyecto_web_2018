@@ -23,7 +23,7 @@ namespace proyectoweb.Views
             if (string.IsNullOrEmpty(Session["tipo"] as string))
             {
                 //Some Stuff to initialize the variable
-                Response.Redirect("Error401.aspx");
+                Response.Redirect("Error404.aspx");
 
             }
             else {
@@ -33,7 +33,7 @@ namespace proyectoweb.Views
                     llenarDatos();
                 }
                 else {
-                    Response.Redirect("Error401.aspx");
+                    Response.Redirect("Error404.aspx");
                 }
                
             }
@@ -182,7 +182,7 @@ namespace proyectoweb.Views
             }
         }
 
-        protected void Modal_Command(object sender, CommandEventArgs e)
+        protected void Modal_Command1(object sender, CommandEventArgs e)
         {
 
         }
