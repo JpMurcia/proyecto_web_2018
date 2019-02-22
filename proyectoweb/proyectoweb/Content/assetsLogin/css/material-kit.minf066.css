@@ -17550,8 +17550,8 @@ thead.thead-inverse th {
 }
 
 .card-profile .card-avatar {
-	width: 280px;
-	max-width: 230px;
+	width: 180px;
+	max-width: 180px;
 	max-height: 830px
 }
 
@@ -17693,8 +17693,7 @@ screen and (-ms-high-contrast:active) {
 .card-testimonial .card-avatar {
 	margin: -40px auto 0;
 	border-radius: 50%;
-	overflow: hidden;
-	padding: 0;
+	overflow: visible;
 	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
 }
 
@@ -17705,7 +17704,7 @@ screen and (-ms-high-contrast:active) {
 
 .card-profile .card-avatar img,
 .card-testimonial .card-avatar img {
-	width: 100%;
+	width: 84%;
 	height: auto
 }
 
