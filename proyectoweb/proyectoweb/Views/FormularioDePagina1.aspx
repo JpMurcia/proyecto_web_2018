@@ -229,6 +229,8 @@
 
 
                                     </div>
+
+
                                     <div class="tab-pane" id="captain">
                                         <div class="form-group">
                                             <div class="input-group">
@@ -264,12 +266,28 @@
                                                                 <td class="td-actions text-right ">
 
                                                                     
-                                                                    <asp:LinkButton  class="btn btn-primary"  ID="Modal"  title='<%#Eval("id_usuario")%>' CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                    <asp:LinkButton  CssClass="btn btn-primary"  ID="Modal"  runat="server"  OnCommand="Modal_Command" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'   ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
                                                                 
                                                                     
-                                                                    <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        
+
+                                                                </td>
+
+                                                                <td class="td-actions text-right ">
+                                                                    <div class="togglebutton">
+                                                                        <label>
+                                                                            <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" value="1">
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+
+
+                                                                <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-signup" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
@@ -331,8 +349,8 @@
                                                                                                         </tr>
                                                                                                     </thead>
                                                                                                     <tbody>
-                                                                                                        <asp:Repeater ID="InnerRepeater" runat="server">
-                                                                                                            <ItemTemplate>
+                                                                                                        <%--<asp:Repeater ID="InnerRepeater" runat="server">
+                                                                                                            <ItemTemplate>--%>
                                                                                                                 <tr>
 
 
@@ -350,8 +368,8 @@
 
 
                                                                                                                 </tr>
-                                                                                                            </ItemTemplate>
-                                                                                                        </asp:Repeater>
+                                                                                                         <%--   </ItemTemplate>
+                                                                                                        </asp:Repeater>--%>
                                                                                                     </tbody>
                                                                                                 </table>
 
@@ -370,22 +388,14 @@
                                                                         </div>
                                                                     </div>
 
-                                                                </td>
-
-                                                                <td class="td-actions text-right ">
-                                                                    <div class="togglebutton">
-                                                                        <label>
-                                                                            <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" value="1">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </ItemTemplate>
-                                                    </asp:Repeater>
                                                 </tbody>
                                             </table>
                                          </div>
                                     </div>
+
+
+
+
                                     <div class="tab-pane" id="description">
                                         <div class="card card-plain">
                                             <div class="card-header" role="tab" id="headingOne">
