@@ -13,6 +13,8 @@ namespace proyectoweb.Controllers
         private modelUsuario usuarioSigepi = new modelUsuario();
 
         private Grupo_inve_semillero grupoSigepi = new Grupo_inve_semillero();
+
+        private grupo_investigacion grupoVG = new grupo_investigacion();
         private usuario usuarioVG = new usuario();
 
         public loginController()
@@ -37,6 +39,12 @@ namespace proyectoweb.Controllers
         public DataTable consultarInforGrupo(Grupo_inve_semillero grup) {
 
             return grupoSigepi.consultargrupoModel(grup);
+
+        }
+        public DataTable crear_grupo(grupo_investigacion grup)
+        {
+
+            return grupoVG.Crear_grupo(grup);
 
         }
 

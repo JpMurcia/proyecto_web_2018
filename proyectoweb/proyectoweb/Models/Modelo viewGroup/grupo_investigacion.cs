@@ -24,9 +24,10 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string justificacion { get; set; }
         public string quienesSomos { get; set; }
     
-        public string url_imagen { get; set; }
+       // public string url_imagen { get; set; }
         public string estado { get; set; }
         public string fk_id_grupo { get; set; }
+        public string telefono { get; set; }
         public string correo   { get; set; }
         public string direccion { get; set; }
         
@@ -55,35 +56,87 @@ namespace proyectoweb.Models.ModelosViewGroup
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
-
             p.Add(new Parametro(
                 "nom_grupo",
                  obj.grupo_nombre,
                  "VARCHAR",
                  ParameterDirection.Input
                 ));
-
             p.Add(new Parametro(
                 "email_grupo",
-                 obj.grupo_nombre,
+                 obj.correo,
                  "VARCHAR",
                  ParameterDirection.Input
                 ));
-
             p.Add(new Parametro(
                 "telefo_grupo",
-                obj.grupo_nombre,
+                obj.telefono,
                 "VARCHAR",
                  ParameterDirection.Input
                 ));
-
-
             p.Add(new Parametro(
                 "direcc_grupo",
-                obj.grupo_nombre,
+                obj.direccion,
                 "VARCHAR",
                 ParameterDirection.Input
                  ));
+            p.Add(new Parametro(
+                "url_logo_grupo",
+                 obj.urlLogo,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "siglas",
+                obj.siglas,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "obejtivo",
+                obj.objetivo,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+            p.Add(new Parametro(
+                "mision",
+                 obj.mision,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "vision",
+                obj.vision,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "justif",
+                obj.justificacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+            p.Add(new Parametro(
+                "quien",
+                 obj.quienesSomos,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "fk_grupo",
+                obj.fk_id_grupo,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "fk_programa",
+                obj.ProgramaGrupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+
+
+
 
 
 

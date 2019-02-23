@@ -26,6 +26,7 @@ namespace proyectoweb.Views
             usuario b = new usuario();
             modelUsuario a = new modelUsuario();
             Grupo_inve_semillero grupo = new Grupo_inve_semillero();
+            grupo_investigacion grupoVG = new grupo_investigacion();
             a.email_usuario = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
@@ -62,24 +63,39 @@ namespace proyectoweb.Views
 
                          grupo.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
                         DataTable datos_grupo = controlador.consultarInforGrupo(grupo);
-                        grupo.id_grupo = datoRegreso.Rows[0]["id_grupo"].ToString();
 
 
+                        grupoVG.idGrupoInvestigacion = datos_grupo.Rows[0]["id_grupo"].ToString();
+                        grupoVG.grupo_nombre = datos_grupo.Rows[0]["nom_grupo"].ToString();
+                        grupoVG.siglas = datos_grupo.Rows[0]["sigla_signif_grupo"].ToString();
+                        grupoVG.objetivo = datos_grupo.Rows[0]["objetivo_grupo"].ToString();
+                        grupoVG.ProgramaGrupo = datos_grupo.Rows[0]["programa_grupo"].ToString();
+                        grupoVG.mision = datos_grupo.Rows[0]["mision_grupo"].ToString();
+                        grupoVG.vision = datos_grupo.Rows[0]["vision_grupo"].ToString();
+                        grupoVG.justificacion = datos_grupo.Rows[0]["justif_grupo"].ToString();
+                        grupoVG.quienesSomos = datos_grupo.Rows[0]["quien_somos_grupo"].ToString();
+                        grupoVG.urlLogo = datos_grupo.Rows[0]["url_logo_grupo"].ToString();
 
+
+                        DataTable crear_grupo = controlador.crear_grupo(grupoVG);
 
                         DataTable CreandoUser = controlador.crearUsuario(b);
+
+                        
+
+                   
 
                         b.ToString();
 
                     }
                     b.fk_tipo_user = "1";
                     //  DataTable dt = controlador.consultarGrupos(a);
-                    a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
-                    //grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
-                    //grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
-                    Session["nom"] = a.nombre;
-                    Session["contra"] = a.contrasena;
-                    Session["tipo"] = a.tipo;
+                    //a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
+                    ////grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
+                    ////grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
+                    //Session["nom"] = a.nombre;
+                    //Session["contra"] = a.contrasena;
+                    //Session["tipo"] = a.tipo;
 
                     Response.Redirect("principal.aspx");
 

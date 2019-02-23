@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.5.21 - MySQL Community Server (GPL)
--- Server OS:                    Win64
--- HeidiSQL Version:             10.1.0.5464
+-- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             10.1.0.5464
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,11 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Dumping database structure for viewgroup3
+-- Volcando estructura de base de datos para viewgroup3
 CREATE DATABASE IF NOT EXISTS `viewgroup3` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `viewgroup3`;
 
--- Dumping structure for procedure viewgroup3.proced_consultar_product_semillero
+-- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
@@ -55,7 +55,7 @@ grupo_invest.id_grupo_invest=pk_grupo;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_grupo_id
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo_id
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
 BEGIN
@@ -67,7 +67,7 @@ LIMIT 1;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_menu_view
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_menu_view
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
@@ -88,7 +88,7 @@ WHERE tipo_usuario.id_user = id_rol and menu.estado<>0
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_producto
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_producto
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_producto`(
 	IN `pk_grupo` INT
@@ -107,7 +107,7 @@ producto.publico_produc<>0;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_semillero_XXX
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_semillero_XXX
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero_XXX`(
 	IN `pk_grupo` INT
@@ -128,7 +128,7 @@ grupo_invest.id_grupo_invest=pk_grupo;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_soport_pag_not
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_soport_pag_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 	IN `id_grupo` INT
@@ -147,7 +147,7 @@ LIMIT 10;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_consul_user
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_user
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 	IN `id_user` INT
@@ -177,11 +177,11 @@ else
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_create_grupo
+-- Volcando estructura para procedimiento viewgroup3.proced_create_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
-	IN `nom_grupo1` VARCHAR(500),
-	IN `url_logo_grupo` VARCHAR(500),
+	IN `id_grupo` INT,
+	IN `nom_grupo` VARCHAR(500),
 	IN `email_grupo` VARCHAR(500),
 	IN `telefo_grupo` VARCHAR(500),
 	IN `direcc_grupo` VARCHAR(500)
@@ -190,24 +190,39 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
 
 
 
+
+
+
+,
+	IN `url_logo_grupo` VARCHAR(500),
+	IN `siglas` VARCHAR(800),
+	IN `objetivo` VARCHAR(800),
+	IN `mision` VARCHAR(800),
+	IN `vision` VARCHAR(800),
+	IN `justif` VARCHAR(800),
+	IN `quien` VARCHAR(800),
+	IN `fk_grupo` INT,
+	IN `fk_programa` VARCHAR(50)
+
+
 )
+    COMMENT 'registrar toda la inforamcion '
 BEGIN
 
-declare num int;
 
 
-  
-SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
-   
+declare idprograma int;
 
-  
-   insert into grupo_invest VALUES((num+1),nom_grupo1,url_logo_grupo,email_grupo,telefo_grupo,direcc_grupo,1,(num+1));
+set idprograma = (select programa.id_programa from programa where programa.nom_programa=fk_programa);
+
+INSERT INTO grupo_invest (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
+	(id_grupo,nom_grupo, email_grupo,telefo_grupo, direcc_grupo, url_logo_grupo, 1, siglas, objetivo, mision, vision, justif, quien, fk_grupo, idprograma);
 
 
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_create_paginajhgjhgjhjg
+-- Volcando estructura para procedimiento viewgroup3.proced_create_paginajhgjhgjhjg
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_paginajhgjhgjhjg`(
 	IN `nom_grupo1` VARCHAR(50),
@@ -266,7 +281,7 @@ SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_create_semillero
+-- Volcando estructura para procedimiento viewgroup3.proced_create_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
 	IN `id_semillero` INT,
@@ -296,7 +311,7 @@ set id_grupo=(select grupo_invest.id_grupo_invest from grupo_invest
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_create_soport_not
+-- Volcando estructura para procedimiento viewgroup3.proced_create_soport_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_soport_not`(
 	IN `pk_fk_produc` INT,
@@ -325,34 +340,28 @@ insert into soporte VALUES((num+1),url_imagen,pk_fk_produc,titulo_soporte,descri
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_create_usuario
+-- Volcando estructura para procedimiento viewgroup3.proced_create_usuario
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_usuario`(
 	IN `id_user` INT,
 	IN `nombre_user` VARCHAR(50),
-	IN `url_foto_user` VARCHAR(50),
-	IN `tipo_user` INT
-
-
-
-
-
-
-
+	IN `url_foto_user` VARCHAR(50)
+,
+	IN `email` VARCHAR(50)
 )
 BEGIN
 
-declare num int;
+#declare num int;
 
-SET num =(select IFNULL(MAX(usuario.id_usuario),0) FROM usuario)+1;
+#SET num =(select IFNULL(MAX(usuario.id_usuario),0) FROM usuario)+1;
 
- insert into usuario VALUES(id_user,nombre_user,url_foto_user,tipo_user,1);
+ insert into usuario VALUES(id_user,nombre_user,url_foto_user,email);
    
   
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_delete_soport
+-- Volcando estructura para procedimiento viewgroup3.proced_delete_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_delete_soport`(
 	IN `id_soport` INT
@@ -366,7 +375,7 @@ where soporte.id_soporte;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_registra_produc
+-- Volcando estructura para procedimiento viewgroup3.proced_registra_produc
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_registra_produc`(
 	IN `nom_producto` VARCHAR(500),
@@ -395,7 +404,7 @@ insert into producto VALUES((num+1),nom_producto,fecha_de_produc,estado_produc,p
 END//
 DELIMITER ;
 
--- Dumping structure for procedure viewgroup3.proced_update_soport
+-- Volcando estructura para procedimiento viewgroup3.proced_update_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_soport`(
 	IN `id_soport` INT,

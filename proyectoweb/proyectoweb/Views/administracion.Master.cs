@@ -36,7 +36,7 @@ namespace proyectoweb.Views
             if (string.IsNullOrEmpty(Session["tipo"] as string))
             {
                 //Some Stuff to initialize the variable
-                Response.Redirect("Error401.aspx");
+                Response.Redirect("Error404.aspx");
 
             }
             else {
