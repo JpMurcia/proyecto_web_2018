@@ -255,7 +255,9 @@
                                                 </thead>
                                               <tbody>
 
-                                                      <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
+                                                      <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                         <%-- 
+                                                      <asp:Repeater ID="Repeater2" OnItemDataBound="RepiterItem" runat="server">--%>
                                                    <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
                                                         <ItemTemplate>
                                                             <tr>
@@ -266,111 +268,18 @@
                                                                 <td class="td-actions text-right ">
 
                                                                     
-                                                                    <asp:LinkButton  class="btn btn-primary"  ID="Modal"  title='<%#Eval("id_usuario")%>' CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                    <asp:LinkButton  CssClass="btn btn-primary"    runat="server" OnCommand="Modal_Command1"  CommandArgument='<%# Eval("id_usuario") %>'   >
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
                                                                 
-                                                                    
-                                                                    <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-signup" role="document">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h5 class="modal-title card-title">Miembro</h5>
-                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                        <i class="material-icons">clear</i>
-                                                                                    </button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-5 ml-auto">
-                                                                                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-                                                                                                <div class="fileinput-new thumbnail img-raised">
+                                                                 <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                       <i class="material-icons">edit</i>Editar
+                                                                    </asp:LinkButton>--%>
 
-                                                                                                    <%-- Aqui se ubica la imagen del miembro--%>
-                                                                                                    <img src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
-                                                                                                </div>
-                                                                                                <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-
-                                                                                            </div>
-
-                                                                                            <div class="info info-horizontal">
-                                                                                                <div class="description">
-                                                                                                    <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
-                                                                                                </div>
-                                                                                            </div>
-
-
-                                                                                        </div>
-
-                                                                                        <div class="col-md-5 mr-auto">
+                                                                    <%-- modal --%>
 
 
 
-                                                                                            <form class="form" method="" action="">
-                                                                                                <h4 class="title">Escriba las habilidades de la persona</h4>
-                                                                                                <span class="form-group">
-                                                                                                    <input type="text" value="" placeholder=" habilidades" class="form-control tagsinput text-left" data-role="tagsinput" data-color="info" style="display: none;">
-                                                                                                </span>
-
-<%--                                                                                                <div class="form-group">
-                                                                                                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                                                                                                    <select multiple class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect2">
-                                                                                                        <option>1</option>
-                                                                                                        <option>2</option>
-                                                                                                        <option>3</option>
-                                                                                                        <option>4</option>
-                                                                                                        <option>5</option>
-                                                                                                    </select>
-                                                                                                </div>
---%>
-
-                                                                                                <table class="table">
-                                                                                                    <thead>
-                                                                                                        <tr>
-                                                                                                            <p><%#Eval("nom_usuario") %></p>
-                                                                                                            <th class="text-left">Proyecto</th>
-                                                                                                            <th class="text-right">Publicar</th>
-                                                                                                        </tr>
-                                                                                                    </thead>
-                                                                                                    <tbody>
-                                                                                                        <asp:Repeater ID="InnerRepeater" runat="server">
-                                                                                                            <ItemTemplate>
-                                                                                                                <tr>
-
-
-
-                                                                                                                    <td class="text-left"><%#Eval("proyectos")%></td>
-                                                                                                                    <td class="td-actions text-right ">
-                                                                                                                        <div class="togglebutton">
-                                                                                                                            <label>
-                                                                                                                             
-                                                                                                                                <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked=""   >
-                                                                                                                            </label>
-                                                                                                                        </div>
-                                                                                                                    </td>
-
-
-
-                                                                                                                </tr>
-                                                                                                            </ItemTemplate>
-                                                                                                        </asp:Repeater>
-                                                                                                    </tbody>
-                                                                                                </table>
-
-                                                                                            </form>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                  
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
 
                                                                 </td>
 
@@ -384,6 +293,9 @@
                                                             </tr>
                                                         </ItemTemplate>
                                                     </asp:Repeater>
+
+                                               
+
                                                 </tbody>
 
 
@@ -588,6 +500,95 @@
             </div>
         </div>
 
+
+        <div class="modal fade" id="modal-datos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-signup" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title card-title">Miembro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">clear</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5 ml-auto">
+                                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail img-raised">
+
+                                        <%-- Aqui se ubica la imagen del miembro--%>
+                                        <img src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+
+                                </div>
+
+                                <div class="info info-horizontal">
+                                    <div class="description">
+                                        <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-md-5 mr-auto">
+
+
+
+                               
+
+                             
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="" >
+
+                                                </asp:TextBox>
+                                                <p ><%#Eval("nom_usuario") %></p>
+                                                <th class="text-left">Proyecto</th>
+                                                <th class="text-right">Publicar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <asp:Repeater ID="InnerRepeater" runat="server">
+                                                <ItemTemplate>
+                                                    <tr>
+
+
+
+                                                        <td class="text-left"><%#Eval("proyectos")%></td>
+                                                        <td class="td-actions text-right ">
+                                                            <div class="togglebutton">
+                                                                <label>
+
+                                                                    <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked="">
+                                                                </label>
+                                                            </div>
+                                                        </td>
+
+
+
+                                                    </tr>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </tbody>
+                                    </table>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="/Content/assetsLogin/js/core/jquery.min.js" type="text/javascript"></script>
         <script src="/Content/assetsLogin/js/core/popper.min.js" type="text/javascript"></script>

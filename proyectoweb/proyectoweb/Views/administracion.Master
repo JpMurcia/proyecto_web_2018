@@ -202,7 +202,7 @@
 <script src="/Content/assetsAdministracion/js/core/bootstrap-material-design.min.js"></script>
 
 <script src="/Content/assetsLogin/js/buttons.js"></script>
-<script src="/Content/assetsLogin/js/jquery.min.js"></script>
+
 <script src="/Content/assetsLogin/js/material-kit.minf066.js"></script>
 <script src="/Content/assetsLogin/js/owl.carousel.min.js"></script>
 <script src="/Content/assetsLogin/js/plugins/bootstrap-datetimepicker.js"></script>
@@ -213,7 +213,7 @@
 <script src="/Content/assetsLogin/js/plugins/moment.min.js"></script>
 <script src="/Content/assetsLogin/js/plugins/nouislider.min.js"></script>
 <script src="/Content/assetsLogin/js/core/bootstrap-material-design.min.js"></script>
-<script src="/Content/assetsLogin/js/core/jquery.min.js"></script>
+
 <script src="/Content/assetsLogin/js/core/popper.min.js"></script>
 
 

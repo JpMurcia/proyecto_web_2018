@@ -178,7 +178,7 @@ INSERT INTO `tipo_has_menu` (`pk_fk_tipo_usuario`, `pk_fk_menu`, `fecha`) VALUES
 
 -- Volcando datos para la tabla viewgroup.tipo_usuario: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
-INSERT INTO `tipo_usuario` (`id_user`, `nombre_user`) VALUES
+INSERT INTO `tipo_usuario` (`id_rol`, `nom_rol`) VALUES
 	(1, 'Lider'),
 	(2, 'miembro'),
 	(5, 'Administrador');

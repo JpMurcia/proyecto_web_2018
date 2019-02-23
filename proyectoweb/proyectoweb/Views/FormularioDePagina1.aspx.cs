@@ -48,15 +48,7 @@ namespace proyectoweb.Views
         }
 
 
-        protected void ventanitaclick(object sender, EventArgs e) {
-
-            
-
-           
-
-
-
-        }
+     
         
 
 
@@ -184,7 +176,20 @@ namespace proyectoweb.Views
 
         protected void Modal_Command1(object sender, CommandEventArgs e)
         {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "$('#modal-datos').modal('show');", true);
 
+            user.grupo = Request.QueryString["grupo"];
+        
+            nom_usaurioMostrar.Text = user.nombre;
+           // user.id = "24";
+            user.id = e.CommandArgument.ToString();
+
+            // object algo = Request.QueryString["iden"].ToString();
+
+            
+            DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
+            InnerRepeater.DataSource = dt6;
+            InnerRepeater.DataBind();
         }
     }
 }
