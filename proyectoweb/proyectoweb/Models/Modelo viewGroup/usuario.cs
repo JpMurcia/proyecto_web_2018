@@ -11,8 +11,10 @@ namespace proyectoweb.Models.ModelosViewGroup
     {
         public string idUsuario { get; set; }
         public string nom_usuario { get; set; }
+        public string correo { get; set; }
         public string url_foto_usuario { get; set; }
         public string fk_tipo_user { get; set; }
+        
 
         private ConexionPropio conect = new ConexionPropio();
 
@@ -26,7 +28,7 @@ namespace proyectoweb.Models.ModelosViewGroup
             p.Add(new Parametro(
               "id_user",
               obj.idUsuario,
-              "INT",
+              "VARCHAR",
               ParameterDirection.Input
               ));
 
@@ -43,9 +45,9 @@ namespace proyectoweb.Models.ModelosViewGroup
                 ParameterDirection.Input
                 ));
             p.Add(new Parametro(
-               "tipo_user",
-               obj.fk_tipo_user,
-               "INT",
+               "email",
+               obj.correo,
+               "VARCHAR",
                ParameterDirection.Input
                ));
 

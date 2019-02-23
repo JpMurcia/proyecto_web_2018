@@ -11,6 +11,8 @@ namespace proyectoweb.Controllers
     public class loginController
     {
         private modelUsuario usuarioSigepi = new modelUsuario();
+
+        private Grupo_inve_semillero grupoSigepi = new Grupo_inve_semillero();
         private usuario usuarioVG = new usuario();
 
         public loginController()
@@ -32,9 +34,9 @@ namespace proyectoweb.Controllers
             return usuarioVG.crearUsuario(usu);
         }
 
-        public DataTable consultarGrupos(modelUsuario usu) {
+        public DataTable consultarInforGrupo(Grupo_inve_semillero grup) {
 
-            return usuarioSigepi.consultarProyecto(usu);
+            return grupoSigepi.consultargrupoModel(grup);
 
         }
 

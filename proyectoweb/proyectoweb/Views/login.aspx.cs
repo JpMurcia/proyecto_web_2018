@@ -35,55 +35,67 @@ namespace proyectoweb.Views
 
             if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")
             {
-                b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
-                DataTable Consul_dato = controlador.Consultar(b);
 
-                if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
+                if (datoRegreso.Rows[0]["es"].ToString() == ("Lider"))
                 {
+
+
+                    b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
+
+                    DataTable Consul_dato = controlador.Consultar(b);
+
+                    if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
+                    {
+
+
+
+                    }
+                    else
+                    {
+
+
+                        b.fk_tipo_user = datoRegreso.Rows[0]["tipo_user"].ToString();
+                        b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
+                        b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
+                        b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
+                        b.correo = datoRegreso.Rows[0]["correo"].ToString();
+
+                         grupo.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
+                        DataTable datos_grupo = controlador.consultarInforGrupo(grupo);
+                        grupo.id_grupo = datoRegreso.Rows[0]["id_grupo"].ToString();
+
+
+
+
+                        DataTable CreandoUser = controlador.crearUsuario(b);
+
+                        b.ToString();
+
+                    }
+                    b.fk_tipo_user = "1";
+                    //  DataTable dt = controlador.consultarGrupos(a);
+                    a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
+                    //grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
+                    //grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
+                    Session["nom"] = a.nombre;
+                    Session["contra"] = a.contrasena;
+                    Session["tipo"] = a.tipo;
+
+                    Response.Redirect("principal.aspx");
 
                    
 
                 }
                 else
                 {
+                    b.fk_tipo_user = "2";
 
-                    if (datoRegreso.Rows[0]["grupo"].ToString() == ("Lider"))
-                    {
-
-                        b.fk_tipo_user = "1";
-
-                    }
-                    else
-                    {
-                        b.fk_tipo_user = "2";
-
-
-                    }
-
-                    b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
-                    b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
-                    b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
-                  
-
-                    
-                   
-
-                    
-                    DataTable CreandoUser = controlador.crearUsuario(b);
-
-                    b.ToString();
 
                 }
 
-              //  DataTable dt = controlador.consultarGrupos(a);
-                a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
-                //grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
-                //grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
-                Session["nom"] = a.nombre;
-                Session["contra"] = a.contrasena;
-                Session["tipo"] = a.tipo;
+             
 
-                Response.Redirect("principal.aspx");
+             
 
 
 
