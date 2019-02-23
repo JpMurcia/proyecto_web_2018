@@ -28,7 +28,10 @@ CREATE TABLE IF NOT EXISTS `actividad` (
   CONSTRAINT `fk_Actividad_grupo_invest1` FOREIGN KEY (`grupo_invest_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.actividad: ~0 rows (approximately)
+/*!40000 ALTER TABLE `actividad` DISABLE KEYS */;
+/*!40000 ALTER TABLE `actividad` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.auditoria
 CREATE TABLE IF NOT EXISTS `auditoria` (
   `id_auditoria` int(11) NOT NULL,
@@ -38,7 +41,10 @@ CREATE TABLE IF NOT EXISTS `auditoria` (
   PRIMARY KEY (`id_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.auditoria: ~0 rows (approximately)
+/*!40000 ALTER TABLE `auditoria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auditoria` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.categoria
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_Categoria` int(11) NOT NULL,
@@ -47,7 +53,10 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   PRIMARY KEY (`id_Categoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.categoria: ~0 rows (approximately)
+/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.facultad
 CREATE TABLE IF NOT EXISTS `facultad` (
   `id_facultad` int(11) NOT NULL,
@@ -55,7 +64,13 @@ CREATE TABLE IF NOT EXISTS `facultad` (
   PRIMARY KEY (`id_facultad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.facultad: ~2 rows (approximately)
+/*!40000 ALTER TABLE `facultad` DISABLE KEYS */;
+INSERT INTO `facultad` (`id_facultad`, `nom_facultad`) VALUES
+	(1, 'Ingenieria'),
+	(2, 'Ciencias Basicas');
+/*!40000 ALTER TABLE `facultad` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.grupo_invest
 CREATE TABLE IF NOT EXISTS `grupo_invest` (
   `id_grupo_invest` int(11) NOT NULL,
@@ -81,7 +96,10 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_grupo_invest` FOREIGN KEY (`fk_grupo_semi`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.grupo_invest: ~0 rows (approximately)
+/*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
+/*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.grupo_invest_has_usuario
 CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   `pkf_id_grupo_invest` int(11) NOT NULL,
@@ -97,7 +115,10 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.grupo_invest_has_usuario: ~0 rows (approximately)
+/*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.habilidades
 CREATE TABLE IF NOT EXISTS `habilidades` (
   `id_Habilidades` int(11) NOT NULL,
@@ -106,7 +127,10 @@ CREATE TABLE IF NOT EXISTS `habilidades` (
   PRIMARY KEY (`id_Habilidades`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.habilidades: ~0 rows (approximately)
+/*!40000 ALTER TABLE `habilidades` DISABLE KEYS */;
+/*!40000 ALTER TABLE `habilidades` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.habilidades_has_usuario
 CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
   `pkf_id_Habilidades` int(11) NOT NULL,
@@ -119,7 +143,10 @@ CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
   CONSTRAINT `FK_habilidades_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.habilidades_has_usuario: ~0 rows (approximately)
+/*!40000 ALTER TABLE `habilidades_has_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `habilidades_has_usuario` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.menu
 CREATE TABLE IF NOT EXISTS `menu` (
   `id_menu` int(11) NOT NULL,
@@ -132,7 +159,31 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`id_menu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.menu: ~20 rows (approximately)
+/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` (`id_menu`, `nom_menu`, `id_menu_padre`, `url_pagina`, `icono`, `comentario`, `estado`) VALUES
+	(1, 'Grupo', NULL, NULL, 'group', 'solo para lider', NULL),
+	(2, 'Crear Pagina', NULL, 'CrearPagina.aspx', 'image', 'para creadores y miembro', '1'),
+	(3, 'Mi Pagina ', '2', NULL, 'image', NULL, '1'),
+	(4, 'Actualizar Pagina', '2', NULL, 'AP', NULL, NULL),
+	(5, 'Eliminar Pagina', '2', NULL, 'EP', NULL, NULL),
+	(6, 'Las Paginas', NULL, NULL, 'grid_on', 'las paginas de todos los grupos super admi', NULL),
+	(7, 'Lista de Miembros', NULL, 'permisos.aspx', 'assignment_ind', NULL, '1'),
+	(8, 'Noticias', NULL, NULL, 'event_note', NULL, NULL),
+	(9, 'Nueva Noticia', '8', 'NoticiaNueva.aspx', 'event_note', NULL, '1'),
+	(10, 'Ver Noticias', '8', 'NoticiaPublicada.aspx', 'event_note', NULL, '1'),
+	(11, 'Elinimar Noticia', '8', NULL, 'grid_on', NULL, NULL),
+	(12, 'Actividades ', NULL, 'Actividades.aspx', 'date_range ', NULL, '1'),
+	(13, 'Ver Actividades', '12', NULL, 'VA', NULL, NULL),
+	(14, 'Crear Actividad', '12', NULL, 'date_range ', NULL, '1'),
+	(15, 'Modificar Actividad', '12', NULL, 'grid_on', NULL, NULL),
+	(16, 'Eliminar Actividad ', '12', NULL, 'grid_on', NULL, NULL),
+	(17, 'Reporte', NULL, NULL, 'grid_on', 'reporte interno de los grupos', '1'),
+	(18, 'Grupos', NULL, NULL, 'grid_on', NULL, NULL),
+	(19, 'Pagina', '2', NULL, 'grid_on', 'consulta pagina 1', NULL),
+	(20, 'Reporte de grupos', NULL, NULL, 'grid_on', 'super administrador', NULL);
+/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.pagina_propia
 CREATE TABLE IF NOT EXISTS `pagina_propia` (
   `id_Pagina Propia` int(11) NOT NULL,
@@ -144,7 +195,10 @@ CREATE TABLE IF NOT EXISTS `pagina_propia` (
   PRIMARY KEY (`id_Pagina Propia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.pagina_propia: ~0 rows (approximately)
+/*!40000 ALTER TABLE `pagina_propia` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pagina_propia` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.pagina_web
 CREATE TABLE IF NOT EXISTS `pagina_web` (
   `id_pagina` int(11) NOT NULL,
@@ -158,7 +212,10 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
   CONSTRAINT `fk_pagina_web_plantilla1` FOREIGN KEY (`fk_id_plantilla`) REFERENCES `plantilla` (`id_plantilla`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.pagina_web: ~0 rows (approximately)
+/*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pagina_web` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.plantilla
 CREATE TABLE IF NOT EXISTS `plantilla` (
   `id_plantilla` int(11) NOT NULL,
@@ -167,7 +224,10 @@ CREATE TABLE IF NOT EXISTS `plantilla` (
   PRIMARY KEY (`id_plantilla`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.plantilla: ~0 rows (approximately)
+/*!40000 ALTER TABLE `plantilla` DISABLE KEYS */;
+/*!40000 ALTER TABLE `plantilla` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.programa
 CREATE TABLE IF NOT EXISTS `programa` (
   `id_programa` int(11) NOT NULL,
@@ -178,7 +238,15 @@ CREATE TABLE IF NOT EXISTS `programa` (
   CONSTRAINT `FK_programa_facultad` FOREIGN KEY (`fk_id_facultad`) REFERENCES `facultad` (`id_facultad`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.programa: ~4 rows (approximately)
+/*!40000 ALTER TABLE `programa` DISABLE KEYS */;
+INSERT INTO `programa` (`id_programa`, `nom_programa`, `fk_id_facultad`) VALUES
+	(1, 'Ingenieria de Sistema', 1),
+	(2, 'Ingenieria Agrocologica', 1),
+	(3, 'Ingenieria de Alimento', 1),
+	(4, 'Quimica', 2);
+/*!40000 ALTER TABLE `programa` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.proyecto
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_produc` int(11) NOT NULL,
@@ -192,7 +260,10 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   CONSTRAINT `FK_proyecto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.proyecto: ~0 rows (approximately)
+/*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.proyecto_has_usuario
 CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   `pkf_id_proyecto` int(11) NOT NULL,
@@ -204,7 +275,10 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_proyecto` FOREIGN KEY (`pkf_id_proyecto`) REFERENCES `proyecto` (`id_produc`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.proyecto_has_usuario: ~0 rows (approximately)
+/*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.soporte
 CREATE TABLE IF NOT EXISTS `soporte` (
   `id_soporte` int(11) NOT NULL,
@@ -222,7 +296,10 @@ CREATE TABLE IF NOT EXISTS `soporte` (
   CONSTRAINT `fk_soporte_grupo_invest1` FOREIGN KEY (`grupo_invest_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.soporte: ~0 rows (approximately)
+/*!40000 ALTER TABLE `soporte` DISABLE KEYS */;
+/*!40000 ALTER TABLE `soporte` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.tipo_usuario
 CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_rol` int(11) NOT NULL,
@@ -230,7 +307,14 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   PRIMARY KEY (`id_rol`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.tipo_usuario: ~3 rows (approximately)
+/*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
+INSERT INTO `tipo_usuario` (`id_rol`, `nom_rol`) VALUES
+	(1, 'Lider'),
+	(2, 'miembro'),
+	(5, 'Administrador');
+/*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.tipo_usuario_has_menu
 CREATE TABLE IF NOT EXISTS `tipo_usuario_has_menu` (
   `pk_fk_tipo_usuario` int(11) NOT NULL,
@@ -243,7 +327,10 @@ CREATE TABLE IF NOT EXISTS `tipo_usuario_has_menu` (
   CONSTRAINT `fk_tipo_usuario_has_Menu_tipo_usuario1` FOREIGN KEY (`pk_fk_tipo_usuario`) REFERENCES `tipo_usuario` (`id_rol`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.tipo_usuario_has_menu: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tipo_usuario_has_menu` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_usuario_has_menu` ENABLE KEYS */;
+
 -- Dumping structure for table viewgroup3.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int(11) NOT NULL,
@@ -253,7 +340,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table viewgroup3.usuario: ~2 rows (approximately)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`) VALUES
+	(1, 'fdsafdsf', 'fsfasdf', 'asfsdvcvcxv'),
+	(2, 'fsdfdf', 'sdafdf', 'gfdgfdg');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
--- SO del servidor:              Win64
--- HeidiSQL Versión:             10.1.0.5464
+-- Server version:               5.5.21 - MySQL Community Server (GPL)
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.1.0.5464
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,13 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para viewgroup3
-DROP DATABASE IF EXISTS `viewgroup3`;
+-- Dumping database structure for viewgroup3
 CREATE DATABASE IF NOT EXISTS `viewgroup3` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `viewgroup3`;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
-DROP PROCEDURE IF EXISTS `proced_consultar_product_semillero`;
+-- Dumping structure for procedure viewgroup3.proced_consultar_product_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
@@ -57,8 +55,7 @@ grupo_invest.id_grupo_invest=pk_grupo;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo_id
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_id`;
+-- Dumping structure for procedure viewgroup3.proced_consul_grupo_id
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
 BEGIN
@@ -70,8 +67,7 @@ LIMIT 1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_menu_view
-DROP PROCEDURE IF EXISTS `proced_consul_menu_view`;
+-- Dumping structure for procedure viewgroup3.proced_consul_menu_view
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
@@ -92,8 +88,7 @@ WHERE tipo_usuario.id_user = id_rol and menu.estado<>0
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_producto
-DROP PROCEDURE IF EXISTS `proced_consul_producto`;
+-- Dumping structure for procedure viewgroup3.proced_consul_producto
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_producto`(
 	IN `pk_grupo` INT
@@ -112,8 +107,7 @@ producto.publico_produc<>0;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_semillero_XXX
-DROP PROCEDURE IF EXISTS `proced_consul_semillero_XXX`;
+-- Dumping structure for procedure viewgroup3.proced_consul_semillero_XXX
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero_XXX`(
 	IN `pk_grupo` INT
@@ -134,8 +128,7 @@ grupo_invest.id_grupo_invest=pk_grupo;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_soport_pag_not
-DROP PROCEDURE IF EXISTS `proced_consul_soport_pag_not`;
+-- Dumping structure for procedure viewgroup3.proced_consul_soport_pag_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 	IN `id_grupo` INT
@@ -154,8 +147,7 @@ LIMIT 10;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_user
-DROP PROCEDURE IF EXISTS `proced_consul_user`;
+-- Dumping structure for procedure viewgroup3.proced_consul_user
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 	IN `id_user` INT
@@ -185,8 +177,7 @@ else
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_grupo
-DROP PROCEDURE IF EXISTS `proced_create_grupo`;
+-- Dumping structure for procedure viewgroup3.proced_create_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
 	IN `nom_grupo1` VARCHAR(500),
@@ -216,8 +207,7 @@ SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_paginajhgjhgjhjg
-DROP PROCEDURE IF EXISTS `proced_create_paginajhgjhgjhjg`;
+-- Dumping structure for procedure viewgroup3.proced_create_paginajhgjhgjhjg
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_paginajhgjhgjhjg`(
 	IN `nom_grupo1` VARCHAR(50),
@@ -276,8 +266,7 @@ SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_semillero
-DROP PROCEDURE IF EXISTS `proced_create_semillero`;
+-- Dumping structure for procedure viewgroup3.proced_create_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
 	IN `id_semillero` INT,
@@ -307,8 +296,7 @@ set id_grupo=(select grupo_invest.id_grupo_invest from grupo_invest
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_soport_not
-DROP PROCEDURE IF EXISTS `proced_create_soport_not`;
+-- Dumping structure for procedure viewgroup3.proced_create_soport_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_soport_not`(
 	IN `pk_fk_produc` INT,
@@ -337,8 +325,7 @@ insert into soporte VALUES((num+1),url_imagen,pk_fk_produc,titulo_soporte,descri
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_usuario
-DROP PROCEDURE IF EXISTS `proced_create_usuario`;
+-- Dumping structure for procedure viewgroup3.proced_create_usuario
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_usuario`(
 	IN `id_user` INT,
@@ -365,8 +352,7 @@ SET num =(select IFNULL(MAX(usuario.id_usuario),0) FROM usuario)+1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_delete_soport
-DROP PROCEDURE IF EXISTS `proced_delete_soport`;
+-- Dumping structure for procedure viewgroup3.proced_delete_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_delete_soport`(
 	IN `id_soport` INT
@@ -380,8 +366,7 @@ where soporte.id_soporte;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_registra_produc
-DROP PROCEDURE IF EXISTS `proced_registra_produc`;
+-- Dumping structure for procedure viewgroup3.proced_registra_produc
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_registra_produc`(
 	IN `nom_producto` VARCHAR(500),
@@ -410,8 +395,7 @@ insert into producto VALUES((num+1),nom_producto,fecha_de_produc,estado_produc,p
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_update_soport
-DROP PROCEDURE IF EXISTS `proced_update_soport`;
+-- Dumping structure for procedure viewgroup3.proced_update_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_soport`(
 	IN `id_soport` INT,
