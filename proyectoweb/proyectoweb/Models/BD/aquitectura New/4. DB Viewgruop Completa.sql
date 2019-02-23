@@ -103,10 +103,6 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
 
 -- Volcando datos para la tabla viewgroup3.grupo_invest: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
-REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
-	(1, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
-	(11, 'dsafdsf', 'dsdsffdsf', 'fasdfasdf', 'fsadfdsfadf', 'fsadfsdf', 1, 'gfdgdfght', 'jytjtyjlo', 'yjttrysfsdg', 'hfghsbbd', 'sfghgghjy', 'hjhj', NULL, NULL),
-	(111, 'dsafdsf', 'dsdsffdsf', 'fasdfasdf', 'fsadfdsfadf', 'fsadfsdf', 1, 'gfdgdfght', 'jytjtyjlo', 'yjttrysfsdg', 'hfghsbbd', 'sfghgghjy', 'hjhj', NULL, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest_has_usuario
