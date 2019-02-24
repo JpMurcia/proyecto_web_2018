@@ -16,7 +16,7 @@ namespace proyectoweb.Views
         {
             llenar_noticias();
         }
-        producto produc = new producto();
+        proyecto produc = new proyecto();
         grupo_investigacion semillero = new grupo_investigacion();
         public void llenar_noticias() {
 
@@ -27,13 +27,13 @@ namespace proyectoweb.Views
 
             semillero.fk_id_grupo = Session["grupo"].ToString();
 
-            DataTable dt = controlador.ConsultarProduc(produc);
+        //    DataTable dt = controlador.ConsultarProduc(produc);
 
            // DataTable dt2 = controlador.consultarSemillero(semillero);
 
 
-            RepeaterRoducto.DataSource = dt;
-            RepeaterRoducto.DataBind();
+            //RepeaterRoducto.DataSource = dt;
+            //RepeaterRoducto.DataBind();
 
             //RepeaterMiembro.DataSource = dt2;
             //RepeaterMiembro.DataBind();

@@ -25,8 +25,9 @@ namespace proyectoweb.Views
         {
             usuario b = new usuario();
             modelUsuario a = new modelUsuario();
-            Grupo_inve_semillero grupo = new Grupo_inve_semillero();
+            Grupo_inve_semillero grupoSIGEPI = new Grupo_inve_semillero();
             grupo_investigacion grupoVG = new grupo_investigacion();
+            grupo_investigacion Semillero = new grupo_investigacion();
             a.email_usuario = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
@@ -61,14 +62,15 @@ namespace proyectoweb.Views
                         b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
                         b.correo = datoRegreso.Rows[0]["correo"].ToString();
 
-                         grupo.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
-                        DataTable datos_grupo = controlador.consultarInforGrupo(grupo);
+                        grupoSIGEPI.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
+                        DataTable datos_grupo = controlador.consultarInforGrupo(grupoSIGEPI);
 
 
                         grupoVG.idGrupoInvestigacion = datos_grupo.Rows[0]["id_grupo"].ToString();
                         grupoVG.grupo_nombre = datos_grupo.Rows[0]["nom_grupo"].ToString();
                         grupoVG.siglas = datos_grupo.Rows[0]["sigla_signif_grupo"].ToString();
                         grupoVG.objetivo = datos_grupo.Rows[0]["objetivo_grupo"].ToString();
+
                         grupoVG.ProgramaGrupo = datos_grupo.Rows[0]["programa_grupo"].ToString();
                         grupoVG.mision = datos_grupo.Rows[0]["mision_grupo"].ToString();
                         grupoVG.vision = datos_grupo.Rows[0]["vision_grupo"].ToString();
@@ -81,11 +83,47 @@ namespace proyectoweb.Views
 
                         DataTable CreandoUser = controlador.crearUsuario(b);
 
-                        
+                       
 
-                   
+                      
 
-                        b.ToString();
+                        DataTable dato_semillero = controlador.consultarInfoSemillero(grupoSIGEPI);
+
+
+
+                        for (int i=0;i <dato_semillero.Rows.Count;i++) {
+
+                            Semillero.idGrupoInvestigacion = dato_semillero.Rows[i]["id_grupo"].ToString();
+                            Semillero.grupo_nombre = dato_semillero.Rows[i]["nom_grupo"].ToString();
+                            Semillero.siglas = dato_semillero.Rows[i]["sigla_signif_grupo"].ToString();
+                            Semillero.objetivo = dato_semillero.Rows[i]["objetivo_grupo"].ToString();
+
+                            Semillero.ProgramaGrupo = dato_semillero.Rows[i]["programa_grupo"].ToString();
+                            Semillero.mision = dato_semillero.Rows[i]["mision_grupo"].ToString();
+                            Semillero.vision = dato_semillero.Rows[i]["vision_grupo"].ToString();
+                            Semillero.justificacion = dato_semillero.Rows[i]["justif_grupo"].ToString();
+                            Semillero.quienesSomos = dato_semillero.Rows[i]["quien_somos_grupo"].ToString();
+                            Semillero.urlLogo = dato_semillero.Rows[i]["url_logo_grupo"].ToString();
+                            Semillero.fk_id_grupo = grupoVG.idGrupoInvestigacion;
+
+                            controlador.crear_semillero(Semillero);
+
+
+                        }
+
+                        DataTable dato_proyec = new DataTable();
+
+                        dato_proyec = controlador.consultarInfoProyecto(grupoSIGEPI);
+
+                        for (int i = 0; i < dato_proyec.Rows.Count; i++)
+                        {
+                         
+
+                        }
+
+
+                            //<>
+                            b.ToString();
 
                     }
                     b.fk_tipo_user = "1";

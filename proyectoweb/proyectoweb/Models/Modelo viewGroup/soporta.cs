@@ -9,6 +9,6 @@ namespace proyectoweb.Models.ModelosViewGroup
     {
         public string idSoporte { get; set; }
         public string urlImage { get; set; }
-        public producto fkProducto { get; set; }
+        public string fk_algo { get; set; }
     }
 }

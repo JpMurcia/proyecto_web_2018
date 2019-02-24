@@ -14,14 +14,14 @@ namespace proyectoweb.Controllers
 
     {
          
-        producto product = new producto();
+        proyecto product = new proyecto();
 
         grupo_investigacion semillero = new grupo_investigacion();
 
-        public DataTable ConsultarProduc(producto produc)
-        {
-            return product.CrearProductoModelo(produc);
-        }
+        //public DataTable ConsultarProduc(proyecto produc)
+        //{
+        //    return product.CrearProductoModelo(produc);
+        //}
 
         public DataTable consultarSemillero(grupo_investigacion semi) {
 

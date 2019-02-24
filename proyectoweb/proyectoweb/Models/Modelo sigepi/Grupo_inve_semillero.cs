@@ -23,20 +23,8 @@ namespace proyectoweb.Models.ModeloSigepi
         public string justificacion { get; set; }
         public string quienesSomos { get; set; }
 
-
-        public Grupo_inve_semillero(string nombreGrupo, string siglas, string objetivo, string ProgramaGrupo, string urlLogo
-            , string mision, string vision, string justificacion, string quinesSomos)
-        {
-            this.nombreGrupo = nombreGrupo;
-            this.siglas = siglas;
-            this.objetivo = objetivo;
-        }
-
-        public Grupo_inve_semillero()
-        {
-
-        }
-
+        
+        
         public DataTable consultargrupoModel(Grupo_inve_semillero obj)
         {
             List<Parametro> p = new List<Parametro>();
@@ -99,12 +87,26 @@ namespace proyectoweb.Models.ModeloSigepi
             List<Parametro> p = new List<Parametro>();
             p.Add(new Parametro(
                 "nombre",
-                obj.nombreGrupo,
+                obj.id_grupo,
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
 
-            return conect.ExecuteProcedure("proced_consul_proyec_inac", p);
+            return conect.ExecuteProcedure("proced_consul_proyec_act", p);
+
+        }
+
+        public DataTable consultarProyecto(Grupo_inve_semillero obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_grupo",
+                obj.id_grupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_proyecto", p);
 
         }
 

@@ -93,7 +93,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                  ParameterDirection.Input
                 ));
             p.Add(new Parametro(
-                "obejtivo",
+                "objetivo",
                 obj.objetivo,
                 "VARCHAR",
                 ParameterDirection.Input

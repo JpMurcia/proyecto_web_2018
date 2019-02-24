@@ -14,6 +14,7 @@ CALL `proced_consul_semilleros`('giecom');
 CALL `proced_consul_proyecto`('111');
 
 
+
  # traer los miembros de los grupos tanto de semillero, como los que tiene en proyecto
 CALL `proced_consul_miembro_simple`('giecom');
 

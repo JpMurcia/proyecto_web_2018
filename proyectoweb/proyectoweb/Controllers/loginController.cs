@@ -17,6 +17,8 @@ namespace proyectoweb.Controllers
         private grupo_investigacion grupoVG = new grupo_investigacion();
         private usuario usuarioVG = new usuario();
 
+        //private proyecto proyec = new proyecto();
+
         public loginController()
         {
         }
@@ -42,6 +44,34 @@ namespace proyectoweb.Controllers
 
         }
         public DataTable crear_grupo(grupo_investigacion grup)
+        {
+
+            return grupoVG.Crear_grupo(grup);
+
+        }
+
+        public DataTable consultarInfoSemillero(Grupo_inve_semillero grup)
+        {
+
+            return grupoSigepi.consultarsemilleroModel(grup);
+
+        }
+
+        public DataTable crear_semillero(grupo_investigacion grup)
+        {
+
+            return grupoVG.Crear_grupo(grup);
+
+        }
+
+        public DataTable consultarInfoProyecto(Grupo_inve_semillero grup)
+        {
+
+            return grupoSigepi.consultarProyecto(grup);
+
+        }
+
+        public DataTable crear_proyecto(grupo_investigacion grup)
         {
 
             return grupoVG.Crear_grupo(grup);

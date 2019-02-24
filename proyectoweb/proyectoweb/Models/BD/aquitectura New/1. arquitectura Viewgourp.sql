@@ -60,25 +60,24 @@ CREATE TABLE IF NOT EXISTS `facultad` (
 CREATE TABLE IF NOT EXISTS `grupo_invest` (
   `id_grupo_invest` int(11) NOT NULL,
   `nom_grupo` varchar(255) DEFAULT NULL,
-  `grupo_investcol` varchar(45) DEFAULT NULL,
   `email_grupo` varchar(45) DEFAULT NULL,
   `telefo_grupo` varchar(45) DEFAULT NULL,
   `direcc_grupo` varchar(45) DEFAULT NULL,
   `url_logo_grupo` varchar(255) DEFAULT NULL,
   `estado_grupo` tinyint(4) DEFAULT NULL,
-  `siglas_signif_grupo` varchar(450) DEFAULT NULL,
-  `objetivo_grupo` varchar(450) DEFAULT NULL,
-  `mision_grupo` varchar(450) DEFAULT NULL,
-  `vision_grupo` varchar(450) DEFAULT NULL,
-  `justif_grupo` varchar(450) DEFAULT NULL,
-  `quien_somos_grupo` varchar(45) DEFAULT NULL,
-  `fk_grupo_semi` int(11) NOT NULL,
+  `siglas_signif_grupo` varchar(800) DEFAULT NULL,
+  `objetivo_grupo` varchar(800) DEFAULT NULL,
+  `mision_grupo` varchar(800) DEFAULT NULL,
+  `vision_grupo` varchar(800) DEFAULT NULL,
+  `justif_grupo` varchar(800) DEFAULT NULL,
+  `quien_somos_grupo` varchar(800) DEFAULT NULL,
+  `fk_grupo_semi` int(11) DEFAULT NULL,
   `fk_id_Programa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_grupo_invest`),
   KEY `fk_grupo_invest_Programa1_idx` (`fk_id_Programa`),
   KEY `FK_grupo_invest_grupo_invest` (`fk_grupo_semi`),
-  CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_grupo_invest_grupo_invest` FOREIGN KEY (`fk_grupo_semi`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK_grupo_invest_grupo_invest` FOREIGN KEY (`fk_grupo_semi`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
@@ -92,8 +91,8 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   KEY `fk_grupo_invest_has_usuario_usuario1_idx` (`pkf_id_usuario`),
   KEY `fk_grupo_invest_has_usuario_grupo_invest1_idx` (`pkf_id_grupo_invest`),
   KEY `FK_grupo_invest_has_usuario_tipo_usuario` (`fk_tipo_usuario`),
-  CONSTRAINT `FK_grupo_invest_has_usuario_tipo_usuario` FOREIGN KEY (`fk_tipo_usuario`) REFERENCES `tipo_usuario` (`id_rol`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_grupo_invest_has_usuario_grupo_invest` FOREIGN KEY (`pkf_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_grupo_invest_has_usuario_tipo_usuario` FOREIGN KEY (`fk_tipo_usuario`) REFERENCES `tipo_usuario` (`id_rol`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -182,10 +181,10 @@ CREATE TABLE IF NOT EXISTS `programa` (
 -- Dumping structure for table viewgroup3.proyecto
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_produc` int(11) NOT NULL,
-  `nom_proyecto` varchar(45) DEFAULT NULL,
-  `fecha_de_produc` date DEFAULT NULL,
-  `estado_produc` tinyint(4) DEFAULT NULL,
-  `publico_produc` tinyint(4) DEFAULT NULL,
+  `nom_proyecto` varchar(600) DEFAULT NULL,
+  `fecha_de_proyecto` date DEFAULT NULL,
+  `estado_proyecto` tinyint(4) DEFAULT NULL,
+  `estado` tinyint(4) DEFAULT NULL,
   `fk_id_grupo_invest` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_produc`),
   KEY `fk_producto_grupo_invest1_idx` (`fk_id_grupo_invest`),
@@ -200,8 +199,8 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   `fecha` date DEFAULT NULL,
   PRIMARY KEY (`pkf_id_proyecto`,`pkf_id_usuario`),
   KEY `FK_proyecto_has_usuario_usuario` (`pkf_id_usuario`),
-  CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_proyecto_has_usuario_proyecto` FOREIGN KEY (`pkf_id_proyecto`) REFERENCES `proyecto` (`id_produc`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK_proyecto_has_usuario_proyecto` FOREIGN KEY (`pkf_id_proyecto`) REFERENCES `proyecto` (`id_produc`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.

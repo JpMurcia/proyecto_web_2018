@@ -15,7 +15,8 @@ namespace proyectoweb.Controllers
 
         private modelUsuario miembro = new modelUsuario();
 
-        private proyecto proye = new proyecto();
+       
+
 
         public FormularioDepaginaController()
         {

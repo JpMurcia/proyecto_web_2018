@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
--- SO del servidor:              Win64
--- HeidiSQL Versión:             10.1.0.5464
+-- Server version:               5.5.21 - MySQL Community Server (GPL)
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.1.0.5464
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,16 +12,15 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para sigepi
-DROP DATABASE IF EXISTS `sigepi`;
+-- Dumping database structure for sigepi
 CREATE DATABASE IF NOT EXISTS `sigepi` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `sigepi`;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
+-- Dumping structure for procedure sigepi.proced_consul_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `nombre` varchar(45)
+
 
 
 
@@ -33,6 +32,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 begin 
 
 select 
+id_grupo,
 nom_grupo ,
 sigla_signif_grupo,
 objetivo_grupo ,
@@ -50,21 +50,17 @@ grupo_inve_semillero.nom_grupo=nombre;
 end//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_grupo_has_usu
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_has_usu`;
+-- Dumping structure for procedure sigepi.proced_consul_grupo_has_usu
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_has_usu`(
 	IN `id_usuario` INT
 
 
 
-
-
-
 )
 BEGIN
 
-select grupo.id_grupo, grupo.nom_grupo from grupo_inve_semillero as grupo
+select grupo.nom_grupo from grupo_inve_semillero as grupo
 inner join integrante_has_grupo_inve_semillero pertenece on pertenece.grupo_inve_semillero_id_grupo = grupo.id_grupo
 where pertenece.usuario_id_usuario=id_usuario;
 
@@ -72,8 +68,7 @@ where pertenece.usuario_id_usuario=id_usuario;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_miembros_semi
-DROP PROCEDURE IF EXISTS `proced_consul_miembros_semi`;
+-- Dumping structure for procedure sigepi.proced_consul_miembros_semi
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembros_semi`(
 	IN `nom_grupo` VARCHAR(500)
@@ -98,8 +93,7 @@ ORDER by semillero.id_grupo;
 end//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_miembro_simple
-DROP PROCEDURE IF EXISTS `proced_consul_miembro_simple`;
+-- Dumping structure for procedure sigepi.proced_consul_miembro_simple
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembro_simple`(
 	IN `nom_grupo` VARCHAR(500)
@@ -123,11 +117,12 @@ ORDER by usuario.id_usuario;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_proyecto
-DROP PROCEDURE IF EXISTS `proced_consul_proyecto`;
+-- Dumping structure for procedure sigepi.proced_consul_proyecto
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyecto`(
-	IN `nombre` VARCHAR(50)
+	IN `id_grupo` INT
+
+
 
 
 
@@ -138,17 +133,44 @@ BEGIN
 
 
 select 
+proyecto.id_proyecto,
 proyecto.nom_proyecto,
-proyecto.estado_proyecto
+proyecto.estado_proyecto,
+"grupo" as tipo,
+grupo.id_grupo as semi
 
 from proyecto
 inner join proyecto_has_grupo_inve_semillero as proyec on proyecto.id_proyecto=proyec.proyecto_id_proyecto
 INNER JOIN  grupo_inve_semillero as grupo	ON proyec.grupo_inve_semillero_id_grupo=grupo.id_grupo
 
 
+
+
 where 
 
-grupo.nom_grupo=nombre; 
+grupo.id_grupo=id_grupo 
+
+UNION
+
+
+select 
+proyecto.id_proyecto,
+proyecto.nom_proyecto,
+proyecto.estado_proyecto,
+"semillero" as tipo,
+semillero.id_grupo as semi
+
+from proyecto
+inner join proyecto_has_grupo_inve_semillero as proyec on proyecto.id_proyecto=proyec.proyecto_id_proyecto
+INNER JOIN  grupo_inve_semillero as semillero	ON semillero.id_grupo=proyec.grupo_inve_semillero_id_grupo
+
+
+where 
+ 
+
+semillero.grupo_inve_semillero_id_grupo=id_grupo
+ and
+semillero.grupo_inve_semillero_id_grupo <> semillero.id_grupo ; 
 	
 
 
@@ -156,8 +178,7 @@ grupo.nom_grupo=nombre;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_proyec_act
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_act`;
+-- Dumping structure for procedure sigepi.proced_consul_proyec_act
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_act`(
 	IN `nombre` VARCHAR(500)
@@ -187,8 +208,7 @@ and proyecto.estado_proyecto=1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_proyec_inac
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_inac`;
+-- Dumping structure for procedure sigepi.proced_consul_proyec_inac
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_inac`(
 	IN `nombre` VARCHAR(500)
@@ -218,13 +238,14 @@ and proyecto.estado_proyecto=0;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_proye_user_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_proye_user_grupo`;
+-- Dumping structure for procedure sigepi.proced_consul_proye_user_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proye_user_grupo`(
 	IN `grupo_perte` VARCHAR(50),
 	IN `id_proyec` INT
+
 )
+    COMMENT 'quienes trabajaron el el proyecto x'
 BEGIN
 
 SELECT usuario.nom_usuario as Colaboradores FROM usuario
@@ -237,8 +258,7 @@ WHERE grupo.nom_grupo=grupo_perte AND proyecto.id_proyecto=id_proyec;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_semilleros
-DROP PROCEDURE IF EXISTS `proced_consul_semilleros`;
+-- Dumping structure for procedure sigepi.proced_consul_semilleros
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semilleros`(
 	IN `nombre` VARCHAR(50)
@@ -271,8 +291,7 @@ grupo_inve_semillero.nom_grupo=nombre;
 end//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_semi_pag
-DROP PROCEDURE IF EXISTS `proced_consul_semi_pag`;
+-- Dumping structure for procedure sigepi.proced_consul_semi_pag
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semi_pag`(
 	IN `nombre` VARCHAR(500)
@@ -315,50 +334,15 @@ grupo_inve_semillero.nom_grupo=nombre ;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_consul_user_has_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_user_has_grupo`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_has_grupo`(
-	IN `nom_email` VARCHAR(500)
-
-)
-begin 
-
-
-
-select  semillero.nom_grupo from grupo_inve_semillero as semillero
-
-inner join integrante_has_grupo_inve_semillero pertenece on pertenece.grupo_inve_semillero_id_grupo = semillero.id_grupo
-inner join usuario on usuario.id_usuario=pertenece.usuario_id_usuario
-where usuario.email_usuario=nom_email;
-
-
- 
- select grupo.nom_grupo from grupo_inve_semillero  as grupo 
-
-where grupo.id_grupo=(select  semillero.grupo_inve_semillero_id_grupo from grupo_inve_semillero as semillero
-
-inner join integrante_has_grupo_inve_semillero pertenece on pertenece.grupo_inve_semillero_id_grupo = semillero.id_grupo
-inner join usuario on usuario.id_usuario=pertenece.usuario_id_usuario
-where usuario.email_usuario='d.antonieta@udla.edu.co');
- 
-
-
-end//
-DELIMITER ;
-
--- Volcando estructura para procedimiento sigepi.proced_consul_user_proye_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_user_proye_grupo`;
+-- Dumping structure for procedure sigepi.proced_consul_user_proye_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_proye_grupo`(
 	IN `grupo_perte` VARCHAR(500),
 	IN `id_user` INT
 
 
-
-
 )
-    COMMENT 'trae los proyectos que tiene un usuario en grupo x, y los semillero '
+    COMMENT 'trae los proyectos que tiene un usuario en grupo x'
 BEGIN
 
 
@@ -367,27 +351,19 @@ INNER JOIN usuario_has_proyecto ON usuario_has_proyecto.usuario_id_usuario=usuar
 INNER JOIN proyecto ON proyecto.id_proyecto = usuario_has_proyecto.proyecto_id_proyecto
 INNER JOIN proyecto_has_grupo_inve_semillero AS proye_has ON proye_has.proyecto_id_proyecto=proyecto.id_proyecto
 INNER JOIN grupo_inve_semillero grupo ON grupo.id_grupo=proye_has.grupo_inve_semillero_id_grupo
-WHERE grupo.nom_grupo=grupo_perte AND usuario.id_usuario=id_user
-
-UNION
-select  semillero.id_grupo  , semillero.nom_grupo from grupo_inve_semillero as semillero
-
-inner join integrante_has_grupo_inve_semillero pertenece on pertenece.grupo_inve_semillero_id_grupo = semillero.id_grupo
-inner join usuario on usuario.id_usuario=pertenece.usuario_id_usuario
-where usuario.id_usuario=id_user 
-and semillero.grupo_inve_semillero_id_grupo=(SELECT grupo_inve_semillero.id_grupo from grupo_inve_semillero
-WHERE grupo_inve_semillero.nom_grupo=grupo_perte);
-
+WHERE grupo.nom_grupo=grupo_perte AND usuario.id_usuario=id_user;
 
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento sigepi.proced_validar_user
-DROP PROCEDURE IF EXISTS `proced_validar_user`;
+-- Dumping structure for procedure sigepi.proced_validar_user
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_validar_user`(
 	IN `email_usuari` varchar(45),
 	IN `contra` varchar(45)
+
+
+
 
 
 
@@ -405,8 +381,12 @@ begin
  declare nombreUsuario varchar(60);
  declare idUsuario int;
  declare tipoUsuario int;
- declare tipoU varchar(60);
+ declare grupo varchar(60);
  declare foto varchar(60);
+ declare pertenece varchar(60);
+ declare id_pertenece int;
+ 
+  declare email varchar(60);
 
  
  
@@ -445,16 +425,36 @@ else
 
 	
 	select 
-	tipo.nom_tipo_usuario into tipoU from tipo_usuario tipo
+	tipo.nom_tipo_usuario into grupo from tipo_usuario tipo
 	where tipoUsuario=tipo.id_tipo_usuario ;
 	
-
+	select 
+	grupo_inve_semillero.nom_grupo into pertenece
+	 from grupo_inve_semillero 
+	inner JOIN integrante_has_grupo_inve_semillero inter on inter.grupo_inve_semillero_id_grupo= grupo_inve_semillero.id_grupo
+	inner JOIN usuario on usuario.id_usuario=inter.usuario_id_usuario
+	where usuario.id_usuario=idUsuario
+	limit 1 ;
+	
+	
+	select 
+	grupo_inve_semillero.id_grupo into id_pertenece
+	 from grupo_inve_semillero 
+	inner JOIN integrante_has_grupo_inve_semillero inter on inter.grupo_inve_semillero_id_grupo= grupo_inve_semillero.id_grupo
+	inner JOIN usuario on usuario.id_usuario=inter.usuario_id_usuario
+	where usuario.id_usuario=idUsuario 
+	limit 1;
+ 	set email = email_usuari;
 	select "bueeeeena perro" as mensaje,
 	idUsuario as usuari,
 	nombreUsuario as nombreeee,
-	tipoUsuario as tipo,
-	tipoU as grupo,
-	foto as foto_perfil;
+	email as correo,
+	foto as foto_perfil,
+	id_pertenece as id_grupo,
+	pertenece as su_grupo,
+	grupo as es,
+	tipoUsuario as tipo_user
+	;
 	
 	end if;
 
