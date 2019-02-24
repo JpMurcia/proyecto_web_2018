@@ -1136,7 +1136,7 @@
     <Compile Include="Models\Modelo viewGroup\menu.cs" />
     <Compile Include="Models\Modelo viewGroup\pagina_web.cs" />
     <Compile Include="Models\Modelo viewGroup\plantilla.cs" />
-    <Compile Include="Models\Modelo viewGroup\producto.cs" />
+    <Compile Include="Models\Modelo viewGroup\proyecto.cs" />
     <Compile Include="Models\Modelo viewGroup\soporta.cs" />
     <Compile Include="Models\Modelo viewGroup\tipo_has_menu.cs" />
     <Compile Include="Models\Modelo viewGroup\tipo_usuario.cs" />
