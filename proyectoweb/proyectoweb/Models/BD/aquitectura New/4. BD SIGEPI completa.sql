@@ -443,6 +443,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyecto`(
 
 
 
+
 )
 BEGIN
 
@@ -453,7 +454,8 @@ select
 proyecto.id_proyecto,
 proyecto.nom_proyecto,
 proyecto.estado_proyecto,
-"grupo" as tipo
+"grupo" as tipo,
+grupo.id_grupo as semi
 
 from proyecto
 inner join proyecto_has_grupo_inve_semillero as proyec on proyecto.id_proyecto=proyec.proyecto_id_proyecto
@@ -473,7 +475,8 @@ select
 proyecto.id_proyecto,
 proyecto.nom_proyecto,
 proyecto.estado_proyecto,
-"semillero" as tipo
+"semillero" as tipo,
+semillero.id_grupo as semi
 
 from proyecto
 inner join proyecto_has_grupo_inve_semillero as proyec on proyecto.id_proyecto=proyec.proyecto_id_proyecto
@@ -695,6 +698,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_validar_user`(
 
 
 
+
+
 )
 begin 
  
@@ -705,6 +710,8 @@ begin
  declare foto varchar(60);
  declare pertenece varchar(60);
  declare id_pertenece int;
+ 
+  declare email varchar(60);
 
  
  
@@ -751,18 +758,22 @@ else
 	 from grupo_inve_semillero 
 	inner JOIN integrante_has_grupo_inve_semillero inter on inter.grupo_inve_semillero_id_grupo= grupo_inve_semillero.id_grupo
 	inner JOIN usuario on usuario.id_usuario=inter.usuario_id_usuario
-	where usuario.id_usuario=idUsuario ;
+	where usuario.id_usuario=idUsuario
+	limit 1 ;
+	
 	
 	select 
 	grupo_inve_semillero.id_grupo into id_pertenece
 	 from grupo_inve_semillero 
 	inner JOIN integrante_has_grupo_inve_semillero inter on inter.grupo_inve_semillero_id_grupo= grupo_inve_semillero.id_grupo
 	inner JOIN usuario on usuario.id_usuario=inter.usuario_id_usuario
-	where usuario.id_usuario=idUsuario ;
-
+	where usuario.id_usuario=idUsuario 
+	limit 1;
+ 	set email = email_usuari;
 	select "bueeeeena perro" as mensaje,
 	idUsuario as usuari,
 	nombreUsuario as nombreeee,
+	email as correo,
 	foto as foto_perfil,
 	id_pertenece as id_grupo,
 	pertenece as su_grupo,
