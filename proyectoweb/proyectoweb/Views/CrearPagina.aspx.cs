@@ -20,8 +20,8 @@ namespace proyectoweb.Views
 
         public void llenar() {
 
-            
 
+            //Image1.ImageUrl = Session["url_logo"].ToString();
 
 
 
@@ -52,14 +52,6 @@ namespace proyectoweb.Views
             
         }
 
-        protected void verSara_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=giie");
-        }
-
-        protected void verPicardie_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
-        }
+       
     }
 }

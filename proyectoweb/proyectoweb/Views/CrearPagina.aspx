@@ -22,7 +22,8 @@
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
-                                            <img src="../Content/assetsAdministracion/img/giecom.png" />
+                                            <asp:Image ID="Image1" runat="server" />
+                                           <%-- <img src="../Content/assetsAdministracion/img/giecom.png" />--%>
                                         </a>
                                     </div>
                                     <div class="card-body ">

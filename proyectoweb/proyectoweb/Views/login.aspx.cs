@@ -59,17 +59,15 @@ namespace proyectoweb.Views
                         b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
                         b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
                         b.correo = datoRegreso.Rows[0]["correo"].ToString();
-                        if (b.fk_tipo_user.ToString().Equals("1")) {
-                            Session["nom"] = b.nom_usuario;
-                            //Session["contra"] = a.contrasena;
-                            Session["tipo"] = b.fk_tipo_user;
-                            Session["grupo"] = grupoVG.grupo_nombre;
-                            Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
-                        }
-                        else {
+                        Session["nom"] = b.nom_usuario;
+                        //Session["contra"] = a.contrasena;
+                        Session["tipo"] = b.fk_tipo_user;
+                        Session["grupo"] = grupoVG.grupo_nombre;
+                        Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
 
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
-                        }
+                        Session["url_logo"] = grupoVG.urlLogo;
+                        Response.Redirect("principal.aspx");
+
 
 
 
@@ -206,17 +204,19 @@ namespace proyectoweb.Views
                     Session["grupo"] = grupoVG.grupo_nombre;
                     Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
 
+                    Session["url_logo"] = grupoVG.urlLogo;
 
                     Response.Redirect("principal.aspx");
+                    
 
-                   
+
 
                 }
                 else
                 {
                     b.fk_tipo_user = "2";
 
-
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
                 }
 
              
