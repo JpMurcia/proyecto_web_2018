@@ -1025,6 +1025,7 @@
     <Content Include="Content\assetsPlantillaHeli\fonts\star.ttf" />
     <Content Include="Content\assetsPlantillaHeli\fonts\star.woff" />
     <Content Include="Content\assetsPlantillaHeli\fonts\stard41d.eot" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="imagenes\grupos\giecom.jpg" />
     <Content Include="imagenes\grupos\giecom.png" />

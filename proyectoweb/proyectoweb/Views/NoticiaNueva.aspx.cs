@@ -16,18 +16,15 @@ namespace proyectoweb.Views
         {
             llenar_noticias();
         }
-        proyecto produc = new proyecto();
-        grupo_investigacion semillero = new grupo_investigacion();
+       // proyecto produc = new proyecto();
+        grupo_investigacion grupovg = new grupo_investigacion();
         public void llenar_noticias() {
 
             NoticiaController controlador = new NoticiaController();
-            Session["grupo"] = "3";
-            produc.fk_grupo= Session["grupo"].ToString();
+           
 
+           DataTable dt = controlador.consultarProductos(grupovg);
 
-            semillero.fk_id_grupo = Session["grupo"].ToString();
-
-        //    DataTable dt = controlador.ConsultarProduc(produc);
 
            // DataTable dt2 = controlador.consultarSemillero(semillero);
 

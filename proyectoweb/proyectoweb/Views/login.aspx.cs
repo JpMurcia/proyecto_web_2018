@@ -51,8 +51,25 @@ namespace proyectoweb.Views
 
                     DataTable Consul_dato = controlador.Consultar(b);
 
+
                     if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                     {
+                        b.fk_tipo_user = datoRegreso.Rows[0]["tipo_user"].ToString();
+                        b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
+                        b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
+                        b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
+                        b.correo = datoRegreso.Rows[0]["correo"].ToString();
+                        if (b.fk_tipo_user.ToString().Equals("1")) {
+                            Session["nom"] = b.nom_usuario;
+                            //Session["contra"] = a.contrasena;
+                            Session["tipo"] = b.fk_tipo_user;
+                            Session["grupo"] = grupoVG.grupo_nombre;
+                            Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
+                        }
+                        else {
+
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                        }
 
 
 
@@ -126,6 +143,7 @@ namespace proyectoweb.Views
                             proyectoVG.nom_proyect = dato_proyec.Rows[i]["nom_proyecto"].ToString();
                             //  proyectoVG.fechaproye = Convert.ToDateTime(dato_proyec.Rows[i]["fecha_proyecto"]);
                             //proyectoVG.fechaproye = dato_proyec.Rows[i]["fecha_proyecto"].ToString();
+                            proyectoVG.fechaproye = null;
                             proyectoVG.estado_proyec =  dato_proyec.Rows[i]["estado_proyecto"].ToString();
                             proyectoVG.fk_grupo = dato_proyec.Rows[i]["semi"].ToString();
 
