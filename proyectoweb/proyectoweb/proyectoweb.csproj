@@ -109,6 +109,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\assetsAdministracion\css\EstiloCalendario.css" />
     <Content Include="Content\assetsAdministracion\css\material-dashboard.min40a0.css" />
     <Content Include="Content\assetsAdministracion\demo\demo.css" />
     <Content Include="Content\assetsAdministracion\demo\demo.js" />
@@ -150,7 +151,7 @@
     <Content Include="Content\assetsAdministracion\img\sidebar-2.jpg" />
     <Content Include="Content\assetsAdministracion\img\sidebar-3.jpg" />
     <Content Include="Content\assetsAdministracion\img\sidebar-4.jpg" />
-    <Content Include="Content\assetsAdministracion\js\Calendar.js" />
+    <Content Include="Content\assetsAdministracion\js\Propio.js" />
     <Content Include="Content\assetsAdministracion\js\core\bootstrap-material-design.min.js" />
     <Content Include="Content\assetsAdministracion\js\core\jquery.min.js" />
     <Content Include="Content\assetsAdministracion\js\core\popper.min.js" />
@@ -1103,6 +1104,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ActividadController.cs" />
     <Compile Include="Controllers\FormularioDepaginaController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />

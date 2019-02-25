@@ -10,7 +10,16 @@
 namespace proyectoweb.Views {
     
     
-    public partial class FormularioDePagina1 {
+    public partial class FormularioDePagina2 {
+        
+        /// <summary>
+        /// Control form2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
         /// Control nombreGrupo.
@@ -121,39 +130,84 @@ namespace proyectoweb.Views {
         protected global::System.Web.UI.WebControls.TextBox DireccionGrupo;
         
         /// <summary>
-        /// Control Repeater1.
+        /// Control Color.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.TextBox Color;
         
         /// <summary>
-        /// Control RepeaterMiembro.
+        /// Control NombreSemillero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterMiembro;
+        protected global::System.Web.UI.WebControls.TextBox NombreSemillero;
         
         /// <summary>
-        /// Control RepeaterInacti.
+        /// Control siglaSemillero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterInacti;
+        protected global::System.Web.UI.WebControls.TextBox siglaSemillero;
         
         /// <summary>
-        /// Control RepeaterActivo.
+        /// Control ObjetivoSemillero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterActivo;
+        protected global::System.Web.UI.WebControls.TextBox ObjetivoSemillero;
+        
+        /// <summary>
+        /// Control MisionSemiller.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MisionSemiller;
+        
+        /// <summary>
+        /// Control VisionSemillero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox VisionSemillero;
+        
+        /// <summary>
+        /// Control JustificacionSemillero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox JustificacionSemillero;
+        
+        /// <summary>
+        /// Control QuinesSomosSemillero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox QuinesSomosSemillero;
+        
+        /// <summary>
+        /// Control imagenDeSemillero.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imagenDeSemillero;
     }
 }

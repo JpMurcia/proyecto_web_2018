@@ -10,8 +10,7 @@ using System.Web;
 namespace proyectoweb.Controllers
 {
     public class NoticiaController
-
-
+        
     {
          
         producto product = new producto();

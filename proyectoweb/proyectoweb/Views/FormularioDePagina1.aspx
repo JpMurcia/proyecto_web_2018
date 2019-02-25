@@ -18,8 +18,6 @@
 <body>
     <form runat="server">
 
-
-
         <div class="image-container set-full-height" style="background-image: url('/Content/assetsLogin/img/heliconias.jpg')">
             <a href="FormularioDePagina1.aspx"></a>
             <!--   Big container   -->
@@ -46,9 +44,11 @@
                                 </div>
                                 <div class="tab-content">
                                     <div class="tab-pane" id="details">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-lg-7">
                                         <div class="card card-plain">
                                             <div class="card-header" role="tab" id="headingTwo">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Documentación de SIGEPI
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Documentacion  de SIGEPI
                                                    
                                                     <i class="material-icons">keyboard_arrow_down</i>
                                                 </a>
@@ -91,8 +91,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
+                                        </div>
+                                            </div>
+                                         <div class="col-sm-6 col-lg-7">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -103,6 +104,8 @@
                                                 <asp:TextBox ID="CorreoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Correo electronico" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
+                                             </div>
+                                              <div class="col-sm-6 col-lg-7">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -113,6 +116,8 @@
                                                 <asp:TextBox ID="TelefonoGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Telefono" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
+                                                  </div>
+                                                   <div class="col-sm-6 col-lg-7">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
@@ -123,30 +128,10 @@
                                                 <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">fiber_manual_record</i>
-                                                        <h6>Color por defecto</h6>
-                                                    </span>
-                                                </div>
-                                                <asp:TextBox ID="Color" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">fiber_manual_record</i>
-                                                        <h6>Titulos</h6>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                       </div>
                                     </div>
                                     <div class="tab-pane" id="Semilleros">
-
+                                         <div class="col-sm-6 col-lg-7">
                                         <div class="card card-plain">
 
                                             <asp:Repeater ID="Repeater1" runat="server">
@@ -221,7 +206,7 @@
                                             </asp:Repeater>
 
                                         </div>
-
+                                             </div>
 
 
 
@@ -241,7 +226,6 @@
                                                     <h6 text_align="center">Miembros</h6>
                                                 </div>
                                             </div>
-                                           
                                         </div>
                                          <div class="form-group">
                                              <table class="table">
@@ -254,23 +238,15 @@
                                                     </tr>
                                                 </thead>
                                               <tbody>
-
                                                       <asp:Repeater ID="RepeaterMiembro" OnItemDataBound="RepiterItem" runat="server">
                                                    <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
                                                         <ItemTemplate>
                                                             <tr>
-
                                                                 <td><%#Eval("nom_usuario") %> </td>
-
-
                                                                 <td class="td-actions text-right ">
-
-                                                                    
                                                                     <asp:LinkButton  class="btn btn-primary"  ID="Modal"  title='<%#Eval("id_usuario")%>' CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
-                                                                
-                                                                    
                                                                     <div class="modal fade" id="<%#Eval("id_usuario") %> " tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-signup" role="document">
                                                                             <div class="modal-content">
@@ -405,7 +381,6 @@
 
                                             <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="card-body">
-
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">
@@ -423,16 +398,21 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-
-
                                                             <asp:Repeater ID="RepeaterInacti" runat="server">
                                                                 <ItemTemplate>
-
                                                                     <tr>
-
-
-                                                                        <td><%#Eval("nom_proyecto") %></td>
-                                                                        <td class="td-actions text-right ">
+                                                                        
+                                                                        <td >
+                                                                            <div class="row">
+                                                                            <div class="col-md-12">
+                                                                            <%#Eval("nom_proyecto") %>
+                                                                                 </div>
+                                                                           </div>
+                                                                        </td>
+                                                                                 
+                                                                         
+                                                                        <td class="td-actions text-right col-md-4 ">
+                                                                            
                                                                             <p>
                                                                                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
                                                                                     Editar
@@ -440,26 +420,31 @@
                                                                                 </button>
                                                                             </p>
                                                                             <div class="collapse" id="p<%#Eval("id_proyecto") %>">
-                                                                                <div class="card card-body">
-                                                                                    <div class="form-group form-file-upload form-file-multiple">
-                                                                                        <input type="file" multiple="" class="inputFileHidden" />
-                                                                                        <div class="input-group">
-                                                                                            <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
-                                                                                            <span class="input-group-btn">
-                                                                                                <button type="button" class="btn btn-fab btn-round btn-info">
-                                                                                                    <i class="material-icons">layers</i>
-                                                                                                </button>
-                                                                                            </span>
+                                                                                  
+                                                                               <div class="card card-body">
+                                                                                        <div class="form-group form-file-upload form-file-multiple">
+                                                                                            <input type="file" multiple="" class="inputFileHidden" />
+                                                                                            <div class="input-group">
+                                                                                                <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" />
+                                                                                                <span class="input-group-btn">
+                                                                                                    <button type="button" class="btn btn-fab btn-round btn-info">
+                                                                                                        <i class="material-icons">layers</i>
+                                                                                                    </button>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label for="exampleFormControlTextarea1">Descripción</label>
+                                                                                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="form-group">
-                                                                                        <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                                                    </div>
-                                                                                </div>
+                                                                                 
                                                                             </div>
+                                                                             
+                                                                             
+                                                                       
                                                                         </td>
-
+                                                                     
 
                                                                     </tr>
                                                                 </ItemTemplate>
