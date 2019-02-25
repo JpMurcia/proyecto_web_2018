@@ -1131,6 +1131,7 @@
     <Compile Include="Models\Modelo sigepi\UsuarioProducto.cs" />
     <Compile Include="Models\Modelo viewGroup\Actividad.cs" />
     <Compile Include="Models\Modelo viewGroup\ActividadUsuario.cs" />
+    <Compile Include="Models\Modelo viewGroup\enlace.cs" />
     <Compile Include="Models\Modelo viewGroup\grupo_investigacion.cs" />
     <Compile Include="Models\Modelo viewGroup\InformacionIntegrantesProyecto.cs" />
     <Compile Include="Models\Modelo viewGroup\menu.cs" />
