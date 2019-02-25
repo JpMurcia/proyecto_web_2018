@@ -16,7 +16,7 @@ namespace proyectoweb.Controllers
 
         private grupo_investigacion grupoVG = new grupo_investigacion();
         private usuario usuarioVG = new usuario();
-
+        //private enlace 
         private Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
 
         private Models.ModeloSigepi.proyecto proyecSIGEPI = new Models.ModeloSigepi.proyecto();

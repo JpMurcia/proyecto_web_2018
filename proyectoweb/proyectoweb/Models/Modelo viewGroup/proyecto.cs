@@ -14,9 +14,9 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string nom_proyect { get; set; }
 
 
-        public Boolean estado { get; set; }
+        public string estado { get; set; }
         public string fechaproye { get; set; }
-        public Boolean estado_proyec { get; set; }
+        public string estado_proyec { get; set; }
         public string fk_grupo { get; set; }
 
 
@@ -50,7 +50,7 @@ namespace proyectoweb.Models.ModelosViewGroup
             p.Add(new Parametro(
               "fecha",
               obj.fechaproye,
-              "VARCHAR",
+              "DATE",
               ParameterDirection.Input
               ));
             return conect.ExecuteProcedure("proye_crearte_proced", p);
