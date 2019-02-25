@@ -1,6 +1,7 @@
 ﻿using proyectoweb.Controllers;
 using proyectoweb.Models.ModeloSigepi;
 using proyectoweb.Models.ModelosViewGroup;
+using proyectoweb.Models.Modelo_viewGroup;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,6 +30,7 @@ namespace proyectoweb.Views
             Grupo_inve_semillero grupoSIGEPI = new Grupo_inve_semillero();
             grupo_investigacion grupoVG = new grupo_investigacion();
             grupo_investigacion Semillero = new grupo_investigacion();
+            enlace enlaceVG = new enlace();
             Models.ModelosViewGroup.proyecto proyectoVG = new Models.ModelosViewGroup.proyecto();
 
             a.email_usuario = usuarioNombre.Text;
@@ -134,7 +136,7 @@ namespace proyectoweb.Views
 
                         DataTable proyecto_trabajado = new DataTable();
                         dato_miembros = controlador.consultarInfoMiembros(grupoSIGEPI);
-
+                        DataTable registrado_enlaces = new DataTable();
 
                         for (int i = 0; i < dato_miembros.Rows.Count; i++)
                         {
@@ -143,25 +145,49 @@ namespace proyectoweb.Views
                             miembro.url_foto_usuario= dato_miembros.Rows[i]["url_foto_usuario"].ToString();
                             miembro.correo= dato_miembros.Rows[i]["email_usuario"].ToString();
                             miembro.fk_tipo_user = dato_miembros.Rows[i]["fk_tipo_usuario"].ToString();
+                            miembro.grupo = grupoVG.idGrupoInvestigacion.ToString();
 
 
                             controlador.crearUsuario(miembro);
 
                             proyecto_trabajado = controlador.consultarInfoProyecMiembros(miembro);
 
+                            for (int j = 0; j < proyecto_trabajado.Rows.Count; j++)
+                            {
+                                enlaceVG.tipo = proyecto_trabajado.Rows[j]["cargo"].ToString();
+                                enlaceVG.identificador = proyecto_trabajado.Rows[j]["identificador"].ToString();
+
+                                enlaceVG.id_user = miembro.idUsuario.ToString();
+                                
+
+                                registrado_enlaces = controlador.create_dato_enlace(enlaceVG);
+                            }
+
+
                         }
+
+                       // b.fk_tipo_user = datoRegreso.Rows[0]["tipo_user"].ToString();
+                       
+                        enlaceVG.tipo = b.fk_tipo_user.ToString();
+                        enlaceVG.identificador = grupoVG.idGrupoInvestigacion.ToString();
+
+                        enlaceVG.id_user = b.idUsuario.ToString();
+                        hola = controlador.create_dato_enlace(enlaceVG);
                         //<>
                         b.ToString();
 
                     }
-                    b.fk_tipo_user = "1";
+                    
                     //  DataTable dt = controlador.consultarGrupos(a);
                     //a.tipo = datoRegreso.Rows[0]["tipo"].ToString();
                     ////grupo.id_grupo = dt.Rows[0]["id_grupo"].ToString();
                     ////grupo.nombreGrupo= dt.Rows[0]["nom_grupo"].ToString();
-                    //Session["nom"] = a.nombre;
+                    Session["nom"] = b.nom_usuario;
                     //Session["contra"] = a.contrasena;
-                    //Session["tipo"] = a.tipo;
+                    Session["tipo"] = b.fk_tipo_user;
+                    Session["grupo"] = grupoVG.grupo_nombre;
+                    Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
+
 
                     Response.Redirect("principal.aspx");
 

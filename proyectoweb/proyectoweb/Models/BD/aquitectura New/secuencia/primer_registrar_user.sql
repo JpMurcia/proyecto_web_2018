@@ -25,9 +25,3 @@ CALL `proced_consul_miembro_simple`('giecom');
 CALL `proced_consul_user_proye_grupo`('111', '14');
 
 
-
- 
-
- 
- 
- 

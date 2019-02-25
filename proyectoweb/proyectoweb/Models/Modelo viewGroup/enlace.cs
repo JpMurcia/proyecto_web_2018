@@ -11,9 +11,9 @@ namespace proyectoweb.Models.Modelo_viewGroup
     public class enlace
     {
         private ConexionPropio conect = new ConexionPropio();
-        string tipo { get; set; }
-        string id_user { get; set; }
-        string identificador { get; set; }
+        public string tipo { get; set; }
+        public string id_user { get; set; }
+        public string identificador { get; set; }
 
         public DataTable crear_enlace(enlace obj)
         {

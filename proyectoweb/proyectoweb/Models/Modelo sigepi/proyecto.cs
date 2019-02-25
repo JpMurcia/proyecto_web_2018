@@ -26,7 +26,7 @@ namespace proyectoweb.Models.ModeloSigepi
                 ParameterDirection.Input
                 ));
             p.Add(new Parametro(
-                "id_proyec",
+                "id_user",
                 obj.idUsuario,
                 "VARCHAR",
                 ParameterDirection.Input

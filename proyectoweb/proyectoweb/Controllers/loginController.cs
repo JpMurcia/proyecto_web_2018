@@ -1,4 +1,5 @@
-﻿using proyectoweb.Models.ModeloSigepi;
+﻿using proyectoweb.Models.Modelo_viewGroup;
+using proyectoweb.Models.ModeloSigepi;
 using proyectoweb.Models.ModelosViewGroup;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace proyectoweb.Controllers
 
         private grupo_investigacion grupoVG = new grupo_investigacion();
         private usuario usuarioVG = new usuario();
-        //private enlace 
+        private enlace enlace_data = new enlace();
         private Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
 
         private Models.ModeloSigepi.proyecto proyecSIGEPI = new Models.ModeloSigepi.proyecto();
@@ -94,7 +95,14 @@ namespace proyectoweb.Controllers
 
         }
 
-        
+        public DataTable create_dato_enlace(enlace conect)
+        {
+
+            return enlace_data.crear_enlace(conect);
+
+        }
+
+
 
     }
 }

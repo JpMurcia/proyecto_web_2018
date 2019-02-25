@@ -102,18 +102,18 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
 REPLACE INTO `proyecto` (`id_proyecto`, `nom_proyecto`, `fecha_proyecto`, `estado_proyecto`) VALUES
 	(20, 'SIGEPI', '2013-11-11', 0),
 	(21, 'RQSOFT', '2013-01-13', 0),
-	(22, 'Estacion Meteriologica', NULL, 1),
-	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0),
-	(24, 'Semillero De Programacion', NULL, 0),
-	(25, 'MDD', NULL, 0),
-	(26, 'Visibilidad', NULL, 1),
-	(27, 'Mercado Campesino', NULL, 0),
-	(28, 'Contador de alevinos ', NULL, 1),
-	(29, 'Teletrabajo', NULL, 1),
-	(30, 'DESARROLLO DE PÁGINA WEB - URUKI EL MANANTIAL', NULL, 0),
-	(31, 'Las TIC y Objetos Virtuales de Aprendizaje OVA, para facilitar el aprendizaje de una segunda lengua (Inglés). Proyecto de extensión en la comunidad del barrio Piedrahita en el sector Altos de Capri.', NULL, 0),
-	(32, 'Tecnologías de la Información y la Comunicación para generación de cultura de paz a través del uso responsable del Internet y las redes sociales a niños y jóvenes.', NULL, 0),
-	(33, 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 1),
+	(22, 'Estacion Meteriologica', '2019-02-24', 1),
+	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', '2019-02-24', 0),
+	(24, 'Semillero De Programacion', '2019-02-24', 0),
+	(25, 'MDD', '2019-02-24', 0),
+	(26, 'Visibilidad', '2019-02-24', 1),
+	(27, 'Mercado Campesino', '2019-02-24', 0),
+	(28, 'Contador de alevinos ', '2019-02-24', 1),
+	(29, 'Teletrabajo', '2019-02-24', 1),
+	(30, 'DESARROLLO DE PÁGINA WEB - URUKI EL MANANTIAL', '2019-02-24', 0),
+	(31, 'Las TIC y Objetos Virtuales de Aprendizaje OVA, para facilitar el aprendizaje de una segunda lengua (Inglés). Proyecto de extensión en la comunidad del barrio Piedrahita en el sector Altos de Capri.', '2019-02-24', 0),
+	(32, 'Tecnologías de la Información y la Comunicación para generación de cultura de paz a través del uso responsable del Internet y las redes sociales a niños y jóvenes.', '2019-02-24', 0),
+	(33, 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', '2019-02-24', 1),
 	(34, ' Estudio computacional del espectro UV-Vis de moléculas orgánicas conjugadas con posibles aplicaciones en celdas solares orgánicas ', '2016-01-05', 0),
 	(35, 'Investigación, desarrollo e innovación: Desarrollo de sensores potenciométricos basados en terpiridinas', '2016-01-01', 0),
 	(36, 'Estudio teórico del espectro UV-Vis de moléculas orgánicas derivadas del diestirilbenceno ', '2015-08-08', 0),
@@ -418,10 +418,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembro_simple`(
 
 
 
+
 )
 BEGIN
 
-SELECT  usuario.id_usuario,usuario.Programa, usuario.nom_usuario, true as estado,usuario.url_foto_usuario, usuario.email_usuario 
+SELECT  usuario.id_usuario,usuario.Programa, usuario.nom_usuario, true as estado,usuario.url_foto_usuario, usuario.email_usuario, usuario.fk_tipo_usuario 
 FROM grupo_inve_semillero 
 INNER JOIN grupo_inve_semillero AS semillero ON grupo_inve_semillero.id_grupo=semillero.grupo_inve_semillero_id_grupo
 inner join integrante_has_grupo_inve_semillero integra on integra.grupo_inve_semillero_id_grupo = semillero.id_grupo
@@ -444,6 +445,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyecto`(
 
 
 
+
+
 )
 BEGIN
 
@@ -454,6 +457,7 @@ select
 proyecto.id_proyecto,
 proyecto.nom_proyecto,
 proyecto.estado_proyecto,
+proyecto.fecha_proyecto,
 "grupo" as tipo,
 grupo.id_grupo as semi
 
@@ -475,6 +479,7 @@ select
 proyecto.id_proyecto,
 proyecto.nom_proyecto,
 proyecto.estado_proyecto,
+proyecto.fecha_proyecto,
 "semillero" as tipo,
 semillero.id_grupo as semi
 
@@ -661,8 +666,10 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS `proced_consul_user_proye_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_proye_grupo`(
-	IN `grupo_perte` VARCHAR(500),
+	IN `grupo_perte` INT,
 	IN `id_user` INT
+
+
 
 
 )
@@ -670,13 +677,18 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_proye_grupo`(
 BEGIN
 
 
-SELECT  proyecto.id_proyecto,proyecto.nom_proyecto as proyectos FROM usuario
+SELECT  proyecto.id_proyecto as identificador,proyecto.nom_proyecto as trabajo,"no"as cargo  FROM usuario
 INNER JOIN usuario_has_proyecto ON usuario_has_proyecto.usuario_id_usuario=usuario.id_usuario 
 INNER JOIN proyecto ON proyecto.id_proyecto = usuario_has_proyecto.proyecto_id_proyecto
 INNER JOIN proyecto_has_grupo_inve_semillero AS proye_has ON proye_has.proyecto_id_proyecto=proyecto.id_proyecto
 INNER JOIN grupo_inve_semillero grupo ON grupo.id_grupo=proye_has.grupo_inve_semillero_id_grupo
-WHERE grupo.nom_grupo=grupo_perte AND usuario.id_usuario=id_user;
-
+WHERE grupo.id_grupo=grupo_perte AND usuario.id_usuario=id_user
+UNION
+SELECT  grupo.id_grupo as identificador ,grupo.nom_grupo as trabajo,
+usuario.fk_tipo_usuario as cargo FROM usuario
+inner join integrante_has_grupo_inve_semillero integra on integra.usuario_id_usuario=usuario.id_usuario
+inner join grupo_inve_semillero as grupo on grupo.id_grupo=integra.grupo_inve_semillero_id_grupo
+where grupo.grupo_inve_semillero_id_grupo=grupo_perte AND usuario.id_usuario=id_user;
 END//
 DELIMITER ;
 
