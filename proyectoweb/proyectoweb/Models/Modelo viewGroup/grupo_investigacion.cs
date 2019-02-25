@@ -46,6 +46,26 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
+
+        public DataTable consultarproductos(grupo_investigacion obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "pk_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_semillero", p);
+
+        }
+
+
+
+
+
         public DataTable Crear_grupo(grupo_investigacion obj)
         {
 

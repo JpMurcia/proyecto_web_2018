@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="plantlillaHeli.master.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.plantlillaHeli" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/bootstrap.min.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/font-awesome.min.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/pe-icon-7-stroke.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/settings.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/magnific-popup.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/owl.carousel.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/owl.theme.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/owl.transitions.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/prettyPhoto.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/style.css" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../Content/assetsPlantillaHeli/css/custom.css" type="text/css" media="all"/>
+    
+    <link href="../../Content/assetsPlantillaHeli/css/settings.css" rel="stylesheet" />
+    <link href="../../Content/assetsPlantillaHeli/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="../../Content/assetsPlantillaHeli/css/morphext.css" rel="stylesheet" />
+    <%--<link href="../../Content/assetsPlantillaHeli/css/jquery.multiscroll.css" rel="stylesheet" />--%>
+    <link href="../../Content/assetsPlantillaHeli/css/jquery.fullPage.css" rel="stylesheet" />
+
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,400italic,700" rel="stylesheet"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+
+</head>
+<body>
+            <%--<div class="noo-spinner">
+			<div class="spinner">
+				<div class="cube1"></div>
+				<div class="cube2"></div>
+			</div>
+		</div>--%>
+		<div class="search-form-container-full">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 offset-sm-3 search-wrap">
+						<div class="text-center middle">
+							<form id="form1" runat="server" class="search-form">
+								<input type="search" class="search-field" value="" name="s" placeholder="¿Que estas buscando?" />
+								<button class="button-search">
+									<i class="pe-7s-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="side-box-container" class="sidr right">
+			<div class="sidr-inner">
+				<a href="#" class="button-side-box-close pe-7s-close"></a>
+				<div class="side-box-inner">
+					<div class="widget">
+						<h3 class="widget-title">Enlaces Ùtiles</h3>
+						<ul>
+							<li><a href="QuienesSomos.aspx">¿Quiènes Somos?</a></li>
+							<li><a href="Proyectos.aspx">Proyectos</a></li>
+							<li><a href="Blog.aspx">Blog</a></li>
+							<li><a href="Miembros.aspx">Miembros</a></li>
+							<li><a href="Semillero.aspx">Semilleros</a></li>
+							<li><a href="Contacto.aspx">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="side-box-social-list">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="site">
+			<header class="header header-1 header-desktop header-transparent header-white">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-10 col-md-10 col-lg-10 col-xl-10 pl-0">
+							<div class="row">
+								<div class="site-branding">
+									<a class="normal_logo" href="index.html" rel="home">
+										<img src="images/logo.svg" alt="Heli" />
+									</a>
+								</div>
+								<nav class="main-navigation d-none d-lg-block">
+									<div class="primary-menu">
+										<ul class="main-menu">
+											<li class="menu-item-has-children mega-menu">
+												<a href="IndexHeli.aspx">Principal</a>
+											</li>
+											<li class="menu-item-has-children">
+												<a href="QuienesSomos.aspx">¿Quiènes Somos?</a>
+											</li>
+											<li class="menu-item-has-children mega-menu">
+												<a href="Proyectos.aspx">Proyectos</a>
+											</li>
+											<li class="menu-item-has-children">
+												<a href="Blog.aspx">Blog</a>
+											</li>
+											<li class="menu-item-has-children mega-menu">
+												<a href="#">Semilleros</a>
+												<ul class="sub-menu">
+													<div class="col-sm-3">
+																	<div class="column-inner">
+																		<ul class="menu">
+																			<li><a href="Semillero.aspx">Semillero #1</a></li>
+																			<li><a href="Semillero.aspx">Semillero #2</a></li>
+																			<li><a href="Semillero.aspx">Semillero #3</a></li>
+																			<li><a href="Semillero.aspx">Semillero #4</a></li>
+																		</ul>
+																	</div>
+																</div>
+												</ul>
+											</li>
+											<li class="menu-item-has-children">
+												<a href="Miembros.aspx">Miembros</a>
+											</li>
+											<li class="menu-item-has-children">
+												<a href="Contacto.aspx">Contacto</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
+							<div class="header-icon header-icon-search d-none d-lg-block">
+								<i class="pe-7s-search"></i>
+							</div>
+							<div class="header-icon header-icon-canvas menu-button d-none d-lg-block">
+								<span></span>
+							</div>
+							<div id="page-open-mobile-menu" class="page-open-mobile-menu d-lg-none">
+								<div><i></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 col-md-12">
+							<img src="images/logo2.svg" alt="Heli" />
+							<div class="office">
+								<p><i class="pe-7s-call"></i> (61 2) 9251 5600 </p>
+								<p><i class="pe-7s-mail-open-file"></i> email@domain.com</p>
+								<p><i class="pe-7s-map-2"></i> No.200 Josecph, Canada 10020</p>
+							</div>
+							<div class="mb-5 d-block d-md-block d-lg-none"></div>
+						</div>
+						<div class="col-lg-2 col-md-6">
+							<h3 class="widget-title uppercase">Company</h3>
+							<ul class="menu">
+							<li><a href="QuienesSomos.aspx">¿Quiènes Somos?</a></li>
+							<li><a href="Proyectos.aspx">Proyectos</a></li>
+							<li><a href="Blog.aspx">Blog</a></li>
+							<li><a href="Miembros.aspx">Miembros</a></li>
+							<li><a href="Semillero.aspx">Semilleros</a></li>
+							<li><a href="Contacto.aspx">Contacto</a></li>
+							</ul>
+							<div class="mb-5 d-block d-md-block d-lg-none"></div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="copyright text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							Hecho con  <i class="pe-7s-like"></i> por <a target="_blank" href="#">Yisus y JP</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a id="backtotop" class="fa fa-angle-up circle" href="javascript:void(0)"></a>
+
+    
+		<!-- LOAD JQUERY LIBRARY -->
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jquery-migrate.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/bootstrap.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/modernizr-2.7.1.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.sidr.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.countTo.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/owl.carousel.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.prettyPhoto.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/headroom.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jQuery.headroom.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/bootstrap-progressbar.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/waypoints.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/script.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.countdown.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.easings.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.equalheights.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.fitvids.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.fullpage.extensions.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.isotope.init.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.justifiedGallery.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.magnific-popup.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.multiscroll.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.singlePageNav.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/jquery.themepunch.tools.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/circle-progress.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/fullpage.responsiveSlides.limited.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/imagesloaded.pkgd.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/isotope.pkgd.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/morphext.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/packery-mode.pkgd.min.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/pie-chart.js"></script>
+        <script src="../../Content/assetsPlantillaHeli/js/typed.js"></script>
+
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.themepunch.tools.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.video.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.actions.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.migration.min.js"></script>
+		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.parallax.min.js"></script>
+    
+
+    
+</html>

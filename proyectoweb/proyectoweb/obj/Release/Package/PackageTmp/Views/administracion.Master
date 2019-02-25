@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="administracion.master.cs" Inherits="proyectoweb.Views.administracion" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/assetsAdministracion/css/material-dashboard.min40a0.css" rel="stylesheet" />
+    <link href="../Content/assetsAdministracion/demo/demo.css" rel="stylesheet" />
+    <link href="../Content/assetsAdministracion/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/css8393.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/material-kit.minf066.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/owl.carousel.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../Content/assetsLogin/css/owl.theme.default.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="wrapper ">
+
+        <div class="sidebar" data-color="green" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="logo ">
+                    <a href="principal.aspx" class="simple-text logo-normal">
+                        <img src="../Content/assetsLogin/img/bg0.jpg" height="100" width="150" />
+                    </a>
+
+                    <a href="principal.aspx" class="simple-text logo-mini"></a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <ul class="nav">
+             <%--   OnItemDataBound="ItemBound"--%>
+             <%--   <asp:Repeater ID="Padre2" runat="server" OnItemDataBound="ItemBound"  >
+                    <ItemTemplate>
+
+
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                                <i class="material-icons"><%# Eval("icono")%></i>
+                                <p>
+                                    <%# Eval("nom_menu") %>
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+
+                          <asp:Repeater ID="Hijo" runat="server">
+                                <ItemTemplate>
+
+
+                                    <div class="collapse" id="pagesExamples">
+                                        <ul class="nav">
+
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href=" <%# Eval("url_pagina") %>">
+                                                    <span class="sidebar-mini"><%# Eval("icono")%></span>
+                                                    <span class="sidebar-normal"><%# Eval("nom_menu") %></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            </li>
+                    </ItemTemplate>
+                </asp:Repeater>--%>
+
+
+                <li class="nav-item ">
+                    <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+                        <i class="material-icons">group</i>
+                        <p>
+                            Grupos
+                       <b class="caret"></b>
+                        </p>
+                    </a>
+
+                    <div class="collapse" id="formsExamples">
+                        <ul class="nav">
+
+                            <%-- para repetidor de grupos  --%>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="forms/regular.html">
+                                    <span class="sidebar-mini">NP </span>
+                                    <span class="sidebar-normal">Nueva Plantilla </span>
+                                </a>            
+                           </li>
+                        
+
+                        </ul>
+                    </div>
+                </li>
+
+                 
+                <asp:Repeater ID="Padre" runat="server">
+                    <ItemTemplate>
+                         <li class="nav-item ">
+
+                       
+                      
+                            <a class="nav-link" href='<%#Eval("url_pagina")%>'>
+                                <i class="material-icons"><%#Eval("icono")%></i>
+                                <p>
+                                    <%#Eval("nom_menu") %>
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                                  
+                        
+                         </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+
+                     
+
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="../../../material-kit-pro/FormularioDePagina.html">Tablero</a>
+                    </div>
+            </nav>
+            <!-- End Navbar -->
+
+            <div class="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <footer class="footer">
+                    <div class="container-fluid">
+
+                        <div class="copyright float-right">
+                            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+                            , Hecho con <i class="material-icons">favorite</i> por
+            <a href="https://www.creative-tim.com/" target="_blank">Yisus and  Jp</a> para pasar programación web.
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="]/Content/assetsAdministracion/js/material-dashboard.min40a0.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/sweetalert2.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/nouislider.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/jquery.validate.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/moment.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/jquery.dataTables.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/jquery.bootstrap-wizard.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/jquery-jvectormap.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/jasny-bootstrap.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/chartist.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/bootstrap-tagsinput.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/bootstrap-selectpicker.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/bootstrap-notify.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/bootstrap-datetimepicker.min.js"></script>
+<script src="/Content/assetsAdministracion/js/plugins/arrive.min.js"></script>
+<script src="/Content/assetsAdministracion/js/core/popper.min.js"></script>
+<script src="/Content/assetsAdministracion/js/core/jquery.min.js"></script>
+<script src="/Content/assetsAdministracion/js/core/bootstrap-material-design.min.js"></script>
+
+<script src="/Content/assetsLogin/js/buttons.js"></script>
+
+<script src="/Content/assetsLogin/js/material-kit.minf066.js"></script>
+<script src="/Content/assetsLogin/js/owl.carousel.min.js"></script>
+<script src="/Content/assetsLogin/js/plugins/bootstrap-datetimepicker.js"></script>
+<script src="/Content/assetsLogin/js/plugins/bootstrap-selectpicker.js"></script>
+<script src="/Content/assetsLogin/js/plugins/bootstrap-tagsinput.js"></script>
+<script src="/Content/assetsLogin/js/plugins/jasny-bootstrap.min.js"></script>
+<script src="/Content/assetsLogin/js/plugins/jquery.flexisel.js"></script>
+<script src="/Content/assetsLogin/js/plugins/moment.min.js"></script>
+<script src="/Content/assetsLogin/js/plugins/nouislider.min.js"></script>
+<script src="/Content/assetsLogin/js/core/bootstrap-material-design.min.js"></script>
+
+<script src="/Content/assetsLogin/js/core/popper.min.js"></script>
+
+
+
+<asp:contentplaceholder id="ScriptsContent" runat="server">
+    </asp:contentplaceholder>
+</html>

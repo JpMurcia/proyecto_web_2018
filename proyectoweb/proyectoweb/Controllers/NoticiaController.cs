@@ -16,16 +16,22 @@ namespace proyectoweb.Controllers
          
         proyecto product = new proyecto();
 
-        grupo_investigacion semillero = new grupo_investigacion();
+        grupo_investigacion grupovg = new grupo_investigacion();
 
         //public DataTable ConsultarProduc(proyecto produc)
         //{
         //    return product.CrearProductoModelo(produc);
         //}
 
-        public DataTable consultarSemillero(grupo_investigacion semi) {
+        //public DataTable consultarSemillero(grupo_investigacion semi) {
 
-            return semillero.consultarSemillero(semi);
+        //    return semillero.consultarSemillero(semi);
+        //}
+
+        public DataTable consultarProductos(grupo_investigacion grupo) {
+
+            return grupovg.consultarproductos(grupo);
+
         }
 
     }

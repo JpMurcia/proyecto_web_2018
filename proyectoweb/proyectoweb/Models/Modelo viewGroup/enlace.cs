@@ -43,7 +43,7 @@ namespace proyectoweb.Models.Modelo_viewGroup
           
 
 
-            return conect.ExecuteProcedure("proced_create_usuario", p);
+            return conect.ExecuteProcedure("proye_inser_enlases_usuario", p);
 
         }
 
