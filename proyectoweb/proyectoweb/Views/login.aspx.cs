@@ -23,11 +23,14 @@ namespace proyectoweb.Views
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            usuario b = new usuario();
-            modelUsuario a = new modelUsuario();
+            usuario b = new usuario();//VG
+            usuario miembro = new usuario();
+            modelUsuario a = new modelUsuario();//SIGEPI
             Grupo_inve_semillero grupoSIGEPI = new Grupo_inve_semillero();
             grupo_investigacion grupoVG = new grupo_investigacion();
             grupo_investigacion Semillero = new grupo_investigacion();
+            Models.ModelosViewGroup.proyecto proyectoVG = new Models.ModelosViewGroup.proyecto();
+
             a.email_usuario = usuarioNombre.Text;
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
@@ -84,8 +87,8 @@ namespace proyectoweb.Views
                         DataTable CreandoUser = controlador.crearUsuario(b);
 
                        
+                        grupoSIGEPI.id_grupo= datoRegreso.Rows[0]["id_grupo"].ToString();
 
-                      
 
                         DataTable dato_semillero = controlador.consultarInfoSemillero(grupoSIGEPI);
 
@@ -112,18 +115,43 @@ namespace proyectoweb.Views
                         }
 
                         DataTable dato_proyec = new DataTable();
-
+                        DataTable hola = new DataTable();
                         dato_proyec = controlador.consultarInfoProyecto(grupoSIGEPI);
 
                         for (int i = 0; i < dato_proyec.Rows.Count; i++)
                         {
-                         
+                            proyectoVG.idproyect = dato_proyec.Rows[i]["id_proyecto"].ToString();
+                            proyectoVG.nom_proyect = dato_proyec.Rows[i]["nom_proyecto"].ToString();
+                            //  proyectoVG.fechaproye = Convert.ToDateTime(dato_proyec.Rows[i]["fecha_proyecto"]);
+                            //proyectoVG.fechaproye = dato_proyec.Rows[i]["fecha_proyecto"].ToString();
+                            proyectoVG.estado_proyec =  dato_proyec.Rows[i]["estado_proyecto"].ToString();
+                            proyectoVG.fk_grupo = dato_proyec.Rows[i]["semi"].ToString();
 
+                           hola =controlador.crear_proyecto(proyectoVG);
                         }
 
+                        DataTable dato_miembros = new DataTable();
 
-                            //<>
-                            b.ToString();
+                        DataTable proyecto_trabajado = new DataTable();
+                        dato_miembros = controlador.consultarInfoMiembros(grupoSIGEPI);
+
+
+                        for (int i = 0; i < dato_miembros.Rows.Count; i++)
+                        {
+                            miembro.idUsuario = dato_miembros.Rows[i]["id_usuario"].ToString();
+                            miembro.nom_usuario = dato_miembros.Rows[i]["nom_usuario"].ToString();
+                            miembro.url_foto_usuario= dato_miembros.Rows[i]["url_foto_usuario"].ToString();
+                            miembro.correo= dato_miembros.Rows[i]["email_usuario"].ToString();
+                            miembro.fk_tipo_user = dato_miembros.Rows[i]["fk_tipo_usuario"].ToString();
+
+
+                            controlador.crearUsuario(miembro);
+
+                            proyecto_trabajado = controlador.consultarInfoProyecMiembros(miembro);
+
+                        }
+                        //<>
+                        b.ToString();
 
                     }
                     b.fk_tipo_user = "1";

@@ -17,7 +17,9 @@ namespace proyectoweb.Controllers
         private grupo_investigacion grupoVG = new grupo_investigacion();
         private usuario usuarioVG = new usuario();
 
-        //private proyecto proyec = new proyecto();
+        private Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
+
+        private Models.ModeloSigepi.proyecto proyecSIGEPI = new Models.ModeloSigepi.proyecto();
 
         public loginController()
         {
@@ -71,12 +73,28 @@ namespace proyectoweb.Controllers
 
         }
 
-        public DataTable crear_proyecto(grupo_investigacion grup)
+        public DataTable crear_proyecto(Models.ModelosViewGroup.proyecto proyectoC)
         {
 
-            return grupoVG.Crear_grupo(grup);
+            return proyec.Crear_proyecto(proyectoC);
 
         }
+
+        public DataTable consultarInfoMiembros(Grupo_inve_semillero grup)
+        {
+
+            return grupoSigepi.consultarMiembros(grup);
+
+        }
+
+        public DataTable consultarInfoProyecMiembros(usuario miembrodata)
+        {
+
+            return proyecSIGEPI.consultarProyectoDeMiembro(miembrodata);
+
+        }
+
+        
 
     }
 }

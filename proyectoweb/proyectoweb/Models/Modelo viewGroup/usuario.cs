@@ -14,7 +14,9 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string correo { get; set; }
         public string url_foto_usuario { get; set; }
         public string fk_tipo_user { get; set; }
-        
+        public string programa { get; set; }
+        public string grupo { get; set; }
+
 
         private ConexionPropio conect = new ConexionPropio();
 

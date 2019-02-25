@@ -22,7 +22,9 @@ CALL `proced_consul_miembro_simple`('giecom');
  
  
   # traer los proyecto relacionado con "X" grupo y "X" id_mienbro solo para consultar en la modal
-CALL `proced_consul_user_proye_grupo`('giecom', '24')
+CALL `proced_consul_user_proye_grupo`('111', '14');
+
+
 
  
 
