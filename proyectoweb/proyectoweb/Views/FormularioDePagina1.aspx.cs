@@ -54,7 +54,10 @@ namespace proyectoweb.Views
 
         public void llenarDatos()
         {
-            grupo.nombreGrupo = Request.QueryString["grupo"];
+          //  grupo.nombreGrupo = Request.QueryString["grupo"];
+
+            grupo.nombreGrupo = Session["grupo"].ToString();
+
             Console.Write("epa hijuemadre");
 
           

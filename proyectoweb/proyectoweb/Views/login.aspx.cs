@@ -37,7 +37,7 @@ namespace proyectoweb.Views
             a.contrasena = usuarioContrasena.Text;
             loginController controlador = new loginController();
             DataTable datoRegreso = controlador.iniciarSesion(a);
-
+            //
 
 
             if (datoRegreso.Rows[0]["mensaje"].ToString() == "bueeeeena perro")

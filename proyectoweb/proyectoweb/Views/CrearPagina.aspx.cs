@@ -27,31 +27,34 @@ namespace proyectoweb.Views
 
         }
 
-        protected void verGiecom_Click(object sender, EventArgs e)
+        
+
+        protected void ver(object sender, EventArgs e)
         {
             try
             {
+
                 if (Session["tipo"].ToString() == "1")
                 {
-                    Response.Redirect("FormularioDePagina1.aspx?grupo=giecom");
+                    Response.Redirect("FormularioDePagina1.aspx");
                 }
-                else {
+                else
+                {
 
 
                 }
 
-                
+
             }
             catch (Exception ex)
             {
-                
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+
+                Response.Redirect("Error404.aspx");
                 // Extract some information from this exception, and then 
-                
+
             }
-            
+
         }
 
-       
     }
 }
