@@ -17,7 +17,7 @@
     <link href="../Content/assetsLogin/css/owl.carousel.css" rel="stylesheet" />
     <link href="../Content/assetsLogin/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="../Content/assetsLogin/css/owl.theme.default.min.css" rel="stylesheet" />
-
+    <link href="../Content/assetsAdministracion/css/EstiloCalendario.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -90,7 +90,6 @@
                         <i class="material-icons">group</i>
                         <p>
                             Grupos
-                       <b class="caret"></b>
                         </p>
                     </a>
 
@@ -104,8 +103,6 @@
                                     <span class="sidebar-normal">Nueva Plantilla </span>
                                 </a>            
                            </li>
-                        
-
                         </ul>
                     </div>
                 </li>
@@ -114,18 +111,13 @@
                 <asp:Repeater ID="Padre" runat="server">
                     <ItemTemplate>
                          <li class="nav-item ">
-
-                       
-                      
                             <a class="nav-link" href='<%#Eval("url_pagina")%>'>
                                 <i class="material-icons"><%#Eval("icono")%></i>
                                 <p>
                                     <%#Eval("nom_menu") %>
-                                    <b class="caret"></b>
+                                    
                                 </p>
                             </a>
-                                  
-                        
                          </li>
                     </ItemTemplate>
                 </asp:Repeater>
@@ -181,6 +173,8 @@
 
 
 </body>
+
+
 <script src="]/Content/assetsAdministracion/js/material-dashboard.min40a0.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/sweetalert2.js"></script>
 <script src="/Content/assetsAdministracion/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -199,10 +193,12 @@
 <script src="/Content/assetsAdministracion/js/plugins/arrive.min.js"></script>
 <script src="/Content/assetsAdministracion/js/core/popper.min.js"></script>
 <script src="/Content/assetsAdministracion/js/core/jquery.min.js"></script>
+    
+<script src="../Content/assetsAdministracion/js/plugins/fullcalendar.min.js"></script>
+    <script src="../Content/assetsAdministracion/js/Propio.js"></script>
 <script src="/Content/assetsAdministracion/js/core/bootstrap-material-design.min.js"></script>
 
 <script src="/Content/assetsLogin/js/buttons.js"></script>
-
 <script src="/Content/assetsLogin/js/material-kit.minf066.js"></script>
 <script src="/Content/assetsLogin/js/owl.carousel.min.js"></script>
 <script src="/Content/assetsLogin/js/plugins/bootstrap-datetimepicker.js"></script>
@@ -213,7 +209,6 @@
 <script src="/Content/assetsLogin/js/plugins/moment.min.js"></script>
 <script src="/Content/assetsLogin/js/plugins/nouislider.min.js"></script>
 <script src="/Content/assetsLogin/js/core/bootstrap-material-design.min.js"></script>
-
 <script src="/Content/assetsLogin/js/core/popper.min.js"></script>
 
 

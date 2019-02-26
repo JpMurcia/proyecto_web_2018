@@ -63,22 +63,7 @@ namespace proyectoweb.Models.ModelosViewGroup
         }
 
 
-        public DataTable consultarProyectoInac(grupo_investigacion obj)
-        {
 
-            List<Parametro> p = new List<Parametro>();
-            p.Add(new Parametro(
-                "pk_grupo",
-                obj.idGrupoInvestigacion,
-                "VARCHAR",
-                ParameterDirection.Input
-                ));
-
-            return conect.ExecuteProcedure("proye_consul_int_proced", p);
-
-        }
-
-        
 
 
         public DataTable Crear_grupo(grupo_investigacion obj)
