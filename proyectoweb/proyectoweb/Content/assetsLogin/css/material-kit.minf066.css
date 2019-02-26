@@ -16933,13 +16933,13 @@ thead.thead-inverse th {
 }
 
 .card .card-header {
-	border-radius: 3px;
-	padding: 1rem 15px;
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: -30px;
-	border: 0;
-	background: linear-gradient(60deg, #eee, #bdbdbd)
+    border-radius: 3px;
+    padding: 1rem 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border: 0;
+    background: linear-gradient(60deg, #207608, #5f5959)
 }
 
 .card .card-header .title {
@@ -20749,10 +20749,10 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 }
 
 a {
-  color: #9c27b0;
+    color: #ffffff;
 }
 a:hover, a:focus {
-  color: #89229b;
+  color: white;
   text-decoration: none;
 }
 a.text-info:hover, a.text-info:focus {

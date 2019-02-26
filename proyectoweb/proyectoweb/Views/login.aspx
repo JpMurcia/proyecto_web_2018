@@ -25,10 +25,6 @@
                 swal("Datos inconsistentes", "Verifique sus datos", "error");
 
             }</script>
-      
-
-
-
         <div class="page-header header-filter" style="background-image: url('../Content/assetsLogin/img/bg7.jpg'); background-size: cover; background-position: top center;">
             <div class="container">
                 <div class="row">
