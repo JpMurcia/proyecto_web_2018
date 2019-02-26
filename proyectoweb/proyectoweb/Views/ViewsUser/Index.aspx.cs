@@ -16,11 +16,11 @@ namespace proyectoweb.Views.ViewsUser
             llenar();
         }
 
-        public DataTable cosultarA()
-        {
+        //public DataTable cosultarA()
+        //{
 
-            return activy.consul_acti(act);
-        }
+        //    return activy.consul_acti(act);
+        //}
 
         public void llenar() {
 
