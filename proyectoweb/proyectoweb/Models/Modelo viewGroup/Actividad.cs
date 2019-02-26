@@ -19,8 +19,6 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string fechaActividad { get; set; }
         public string fk_grupo { get; set; }
 
-
-
         public DataTable Crear(Actividad obj)
         {
             List<Parametro> p = new List<Parametro>();
@@ -73,13 +71,9 @@ namespace proyectoweb.Models.ModelosViewGroup
                "VARCHAR",
                ParameterDirection.Input
                ));
-
-           
-
             return conect.ExecuteProcedure("proced_dele_activity", p);
-
         }
-
+            
         public DataTable update_acti(Actividad obj)
         {
             List<Parametro> p = new List<Parametro>();

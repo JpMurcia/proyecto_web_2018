@@ -41,48 +41,7 @@
 
             </div>
 
-
-
-
-
-
-
             <ul class="nav">
-             <%--   OnItemDataBound="ItemBound"--%>
-             <%--   <asp:Repeater ID="Padre2" runat="server" OnItemDataBound="ItemBound"  >
-                    <ItemTemplate>
-
-
-                        <li class="nav-item ">
-                            <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-                                <i class="material-icons"><%# Eval("icono")%></i>
-                                <p>
-                                    <%# Eval("nom_menu") %>
-                                    <b class="caret"></b>
-                                </p>
-                            </a>
-
-                          <asp:Repeater ID="Hijo" runat="server">
-                                <ItemTemplate>
-
-
-                                    <div class="collapse" id="pagesExamples">
-                                        <ul class="nav">
-
-                                            <li class="nav-item ">
-                                                <a class="nav-link" href=" <%# Eval("url_pagina") %>">
-                                                    <span class="sidebar-mini"><%# Eval("icono")%></span>
-                                                    <span class="sidebar-normal"><%# Eval("nom_menu") %></span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </ItemTemplate>
-                            </asp:Repeater>
-                            </li>
-                    </ItemTemplate>
-                </asp:Repeater>--%>
 
 
                 <li class="nav-item ">
@@ -121,20 +80,6 @@
                          </li>
                     </ItemTemplate>
                 </asp:Repeater>
-
-                     
-
-
-
-
-
-
-
-
-
-
-
-
             </ul>
         </div>
 
