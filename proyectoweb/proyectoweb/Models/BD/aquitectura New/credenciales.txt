@@ -1,0 +1,7 @@
+  host: 172.27.29.100
+DATABASE:sigepi
+DATABASE:viewgroup3
+usuario: user_jp
+	contarseña: jp.123
+
+h.ing@udla.edu.co

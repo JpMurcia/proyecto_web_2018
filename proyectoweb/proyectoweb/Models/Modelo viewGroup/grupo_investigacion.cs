@@ -58,7 +58,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                 ParameterDirection.Input
                 ));
 
-            return conect.ExecuteProcedure("proced_consul_semillero", p);
+            return conect.ExecuteProcedure("proye_consul_act_proced", p);
 
         }
 
