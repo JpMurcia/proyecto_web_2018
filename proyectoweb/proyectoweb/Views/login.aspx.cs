@@ -51,6 +51,9 @@ namespace proyectoweb.Views
 
                     DataTable Consul_dato = controlador.Consultar(b);
 
+                    grupoVG.grupo_nombre = datoRegreso.Rows[0]["su_grupo"].ToString();
+                    grupoVG.idGrupoInvestigacion= datoRegreso.Rows[0]["id_grupo"].ToString();
+
 
                     if (Consul_dato.Rows[0]["mensaje"].ToString() == "siii wey si existe :D")
                     {
@@ -63,7 +66,13 @@ namespace proyectoweb.Views
                         //Session["contra"] = a.contrasena;
                         Session["tipo"] = b.fk_tipo_user;
                         Session["grupo"] = grupoVG.grupo_nombre;
-                        Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
+
+                        grupoSIGEPI.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
+                        DataTable datos_grupo = controlador.consultarInforGrupo(grupoSIGEPI);
+                        
+                        grupoVG.urlLogo = datos_grupo.Rows[0]["url_logo_grupo"].ToString();
+
+                        Session["id_grupo"] = datos_grupo.Rows[0]["url_logo_grupo"].ToString();
 
                         Session["url_logo"] = grupoVG.urlLogo;
                         Response.Redirect("principal.aspx");
@@ -85,7 +94,7 @@ namespace proyectoweb.Views
                         grupoSIGEPI.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
                         DataTable datos_grupo = controlador.consultarInforGrupo(grupoSIGEPI);
 
-
+                      
                         grupoVG.idGrupoInvestigacion = datos_grupo.Rows[0]["id_grupo"].ToString();
                         grupoVG.grupo_nombre = datos_grupo.Rows[0]["nom_grupo"].ToString();
                         grupoVG.siglas = datos_grupo.Rows[0]["sigla_signif_grupo"].ToString();

@@ -104,14 +104,15 @@
                                                 </a>
 
                                                 <div class="dropdown-menu"    aria-labelledby="dropdownMenuLink">
-                                                <asp:Repeater ID="RepeaterRoducto" runat="server">
-                                                    <ItemTemplate>
-                                                        
-                                                            <a class="dropdown-item" href="p<%#Eval("id_produc")%>"><%#Eval("nom_producto")%></a>
+                                             <%--   <asp:Repeater ID="RepeaterRoducto" runat="server">
+                                                    <ItemTemplate>--%>
+                                                        <asp:DropDownList ID="DropDownListProye" runat="server"></asp:DropDownList>
+                                                         
+<%--                                                            <a class="dropdown-item" href="p<%#Eval("id_produc")%>"><%#Eval("nom_producto")%></a>--%>
 
                                                       
-                                                    </ItemTemplate>
-                                                </asp:Repeater>
+                                                <%--    </ItemTemplate>
+                                                </asp:Repeater>--%>
                                                       </div>
 
                                                 <%--      <asp:Repeater ID="RepeaterMiembro" runat="server">

@@ -31,12 +31,15 @@ namespace proyectoweb.Views
 
         protected void ver(object sender, EventArgs e)
         {
+            string hola = Session["tipo"].ToString();
             try
             {
-
-                if (Session["tipo"].ToString() == "1")
+               
+                if (Session["tipo"].ToString().Equals("1"))
                 {
+
                     Response.Redirect("FormularioDePagina1.aspx");
+                    Response.Redirect("principal.aspx");
                 }
                 else
                 {
@@ -48,8 +51,17 @@ namespace proyectoweb.Views
             }
             catch (Exception ex)
             {
-
-                Response.Redirect("Error404.aspx");
+                if (hola.Equals("1"))
+                {
+                    Response.Redirect("FormularioDePagina1.aspx");
+                }
+                else {
+                    Response.Redirect("Error404.aspx");
+                }
+             
+                Response.Redirect("principal.aspx");
+              
+               
                 // Extract some information from this exception, and then 
 
             }

@@ -22,6 +22,7 @@ namespace proyectoweb.Views
         {
             if (string.IsNullOrEmpty(Session["tipo"] as string))
             {
+            
                 //Some Stuff to initialize the variable
                 Response.Redirect("Error404.aspx");
 
@@ -112,7 +113,7 @@ namespace proyectoweb.Views
             grupo.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();
             grupo.vision = dt.Rows[0]["vision_grupo"].ToString();
 
-            Console.Write("epa hijuemadre");
+          
 
             nombreGrupo.Text = grupo.nombreGrupo;
             Objetivo.Text = grupo.objetivo;

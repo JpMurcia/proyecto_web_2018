@@ -22,6 +22,7 @@
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
+                                            <asp:Image ID="Image1" runat="server" />
                                             <img src="../Content/assetsAdministracion/img/giecom.png" />
                                         </a>
                                     </div>
@@ -30,7 +31,7 @@
                                         <p class="card-description">
                                             Grupo de investigaciòn dedicado a muchas cosas,entre esas muchas cosas màs y màs y mas   
                                         </p>
-                                        <asp:Button runat="server" ID="verPicardie" CssClass="btn btn-primary" OnClick="verPicardie_Click" Text="Crear Pagina" />
+                                        <asp:Button runat="server" ID="verPicardie" CssClass="btn btn-primary" OnClick="ver" Text="Crear Pagina" />
 
                                     </div>
                                 </div>

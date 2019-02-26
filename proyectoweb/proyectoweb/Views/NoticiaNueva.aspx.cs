@@ -21,9 +21,19 @@ namespace proyectoweb.Views
         public void llenar_noticias() {
 
             NoticiaController controlador = new NoticiaController();
-           
 
-           DataTable dt = controlador.consultarProductos(grupovg);
+            grupovg.idGrupoInvestigacion = Session["id_grupo"].ToString();
+
+            //  DropDownListProye
+            DataTable dt = controlador.consultarProductos(grupovg);
+
+
+            //DropDownListProye.DataTextField ="nom_proyecto";
+            //DropDownListProye.DataValueField = "id_produc";
+            //DropDownListProye.DataSource = controlador.consultarProductos(grupovg);
+            //DropDownListProye.DataBind();
+
+          //  DataTable dt = controlador.consultarProductos(grupovg);
 
 
            // DataTable dt2 = controlador.consultarSemillero(semillero);
