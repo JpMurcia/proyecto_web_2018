@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyectoweb.Models.ModelosViewGroup;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace proyectoweb.Views
 {
     public partial class principal : System.Web.UI.Page
     {
-        
+        grupo_investigacion grupoVG = new grupo_investigacion();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             llenar();
@@ -20,9 +22,10 @@ namespace proyectoweb.Views
 
         public void llenar() {
 
-
+            grupoVG.urlLogo = Session["url_logo"].ToString();
             //Image1.ImageUrl = Session["url_logo"].ToString();
-
+            //imagenGrupo.Src = "../imagenes/grupos/" +grupoVG.urlLogo;
+           
 
 
         }

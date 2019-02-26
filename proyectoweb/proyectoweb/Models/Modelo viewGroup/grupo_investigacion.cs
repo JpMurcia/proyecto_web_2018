@@ -37,7 +37,7 @@ namespace proyectoweb.Models.ModelosViewGroup
             List<Parametro> p = new List<Parametro>();
             p.Add(new Parametro(
                 "pk_grupo",
-                obj.fk_id_grupo,
+                obj.idGrupoInvestigacion,
                 "VARCHAR",
                 ParameterDirection.Input
                 ));
@@ -45,7 +45,21 @@ namespace proyectoweb.Models.ModelosViewGroup
             return conect.ExecuteProcedure("proced_consul_semillero", p);
 
         }
+        public DataTable consultarProyectoInac(grupo_investigacion obj)
+        {
 
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "pk_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proye_consul_int_proced", p);
+
+        }
 
         public DataTable consultarproductos(grupo_investigacion obj)
         {

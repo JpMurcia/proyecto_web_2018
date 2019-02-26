@@ -13,9 +13,8 @@ namespace proyectoweb.Controllers
 
 
     {
-         
-        proyecto product = new proyecto();
 
+        soporta noticia = new soporta();
         grupo_investigacion grupovg = new grupo_investigacion();
 
         //public DataTable ConsultarProduc(proyecto produc)
@@ -33,6 +32,36 @@ namespace proyectoweb.Controllers
             return grupovg.consultarproductos(grupo);
 
         }
+
+        public DataTable crearNoticias(soporta noti)
+        {
+
+            return noticia.crear_soporte(noti);
+
+        }
+
+        public DataTable consulNoticias(soporta noti)
+        {
+
+            return noticia.consul_soporte(noti);
+
+        }
+
+        public DataTable updateNoticias(soporta noti)
+        {
+
+            return noticia.update_soporte(noti);
+
+        }
+
+        public DataTable deleNoticias(soporta noti)
+        {
+
+            return noticia.dele_soporte(noti);
+
+        }
+
+
 
     }
 }

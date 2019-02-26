@@ -16,7 +16,7 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string fk_tipo_user { get; set; }
         public string programa { get; set; }
         public string grupo { get; set; }
-
+        public string fk_grupo { get; set; }
 
         private ConexionPropio conect = new ConexionPropio();
 
@@ -92,6 +92,25 @@ namespace proyectoweb.Models.ModelosViewGroup
             return conect.ExecuteProcedure("proced_consul_user", p);
         }
 
+        public DataTable consultarProyectodeMiembro(usuario obj)
+        {
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "grupo_perte",
+                obj.fk_grupo,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "id_user",
+                obj.idUsuario,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proyec_semi_trabajo_consul", p);
+
+        }
 
 
 

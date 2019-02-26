@@ -22,8 +22,9 @@
                                 <div class="card card-profile">
                                     <div class="card-avatar">
                                         <a href="#pablo">
-                                            <asp:Image ID="Image1" runat="server" />
-                                            <img src="../Content/assetsAdministracion/img/giecom.png" />
+                                       <%--     <asp:Image ID="Image1" runat="server" />--%>
+                                         <%--    <img runat="server" id="imagenDeGrupo" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid" />--%>
+                                            <img id="imagenGrupo" runat="server" src="../Content/assetsAdministracion/img/giecom.png"  />
                                         </a>
                                     </div>
                                     <div class="card-body ">

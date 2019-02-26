@@ -1025,6 +1025,7 @@
     <Content Include="Content\assetsPlantillaHeli\fonts\star.ttf" />
     <Content Include="Content\assetsPlantillaHeli\fonts\star.woff" />
     <Content Include="Content\assetsPlantillaHeli\fonts\stard41d.eot" />
+    <Content Include="imagenes\semilleros\hola.docx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="imagenes\grupos\giecom.jpg" />
@@ -1033,6 +1034,25 @@
     <Content Include="imagenes\grupos\picardie.png" />
     <Content Include="imagenes\grupos\quimica.PNG" />
     <Content Include="imagenes\grupos\sara.jpg" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %281%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2810%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2811%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2812%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2813%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2814%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %2815%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %282%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %283%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %284%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %285%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %286%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %287%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %288%29.png" />
+    <Content Include="imagenes\imagen_perfil\1 - copia %289%29.png" />
+    <Content Include="imagenes\semilleros\picardie.png" />
+    <Content Include="imagenes\semilleros\quimica.PNG" />
+    <Content Include="imagenes\semilleros\sara.jpg" />
+    <Content Include="imagenes\semilleros\semillero_programacion.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -1104,7 +1124,9 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ActividadController.cs" />
     <Compile Include="Controllers\FormularioDepaginaController.cs" />
+    <Compile Include="Controllers\indexController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\PermisosController.cs" />
