@@ -72,7 +72,7 @@ namespace proyectoweb.Views
                         
                         grupoVG.urlLogo = datos_grupo.Rows[0]["url_logo_grupo"].ToString();
 
-                        Session["id_grupo"] = datos_grupo.Rows[0]["url_logo_grupo"].ToString();
+                        Session["id_grupo"] = datos_grupo.Rows[0]["id_grupo"].ToString();
 
                         Session["url_logo"] = grupoVG.urlLogo;
                         Response.Redirect("principal.aspx");

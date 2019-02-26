@@ -13,7 +13,11 @@ namespace proyectoweb.Controllers
         
         private Grupo_inve_semillero grupo = new Grupo_inve_semillero();
 
+        private grupo_investigacion grupovg = new grupo_investigacion();
+
         private modelUsuario miembro = new modelUsuario();
+
+        private usuario usur = new usuario();
         
        
 
@@ -37,19 +41,24 @@ namespace proyectoweb.Controllers
             return grupo.consultarMiembros(group);
         }
 
-        public DataTable consultarProyectoActController(Grupo_inve_semillero group)
+        public DataTable consultarProyectoActController(grupo_investigacion grupo)
         {
-            return grupo.consultarProyectoAct(group);
+            return grupovg.consultarproductos(grupo);
         }
 
-        public DataTable consultarProyectoInacController(Grupo_inve_semillero group)
+        public DataTable consultarProyectoInacController(grupo_investigacion grupo)
         {
-            return grupo.consultarProyectoInac(group);
+            return grupovg.consultarProyectoInac(grupo);
         }
 
-        public DataTable consultarProyectoDeMiembroController(modelUsuario user)
+        //public DataTable consultarProyectoDeMiembroController(modelUsuario user)
+        //{
+        //    return miembro.consultarProyecto(user);
+        //}
+
+        public DataTable consultarProyectoDeMiembroController(usuario user)
         {
-            return miembro.consultarProyecto(user);
+            return usur.consultarProyectodeMiembro(user);
         }
     }
 }

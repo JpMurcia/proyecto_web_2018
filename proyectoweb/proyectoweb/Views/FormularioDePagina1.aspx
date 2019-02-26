@@ -346,12 +346,12 @@
                                                                         <td><%#Eval("nom_proyecto") %></td>
                                                                         <td class="td-actions text-right ">
                                                                             <p>
-                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
+                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_produc") %>" aria-expanded="false" aria-controls="collapseExample2">
                                                                                     Editar
                                                                        
                                                                                 </button>
                                                                             </p>
-                                                                            <div class="collapse" id="p<%#Eval("id_proyecto") %>">
+                                                                            <div class="collapse" id="p<%#Eval("id_produc") %>">
                                                                                 <div class="card card-body">
                                                                                     <div class="form-group form-file-upload form-file-multiple">
                                                                                         <input type="file" multiple="" class="inputFileHidden" />
@@ -420,12 +420,12 @@
                                                                             <td><%#Eval("nom_proyecto") %> </td>
                                                                             <td class="td-actions text-right ">
                                                                                 <p>
-                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_produc") %>" aria-expanded="false" aria-controls="collapseExample">
                                                                                         Editar
                                                                            
                                                                                     </button>
                                                                                 </p>
-                                                                                <div class="collapse" id="collapseExample">
+                                                                                <div class="collapse" id="p<%#Eval("id_produc") %>">
                                                                                     <div class="card card-body">
                                                                                         <div class="form-group form-file-upload form-file-multiple">
                                                                                             <input type="file" multiple="" class="inputFileHidden" />
@@ -558,12 +558,12 @@
 
 
 
-                                                        <td class="text-left"><%#Eval("proyectos")%></td>
+                                                        <td class="text-left"><%#Eval("Trabajo")%></td>
                                                         <td class="td-actions text-right ">
                                                             <div class="togglebutton">
                                                                 <label>
 
-                                                                    <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked="">
+                                                                    <input type="checkbox" id="<%#Eval("identificador")%>" checked="">
                                                                 </label>
                                                             </div>
                                                         </td>
