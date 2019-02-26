@@ -23,26 +23,31 @@ namespace proyectoweb.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Session["tipo"] as string))
-            {
 
-                //Some Stuff to initialize the variable
-                Response.Redirect("Error404.aspx");
-
-            }
-            else
+            if (!IsPostBack)
             {
-                if ((Session["tipo"].Equals("1")) || (Session["tipo"].Equals("5")))
+                if (string.IsNullOrEmpty(Session["tipo"] as string))
                 {
 
-                    llenarDatos();
+                    //Some Stuff to initialize the variable
+                    Response.Redirect("Error404.aspx");
+
                 }
                 else
                 {
-                    Response.Redirect("Error404.aspx");
-                }
+                    if ((Session["tipo"].Equals("1")) || (Session["tipo"].Equals("5")))
+                    {
 
+                        llenarDatos();
+                    }
+                    else
+                    {
+                        Response.Redirect("Error404.aspx");
+                    }
+
+                }
             }
+            
 
         }
 

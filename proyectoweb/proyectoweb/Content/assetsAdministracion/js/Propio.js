@@ -115,11 +115,6 @@ function cale() {
 
     //Eventos es donde se asigna los eventos traidos desde JSON osea la variable x,esto no
     var eventos = [];
-    //$.each(x, function (i, value) {
-    //    var ed = x[i].EDITABLE == 1 ? true : false;
-
-    //    eventos.push({ "id": x[i].HORA_ID, "start": x[i].FECHA_INI, "end": x[i].FECHA_FIN, "className": x[i].CLASSNAME, "editable": ed });
-    //});
     var ensac = (eventos);
 
     ///entiendo esto
