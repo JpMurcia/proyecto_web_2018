@@ -213,8 +213,9 @@ namespace proyectoweb.Views
             DataTable dato_user_miemrbo = controlador.consul_data_user(user1);
             enlace1.id_user = user1.idUsuario.ToString();
             // object algo = Request.QueryString["iden"].ToString();
+            
             nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
-            imagen_perfil.Src = "../ imagenes / grupos /" + dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
+            imagen_perfil.Src = "../imagenes/imagen_perfil/" + dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
           DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
           
 

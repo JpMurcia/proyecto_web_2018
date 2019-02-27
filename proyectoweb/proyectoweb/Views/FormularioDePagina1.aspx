@@ -565,7 +565,7 @@
                                                     <td class="td-actions text-right ">
                                                         <div class="togglebutton">
                                                             <label>
-
+                                                                  <asp:HiddenField ID="id_usuario" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="ide" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="tipo" Value='<%#Eval("cargo")%>' runat="server" />
                                                                 <asp:CheckBox runat="server" ID="estado" Checked='<%# Boolean.Parse(Eval("estado").ToString()) %>' />
