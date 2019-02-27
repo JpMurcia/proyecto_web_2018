@@ -87,6 +87,11 @@ namespace proyectoweb.Controllers
 
             return enlace.update_enlace(enla);
         }
+
+        public DataTable consul_data_user(usuario user) {
+
+            return usur.consul_data_basi(user);
+        }
     }
 }
  

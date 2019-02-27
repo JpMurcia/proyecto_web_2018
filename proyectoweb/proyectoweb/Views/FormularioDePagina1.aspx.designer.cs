@@ -121,15 +121,6 @@ namespace proyectoweb.Views {
         protected global::System.Web.UI.WebControls.TextBox DireccionGrupo;
         
         /// <summary>
-        /// Control Color.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Color;
-        
-        /// <summary>
         /// Control Repeater1.
         /// </summary>
         /// <remarks>
@@ -166,6 +157,24 @@ namespace proyectoweb.Views {
         protected global::System.Web.UI.WebControls.Repeater RepeaterActivo;
         
         /// <summary>
+        /// Control imagen_perfil.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imagen_perfil;
+        
+        /// <summary>
+        /// Control nombre_miembro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nombre_miembro;
+        
+        /// <summary>
         /// Control nom_usaurioMostrar.
         /// </summary>
         /// <remarks>
@@ -182,5 +191,14 @@ namespace proyectoweb.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater InnerRepeater;
+        
+        /// <summary>
+        /// Control guardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button guardar;
     }
 }

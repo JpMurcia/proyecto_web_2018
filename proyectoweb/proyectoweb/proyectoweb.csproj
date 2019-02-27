@@ -1027,6 +1027,7 @@
     <Content Include="Content\assetsPlantillaHeli\fonts\star.ttf" />
     <Content Include="Content\assetsPlantillaHeli\fonts\star.woff" />
     <Content Include="Content\assetsPlantillaHeli\fonts\stard41d.eot" />
+    <Content Include="imagenes\imagen_perfil\anyela.jpg" />
     <Content Include="imagenes\semilleros\hola.docx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\proyectoweb.csproj.CopyComplete" />

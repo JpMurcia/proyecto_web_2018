@@ -112,6 +112,23 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
+        public DataTable consul_data_basi(usuario obj) {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_user",
+                obj.idUsuario,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+          
+
+            return conect.ExecuteProcedure("proced_consul_user_date", p);
+
+
+
+        }
+
 
 
 

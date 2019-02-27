@@ -20,7 +20,7 @@ namespace proyectoweb.Views
         modelUsuario user = new modelUsuario();
         usuario user1 = new usuario();
         Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
-        enlace enlace = new enlace();
+        enlace enlace1 = new enlace();
         FormularioDepaginaController controlador = new FormularioDepaginaController();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -174,11 +174,32 @@ namespace proyectoweb.Views
 
         }
 
-        protected void modal_guardar() {
+        protected void Button_Miembro(object sender, EventArgs e)
+        {
+        
+            for (int i = 0; i < InnerRepeater.Items.Count; i++)
+            {
+                // InnerRepeater.Items[i].FindControl("estado") identificador
+                // string id = ()InnerRepeater.Items[i].FindControl("estado");
+                HiddenField hf1 = (HiddenField)InnerRepeater.Items[i].FindControl("ide");//identificador 
+                HiddenField hf2 = (HiddenField)InnerRepeater.Items[i].FindControl("tipo");
+               
+                CheckBox chk = (CheckBox)InnerRepeater.Items[i].FindControl("estado");
+
+                enlace1.tipo = hf2.Value.ToString();
+                
+                enlace1.identificador = hf1.Value.ToString();
+                enlace1.estado = chk.Checked.ToString();
+
+                
+                DataTable hola = controlador.update_enlace(enlace1);
 
 
-
+               
+            }
+            string hola1 = "dd";
         }
+
 
         protected void Modal_Command1(object sender, CommandEventArgs e)
         {
@@ -189,13 +210,18 @@ namespace proyectoweb.Views
             nom_usaurioMostrar.Text = user.nombre;
             // user.id = "24";
             user1.idUsuario = e.CommandArgument.ToString();
-
+            DataTable dato_user_miemrbo = controlador.consul_data_user(user1);
+            enlace1.id_user = user1.idUsuario.ToString();
             // object algo = Request.QueryString["iden"].ToString();
+            nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
+            imagen_perfil.Src = "../ imagenes / grupos /" + dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
+          DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
+          
 
-
-            DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
             InnerRepeater.DataSource = dt6;
             InnerRepeater.DataBind();
+
+            
         }
     }
 }

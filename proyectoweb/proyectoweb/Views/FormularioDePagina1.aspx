@@ -123,7 +123,7 @@
                                                 <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                  <%--      <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
@@ -143,7 +143,7 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>--%>
                                     </div>
                                     <div class="tab-pane" id="Semilleros">
 
@@ -158,7 +158,7 @@
                                                             <i class="material-icons">keyboard_arrow_down</i>
                                                         </a>
                                                     </div>
-
+                                                     <asp:HiddenField ID="Semillero" Value='<%#Eval("id_grupo_invest")%>' runat="server"/>
                                                     <div id="s<%#Eval("id_grupo_invest")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
                                                         <div class="card-body">
@@ -174,7 +174,7 @@
                                                                 <div id="g<%#Eval("id_grupo_invest")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
                                                                     <div class="card-body">
-                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                                      
                                                                         <asp:TextBox  Text='<%#Eval("siglas_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Objetivos</label>
@@ -186,7 +186,7 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Visión</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox  Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Justificación</label>
@@ -517,7 +517,7 @@
                                     <div class="fileinput-new thumbnail img-raised">
 
                                         <%-- Aqui se ubica la imagen del miembro--%>
-                                        <img src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                        <img id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
 
@@ -525,6 +525,7 @@
 
                                 <div class="info info-horizontal">
                                     <div class="description">
+                                         <asp:TextBox runat="server" disabled="disabled" ID="nombre_miembro"></asp:TextBox>
                                         <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
                                     </div>
                                 </div>
@@ -536,55 +537,65 @@
 
 
 
-                               
-
-                             
-
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="" >
-
-                                                </asp:TextBox>
-                                                <p ><%#Eval("nom_usuario") %></p>
-                                                <th class="text-left">Proyecto</th>
-                                                <th class="text-right">Publicar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <asp:Repeater ID="InnerRepeater" runat="server">
-                                                <ItemTemplate>
-                                                    <tr>
 
 
 
-                                                        <td class="text-left"><%#Eval("Trabajo")%></td>
-                                                        <td class="td-actions text-right ">
-                                                            <div class="togglebutton">
-                                                                <label>
 
-                                                                    <input type="checkbox" id="<%#Eval("identificador")%>" checked="">
-                                                                </label>
-                                                            </div>
-                                                        </td>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="">
+
+                                            </asp:TextBox>
+                                            <p id="hola"></p>
+
+                                            <th class="text-left">Proyecto</th>
+                                            <th class="text-right">Publicar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <asp:Repeater ID="InnerRepeater" runat="server">
+                                            <ItemTemplate>
+                                                <tr>
 
 
 
-                                                    </tr>
-                                                </ItemTemplate>
-                                            </asp:Repeater>
-                                        </tbody>
-                                    </table>
+                                                    <td class="text-left"><%#Eval("Trabajo")%></td>
 
-                                
+                                                    <td class="td-actions text-right ">
+                                                        <div class="togglebutton">
+                                                            <label>
+
+                                                                <asp:HiddenField ID="ide" Value='<%#Eval("identificador")%>' runat="server" />
+                                                                <asp:HiddenField ID="tipo" Value='<%#Eval("cargo")%>' runat="server" />
+                                                                <asp:CheckBox runat="server" ID="estado" Checked='<%# Boolean.Parse(Eval("estado").ToString()) %>' />
+
+
+                                                            </label>
+                                                        </div>
+                                                    </td>
+
+                                                    <%-- Checked='<%# Eval("estado").ToString() == "True" 
+                                                                               <input type="checkbox"  id="<%#Eval("identificador")%>" value="<%#Eval("estado")%>" checked="">
+                                                                   <%#Eval("identificador")%>
+                                                                   Boolean.Parse(Eval("estado").ToString()) %>'  --%>
+                                                </tr>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </tbody>
+                                </table>
+
+
                             </div>
                         </div>
                     </div>
                     <div class="modal-body">
+                       
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
+                        <asp:Button type="button" CssClass="tn btn-primary" OnClick="Button_Miembro" runat="server" ID="guardar" Text="Guardar Cambios" />
                     </div>
                 </div>
             </div>
