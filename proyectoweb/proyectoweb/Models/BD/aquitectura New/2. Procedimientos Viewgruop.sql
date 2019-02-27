@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
--- SO del servidor:              Win64
--- HeidiSQL Versión:             10.1.0.5464
+-- Server version:               5.5.21 - MySQL Community Server (GPL)
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.1.0.5464
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,11 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para viewgroup3
+-- Dumping database structure for viewgroup3
 CREATE DATABASE IF NOT EXISTS `viewgroup3` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `viewgroup3`;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
+-- Dumping structure for procedure viewgroup3.proced_consultar_product_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
@@ -55,7 +55,7 @@ grupo_invest.id_grupo_invest=pk_grupo;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo
+-- Dumping structure for procedure viewgroup3.proced_consul_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `id_grupo` INT
@@ -71,7 +71,7 @@ order by grupo.id_grupo_invest asc;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo_id
+-- Dumping structure for procedure viewgroup3.proced_consul_grupo_id
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
 BEGIN
@@ -83,7 +83,7 @@ LIMIT 1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_menu_view
+-- Dumping structure for procedure viewgroup3.proced_consul_menu_view
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
@@ -105,7 +105,7 @@ WHERE tipo_usuario.id_rol = id_rol and menu.estado<>0
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_semillero
+-- Dumping structure for procedure viewgroup3.proced_consul_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero`(
 	IN `pk_grupo` INT
@@ -132,7 +132,7 @@ where grupo.id_grupo_invest = pk_grupo AND semillero.estado_grupo=1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_soport_pag_not
+-- Dumping structure for procedure viewgroup3.proced_consul_soport_pag_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 	IN `id_grupo` INT
@@ -155,7 +155,7 @@ LIMIT 10;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_user
+-- Dumping structure for procedure viewgroup3.proced_consul_user
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 	IN `id_user` INT
@@ -185,7 +185,7 @@ else
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_grupo
+-- Dumping structure for procedure viewgroup3.proced_create_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
 	IN `id_grupo` INT,
@@ -234,7 +234,7 @@ INSERT INTO grupo_invest (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_paginajhgjhgjhjg
+-- Dumping structure for procedure viewgroup3.proced_create_paginajhgjhgjhjg
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_paginajhgjhgjhjg`(
 	IN `nom_grupo1` VARCHAR(50),
@@ -293,7 +293,7 @@ SET num =(select IFNULL(MAX(grupo_invest.id_grupo_invest),0) FROM grupo_invest);
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_semillero
+-- Dumping structure for procedure viewgroup3.proced_create_semillero
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
 	IN `id_semillero` INT,
@@ -323,7 +323,7 @@ set id_grupo=(select grupo_invest.id_grupo_invest from grupo_invest
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_soport_not
+-- Dumping structure for procedure viewgroup3.proced_create_soport_not
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_soport_not`(
 	IN `pk_fk_produc` INT,
@@ -351,7 +351,7 @@ descrip_soporte,1,(select CURDATE()),null,pk_fk_produc);
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_create_usuario
+-- Dumping structure for procedure viewgroup3.proced_create_usuario
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_usuario`(
 	IN `id_user` INT,
@@ -372,7 +372,7 @@ BEGIN
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_delete_soport
+-- Dumping structure for procedure viewgroup3.proced_delete_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_delete_soport`(
 	IN `id_soport` INT
@@ -386,7 +386,7 @@ where soporte.id_soporte;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_registra_produc
+-- Dumping structure for procedure viewgroup3.proced_registra_produc
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_registra_produc`(
 	IN `nom_producto` VARCHAR(500),
@@ -415,7 +415,7 @@ insert into producto VALUES((num+1),nom_producto,fecha_de_produc,estado_produc,p
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_update_grupo
+-- Dumping structure for procedure viewgroup3.proced_update_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_grupo`(
 	IN `id_grupo` INT,
@@ -439,7 +439,22 @@ where g.id_grupo_invest=id_grupo;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_update_soport
+-- Dumping structure for procedure viewgroup3.proced_update_proyecto
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_proyecto`(
+	IN `id_proyec` INT,
+	IN `descrip` VARCHAR(600),
+	IN `imagen` VARCHAR(500)
+)
+    COMMENT 'se actualiza la descripcion y una imagen '
+BEGIN
+update proyecto as p
+set p.proyecto_descrip = descrip, p.url_image_proyec = imagen
+where p.id_produc = id_proyec;
+END//
+DELIMITER ;
+
+-- Dumping structure for procedure viewgroup3.proced_update_soport
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_soport`(
 	IN `id_soport` INT,
@@ -460,14 +475,18 @@ where soporte.id_soporte=id_soport;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proyec_semi_trabajo_consul
+-- Dumping structure for procedure viewgroup3.proyec_semi_trabajo_consul
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proyec_semi_trabajo_consul`(
 	IN `grupo_perte` INT,
 	IN `id_user` INT
+
+
 )
+    COMMENT 'para ser modificadas '
 BEGIN
-SELECT  proyecto.id_produc as identificador,proyecto.nom_proyecto as trabajo,"no"as cargo  FROM usuario
+SELECT  proyecto.id_produc as identificador,proyecto.nom_proyecto as trabajo,"no"as cargo, proyecto_has_usuario.estado
+FROM usuario
 INNER JOIN proyecto_has_usuario ON proyecto_has_usuario.pkf_id_usuario= usuario.id_usuario 
 INNER JOIN proyecto ON proyecto.id_produc = proyecto_has_usuario.pkf_id_proyecto
 
@@ -475,14 +494,14 @@ INNER JOIN grupo_invest grupo ON grupo.id_grupo_invest=proyecto.fk_id_grupo_inve
 WHERE grupo.id_grupo_invest=grupo_perte AND usuario.id_usuario=id_user
 UNION
 SELECT  grupo.id_grupo_invest as identificador ,grupo.nom_grupo as trabajo,
-"nose wey" as cargo FROM usuario
+"nose wey" as cargo, integra.estado FROM usuario
 inner join grupo_invest_has_usuario integra on integra.pkf_id_usuario=usuario.id_usuario
 inner join grupo_invest as grupo on grupo.id_grupo_invest=integra.pkf_id_grupo_invest
 where grupo.fk_grupo_semi=grupo_perte AND usuario.id_usuario=id_user;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced
+-- Dumping structure for procedure viewgroup3.proye_consul_act_proced
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced`(
 	IN `pk_grupo` INT
@@ -541,7 +560,7 @@ semillero.grupo_inve_semillero_id_grupo <> semillero.id_grupo ;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proye_consul_int_proced
+-- Dumping structure for procedure viewgroup3.proye_consul_int_proced
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_int_proced`(
 	IN `pk_grupo` INT
@@ -559,7 +578,7 @@ WHERE proyecto.estado_proyecto=0 and proyecto.fk_id_grupo_invest= pk_grupo;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proye_crearte_proced
+-- Dumping structure for procedure viewgroup3.proye_crearte_proced
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_crearte_proced`(
 	IN `id_proyec` INT,
@@ -580,7 +599,7 @@ values(id_proyec,fecha,nom_proyec,estado_proyec,fk_grupo);
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proye_inser_enlases_usuario
+-- Dumping structure for procedure viewgroup3.proye_inser_enlases_usuario
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_inser_enlases_usuario`(
 	IN `tipo` VARCHAR(50),
@@ -593,10 +612,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_inser_enlases_usuario`(
 
 
 
+
 )
 BEGIN
 
-declare rol int;
+
 
 IF(tipo = "no") then
  insert into proyecto_has_usuario values(identificador,id_user,CURDATE(),1);
@@ -608,7 +628,34 @@ end if;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.vista_pagina_propia
+-- Dumping structure for procedure viewgroup3.update_proye_enlases_usuario
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_proye_enlases_usuario`(
+	IN `id_user` INT,
+	IN `estado` TINYINT,
+	IN `tipo_Semi_Proye` VARCHAR(50),
+	IN `identificador` INT
+
+)
+BEGIN
+
+
+IF(tipo_Semi_Proye = "no") then
+	UPDATE proyecto_has_usuario as p_has_u
+	set p_has_u.estado=estado
+	where p_has_u.pkf_id_proyecto=identificador and p_has_u.pkf_id_usuario=id_user;
+ 
+else 
+	UPDATE grupo_invest_has_usuario as integra
+	set integra.estado=estado
+	where integra.pkf_id_grupo_invest=identificador and integra.pkf_id_usuario=id_user;
+
+end if;
+
+END//
+DELIMITER ;
+
+-- Dumping structure for procedure viewgroup3.vista_pagina_propia
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_pagina_propia`(
 	IN `nada` INT

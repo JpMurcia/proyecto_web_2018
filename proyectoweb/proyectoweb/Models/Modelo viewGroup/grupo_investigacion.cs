@@ -77,6 +77,89 @@ namespace proyectoweb.Models.ModelosViewGroup
         }
 
 
+        public DataTable update_grupo(grupo_investigacion obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+                      
+            p.Add(new Parametro(
+                "email",
+                 obj.correo,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "telefo",
+                obj.telefono,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "direcc",
+                obj.direccion,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+            p.Add(new Parametro(
+                "logo",
+                 obj.urlLogo,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "sigla",
+                obj.siglas,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "objetivo",
+                obj.objetivo,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+            p.Add(new Parametro(
+                "mision",
+                 obj.mision,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "vision",
+                obj.vision,
+                "VARCHAR",
+                 ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+                "justif",
+                obj.justificacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                 ));
+            p.Add(new Parametro(
+                "quien",
+                 obj.quienesSomos,
+                 "VARCHAR",
+                 ParameterDirection.Input
+                ));
+          
+
+
+
+
+
+
+            return conect.ExecuteProcedure("proced_update_grupo", p);
+
+        }
+
+
 
 
 

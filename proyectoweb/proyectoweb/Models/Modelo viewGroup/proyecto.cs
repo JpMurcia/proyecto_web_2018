@@ -13,6 +13,9 @@ namespace proyectoweb.Models.ModelosViewGroup
         public string idproyect { get; set; }
         public string nom_proyect { get; set; }
 
+        public string descri { get; set; }
+
+        public string imagen { get; set; }
 
         public string estado { get; set; }
         public string fechaproye { get; set; }
@@ -54,6 +57,35 @@ namespace proyectoweb.Models.ModelosViewGroup
               ParameterDirection.Input
               ));
             return conect.ExecuteProcedure("proye_crearte_proced", p);
+
+
+        }
+
+
+        public DataTable update_proyecto(proyecto obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_proyec",
+                obj.idproyect,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+            p.Add(new Parametro(
+              "descrip",
+              obj.descri,
+              "VARCHAR",
+              ParameterDirection.Input
+              ));
+            p.Add(new Parametro(
+              "imagen",
+              obj.imagen,
+              "VARCHAR",
+              ParameterDirection.Input
+              ));
+         
+            return conect.ExecuteProcedure("proced_update_proyecto", p);
 
 
         }

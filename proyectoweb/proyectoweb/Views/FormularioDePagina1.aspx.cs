@@ -1,4 +1,5 @@
 ﻿using proyectoweb.Controllers;
+using proyectoweb.Models.Modelo_viewGroup;
 using proyectoweb.Models.ModeloSigepi;
 using proyectoweb.Models.ModelosViewGroup;
 using System;
@@ -18,7 +19,8 @@ namespace proyectoweb.Views
         grupo_investigacion grupoVG = new grupo_investigacion();
         modelUsuario user = new modelUsuario();
         usuario user1 = new usuario();
-
+        Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
+        enlace enlace = new enlace();
         FormularioDepaginaController controlador = new FormularioDepaginaController();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -53,8 +55,21 @@ namespace proyectoweb.Views
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-
+            grupoVG.siglas = sigSiglas.Text;
+            grupoVG.mision = Mision.Text;
+            grupoVG.vision = Vision.Text;
+            grupoVG.justificacion = Justificacion.Text;
+            grupoVG.correo =CorreoGrupo.Text;
+            grupoVG.telefono = TelefonoGrupo.Text;
+            grupoVG.direccion = DireccionGrupo.Text;
+       
+                   
+          
+            
+          //  imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
+            // grupoVG.correo
             Response.Redirect("principal.aspx");
+            DataTable hola = controlador.update_grupo(grupoVG);
 
 
         }
@@ -159,54 +174,11 @@ namespace proyectoweb.Views
 
         }
 
-        //protected void RepiterItemCommand(object sender, RepeaterCommandEventArgs e)
-        //{
-        //    Repeater r = e.Item.FindControl("InnerRepeater") as Repeater;
-        //    if (e.CommandName.Equals("botoModal"))
-        //    {
-
-        //        user.grupo = Request.QueryString["grupo"];
-
-        //        // object algo = Session["proyemiembro"].ToString(); 
-        //        user.id = "24";
-        //        user.id = e.CommandArgument.ToString();
+        protected void modal_guardar() {
 
 
-        //        // object algo = Request.QueryString["iden"].ToString();
 
-
-        //         DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
-        //      //  RepeaterMiembro.DataSource = dt6;
-        //        //RepeaterMiembro.DataBind();
-        //    }
-        //}
-
-
-        //protected void RepiterItem(object sender, RepeaterItemEventArgs e)
-        //{
-        //    Repeater r = e.Item.FindControl("InnerRepeater") as Repeater;
-        //    if (r != null)
-        //    {
-
-        //        user.grupo = Request.QueryString["grupo"];
-        //        //object algo = e.Item.ID;
-
-        //        //object halgo = sender.GetType().;
-
-
-        //        //algo.
-        //        // object algo = Session["proyemiembro"].ToString(); 
-        //        user.id = "24";
-        //        //user.id = e.CommandArgument.ToString();
-
-        //        // object algo = Request.QueryString["iden"].ToString();
-
-
-        //        DataTable dt6 = controlador.consultarProyectoDeMiembroController(user);
-        //        r.DataSource = dt6;
-        //        r.DataBind();
-        //    }
-        //}
+        }
 
         protected void Modal_Command1(object sender, CommandEventArgs e)
         {

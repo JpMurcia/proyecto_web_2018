@@ -1,4 +1,5 @@
-﻿using proyectoweb.Models.ModeloSigepi;
+﻿using proyectoweb.Models.Modelo_viewGroup;
+using proyectoweb.Models.ModeloSigepi;
 using proyectoweb.Models.ModelosViewGroup;
 using System;
 using System.Collections.Generic;
@@ -11,58 +12,10 @@ namespace proyectoweb.Controllers
     public class FormularioDepaginaController
     {
 
-        //private Grupo_inve_semillero grupo = new Grupo_inve_semillero();
 
-        //private grupo_investigacion grupoVG = new grupo_investigacion();
+        private Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
 
-        //private modelUsuario miembro = new modelUsuario();
-
-
-
-
-        //public FormularioDepaginaController()
-        //{
-
-        //}
-
-        //public DataTable consultarGrupoController(Grupo_inve_semillero group)
-        //{
-        //    return grupo.consultargrupoModel(group);
-        //}
-
-       
-
-
-        //public DataTable consultarsemilleroController(Grupo_inve_semillero group)
-        //{
-        //    return grupo.consultarsemilleroModel(group);
-        //}
-
-        //public DataTable consultarmiembroController(Grupo_inve_semillero group)
-        //{
-        //    return grupo.consultarMiembros(group);
-        //}
-
-        //public DataTable consultarProyectoActController(Grupo_inve_semillero group)
-        //{
-        //    return grupo.consultarProyectoAct(group);
-        //}
-
-        //public DataTable consultarProyectoInacController(Grupo_inve_semillero group)
-        //{
-        //    return grupo.consultarProyectoInac(group);
-        //}
-
-
-
-
-        //public DataTable consultarProyectoDeMiembroController(modelUsuario user)
-        //{
-        //    return miembro.consultarProyecto(user);
-        //}
-
-
-
+        private enlace enlace = new enlace();
 
         private Grupo_inve_semillero grupo = new Grupo_inve_semillero();
 
@@ -111,10 +64,28 @@ namespace proyectoweb.Controllers
         //{
         //    return miembro.consultarProyecto(user);
         //}
+        public DataTable update_grupo(grupo_investigacion grup) {
+
+            return grupoVG.update_grupo(grup);
+        }
+
 
         public DataTable consultarProyectoDeMiembroController(usuario user)
         {
             return usur.consultarProyectodeMiembro(user);
+        }
+
+        public DataTable update_proyec(Models.ModelosViewGroup.proyecto pro)
+        {
+
+            return proyec.update_proyecto(pro);
+        }
+
+
+        public DataTable update_enlace(enlace enla)
+        {
+
+            return enlace.update_enlace(enla);
         }
     }
 }
