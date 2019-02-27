@@ -13,7 +13,7 @@ namespace proyectoweb.Models.conexion
     public class ConexionPropio
     {
 
-        public string schema = "viewgroup";
+        public string schema = "viewgroup3";
         public string Connection()
         {
             return ConfigurationManager.ConnectionStrings["conn2"].ConnectionString;

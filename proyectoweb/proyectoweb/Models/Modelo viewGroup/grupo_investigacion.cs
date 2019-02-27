@@ -38,7 +38,7 @@ namespace proyectoweb.Models.ModelosViewGroup
             p.Add(new Parametro(
                 "pk_grupo",
                 obj.idGrupoInvestigacion,
-                "VARCHAR",
+                "INT",
                 ParameterDirection.Input
                 ));
 

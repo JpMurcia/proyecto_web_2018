@@ -22,7 +22,7 @@ namespace proyectoweb.Views
 
         public void llenar() {
 
-            grupoVG.urlLogo = Session["url_logo"].ToString();
+          //  grupoVG.urlLogo = Session["url_logo"].ToString();
             //Image1.ImageUrl = Session["url_logo"].ToString();
             //imagenGrupo.Src = "../imagenes/grupos/" +grupoVG.urlLogo;
            

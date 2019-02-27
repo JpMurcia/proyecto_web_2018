@@ -117,6 +117,8 @@ namespace proyectoweb.Views
             //    lista.Add(ddlist.SelectedItem.ToString());
             //}
 
+            
+
             grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
             grupo.mision = dt.Rows[0]["mision_grupo"].ToString();
             grupo.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();
@@ -126,10 +128,25 @@ namespace proyectoweb.Views
             grupo.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();
             grupo.vision = dt.Rows[0]["vision_grupo"].ToString();
 
+            if (dt.Rows[0]["objetivo_grupo"].Equals(null))
+            {
 
+                object hola = Objetivo.SupportsDisabledAttribute;
+                sigSiglas.Attributes.Add("disabled=", "disabled");
+            }
+            else
+            {
 
+               // \"collapse\"
+                Objetivo.Text = grupo.objetivo;
+                object hola = Objetivo.SupportsDisabledAttribute;
+                object hola2 = Objetivo.HasAttributes.ToString();
+                //Objetivo.Disposed = 1;
+
+            }
+           
             nombreGrupo.Text = grupo.nombreGrupo;
-            Objetivo.Text = grupo.objetivo;
+          
             sigSiglas.Text = grupo.siglas;
             Mision.Text = grupo.mision;
             Vision.Text = grupo.vision;

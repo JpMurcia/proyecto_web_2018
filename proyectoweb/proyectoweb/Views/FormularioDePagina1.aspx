@@ -58,11 +58,11 @@
                                                     <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox disabled="disabled" ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Misión</label>

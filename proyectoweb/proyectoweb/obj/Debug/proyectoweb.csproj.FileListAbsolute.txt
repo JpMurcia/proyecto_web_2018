@@ -288,13 +288,7 @@ C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\MySq
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Newtonsoft.Json.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\System.Web.Optimization.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\WebGrease.dll
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\MySql.Data.xml
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\MySql.Web.xml
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\System.Web.Optimization.xml
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Newtonsoft.Json.xml
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Antlr3.Runtime.pdb
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\obj\Debug\proyectoweb.csproj.CopyComplete
