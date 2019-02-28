@@ -46,6 +46,12 @@ namespace proyectoweb.Controllers
             return noticia.consul_soporte(noti);
 
         }
+        public DataTable consulNoticiaDatos(soporta noti)
+        {
+
+            return noticia.consultar_DatoSoporte(noti);
+
+        }
 
         public DataTable updateNoticias(soporta noti)
         {

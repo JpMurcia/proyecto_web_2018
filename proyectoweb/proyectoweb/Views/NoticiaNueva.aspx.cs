@@ -32,14 +32,30 @@ namespace proyectoweb.Views
                     }
 
                 }
-                llenar_noticias();
-                Escribir();
+
+                if (Session["actu_noticia"] != null)
+                {
+                    Actualizar_Noticia();
+                }
+                else
+                {
+                    llenar_noticias();
+                    Escribir();
+                }
+
             }
-            
+            //if (Session["actu_noticia"]=null
+            //{
+            //llenar_noticias_neva()
+            //Titulo.Text=
+            //}
+
+            //}
+           
 
 
         }
-       // proyecto produc = new proyecto();
+        // proyecto produc = new proyecto();
         grupo_investigacion grupovg = new grupo_investigacion();
         soporta notici = new soporta();
         NoticiaController controlador = new NoticiaController();
@@ -83,15 +99,6 @@ namespace proyectoweb.Views
             DDL_Proyectos.DataBind();
         }
 
-        
-        //public void Leer_Datos() {
-        //    NoticiaController controlador = new NoticiaController();
-        //    grupovg.idGrupoInvestigacion = Session["id_grupo"].ToString();
-        //    DataTable dt = controlador.consultarProductos(grupovg);
-        //    GridView1.DataSource = dt ;
-        //    GridView1.DataBind(); 
-        //}
-
         public void Escribir()
         {
             NoticiaController controlador = new NoticiaController();
@@ -124,22 +131,50 @@ namespace proyectoweb.Views
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            if (FileUpload.HasFile)
+
+            if (Session["actu_noticia"] != null)
             {
-                ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
-                FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
-                notici.urlImage = ViewState["Ruta"].ToString();
+                DataTable dt2 = controlador.updateNoticias(notici);
+                if (FileUpload.HasFile)
+                {
+                    ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
+                    FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                    notici.urlImage = ViewState["Ruta"].ToString();
+                }
+                notici.titulo = Titulo.Text;
+                notici.descrip = Descripcion.Text;
+                notici.fk_proyec = DDL_Proyectos.SelectedValue;
+
             }
-            notici.titulo = Titulo.Text;
-            notici.descrip = Descripcion.Text;
-            notici.fk_proyec = DDL_Proyectos.SelectedValue;
-            DataTable dt = controlador.crearNoticias(notici);
-            
-            Titulo.Text = null;
-            Descripcion.Text = null;
+            else
+            {
+                if (FileUpload.HasFile)
+                {
+                    ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
+                    FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                    notici.urlImage = ViewState["Ruta"].ToString();
+                }
+                notici.titulo = Titulo.Text;
+                notici.descrip = Descripcion.Text;
+                notici.fk_proyec = DDL_Proyectos.SelectedValue;
+                DataTable dt = controlador.crearNoticias(notici);
+                Titulo.Text = null;
+                Descripcion.Text = null;
+            }
+           
 
 
 
+        }
+
+        public void Actualizar_Noticia()
+        {
+            notici.idSoporte = Session["actu_noticia"].ToString();
+            DataTable dt1 = controlador.consulNoticiaDatos(notici);
+            Titulo.Text = dt1.Rows[0]["titulo_soporte"].ToString();
+            Descripcion.Text = dt1.Rows[0]["descrip_soperte"].ToString();
+            DDL_Proyectos.SelectedValue = dt1.Rows[0]["id_produc"].ToString();
+            imagenNoticia.Src= dt1.Rows[0]["url_imagene"].ToString();
 
         }
     }

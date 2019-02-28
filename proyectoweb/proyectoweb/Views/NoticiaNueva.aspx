@@ -20,7 +20,7 @@
                                     <div class="col-md-6">
                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                             <div class="fileinput-new thumbnail img-raised">
-                                                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="...">
+                                                <img id="imagenNoticia" runat="server" src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="...">
                                             </div>
                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                             <div class="col-md-12">

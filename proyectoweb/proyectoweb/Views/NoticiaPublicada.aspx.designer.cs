@@ -11,5 +11,14 @@ namespace proyectoweb.Views {
     
     
     public partial class NoticiaPublicada {
+        
+        /// <summary>
+        /// Control RepeaterNoticia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeaterNoticia;
     }
 }
