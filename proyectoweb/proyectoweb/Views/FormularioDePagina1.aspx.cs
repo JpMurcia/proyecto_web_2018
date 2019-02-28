@@ -15,8 +15,9 @@ namespace proyectoweb.Views
     public partial class FormularioDePagina1 : System.Web.UI.Page
     {
         Grupo_inve_semillero grupo = new Grupo_inve_semillero();
-        Grupo_inve_semillero semillero = new Grupo_inve_semillero();
+        //Grupo_inve_semillero semillero = new Grupo_inve_semillero();
         grupo_investigacion grupoVG = new grupo_investigacion();
+        grupo_investigacion semillero = new grupo_investigacion();
         modelUsuario user = new modelUsuario();
         usuario user1 = new usuario();
         Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
@@ -52,9 +53,12 @@ namespace proyectoweb.Views
             
 
         }
+        DataTable hola = new DataTable();
 
+        DataTable hola3 = new DataTable();
         protected void Unnamed_Click(object sender, EventArgs e)
         {
+            grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
             grupoVG.siglas = sigSiglas.Text;
             grupoVG.mision = Mision.Text;
             grupoVG.vision = Vision.Text;
@@ -68,9 +72,61 @@ namespace proyectoweb.Views
             
           //  imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
             // grupoVG.correo
-            Response.Redirect("principal.aspx");
-            DataTable hola = controlador.update_grupo(grupoVG);
+         
+            hola = controlador.update_grupo(grupoVG);
 
+            for (int i = 0; i < Repeater1.Items.Count; i++)
+            {
+               
+                HiddenField hf1 = (HiddenField)Repeater1.Items[i].FindControl("Semillero_id");//identificador 
+                                                                                              // HiddenField hf2 = (HiddenField)Repeater1.Items[i].FindControl("tipo");
+
+                TextBox sig = (TextBox)Repeater1.Items[i].FindControl("siglaSemillero");
+
+                TextBox obj = (TextBox)Repeater1.Items[i].FindControl("ObjetivoSemillero");
+
+                TextBox mis = (TextBox)Repeater1.Items[i].FindControl("MisionSemiller");
+
+                TextBox vis = (TextBox)Repeater1.Items[i].FindControl("VisionSemillero");
+
+
+                TextBox jus = (TextBox)Repeater1.Items[i].FindControl("JustificacionSemillero");
+
+                TextBox qui = (TextBox)Repeater1.Items[i].FindControl("QuinesSomosSemillero");
+
+                // CheckBox chk = (CheckBox)InnerRepeater.Items[i].FindControl("Semillero_id");
+
+
+
+                semillero.idGrupoInvestigacion = hf1.Value.ToString();
+
+                semillero.siglas = sig.Text;
+
+                semillero.objetivo = obj.Text;
+
+                semillero.mision = mis.Text;
+
+                semillero.vision = vis.Text;
+
+                semillero.justificacion = jus.Text;
+
+                semillero.quienesSomos = qui.Text;
+
+                
+               
+                // enlace1.estado = chk.Checked.ToString();
+                // enlace1.id_user = ViewState["id_user"].ToString();
+
+
+
+
+                 hola3 = controlador.update_grupo(semillero);
+
+            }
+
+            string hola23 = "1";
+
+            Response.Redirect("principal.aspx");
 
         }
 
@@ -190,8 +246,8 @@ namespace proyectoweb.Views
                 
                 enlace1.identificador = hf1.Value.ToString();
                 enlace1.estado = chk.Checked.ToString();
+                enlace1.id_user =  ViewState["id_user"].ToString() ;
 
-                
                 DataTable hola = controlador.update_enlace(enlace1);
 
 
@@ -206,7 +262,7 @@ namespace proyectoweb.Views
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "$('#modal-datos').modal('show');", true);
 
             user1.fk_grupo = Session["id_grupo"].ToString(); ;
-
+            ViewState["id_user"] = e.CommandArgument.ToString();
             nom_usaurioMostrar.Text = user.nombre;
             // user.id = "24";
             user1.idUsuario = e.CommandArgument.ToString();
@@ -216,7 +272,7 @@ namespace proyectoweb.Views
             
             nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
             imagen_perfil.Src = "../imagenes/imagen_perfil/" + dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
-          DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
+            DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
           
 
             InnerRepeater.DataSource = dt6;

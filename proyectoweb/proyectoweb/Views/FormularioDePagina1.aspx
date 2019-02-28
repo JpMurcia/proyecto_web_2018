@@ -158,7 +158,8 @@
                                                             <i class="material-icons">keyboard_arrow_down</i>
                                                         </a>
                                                     </div>
-                                                     <asp:HiddenField ID="Semillero" Value='<%#Eval("id_grupo_invest")%>' runat="server"/>
+
+                                                    <asp:HiddenField ID="Semillero_id" Value='<%#Eval("id_grupo_invest")%>' runat="server" />
                                                     <div id="s<%#Eval("id_grupo_invest")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
                                                         <div class="card-body">
@@ -174,11 +175,11 @@
                                                                 <div id="g<%#Eval("id_grupo_invest")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
                                                                     <div class="card-body">
-                                                                      
-                                                                        <asp:TextBox  Text='<%#Eval("siglas_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+
+                                                                        <asp:TextBox Text='<%#Eval("siglas_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                            <asp:TextBox  Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Misión</label>
@@ -186,22 +187,22 @@
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Visión</label>
-                                                                            <asp:TextBox  Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                            <asp:TextBox  Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                            <asp:TextBox  Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-sm-2 ">
                                                                             <h4>Imagen de Grupo</h4>
 
                                                                             <img runat="server" src='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
                                                                         </div>
-
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -216,16 +217,19 @@
                                                     <br />
                                                     <br />
                                                     <br />
-
+                                                   
                                                 </ItemTemplate>
                                             </asp:Repeater>
+
+
 
                                         </div>
 
 
 
 
-
+                                        
+                                          
 
 
                                     </div>
@@ -475,8 +479,9 @@
 
                                     <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
 
+                                     
                                 </div>
-
+                               
                                 <div class="pull-left">
 
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -488,10 +493,13 @@
 
 
                                     <div class="card-body text-center">
+                                         
                                     </div>
+                                     
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
+                           
 
                         </div>
 
@@ -558,14 +566,15 @@
                                             <ItemTemplate>
                                                 <tr>
 
-
+                                                     
 
                                                     <td class="text-left"><%#Eval("Trabajo")%></td>
 
                                                     <td class="td-actions text-right ">
                                                         <div class="togglebutton">
                                                             <label>
-                                                                  <asp:HiddenField ID="id_usuario" Value='<%#Eval("identificador")%>' runat="server" />
+                                                                
+                                                                <asp:HiddenField ID="id_usuario" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="ide" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="tipo" Value='<%#Eval("cargo")%>' runat="server" />
                                                                 <asp:CheckBox runat="server" ID="estado" Checked='<%# Boolean.Parse(Eval("estado").ToString()) %>' />
