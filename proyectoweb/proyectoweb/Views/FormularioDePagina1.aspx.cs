@@ -59,6 +59,12 @@ namespace proyectoweb.Views
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
+
+
+
+
+
+
             grupoVG.siglas = sigSiglas.Text;
             grupoVG.mision = Mision.Text;
             grupoVG.vision = Vision.Text;
