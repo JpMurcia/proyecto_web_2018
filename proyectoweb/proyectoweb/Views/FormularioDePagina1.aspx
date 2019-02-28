@@ -56,14 +56,16 @@
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="card-body" runat="server">
                                                     <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                    
+                                                      <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Significado</label>
+                                                        <asp:TextBox  ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                    </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
                                                         <asp:TextBox  Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox  ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
-                                                    </div>
+                                                  
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Misión</label>
                                                         <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>

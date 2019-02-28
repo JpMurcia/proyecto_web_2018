@@ -36,10 +36,19 @@ namespace proyectoweb.Controllers
 
         }
 
+        public DataTable consultar_grupo_Controller(grupo_investigacion group)
+        {
+            return grupoVG.consultar_data_grupo(group);
+        }
+
+
         public DataTable consultarGrupoController(Grupo_inve_semillero group)
         {
             return grupo.consultargrupoModel(group);
         }
+
+
+
         public DataTable consultarsemilleroController(Grupo_inve_semillero group)
         {
             return grupo.consultarsemilleroModel(group);
