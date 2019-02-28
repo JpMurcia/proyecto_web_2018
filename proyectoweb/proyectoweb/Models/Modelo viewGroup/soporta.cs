@@ -125,6 +125,24 @@ namespace proyectoweb.Models.ModelosViewGroup
             return conect.ExecuteProcedure("proced_consul_soport_pag_not", p);
 
         }
+        public DataTable consultar_DatoSoporte(soporta obj)
+        {
+
+
+            List<Parametro> p = new List<Parametro>();
+
+            p.Add(new Parametro(
+             "id_noticia",
+             obj.idSoporte,
+             "VARCHAR",
+             ParameterDirection.Input
+             ));
+
+
+
+            return conect.ExecuteProcedure("Consultar_noticia", p);
+
+        }
 
 
         public DataTable dele_soporte(soporta obj)
