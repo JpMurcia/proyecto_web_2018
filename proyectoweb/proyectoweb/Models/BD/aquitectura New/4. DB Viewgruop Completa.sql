@@ -101,15 +101,8 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
-REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
-	(111, 'Giecom', NULL, NULL, 'direccion caller 14 # 4 30', NULL, 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', NULL, 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', NULL, NULL, 1),
-	(112, 'Alecout', NULL, NULL, NULL, NULL, 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', 'dsafdsfasdf', '', '', '', 'qweweqqweqweqe', 111, 1),
-	(113, 'Giecom Semillero', NULL, NULL, NULL, NULL, 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', NULL, '', '', '', NULL, 111, 1),
-	(117, 'ECQ', NULL, NULL, NULL, 'quimica.png', 1, 'Estrategias Computacionales en Química', '', 'La misión del grupo de investigación ¿Estrategias Computacionales en Química¿ es ampliar el conocimiento sobre los sistemas químicos empleando simulaciones computacionales. El grupo promueve la formación de talento humano con la capacidad de emplear los modelos computacionales modernos y desarrollar nuevas metodologías teóricas. Los proyectos de investigación están enfocados en proponer, predecir, analizar y aplicar las propiedades físicas, químicas y biológicas de compuestos químicos de interés regional, nacional o mundial.', 'Para el año 2020 nuestro grupo se habrá consolidado como uno de los grupos líderes en Colombia en el área de la química computacional. Contará con un amplio número de estudiantes de pregrado y posgrado. Los proyectos realizados por el grupo estarán estrechamente relacionados con estudios experimentales de punta, en el marco de colaboraciones interdisciplinares.', '', '', NULL, 4),
-	(118, 'ESTRATEGÍAS COMPUTACIONALES ', NULL, NULL, NULL, '../imagenes/semilleros/quimica.png', 1, '', 'El semillero de investigación Estrategias Computacionales a puesto atención a los problemas de la región amazónica intentando brindar soluciones mediante la utilización de herramienta informáticas propias de la química, los cuales en la mayoría son libre acceso, generando propuesta de de investigación de bahjo costos de financiación pero de gran interés para la región amazónica.', 'El semillero de investigación Estrategias Computacionales, buscamos la generación de nuevos conocimientos utilizando una gran variedad de herramientas computacionales de libre acceso que pueden ser de gran utilidad para la predicción de las propiedades físicas y químicas de compuestos desconocidos o difíciles de caracterizar experimentalmente, así como el análisis de las propiedades físicas y químicas de compuestos existentes, interpretando información experimental o prediciendo propiedades aún no determinadas', 'El semillero Estrategias Computacionales familiarizar a sus nuevos integrantes con las herramientas computaciones de interés químico y corroborando los resultados teóricos obtenidos con los datos experimentales reportados en la literatura. Actualmente nuestro semillero está enfocado en el estudio de la resistencia del vector del dengue, chicunguya y Zica, Aedes aegyty, utilizando para ello tanto herramientas experimentales como teóricas. Esperando obtener resultados que puedan ser de utilidad para la solución de los problemas de salud pública.', '', '', 117, 4),
-	(121, 'Semillero de programacion', NULL, NULL, NULL, NULL, 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', NULL, 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', NULL, 111, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest_has_usuario
@@ -129,19 +122,8 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
-REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
-	(111, 10, '2019-02-27', 1, 1),
-	(112, 11, '2019-02-27', 2, 1),
-	(112, 12, '2019-02-27', 2, 1),
-	(112, 13, '2019-02-27', 2, 1),
-	(112, 14, '2019-02-27', 2, 1),
-	(112, 24, '2019-02-27', 2, 0),
-	(113, 11, '2019-02-27', 2, 1),
-	(113, 14, '2019-02-27', 2, 1),
-	(121, 12, '2019-02-27', 2, 1),
-	(121, 14, '2019-02-27', 2, 1);
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades
@@ -225,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `pagina_propia` (
   PRIMARY KEY (`id_Pagina Propia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_propia: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_propia: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_propia` DISABLE KEYS */;
 REPLACE INTO `pagina_propia` (`id_Pagina Propia`, `Nom_grupo`, `Contenido`, `Creadores`, `Acredicimiento`, `Logo`, `descrip`) VALUES
 	(666, 'Viewgroup', 'ViewGroup es una plataforma para la gestiòn de grupos de investigaciòn en la universidad de la Amazonia, en esta plataforma los coordinadores de cada grupo pueden crear y publicar la pagina web del mismo, publicar noticias, crear actividades y demas ingresando unos pequeños datos, de esta manera cualquier persona puede buede visualizar la pagina web una vez este publicada en nuestra plataforma con solo presioar clic al boton visitar del card del grupo de investigacion.', 'Juan Pablo Murcia \r\nBrayane Esneider Alvarez Valencia ', NULL, NULL, 'Software para la vizualizacion de grupos de investigación de la Universidad de la Amazonia');
@@ -297,26 +279,8 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   CONSTRAINT `FK_proyecto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto: ~17 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
-	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
-	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
-	(22, 'Estacion Meteriologica', NULL, 1, 111, NULL, NULL),
-	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
-	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
-	(25, 'MDD', NULL, 0, 111, NULL, NULL),
-	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
-	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
-	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
-	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
-	(34, ' Estudio computacional del espectro UV-Vis de moléculas orgánicas conjugadas con posibles aplicaciones en celdas solares orgánicas ', NULL, 0, 117, NULL, NULL),
-	(35, 'Investigación, desarrollo e innovación: Desarrollo de sensores potenciométricos basados en terpiridinas', NULL, 0, 117, NULL, NULL),
-	(36, 'Estudio teórico del espectro UV-Vis de moléculas orgánicas derivadas del diestirilbenceno ', NULL, 0, 117, NULL, NULL),
-	(37, 'Diseño de compuestos potencialmente activos frente a la enfermedad de Chagas por medio de un análisis de la relación estructura actividad (QSAR) ', NULL, 1, 117, NULL, NULL),
-	(38, ' Evaluación teórica de la resistencia del Aedes aegypti frente a distintos insecticidas por medio de métodos mecano-cuánticos de tipo ab-initio y del teoría del funcional de la densidad (DFT) ', NULL, 1, 117, NULL, NULL),
-	(39, 'Determinación del origen del café por medio de espectroscopía infrarroja ', NULL, 1, 117, NULL, NULL),
-	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto_has_usuario
@@ -332,18 +296,8 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~9 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
-REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
-	(20, 11, '2019-02-27', 1),
-	(20, 13, '2019-02-27', 1),
-	(21, 13, '2019-02-27', 1),
-	(22, 11, '2019-02-27', 1),
-	(25, 14, '2019-02-27', 1),
-	(26, 14, '2019-02-27', 1),
-	(27, 24, '2019-02-27', 0),
-	(28, 24, '2019-02-27', 0),
-	(29, 24, '2019-02-27', 0);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
@@ -452,15 +406,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.usuario: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`) VALUES
-	(10, 'heriberto', '1 - copia (1).png', 'h.ing@udla.edu.co'),
-	(11, 'antonio', '1 - copia (1).png', 'a.leal@udla.edu.co'),
-	(12, 'carlos', '1 - copia (1).png', 'c.carlos@udla.edu.co'),
-	(13, 'carlos2', '1 - copia (1).png', 'c.carlos2@udla.edu.co'),
-	(14, 'brayan', '1 - copia (1).png', 'b.yisus@udla.edu.co'),
-	(24, 'angela', 'anyela.jpg', 'a.cuellar@udla.edu.co');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
@@ -519,12 +466,14 @@ DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `id_grupo` INT
+
 )
 BEGIN
 
 select grupo.nom_grupo, grupo.email_grupo, grupo.telefo_grupo, grupo.direcc_grupo,
 grupo.siglas_signif_grupo, grupo.objetivo_grupo, grupo.mision_grupo, grupo.vision_grupo,
-grupo.justif_grupo,grupo.quien_somos_grupo from grupo_invest as grupo
+grupo.justif_grupo,grupo.quien_somos_grupo,programa.nom_programa,grupo.url_logo_grupo from grupo_invest as grupo
+inner join programa on programa.id_programa = grupo.fk_id_Programa
 where grupo.id_grupo_invest=id_grupo 
 order by grupo.id_grupo_invest asc;
 
@@ -912,11 +861,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_grupo`(
 	IN `direcc` VARCHAR(50),
 	IN `logo` VARCHAR(500),
 	IN `sigla` VARCHAR(500),
-	IN `objetivo` VARCHAR(500),
-	IN `mision` VARCHAR(500),
-	IN `vision` VARCHAR(500),
-	IN `justif` VARCHAR(500),
-	IN `quien` VARCHAR(500)
+	IN `objetivo` VARCHAR(600),
+	IN `mision` VARCHAR(600),
+	IN `vision` VARCHAR(600),
+	IN `justif` VARCHAR(600),
+	IN `quien` VARCHAR(600)
+
+
 
 
 )
