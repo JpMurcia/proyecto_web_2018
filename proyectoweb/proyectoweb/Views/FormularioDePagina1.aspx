@@ -56,16 +56,16 @@
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="card-body" runat="server">
                                                     <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                    
-                                                      <div class="form-group">
+
+                                                    <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox  ID="sigSiglas" disabled="disabled" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="sigSiglas" disabled="disabled" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                        <asp:TextBox  Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                  
+
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Misión</label>
                                                         <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
@@ -76,11 +76,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Justificación</label>
-                                                        <asp:TextBox  Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                        <asp:TextBox  Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Programa</label>
@@ -125,7 +125,7 @@
                                                 <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                  <%--      <div class="form-group">
+                                        <%--      <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
@@ -202,9 +202,9 @@
                                                                         <div class="col-sm-2 ">
                                                                             <h4>Imagen de Grupo</h4>
 
-                                                                            <asp:Image runat="server" ID="imagenSemillero" ImageUrl='<%#Eval("url_logo_grupo") %>'   alt="Raised Image" class="img-raised rounded img-fluid" />
+                                                                            <asp:Image runat="server" ID="imagenSemillero" ImageUrl='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -219,7 +219,7 @@
                                                     <br />
                                                     <br />
                                                     <br />
-                                                   
+
                                                 </ItemTemplate>
                                             </asp:Repeater>
 
@@ -230,8 +230,8 @@
 
 
 
-                                        
-                                          
+
+
 
 
                                     </div>
@@ -247,10 +247,10 @@
                                                     <h6 text_align="center">Miembros</h6>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
-                                         <div class="form-group">
-                                             <table class="table">
+                                        <div class="form-group">
+                                            <table class="table">
                                                 <thead>
                                                     <tr>
 
@@ -259,12 +259,12 @@
                                                         <th class="text-right">Publico</th>
                                                     </tr>
                                                 </thead>
-                                              <tbody>
+                                                <tbody>
 
-                                                      <asp:Repeater ID="RepeaterMiembro" runat="server">
-                                                         <%-- 
+                                                    <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                        <%-- 
                                                       <asp:Repeater ID="Repeater2" OnItemDataBound="RepiterItem" runat="server">--%>
-                                                   <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
+                                                        <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
                                                         <ItemTemplate>
                                                             <tr>
 
@@ -273,12 +273,12 @@
 
                                                                 <td class="td-actions text-right ">
 
-                                                                    
-                                                                    <asp:LinkButton  CssClass="btn btn-primary"    runat="server" OnCommand="Modal_Command1"  CommandArgument='<%# Eval("id_usuario") %>'   >
+
+                                                                    <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Modal_Command1" CommandArgument='<%# Eval("id_usuario") %>'>
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
-                                                                
-                                                                 <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+
+                                                                    <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>--%>
 
@@ -300,13 +300,13 @@
                                                         </ItemTemplate>
                                                     </asp:Repeater>
 
-                                               
+
 
                                                 </tbody>
 
 
                                             </table>
-                                         </div>
+                                        </div>
                                     </div>
 
 
@@ -351,13 +351,14 @@
 
                                                                         <td><%#Eval("nom_proyecto") %></td>
                                                                         <td class="td-actions text-right ">
-                                                                            <p>
-                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_produc") %>" aria-expanded="false" aria-controls="collapseExample2">
-                                                                                    Editar
-                                                                       
-                                                                                </button>
-                                                                            </p>
-                                                                            <div class="collapse" id="p<%#Eval("id_produc") %>">
+                                                                           <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Unnamed_Command" CommandArgument='<%# Eval("id_produc") %>'>
+                                                                       <i class="material-icons">edit</i>Editar
+                                                                    </asp:LinkButton>
+
+
+
+
+                                                                            <%-- <div class="collapse" id="p<%#Eval("id_produc") %>">
                                                                                 <div class="card card-body">
                                                                                     <div class="form-group form-file-upload form-file-multiple">
                                                                                         <input type="file" multiple="" class="inputFileHidden" />
@@ -375,7 +376,7 @@
                                                                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </div>--%>
                                                                         </td>
 
 
@@ -469,7 +470,7 @@
                             </div>
 
 
-                                   
+
 
 
 
@@ -481,36 +482,24 @@
 
                                     <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
 
-                                     
+
                                 </div>
-                               
+
                                 <div class="pull-left">
 
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                         Salir</button>
-
-                           
-
                                     <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
-
-
                                     <div class="card-body text-center">
-                                         
                                     </div>
-                                     
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                           
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="modal fade" id="modal-datos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-signup" role="document">
                 <div class="modal-content">
@@ -525,32 +514,19 @@
                             <div class="col-md-5 ml-auto">
                                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                     <div class="fileinput-new thumbnail img-raised">
-
                                         <%-- Aqui se ubica la imagen del miembro--%>
                                         <img id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-
                                 </div>
-
                                 <div class="info info-horizontal">
                                     <div class="description">
-                                         <asp:TextBox runat="server" disabled="disabled" ID="nombre_miembro"></asp:TextBox>
+                                        <asp:TextBox runat="server" disabled="disabled" ID="nombre_miembro"></asp:TextBox>
                                         <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
                                     </div>
                                 </div>
-
-
                             </div>
-
                             <div class="col-md-5 mr-auto">
-
-
-
-
-
-
-
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -568,14 +544,14 @@
                                             <ItemTemplate>
                                                 <tr>
 
-                                                     
+
 
                                                     <td class="text-left"><%#Eval("Trabajo")%></td>
 
                                                     <td class="td-actions text-right ">
                                                         <div class="togglebutton">
                                                             <label>
-                                                                
+
                                                                 <asp:HiddenField ID="id_usuario" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="ide" Value='<%#Eval("identificador")%>' runat="server" />
                                                                 <asp:HiddenField ID="tipo" Value='<%#Eval("cargo")%>' runat="server" />
@@ -601,7 +577,6 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                       
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -611,6 +586,46 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="modal fade" id="modal_proyecto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card card-body">
+                            <div class="form-group form-file-upload form-file-multiple">
+                                <input type="file" multiple="" class="inputFileHidden" />
+                                <div class="input-group">
+                                    <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-fab btn-round btn-info">
+                                            <i class="material-icons">layers</i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Descripción</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <script src="/Content/assetsLogin/js/core/jquery.min.js" type="text/javascript"></script>
         <script src="/Content/assetsLogin/js/core/popper.min.js" type="text/javascript"></script>
