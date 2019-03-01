@@ -96,7 +96,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                 ParameterDirection.Input
                 ));
             p.Add(new Parametro(
-               "upd_descrip",
+               "upd_descri",
                obj.descrip,
                "VARCHAR",
                ParameterDirection.Input
