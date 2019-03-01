@@ -18,7 +18,7 @@ namespace proyectoweb.Views
             if (!IsPostBack)
             {
 
-                if (Request.Files["FileUpload"]!= null)
+                if (Request.Files["FileUpload"] != null)
                 {
                     HttpPostedFile MyFile = Request.Files["FileUpload"];
 
@@ -28,18 +28,19 @@ namespace proyectoweb.Views
                     }
                     catch (Exception BlueScreen)
                     {
-                        
+
                     }
 
                 }
 
-                if (Session["actu_noticia"] != null)
+                llenar_noticias();
+                if (Request.QueryString.Count>0)
                 {
                     Actualizar_Noticia();
+
                 }
                 else
                 {
-                    llenar_noticias();
                     Escribir();
                 }
 
@@ -51,7 +52,7 @@ namespace proyectoweb.Views
             //}
 
             //}
-           
+
 
 
         }
@@ -59,6 +60,7 @@ namespace proyectoweb.Views
         grupo_investigacion grupovg = new grupo_investigacion();
         soporta notici = new soporta();
         NoticiaController controlador = new NoticiaController();
+        DataTable dt2 = new DataTable();
         string filename;
 
         private void ResetFormControlValues(Control parent)
@@ -82,13 +84,13 @@ namespace proyectoweb.Views
                         case "System.Web.UI.WebControls.RadioButton":
                             ((RadioButton)c).Checked = false;
                             break;
-
                     }
                 }
             }
         }
 
-        public void llenar_noticias() {
+        public void llenar_noticias()
+        {
             NoticiaController controlador = new NoticiaController();
             grupovg.idGrupoInvestigacion = Session["id_grupo"].ToString();
             DataTable dt = controlador.consultarProductos(grupovg);
@@ -97,6 +99,13 @@ namespace proyectoweb.Views
             DDL_Proyectos.DataTextField = "nom_proyecto";
             DDL_Proyectos.DataSource = dt;
             DDL_Proyectos.DataBind();
+            
+            Titulo.Text = "";
+            Descripcion.Text = "";
+            DDL_Proyectos.SelectedIndex =0;
+            imagenNoticia.Src = "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png";
+            Actualizar_Boton.Visible = false;
+            LinkButton1.Visible = true;
         }
 
         public void Escribir()
@@ -116,11 +125,11 @@ namespace proyectoweb.Views
                     filename = Path.GetFileName(FileUpload.FileName);
 
                     FileUpload.SaveAs(Server.MapPath("~/Soporte/") + filename);
-                    
+
                 }
                 catch (Exception ex)
                 {
-                  }
+                }
             }
         }
 
@@ -131,51 +140,49 @@ namespace proyectoweb.Views
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-
-            if (Session["actu_noticia"] != null)
+            if (FileUpload.HasFile)
             {
-                DataTable dt2 = controlador.updateNoticias(notici);
-                if (FileUpload.HasFile)
-                {
-                    ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
-                    FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
-                    notici.urlImage = ViewState["Ruta"].ToString();
-                }
-                notici.titulo = Titulo.Text;
-                notici.descrip = Descripcion.Text;
-                notici.fk_proyec = DDL_Proyectos.SelectedValue;
+                ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
+                FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                notici.urlImage = ViewState["Ruta"].ToString();
 
             }
-            else
-            {
-                if (FileUpload.HasFile)
-                {
-                    ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
-                    FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
-                    notici.urlImage = ViewState["Ruta"].ToString();
-                }
-                notici.titulo = Titulo.Text;
-                notici.descrip = Descripcion.Text;
-                notici.fk_proyec = DDL_Proyectos.SelectedValue;
-                DataTable dt = controlador.crearNoticias(notici);
-                Titulo.Text = null;
-                Descripcion.Text = null;
-            }
-           
-
-
-
+            notici.titulo = Titulo.Text;
+            notici.descrip = Descripcion.Text;
+            notici.fk_proyec = DDL_Proyectos.SelectedValue;
+            DataTable dt = controlador.crearNoticias(notici);
+            Titulo.Text = null;
+            Descripcion.Text = null;
         }
 
         public void Actualizar_Noticia()
         {
-            notici.idSoporte = Session["actu_noticia"].ToString();
+            notici.idSoporte = Convert.ToString(Request.QueryString["Id"]);
             DataTable dt1 = controlador.consulNoticiaDatos(notici);
             Titulo.Text = dt1.Rows[0]["titulo_soporte"].ToString();
             Descripcion.Text = dt1.Rows[0]["descrip_soperte"].ToString();
             DDL_Proyectos.SelectedValue = dt1.Rows[0]["id_produc"].ToString();
-            imagenNoticia.Src= dt1.Rows[0]["url_imagene"].ToString();
-
+            imagenNoticia.Src = dt1.Rows[0]["url_imagene"].ToString();
+            Actualizar_Boton.Visible = true;
+            LinkButton1.Visible = false;
         }
+
+        protected void Actualizar_Click(object sender, EventArgs e)
+        {
+
+            notici.idSoporte = Request.QueryString["Id"].ToString();
+
+
+                if (FileUpload.HasFile)
+                {
+                    ViewState["Ruta"] = "~/Content/Soporte/" + System.IO.Path.GetFileName(FileUpload.FileName);
+                    FileUpload.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                    notici.urlImage = ViewState["Ruta"].ToString();
+                }
+                notici.titulo = Titulo.Text;
+                notici.descrip = Descripcion.Text;
+                notici.fk_proyec = DDL_Proyectos.SelectedValue;
+            dt2 = controlador.updateNoticias(notici);
+            Response.Redirect("NoticiaPublicada.aspx"); }
     }
 }

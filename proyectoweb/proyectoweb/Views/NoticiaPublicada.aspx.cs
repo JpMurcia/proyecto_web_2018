@@ -33,16 +33,20 @@ namespace proyectoweb.Views
         }
 
 
-        protected void EliminarNoticia_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         protected void EditarNoticia_Command(object sender, CommandEventArgs e)
         {
             noticia.idSoporte = e.CommandArgument.ToString();
             Session["actu_noticia"] = noticia.idSoporte;
             Response.Redirect("NoticiaNueva.aspx");
+        }
+
+        protected void EliminarNoticia_Command(object sender, CommandEventArgs e)
+        {
+            noticia.idSoporte = e.CommandArgument.ToString();
+            DataTable dt1 = control.deleNoticias(noticia);
+            Response.Redirect("NoticiaPublicada.aspx");
         }
     }
 }
