@@ -56,14 +56,16 @@
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="card-body" runat="server">
                                                     <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                    
+                                                      <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Significado</label>
+                                                        <asp:TextBox  ID="sigSiglas" disabled="disabled" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                    </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
                                                         <asp:TextBox  Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox  ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
-                                                    </div>
+                                                  
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Misión</label>
                                                         <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
@@ -74,11 +76,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Justificación</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Programa</label>
@@ -200,7 +202,7 @@
                                                                         <div class="col-sm-2 ">
                                                                             <h4>Imagen de Grupo</h4>
 
-                                                                            <img runat="server" src='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
+                                                                            <asp:Image runat="server" ID="imagenSemillero" ImageUrl='<%#Eval("url_logo_grupo") %>'   alt="Raised Image" class="img-raised rounded img-fluid" />
                                                                         </div>
                                                                         
                                                                     </div>

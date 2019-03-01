@@ -77,6 +77,22 @@ namespace proyectoweb.Models.ModelosViewGroup
         }
 
 
+        public DataTable consultar_data_grupo(grupo_investigacion obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("proced_consul_grupo", p);
+
+        }
+
+
         public DataTable update_grupo(grupo_investigacion obj)
         {
 

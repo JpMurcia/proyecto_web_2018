@@ -59,10 +59,19 @@ namespace proyectoweb.Views
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
+
+
+
+
+
             grupoVG.siglas = sigSiglas.Text;
+            grupoVG.objetivo = Objetivo.Text;
             grupoVG.mision = Mision.Text;
             grupoVG.vision = Vision.Text;
             grupoVG.justificacion = Justificacion.Text;
+            grupoVG.quienesSomos = QuienSomos.Text;
+            grupoVG.urlLogo = imagenDeGrupo.Src;
+
             grupoVG.correo =CorreoGrupo.Text;
             grupoVG.telefono = TelefonoGrupo.Text;
             grupoVG.direccion = DireccionGrupo.Text;
@@ -94,6 +103,9 @@ namespace proyectoweb.Views
 
                 TextBox qui = (TextBox)Repeater1.Items[i].FindControl("QuinesSomosSemillero");
 
+                
+                Image img = (Image)Repeater1.Items[i].FindControl("imagenSemillero");
+
                 // CheckBox chk = (CheckBox)InnerRepeater.Items[i].FindControl("Semillero_id");
 
 
@@ -111,6 +123,8 @@ namespace proyectoweb.Views
                 semillero.justificacion = jus.Text;
 
                 semillero.quienesSomos = qui.Text;
+
+                semillero.urlLogo = img.ImageUrl;
 
                 
                
@@ -148,8 +162,8 @@ namespace proyectoweb.Views
 
 
 
-            DataTable dt = controlador.consultarGrupoController(grupo);
-
+            //  DataTable dt = controlador.consultarGrupoController(grupo);
+            DataTable dt = controlador.consultar_grupo_Controller(grupoVG);
             //semillero.nombreGrupo = Request.QueryString["grupo"];
 
 
@@ -190,14 +204,21 @@ namespace proyectoweb.Views
 
             
 
-            grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
-            grupo.mision = dt.Rows[0]["mision_grupo"].ToString();
-            grupo.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();
-            grupo.ProgramaGrupo = dt.Rows[0]["programa_grupo"].ToString();
-            grupo.quienesSomos = dt.Rows[0]["quien_somos_grupo"].ToString();
-            grupo.siglas = dt.Rows[0]["sigla_signif_grupo"].ToString();
-            grupo.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();
-            grupo.vision = dt.Rows[0]["vision_grupo"].ToString();
+            grupoVG.justificacion = dt.Rows[0]["justif_grupo"].ToString();//
+            grupoVG.mision = dt.Rows[0]["mision_grupo"].ToString();//
+            grupoVG.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();//
+            grupoVG.ProgramaGrupo = dt.Rows[0]["nom_programa"].ToString();
+            grupoVG.quienesSomos = dt.Rows[0]["quien_somos_grupo"].ToString();//
+            grupoVG.siglas = dt.Rows[0]["siglas_signif_grupo"].ToString();//
+            grupoVG.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();//
+            grupoVG.vision = dt.Rows[0]["vision_grupo"].ToString();//
+
+            grupoVG.correo= dt.Rows[0]["email_grupo"].ToString();//
+            grupoVG.telefono= dt.Rows[0]["telefo_grupo"].ToString();//
+            grupoVG.direccion = dt.Rows[0]["direcc_grupo"].ToString();//
+
+
+
 
             if (dt.Rows[0]["objetivo_grupo"].Equals(null))
             {
@@ -216,15 +237,24 @@ namespace proyectoweb.Views
 
             }
            
-            nombreGrupo.Text = grupo.nombreGrupo;
+            nombreGrupo.Text = grupoVG.grupo_nombre;//-
           
-            sigSiglas.Text = grupo.siglas;
-            Mision.Text = grupo.mision;
-            Vision.Text = grupo.vision;
-            Justificacion.Text = grupo.justificacion;
-            QuienSomos.Text = grupo.quienesSomos;
-            programa.Text = grupo.ProgramaGrupo;
-            imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;
+            sigSiglas.Text = grupoVG.siglas;//-
+            Objetivo.Text = grupoVG.objetivo;//+
+            Mision.Text = grupoVG.mision;//+
+            Vision.Text = grupoVG.vision;//+
+            Justificacion.Text = grupoVG.justificacion;//+
+            QuienSomos.Text = grupoVG.quienesSomos;//+
+            programa.Text = grupoVG.ProgramaGrupo;//-
+            imagenDeGrupo.Src =  grupoVG.urlLogo;//-
+            TelefonoGrupo.Text = grupoVG.telefono;//+
+            CorreoGrupo.Text = grupoVG.correo;//+
+            DireccionGrupo.Text = grupoVG.direccion;//+
+
+
+
+
+
 
 
 

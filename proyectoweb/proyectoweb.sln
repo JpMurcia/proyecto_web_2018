@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoweb", "proyectoweb\proyectoweb.csproj", "{206172D8-AF9A-4086-9E09-FBE051AA7A72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soporteMongo", "soporteMongo\soporteMongo.csproj", "{CDD22746-21AB-4528-AD52-FAD38616A738}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{206172D8-AF9A-4086-9E09-FBE051AA7A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{206172D8-AF9A-4086-9E09-FBE051AA7A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{206172D8-AF9A-4086-9E09-FBE051AA7A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD22746-21AB-4528-AD52-FAD38616A738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD22746-21AB-4528-AD52-FAD38616A738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD22746-21AB-4528-AD52-FAD38616A738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD22746-21AB-4528-AD52-FAD38616A738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
