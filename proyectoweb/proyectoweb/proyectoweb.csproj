@@ -1028,6 +1028,11 @@
     <Content Include="Content\assetsPlantillaHeli\fonts\star.woff" />
     <Content Include="Content\assetsPlantillaHeli\fonts\stard41d.eot" />
     <Content Include="imagenes\imagen_perfil\anyela.jpg" />
+    <Content Include="imagenes\imagen_perfil\carlos.jpg" />
+    <Content Include="imagenes\imagen_perfil\johan.jpg" />
+    <Content Include="imagenes\imagen_perfil\kamilo.jpg" />
+    <Content Include="imagenes\imagen_perfil\micht.jpg" />
+    <Content Include="imagenes\imagen_perfil\yisus.jpg" />
     <Content Include="imagenes\semilleros\hola.docx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\proyectoweb.csproj.CopyComplete" />

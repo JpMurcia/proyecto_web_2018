@@ -59,7 +59,7 @@
                                                     
                                                       <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox  ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  ID="sigSiglas" disabled="disabled" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Objetivos</label>
@@ -76,11 +76,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Justificación</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox  Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Programa</label>

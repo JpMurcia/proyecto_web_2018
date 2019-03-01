@@ -64,12 +64,13 @@ namespace proyectoweb.Views
 
 
 
-
+            grupoVG.siglas = sigSiglas.Text;
             grupoVG.objetivo = Objetivo.Text;
             grupoVG.mision = Mision.Text;
             grupoVG.vision = Vision.Text;
             grupoVG.justificacion = Justificacion.Text;
             grupoVG.quienesSomos = QuienSomos.Text;
+            grupoVG.urlLogo = imagenDeGrupo.Src;
 
             grupoVG.correo =CorreoGrupo.Text;
             grupoVG.telefono = TelefonoGrupo.Text;
@@ -240,7 +241,7 @@ namespace proyectoweb.Views
             Justificacion.Text = grupoVG.justificacion;//+
             QuienSomos.Text = grupoVG.quienesSomos;//+
             programa.Text = grupoVG.ProgramaGrupo;//-
-            imagenDeGrupo.Src = "../imagenes/grupos/" + grupo.urlLogo;//-
+            imagenDeGrupo.Src =  grupoVG.urlLogo;//-
             TelefonoGrupo.Text = grupoVG.telefono;//+
             CorreoGrupo.Text = grupoVG.correo;//+
             DireccionGrupo.Text = grupoVG.direccion;//+
