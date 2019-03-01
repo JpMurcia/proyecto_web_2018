@@ -202,7 +202,7 @@
                                                                         <div class="col-sm-2 ">
                                                                             <h4>Imagen de Grupo</h4>
 
-                                                                            <img runat="server" src='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
+                                                                            <asp:Image runat="server" ID="imagenSemillero" ImageUrl='<%#Eval("url_logo_grupo") %>'   alt="Raised Image" class="img-raised rounded img-fluid" />
                                                                         </div>
                                                                         
                                                                     </div>

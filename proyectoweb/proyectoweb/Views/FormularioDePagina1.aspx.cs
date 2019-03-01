@@ -103,6 +103,9 @@ namespace proyectoweb.Views
 
                 TextBox qui = (TextBox)Repeater1.Items[i].FindControl("QuinesSomosSemillero");
 
+                
+                Image img = (Image)Repeater1.Items[i].FindControl("imagenSemillero");
+
                 // CheckBox chk = (CheckBox)InnerRepeater.Items[i].FindControl("Semillero_id");
 
 
@@ -120,6 +123,8 @@ namespace proyectoweb.Views
                 semillero.justificacion = jus.Text;
 
                 semillero.quienesSomos = qui.Text;
+
+                semillero.urlLogo = img.ImageUrl;
 
                 
                
