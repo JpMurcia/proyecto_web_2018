@@ -1,0 +1,17 @@
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\soporteMongo.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\soporteMongo.pdb
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\DnsClient.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Bson.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Driver.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\System.Buffers.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\DnsClient.xml
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Bson.xml
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Driver.xml
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\bin\Release\MongoDB.Driver.Core.xml
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\obj\Release\soporteMongo.csprojAssemblyReference.cache
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\obj\Release\soporteMongo.csproj.CoreCompileInputs.cache
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\obj\Release\soporteMongo.csproj.CopyComplete
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\obj\Release\soporteMongo.dll
+C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\soporteMongo\obj\Release\soporteMongo.pdb

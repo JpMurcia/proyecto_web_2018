@@ -56,14 +56,16 @@
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="card-body" runat="server">
                                                     <asp:TextBox disabled="disabled" ID="nombreGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
-                                                    </div>
+
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Significado</label>
-                                                        <asp:TextBox disabled="disabled" ID="sigSiglas" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="sigSiglas" disabled="disabled" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlTextarea1">Objetivos</label>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="Objetivo" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                    </div>
+
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Misión</label>
                                                         <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Mision" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
@@ -74,11 +76,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Justificación</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="Justificacion" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                        <asp:TextBox disabled="disabled" Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                        <asp:TextBox Columns="50" Rows="5" ID="QuienSomos" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleFormControlTextarea1">Programa</label>
@@ -123,7 +125,7 @@
                                                 <asp:TextBox ID="DireccionGrupo" class="form-control" TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <%--      <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
@@ -143,7 +145,7 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>--%>
                                     </div>
                                     <div class="tab-pane" id="Semilleros">
 
@@ -153,53 +155,54 @@
                                                 <ItemTemplate>
 
                                                     <div class="card-header" role="tab" id="headingFour">
-                                                        <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#s<%#Eval("id_grupo_invest")%> " aria-expanded="false" aria-controls="collapseFour"><%#Eval("nom_grupo")%>
 
                                                             <i class="material-icons">keyboard_arrow_down</i>
                                                         </a>
                                                     </div>
 
-                                                    <div id="s<%#Eval("id_grupo")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                    <asp:HiddenField ID="Semillero_id" Value='<%#Eval("id_grupo_invest")%>' runat="server" />
+                                                    <div id="s<%#Eval("id_grupo_invest")%> " class="collapse" role="tabpanel" aria-labelledby="headingFour">
 
                                                         <div class="card-body">
 
                                                             <div class="card card-plain">
                                                                 <div class="card-header" role="tab" id="headingFive">
-                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#g<%#Eval("id_grupo")%> " aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#g<%#Eval("id_grupo_invest")%> " aria-expanded="false" aria-controls="collapseFive">Información de SIGEPI
 
                                                                          <i class="material-icons">keyboard_arrow_down</i>
                                                                     </a>
                                                                 </div>
 
-                                                                <div id="g<%#Eval("id_grupo")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
+                                                                <div id="g<%#Eval("id_grupo_invest")%> " class="collapse show" style: color role="tabpanel" aria-labelledby="headingFive">
 
                                                                     <div class="card-body">
-                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("nom_grupo")%>' ID="NombreSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
-                                                                        <asp:TextBox disabled="disabled" Text='<%#Eval("sigla_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+
+                                                                        <asp:TextBox Text='<%#Eval("siglas_signif_grupo") %>' ID="siglaSemillero" class="form-control" TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("objetivo_grupo") %>' Columns="50" Rows="5" ID="ObjetivoSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Misión</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("mision_grupo") %>' Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("mision_grupo") %>' Columns="50" Rows="5" ID="MisionSemiller" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Visión</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("vision_grupo") %>' Columns="50" Rows="5" ID="VisionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("justif_grupo") %>' Columns="50" Rows="5" ID="JustificacionSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                            <asp:TextBox disabled="disabled" Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+                                                                            <asp:TextBox Text='<%#Eval("quien_somos_grupo") %>' Columns="50" Rows="5" ID="QuinesSomosSemillero" class="form-control" TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-sm-2 ">
                                                                             <h4>Imagen de Grupo</h4>
 
-                                                                            <img runat="server" src='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
+                                                                            <asp:Image runat="server" ID="imagenSemillero" ImageUrl='<%#Eval("url_logo_grupo") %>' alt="Raised Image" class="img-raised rounded img-fluid" />
                                                                         </div>
 
                                                                     </div>
@@ -220,7 +223,10 @@
                                                 </ItemTemplate>
                                             </asp:Repeater>
 
+
+
                                         </div>
+
 
 
 
@@ -241,10 +247,10 @@
                                                     <h6 text_align="center">Miembros</h6>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
-                                         <div class="form-group">
-                                             <table class="table">
+                                        <div class="form-group">
+                                            <table class="table">
                                                 <thead>
                                                     <tr>
 
@@ -253,12 +259,12 @@
                                                         <th class="text-right">Publico</th>
                                                     </tr>
                                                 </thead>
-                                              <tbody>
+                                                <tbody>
 
-                                                      <asp:Repeater ID="RepeaterMiembro" runat="server">
-                                                         <%-- 
+                                                    <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                        <%-- 
                                                       <asp:Repeater ID="Repeater2" OnItemDataBound="RepiterItem" runat="server">--%>
-                                                   <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
+                                                        <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
                                                         <ItemTemplate>
                                                             <tr>
 
@@ -267,12 +273,12 @@
 
                                                                 <td class="td-actions text-right ">
 
-                                                                    
-                                                                    <asp:LinkButton  CssClass="btn btn-primary"    runat="server" OnCommand="Modal_Command1"  CommandArgument='<%# Eval("id_usuario") %>'   >
+
+                                                                    <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Modal_Command1" CommandArgument='<%# Eval("id_usuario") %>'>
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
-                                                                
-                                                                 <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+
+                                                                    <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>--%>
 
@@ -294,13 +300,13 @@
                                                         </ItemTemplate>
                                                     </asp:Repeater>
 
-                                               
+
 
                                                 </tbody>
 
 
                                             </table>
-                                         </div>
+                                        </div>
                                     </div>
 
 
@@ -345,13 +351,14 @@
 
                                                                         <td><%#Eval("nom_proyecto") %></td>
                                                                         <td class="td-actions text-right ">
-                                                                            <p>
-                                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_proyecto") %>" aria-expanded="false" aria-controls="collapseExample2">
-                                                                                    Editar
-                                                                       
-                                                                                </button>
-                                                                            </p>
-                                                                            <div class="collapse" id="p<%#Eval("id_proyecto") %>">
+                                                                           <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Unnamed_Command" CommandArgument='<%# Eval("id_produc") %>'>
+                                                                       <i class="material-icons">edit</i>Editar
+                                                                    </asp:LinkButton>
+
+
+
+
+                                                                            <%-- <div class="collapse" id="p<%#Eval("id_produc") %>">
                                                                                 <div class="card card-body">
                                                                                     <div class="form-group form-file-upload form-file-multiple">
                                                                                         <input type="file" multiple="" class="inputFileHidden" />
@@ -369,7 +376,7 @@
                                                                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </div>--%>
                                                                         </td>
 
 
@@ -420,12 +427,12 @@
                                                                             <td><%#Eval("nom_proyecto") %> </td>
                                                                             <td class="td-actions text-right ">
                                                                                 <p>
-                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_produc") %>" aria-expanded="false" aria-controls="collapseExample">
                                                                                         Editar
                                                                            
                                                                                     </button>
                                                                                 </p>
-                                                                                <div class="collapse" id="collapseExample">
+                                                                                <div class="collapse" id="p<%#Eval("id_produc") %>">
                                                                                     <div class="card card-body">
                                                                                         <div class="form-group form-file-upload form-file-multiple">
                                                                                             <input type="file" multiple="" class="inputFileHidden" />
@@ -463,7 +470,7 @@
                             </div>
 
 
-                                   
+
 
 
 
@@ -475,32 +482,24 @@
 
                                     <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
 
+
                                 </div>
 
                                 <div class="pull-left">
 
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                         Salir</button>
-
-                           
-
                                     <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
-
-
                                     <div class="card-body text-center">
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="modal fade" id="modal-datos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-signup" role="document">
                 <div class="modal-content">
@@ -515,68 +514,65 @@
                             <div class="col-md-5 ml-auto">
                                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                     <div class="fileinput-new thumbnail img-raised">
-
                                         <%-- Aqui se ubica la imagen del miembro--%>
-                                        <img src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                        <img id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-
                                 </div>
-
                                 <div class="info info-horizontal">
                                     <div class="description">
+                                        <asp:TextBox runat="server" disabled="disabled" ID="nombre_miembro"></asp:TextBox>
                                         <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
                                     </div>
                                 </div>
-
-
                             </div>
-
                             <div class="col-md-5 mr-auto">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="">
+
+                                            </asp:TextBox>
+                                            <p id="hola"></p>
+
+                                            <th class="text-left">Proyecto</th>
+                                            <th class="text-right">Publicar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <asp:Repeater ID="InnerRepeater" runat="server">
+                                            <ItemTemplate>
+                                                <tr>
 
 
 
-                               
+                                                    <td class="text-left"><%#Eval("Trabajo")%></td>
 
-                             
+                                                    <td class="td-actions text-right ">
+                                                        <div class="togglebutton">
+                                                            <label>
 
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="" >
-
-                                                </asp:TextBox>
-                                                <p ><%#Eval("nom_usuario") %></p>
-                                                <th class="text-left">Proyecto</th>
-                                                <th class="text-right">Publicar</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <asp:Repeater ID="InnerRepeater" runat="server">
-                                                <ItemTemplate>
-                                                    <tr>
+                                                                <asp:HiddenField ID="id_usuario" Value='<%#Eval("identificador")%>' runat="server" />
+                                                                <asp:HiddenField ID="ide" Value='<%#Eval("identificador")%>' runat="server" />
+                                                                <asp:HiddenField ID="tipo" Value='<%#Eval("cargo")%>' runat="server" />
+                                                                <asp:CheckBox runat="server" ID="estado" Checked='<%# Boolean.Parse(Eval("estado").ToString()) %>' />
 
 
+                                                            </label>
+                                                        </div>
+                                                    </td>
 
-                                                        <td class="text-left"><%#Eval("proyectos")%></td>
-                                                        <td class="td-actions text-right ">
-                                                            <div class="togglebutton">
-                                                                <label>
+                                                    <%-- Checked='<%# Eval("estado").ToString() == "True" 
+                                                                               <input type="checkbox"  id="<%#Eval("identificador")%>" value="<%#Eval("estado")%>" checked="">
+                                                                   <%#Eval("identificador")%>
+                                                                   Boolean.Parse(Eval("estado").ToString()) %>'  --%>
+                                                </tr>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </tbody>
+                                </table>
 
-                                                                    <input type="checkbox" id="<%#Eval("id_proyecto")%>" checked="">
-                                                                </label>
-                                                            </div>
-                                                        </td>
 
-
-
-                                                    </tr>
-                                                </ItemTemplate>
-                                            </asp:Repeater>
-                                        </tbody>
-                                    </table>
-
-                                
                             </div>
                         </div>
                     </div>
@@ -585,10 +581,51 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
+                        <asp:Button type="button" CssClass="tn btn-primary" OnClick="Button_Miembro" runat="server" ID="guardar" Text="Guardar Cambios" />
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="modal fade" id="modal_proyecto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card card-body">
+                            <div class="form-group form-file-upload form-file-multiple">
+                                <input type="file" multiple="" class="inputFileHidden" />
+                                <div class="input-group">
+                                    <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-fab btn-round btn-info">
+                                            <i class="material-icons">layers</i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Descripción</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <script src="/Content/assetsLogin/js/core/jquery.min.js" type="text/javascript"></script>
         <script src="/Content/assetsLogin/js/core/popper.min.js" type="text/javascript"></script>
@@ -620,7 +657,6 @@
         <script type="text/javascript">
             function cancelar() {
                 swal("Datos inconsistentes", "Verifique sus datos", "error");
-
             }</script>
 
 

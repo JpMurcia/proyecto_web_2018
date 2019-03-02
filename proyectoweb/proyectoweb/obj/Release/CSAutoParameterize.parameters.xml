@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="conn-Web.config Connection String" description="conn Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=localhost; database=sigepi; uid=root; password=root;Convert Zero Datetime=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Giecom_strix\\Desktop\\proyecto_web_2018\\proyectoweb\\proyectoweb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conn']/@connectionString" />
+  </parameter>
+  <parameter name="conn2-Web.config Connection String" description="conn2 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=localhost; database=viewgroup3; uid=root; password=root;Convert Zero Datetime=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Giecom_strix\\Desktop\\proyecto_web_2018\\proyectoweb\\proyectoweb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conn2']/@connectionString" />
+  </parameter>
+  <parameter name="LocalMySqlServer-Web.config Connection String" description="LocalMySqlServer Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Giecom_strix\\Desktop\\proyecto_web_2018\\proyectoweb\\proyectoweb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LocalMySqlServer']/@connectionString" />
+  </parameter>
+</parameters>

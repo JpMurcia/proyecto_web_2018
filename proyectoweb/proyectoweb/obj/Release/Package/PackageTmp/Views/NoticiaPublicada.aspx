@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <form runat="server">
 <div class="content">
     <div class="container-fluid">
   <div class="row">
@@ -21,44 +21,29 @@
                 <tr>
                   <th class="text-center">#</th>
                   <th>Nombre</th>
-                  <th>Categorìa</th>
+                  <th>Proyecto vinculado</th>
                   <th>Fecha de publicaciòn</th>
-                  <th class="text-right">Visitas</th>
                   <th class="text-right">Acciòn</th>
                 </tr>
               </thead>
               <tbody>
+
+                  <asp:Repeater ID="RepeaterNoticia" runat="server">
+                      <ItemTemplate>
                 <tr>
                   <td class="text-center">1</td>
-                  <td>¿Que es el Blockchain?</td>
-                  <td>Bases de datos</td>
-                  <td>15/10/2018</td>
-                  <td class="text-right">200</td>
+                  <td><%#Eval("titulo_soporte") %></td>
+                  <td><%#Eval("nom_proyecto") %></td>
+                  <td><%#Eval("Fecha_publica") %></td>
                   <td class="td-actions text-right">
-                    <button type="button" rel="tooltip" class="btn btn-success">
-                      <i class="material-icons">edit</i>
-                    </button>
-                    <button type="button" rel="tooltip" class="btn btn-danger">
-                      <i class="material-icons">close</i>
-                    </button>
+                      <a href="NoticiaNueva.aspx?Id=<%#Eval("id_soporte") %>" class="btn btn-success" ><i class="material-icons">edit</i></a>
+                  <asp:LinkButton ID="EliminarNoticia" runat="server" OnCommand="EliminarNoticia_Command" CssClass="btn btn-danger" CommandArgument='<% #Eval("id_soporte") %>' >
+                          <i class="material-icons">close</i>
+                      </asp:LinkButton>
                   </td>
                 </tr>
-                  
-                <tr>
-                  <td class="text-center">2</td>
-                  <td>LIFI</td>
-                  <td>Internet</td>
-                  <td>15/10/2018</td>
-                  <td class="text-right">200</td>
-                  <td class="td-actions text-right">
-                    <button type="button" rel="tooltip" class="btn btn-success">
-                      <i class="material-icons">edit</i>
-                    </button>
-                    <button type="button" rel="tooltip" class="btn btn-danger">
-                      <i class="material-icons">close</i>
-                    </button>
-                  </td>
-                </tr>
+                          </ItemTemplate>
+                  </asp:Repeater>
               </tbody>
             </table>
           </div>
@@ -70,4 +55,5 @@
   </div>
         </div>
     </div>
+        </form>
 </asp:Content>
