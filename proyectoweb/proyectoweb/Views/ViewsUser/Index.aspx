@@ -137,7 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <a href="#">
                                                 <div class="card card-profile" style="width: 300px; height: 400px">
                                                     <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
+                                                        <a href="../ViewsPlantillaHeli/IndexHeli.aspx">
                                                             <img src="../../Content/assetsAdministracion/img/giecom.jpg" />
                                                         </a>
 
@@ -147,7 +147,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                         <p>
                                                             Esta grupo de investigacion se enfoca en muchas cosas :v  
                                                         </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
+                                                        <button type="button" class="btn btn-success mr-auto " > <a href="../ViewsPlantillaHeli/IndexHeli.aspx">
+                                                            Visitar</button>
                                                     </div>
 
                                                 </div>

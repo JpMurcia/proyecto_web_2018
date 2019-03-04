@@ -24,11 +24,28 @@ namespace proyectoweb.Views
         enlace enlace1 = new enlace();
         FormularioDepaginaController controlador = new FormularioDepaginaController();
 
+
+        DataTable dc = new DataTable();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
             {
+                if (Request.Files["ImagenProyecto"] != null)
+                {
+                    HttpPostedFile MyFile = Request.Files["ImagenProyecto"];
+
+                    try
+                    {
+
+                    }
+                    catch (Exception BlueScreen)
+                    {
+
+                    }
+
+                }
                 if (string.IsNullOrEmpty(Session["tipo"] as string))
                 {
 
@@ -195,15 +212,11 @@ namespace proyectoweb.Views
             RepeaterActivo.DataBind();
 
             //List<string> lista = new List<string>();
-
             //foreach (RepeaterItem Item in RepeaterInacti.Items)
             //{
             //    DropDownList ddlist = (DropDownList)Item.FindControl("DropDownList1");
             //    lista.Add(ddlist.SelectedItem.ToString());
             //}
-
-            
-
             grupoVG.justificacion = dt.Rows[0]["justif_grupo"].ToString();//
             grupoVG.mision = dt.Rows[0]["mision_grupo"].ToString();//
             grupoVG.objetivo = dt.Rows[0]["objetivo_grupo"].ToString();//
@@ -212,13 +225,9 @@ namespace proyectoweb.Views
             grupoVG.siglas = dt.Rows[0]["siglas_signif_grupo"].ToString();//
             grupoVG.urlLogo = dt.Rows[0]["url_logo_grupo"].ToString();//
             grupoVG.vision = dt.Rows[0]["vision_grupo"].ToString();//
-
             grupoVG.correo= dt.Rows[0]["email_grupo"].ToString();//
             grupoVG.telefono= dt.Rows[0]["telefo_grupo"].ToString();//
             grupoVG.direccion = dt.Rows[0]["direcc_grupo"].ToString();//
-
-
-
 
             if (dt.Rows[0]["objetivo_grupo"].Equals(null))
             {
@@ -228,17 +237,13 @@ namespace proyectoweb.Views
             }
             else
             {
-
                // \"collapse\"
                 Objetivo.Text = grupo.objetivo;
                 object hola = Objetivo.SupportsDisabledAttribute;
                 object hola2 = Objetivo.HasAttributes.ToString();
                 //Objetivo.Disposed = 1;
-
             }
-           
             nombreGrupo.Text = grupoVG.grupo_nombre;//-
-          
             sigSiglas.Text = grupoVG.siglas;//-
             Objetivo.Text = grupoVG.objetivo;//+
             Mision.Text = grupoVG.mision;//+
@@ -251,13 +256,6 @@ namespace proyectoweb.Views
             CorreoGrupo.Text = grupoVG.correo;//+
             DireccionGrupo.Text = grupoVG.direccion;//+
 
-
-
-
-
-
-
-
         }
 
         protected void Button_Miembro(object sender, EventArgs e)
@@ -269,19 +267,13 @@ namespace proyectoweb.Views
                 // string id = ()InnerRepeater.Items[i].FindControl("estado");
                 HiddenField hf1 = (HiddenField)InnerRepeater.Items[i].FindControl("ide");//identificador 
                 HiddenField hf2 = (HiddenField)InnerRepeater.Items[i].FindControl("tipo");
-               
                 CheckBox chk = (CheckBox)InnerRepeater.Items[i].FindControl("estado");
-
                 enlace1.tipo = hf2.Value.ToString();
-                
                 enlace1.identificador = hf1.Value.ToString();
                 enlace1.estado = chk.Checked.ToString();
                 enlace1.id_user =  ViewState["id_user"].ToString() ;
 
                 DataTable hola = controlador.update_enlace(enlace1);
-
-
-               
             }
             string hola1 = "dd";
         }
@@ -290,7 +282,6 @@ namespace proyectoweb.Views
         protected void Modal_Command1(object sender, CommandEventArgs e)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "$('#modal-datos').modal('show');", true);
-
             user1.fk_grupo = Session["id_grupo"].ToString(); ;
             ViewState["id_user"] = e.CommandArgument.ToString();
             nom_usaurioMostrar.Text = user.nombre;
@@ -299,36 +290,73 @@ namespace proyectoweb.Views
             DataTable dato_user_miemrbo = controlador.consul_data_user(user1);
             enlace1.id_user = user1.idUsuario.ToString();
             // object algo = Request.QueryString["iden"].ToString();
-            
             nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
             imagen_perfil.Src =  dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
             DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
-          
-
             InnerRepeater.DataSource = dt6;
             InnerRepeater.DataBind();
-
-            
         }
-
         protected void Unnamed_Command(object sender, CommandEventArgs e)
         {
-
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "$('#modal_proyecto').modal('show');", true);
+           proyec.fk_grupo = Session["id_grupo"].ToString(); 
+           ViewState["id_produc"] = e.CommandArgument.ToString();
+           proyec.idproyect = ViewState["id_produc"].ToString();
+            // nom_usaurioMostrar.Text = user.nombre;
+            // // user.id = "24";
+             dc = controlador.consulProyecto(proyec);
+             if (ImagenProyecto.HasFile)
+            {
+                ViewState["Ruta"] = "~/Content/imgProyecto/" + System.IO.Path.GetFileName(ImagenProyecto.FileName);
+                ImagenProyecto.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                proyec.imagen = ViewState["Ruta"].ToString();
 
-            user1.fk_grupo = Session["id_grupo"].ToString(); ;
-            ViewState["id_user"] = e.CommandArgument.ToString();
-            nom_usaurioMostrar.Text = user.nombre;
-            // user.id = "24";
-            user1.idUsuario = e.CommandArgument.ToString();
-            DataTable dato_user_miemrbo = controlador.consul_data_user(user1);
-            enlace1.id_user = user1.idUsuario.ToString();
-            // object algo = Request.QueryString["iden"].ToString();
-            nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
-            imagen_perfil.Src = dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
-            DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
-            InnerRepeater.DataSource = dt6;
-            InnerRepeater.DataBind();
+            }
+            if (dc.Rows[0]["url_image_proyec"].ToString().Equals("")) {
+                imagenNoticia.Src = "http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png";
+            }
+            else {
+                imagenNoticia.Src=  dc.Rows[0]["url_image_proyec"].ToString();
+               
+
+            }
+
+            
+           // imagenNoticia.Src= dc.Rows[0]["proyecto_descrip"].ToString();
+            id_descripcion.Text= dc.Rows[0]["proyecto_descrip"].ToString();
+            // nom_proyecto.Text=  dc.Rows[0]["nom_proyecto"].ToString(); 
+            string hola = "hgjhgjh";
+
+            //nom_proyecto.Text=
+            // user1.idUsuario = e.CommandArgument.ToString();
+            // DataTable dato_user_miemrbo = controlador.consul_data_user(user1);
+            // enlace1.id_user = user1.idUsuario.ToString();
+            // // object algo = Request.QueryString["iden"].ToString();
+            // nombre_miembro.Text = dato_user_miemrbo.Rows[0]["nom_usuario"].ToString();
+            // imagen_perfil.Src = dato_user_miemrbo.Rows[0]["url_foto_usuario"].ToString();
+            // DataTable dt6 = controlador.consultarProyectoDeMiembroController(user1);
+            // InnerRepeater.DataSource = dt6;
+            // InnerRepeater.DataBind();
+        }
+
+        protected void Guardar_proyec_Click(object sender, EventArgs e)
+        {
+            proyec.idproyect = ViewState["id_produc"].ToString();
+
+            if (ImagenProyecto.HasFile)
+            {
+                ViewState["Ruta"] = "~/Content/imgProyecto/" + System.IO.Path.GetFileName(ImagenProyecto.FileName);
+                ImagenProyecto.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                proyec.imagen = ViewState["Ruta"].ToString();
+
+            }
+            
+            proyec.descri = id_descripcion.Text;
+            dc = controlador.update_proyec(proyec);
+
+            string h = "k";
+            Response.Redirect("FormularioDePagina1.aspx");
+
 
         }
     }

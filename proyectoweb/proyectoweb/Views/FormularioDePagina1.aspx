@@ -354,38 +354,10 @@
                                                                            <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Unnamed_Command" CommandArgument='<%# Eval("id_produc") %>'>
                                                                        <i class="material-icons">edit</i>Editar
                                                                     </asp:LinkButton>
-
-
-
-
-                                                                            <%-- <div class="collapse" id="p<%#Eval("id_produc") %>">
-                                                                                <div class="card card-body">
-                                                                                    <div class="form-group form-file-upload form-file-multiple">
-                                                                                        <input type="file" multiple="" class="inputFileHidden" />
-                                                                                        <div class="input-group">
-                                                                                            <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
-                                                                                            <span class="input-group-btn">
-                                                                                                <button type="button" class="btn btn-fab btn-round btn-info">
-                                                                                                    <i class="material-icons">layers</i>
-                                                                                                </button>
-                                                                                            </span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>--%>
                                                                         </td>
-
-
                                                                     </tr>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
-
-
-
                                                         </tbody>
                                                     </table>
 
@@ -424,34 +396,12 @@
                                                                     <ItemTemplate>
 
                                                                         <tr>
-                                                                            <td><%#Eval("nom_proyecto") %> </td>
-                                                                            <td class="td-actions text-right ">
-                                                                                <p>
-                                                                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#p<%#Eval("id_produc") %>" aria-expanded="false" aria-controls="collapseExample">
-                                                                                        Editar
-                                                                           
-                                                                                    </button>
-                                                                                </p>
-                                                                                <div class="collapse" id="p<%#Eval("id_produc") %>">
-                                                                                    <div class="card card-body">
-                                                                                        <div class="form-group form-file-upload form-file-multiple">
-                                                                                            <input type="file" multiple="" class="inputFileHidden" />
-                                                                                            <div class="input-group">
-                                                                                                <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" />
-                                                                                                <span class="input-group-btn">
-                                                                                                    <button type="button" class="btn btn-fab btn-round btn-info">
-                                                                                                        <i class="material-icons">layers</i>
-                                                                                                    </button>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="form-group">
-                                                                                            <label for="exampleFormControlTextarea1">Descripción</label>
-                                                                                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </td>
+                                                                           <td><%#Eval("nom_proyecto") %></td>
+                                                                        <td class="td-actions text-right ">
+                                                                           <asp:LinkButton CssClass="btn btn-primary" runat="server" OnCommand="Unnamed_Command" CommandArgument='<%# Eval("id_produc") %>'>
+                                                                       <i class="material-icons">edit</i>Editar
+                                                                    </asp:LinkButton>
+                                                                        </td>
                                                                         </tr>
 
                                                                     </ItemTemplate>
@@ -479,10 +429,7 @@
                                 <div class="pull-right">
                                     <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
                                     <%--<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />--%>
-
                                     <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
-
-
                                 </div>
 
                                 <div class="pull-left">
@@ -592,33 +539,36 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <asp:Label ID="nom_proyecto" class="modal-title" runat="server" Text=""></asp:Label>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="card card-body">
-                            <div class="form-group form-file-upload form-file-multiple">
-                                <input type="file" multiple="" class="inputFileHidden" />
-                                <div class="input-group">
-                                    <input type="text" class="form-control inputFileVisible" placeholder="Imagenes de proyecto" multiple />
-                                    <span class="input-group-btn">
-                                        <button type="button" class="btn btn-fab btn-round btn-info">
-                                            <i class="material-icons">layers</i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </div>
+                          <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail img-raised">
+                                                <img id="imagenNoticia" runat="server" src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" alt="...">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                            <div class="col-md-12">
+                                                <div>
+                                                    <span class="btn btn-raised btn-round btn-default btn-file">
+                                                        <asp:FileUpload ID="ImagenProyecto" runat="server" CssClass="fileinput-new" OnClick="UploadButton_Click" Text="imagen" /> Seleccionar imagen
+                                                    </span>
+                                                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i>Remove</a>
+                                                </div>  
+                                            </div>
+                                        </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Descripción</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <asp:TextBox ID="id_descripcion" runat="server"  class="form-control" Columns="5"></asp:TextBox>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <asp:LinkButton runat="server" type="button" CssClass="btn btn-primary" ID="Guardar_proyec" OnClick="Guardar_proyec_Click" >Save changes</asp:LinkButton>
                     </div>
                 </div>
             </div>

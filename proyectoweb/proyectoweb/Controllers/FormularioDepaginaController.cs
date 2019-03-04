@@ -101,6 +101,11 @@ namespace proyectoweb.Controllers
 
             return usur.consul_data_basi(user);
         }
+
+        public DataTable consulProyecto(Models.ModelosViewGroup.proyecto pro)
+        {
+            return proyec.consul_proyecto(pro);
+        }
     }
 }
  

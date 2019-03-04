@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/administracion.Master" AutoEventWireup="true" CodeBehind="permisos.aspx.cs" Inherits="proyectoweb.Views.NoticiaPublicada" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/administracion.Master" AutoEventWireup="true" CodeBehind="permisos.aspx.cs" Inherits="proyectoweb.Views.permisos1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="content">
+<div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -16,13 +14,6 @@
                             <h4 class="card-title">Miembros</h4>
                         </div>
                         <div class="card-body">
-
-
-
-
-
-
-
                             <div class="alert alert-info alert-with-icon" data-notify="container">
                                 <i class="material-icons" data-notify="icon">notifications</i>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -122,18 +113,14 @@
                                     </tbody>
                                 </table>
                             </div>
-
-
-
-
                             <button type="button" class="btn  btn-success">Actualizar</button>
 
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsContent" runat="server">
 </asp:Content>

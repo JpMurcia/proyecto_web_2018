@@ -11,7 +11,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="text-center">
-									<h2 class="fz-70 white"><b>GRUPO DE INVESTIGACIÒN</b><br />N</h2>
+                                    <asp:Label ID="QuienesSomos_Titulo" Text="GRUPO DE INVESTIGACIÒN" runat="server" CssClass="fz-70 white"/>
 								</div>
 							</div>
 						</div>
@@ -22,9 +22,9 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="text-center">
-										<h2 class="section-title dark pt-3 mb-2"><b>¿Quiènes</b> Somos?</h2>
+                                        <asp:Label ID="QuienesSomos_desc_Titulo" Text="<b>¿Quiènes  Somos?</b>" runat="server" CssClass="section-title dark pt-3 mb-2" />
 										<div class="mb-2"></div>
-										<p>We are creative brains, artistic mind and enthusiastic people, we bring you the best minimal theme&nbsp;– Heli Studio. You will not be disappointed because we want to boost your business and be an element of your success. From its stunning design, robust options and numerous features, Heli wordpress theme is strong backed by customer acclaiming.</p>
+										<p id="QuienesSomos_desc">We are creative brains, artistic mind and enthusiastic people, we bring you the best minimal theme&nbsp;– Heli Studio. You will not be disappointed because we want to boost your business and be an element of your success. From its stunning design, robust options and numerous features, Heli wordpress theme is strong backed by customer acclaiming.</p>
 									</div>
 								</div>
 							</div>
@@ -32,7 +32,7 @@
 					</div>
 					<div class="bg-gray-3 p-5 mb-5">
 										<h3 class="fz-20 fw-normal white">MISIÒN</h3>
-										<p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p id="Mision" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 									</div>
 					<div class="section">
 						<div class="container-fluid">
@@ -40,7 +40,7 @@
 								<div class="col-sm-12 p-0">
 									<div class="bg-dark p-5 mb-5">
 										<h3 class="fz-20 fw-normal white">Vision</h3>
-										<p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p id="Vision" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 									</div>
 								</div>
 							</div>
@@ -51,7 +51,7 @@
 							<div class="row">
 										<div class="bg-light p-5 mb-5">
 												<h3 class="fz-20 fw-normal">Justificaciòn</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+												<p id="justificacion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 											</div>
 								
 								
@@ -70,31 +70,10 @@
 												<i class="pe-7s-monitor"></i>
 											</div>
 										</div>
-										<h4 class="fz-18 fw-normal">FULLY RESPONSIVE</h4>
 										<div class="desc">
-											Responds elegantly to various screen sizes and has been tested to work across devices, from the largest of desktops to modern smartphone.
-										</div>
-									</div>
-									<div class="feature-item style-2 mb-3">
-										<div class="feature-icon">
-											<div class="feature-icon-inner">
-												<i class="pe-7s-paint-bucket"></i>
-											</div>
-										</div>
-										<h4 class="fz-18 fw-normal">POWERFUL OPTIONS</h4>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-										</div>
-									</div>
-									<div class="feature-item style-2 mb-3">
-										<div class="feature-icon">
-											<div class="feature-icon-inner">
-												<i class="pe-7s-glasses"></i>
-											</div>
-										</div>
-										<h4 class="fz-18 fw-normal">TRANSLATION READY</h4>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            <asp:Label ID="objetivo" Text="Responds elegantly to various screen sizes and has been tested to work across devices, from the largest of desktops to modern smartphone.
+										t" runat="server" />
+
 										</div>
 									</div>
 								</div>

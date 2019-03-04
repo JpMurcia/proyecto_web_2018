@@ -61,6 +61,22 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
+        public DataTable consul_proyecto(proyecto obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "idProyecto",
+                obj.idproyect,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("Consultar__Proyecto", p);
+
+
+        }
+
 
         public DataTable update_proyecto(proyecto obj)
         {

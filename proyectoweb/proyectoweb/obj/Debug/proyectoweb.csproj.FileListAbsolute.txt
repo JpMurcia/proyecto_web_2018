@@ -286,13 +286,7 @@ C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\b
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\Newtonsoft.Json.dll
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\System.Web.Optimization.dll
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\WebGrease.dll
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\MySql.Data.xml
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\MySql.Web.xml
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\System.Web.Optimization.xml
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\Newtonsoft.Json.xml
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\Antlr3.Runtime.pdb
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Users\Usuario\Documents\GitHub\proyecto_web_2018_2V\proyectoweb\proyectoweb\obj\Debug\proyectoweb.csprojAssemblyReference.cache
