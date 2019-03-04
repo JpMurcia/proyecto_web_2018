@@ -103,6 +103,11 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
 
 -- Volcando datos para la tabla viewgroup3.grupo_invest: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
+REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
+	(111, 'Giecom', NULL, NULL, NULL, '../imagenes/grupos/giecom.jpg', 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', '', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', NULL, 1),
+	(112, 'Alecout', NULL, NULL, NULL, '(NULL)', 1, '', 'crear contador de alevinos', '', '', '', '', 111, 1),
+	(113, 'Giecom Semillero', NULL, NULL, NULL, '../imagenes/semilleros/giecom.jpg', 1, '', '', '', '', '', '', 111, 1),
+	(121, 'Semillero de programacion', NULL, NULL, NULL, '../imagenes/semilleros/semillero_programacion.png', 1, '', 'Elevar el nivel de algoritmia ', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', '', 111, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest_has_usuario
@@ -124,6 +129,17 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
 
 -- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
+REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
+	(111, 10, '2019-03-04', 1, 1),
+	(112, 11, '2019-03-04', 2, 1),
+	(112, 12, '2019-03-04', 2, 1),
+	(112, 13, '2019-03-04', 2, 1),
+	(112, 14, '2019-03-04', 2, 1),
+	(112, 24, '2019-03-04', 2, 1),
+	(113, 11, '2019-03-04', 2, 1),
+	(113, 14, '2019-03-04', 2, 1),
+	(121, 12, '2019-03-04', 2, 1),
+	(121, 14, '2019-03-04', 2, 1);
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades
@@ -207,10 +223,10 @@ CREATE TABLE IF NOT EXISTS `pagina_propia` (
   PRIMARY KEY (`id_Pagina Propia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_propia: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_propia: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_propia` DISABLE KEYS */;
 REPLACE INTO `pagina_propia` (`id_Pagina Propia`, `Nom_grupo`, `Contenido`, `Creadores`, `Acredicimiento`, `Logo`, `descrip`) VALUES
-	(666, 'Viewgroup', 'ViewGroup es una plataforma para la gestiòn de grupos de investigaciòn en la universidad de la Amazonia, en esta plataforma los coordinadores de cada grupo pueden crear y publicar la pagina web del mismo, publicar noticias, crear actividades y demas ingresando unos pequeños datos, de esta manera cualquier persona puede buede visualizar la pagina web una vez este publicada en nuestra plataforma con solo presioar clic al boton visitar del card del grupo de investigacion.', 'Juan Pablo Murcia \r\nBrayane Esneider Alvarez Valencia ', NULL, NULL, 'Software para la vizualizacion de grupos de investigación de la Universidad de la Amazonia');
+	(666, 'Viewgroup', 'ViewGroup es una plataforma para la gestiòn de grupos de investigaciòn en la universidad de la Amazonia, en esta plataforma los coordinadores de cada grupo pueden crear y publicar la pagina web del mismo, publicar noticias, crear actividades y demas ingresando unos pequeños datos, de esta manera cualquier persona puede buede visualizar la pagina web una vez este publicada en nuestra plataforma con solo presioar clic al boton visitar del card del grupo de investigacion.', 'Juan Pablo Murcia \r\nBrayane Esneider Alvarez Valencia ', NULL, '../../Content/assetsLogin/img/bg0.jpg', 'Software para la vizualizacion de grupos de investigación de la Universidad de la Amazonia');
 /*!40000 ALTER TABLE `pagina_propia` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.pagina_web
@@ -281,6 +297,18 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
 
 -- Volcando datos para la tabla viewgroup3.proyecto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
+REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
+	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
+	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
+	(22, 'Estacion Meteriologica', NULL, 1, 111, NULL, NULL),
+	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
+	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
+	(25, 'MDD', NULL, 0, 111, NULL, NULL),
+	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
+	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
+	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
+	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
+	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto_has_usuario
@@ -298,6 +326,16 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
 
 -- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
+REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
+	(20, 11, '2019-03-04', 1),
+	(20, 13, '2019-03-04', 1),
+	(21, 13, '2019-03-04', 1),
+	(22, 11, '2019-03-04', 1),
+	(25, 14, '2019-03-04', 1),
+	(26, 14, '2019-03-04', 1),
+	(27, 24, '2019-03-04', 1),
+	(28, 24, '2019-03-04', 1),
+	(29, 24, '2019-03-04', 1);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
@@ -408,6 +446,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 -- Volcando datos para la tabla viewgroup3.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`) VALUES
+	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co'),
+	(11, 'Juan camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co'),
+	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co'),
+	(13, 'johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johan@udla.edu.co'),
+	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co'),
+	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
@@ -870,13 +915,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_grupo`(
 
 
 
+
 )
 BEGIN
 update grupo_invest as g
 set g.email_grupo=(if(email = '', g.email_grupo, email)), 
 g.telefo_grupo=(if(telefo = '', g.telefo_grupo, telefo)),
 g.direcc_grupo=(if(direcc = '', g.direcc_grupo, direcc)),
- g.url_logo_grupo= (if(logo = '', g.url_logo_grupo,logo)),
+
  
   g.siglas_signif_grupo= (if(sigla = '', g.siglas_signif_grupo,sigla)),
  g.objetivo_grupo=(if(objetivo = '', g.objetivo_grupo,objetivo)),
@@ -1114,6 +1160,17 @@ else
 	where integra.pkf_id_grupo_invest=identificador and integra.pkf_id_usuario=id_user;
 
 end if;
+
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento viewgroup3.vista_apropia
+DROP PROCEDURE IF EXISTS `vista_apropia`;
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_apropia`()
+BEGIN
+
+select *  from view_pagina_propia;
 
 END//
 DELIMITER ;
