@@ -10,6 +10,6 @@
 namespace proyectoweb.Views {
     
     
-    public partial class NoticiaPublicada {
+    public partial class permisos1 {
     }
 }

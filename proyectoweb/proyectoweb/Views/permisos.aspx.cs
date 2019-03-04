@@ -7,16 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb.Views
 {
-    public partial class Permisos : System.Web.UI.Page
+    public partial class permisos1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        public void llenar_permisos() {
-
-
 
         }
     }

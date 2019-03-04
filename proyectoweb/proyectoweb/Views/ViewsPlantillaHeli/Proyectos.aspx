@@ -27,8 +27,7 @@
 									<div class="tm-grid has-animation">
 										<div class="grid-sizer"></div>
 										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_1b.jpg" alt="" />
+											<div class="media"><img src="../../Content/assetsLogin/img/bg8.jpg" alt=""/>
 												<div class="overlay-wrapper">
 													<div class="overlay"></div>
 													<div class="popup">
@@ -47,7 +46,7 @@
 										</div>
 										<div class="portfolio-item grid-item masonry-item">
 											<div class="media">
-												<img src="images/project/grid/project_2b.jpg" alt="" />
+                                                <img src="../../Content/assetsLogin/img/bg9.jpg" />
 												<div class="overlay-wrapper">
 													<div class="overlay"></div>
 													<div class="popup">
@@ -66,7 +65,7 @@
 										</div>
 										<div class="portfolio-item grid-item masonry-item">
 											<div class="media">
-												<img src="images/project/grid/project_3b.jpg" alt="" />
+                                                <img src="../../Content/assetsLogin/img/bg5.jpg" />
 												<div class="overlay-wrapper">
 													<div class="overlay"></div>
 													<div class="popup">
@@ -83,120 +82,7 @@
 												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
 											</div>
 										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_4b.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_4_large.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Digital Mask</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_5b.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_5_large.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Interior Design</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_6b.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_6_large.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Industrial Design</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_7.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_7.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Born to win</a></h3>
-												<div class="cate"><a href="#">Branding</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_8.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_8.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Photofolio</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-												<img src="images/project/grid/project_9.jpg" alt="" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_9.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Table Lamp</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
-											</div>
-										</div>
+										
 									</div>
 								</div>
 							</div>
