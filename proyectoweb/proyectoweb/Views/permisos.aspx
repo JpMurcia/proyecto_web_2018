@@ -48,15 +48,16 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">#</th>
-                                            <th>Nombre</th>
-                                            <th>Programa</th>
-                                            <th class="text-right">Administrador</th>
-                                            <th class="text-right">Estudiante</th>
+                                            
+                                            <th>   Nombre</th>
+                                            <th class="text-center">Programa</th>
+                                            <th class="text-center">     Rol</th>
+                                          <th class="text-right">Correo</th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                       <%-- <tr>
 
                                             <td class="text-center">1</td>
                                             <td>Estudiante Cualquiera #1</td>
@@ -109,7 +110,55 @@
                                                     </label>
                                                 </div>
                                             </td>
-                                        </tr>
+                                           
+                                           </tr>
+                                           --%>
+
+                                             <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                        <%-- 
+                                                      <asp:Repeater ID="Repeater2" OnItemDataBound="RepiterItem" runat="server">--%>
+                                                        <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
+                                                        <ItemTemplate>
+                                                            <tr>
+
+                                                                <td><%#Eval("nom_usuario") %> </td>
+
+
+                                                               
+
+
+                                                               
+
+                                                                    <%--      <asp:LinkButton  CssClass="btn btn-primary"  ID="LinkButton1"  runat="server" CommandArgument='<%# Eval("id_usuario") %>' CommandName='botoModal'  data-toggle="modal" data-target="#<%#Eval("id_usuario")%> ">
+                                                                       <i class="material-icons">edit</i>Editar
+                                                                    </asp:LinkButton>--%>
+
+                                                                    <%-- modal --%>
+
+
+
+
+                                                               
+
+                                                               
+                                                                <td class="td-actions text-center ">
+                                                                    <%#Eval("Programa") %>
+                                                                </td>
+
+                                                                 <td class="td-actions text-center ">
+                                                                            Miembro
+                                                                </td>
+
+                                                                 <td class="td-actions text-right ">
+                                                                    <%#Eval("email_usuario") %>
+                                                                </td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+
+
+
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -121,6 +170,9 @@
             </div>
         </div>
     </div>
+
+
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsContent" runat="server">
 </asp:Content>

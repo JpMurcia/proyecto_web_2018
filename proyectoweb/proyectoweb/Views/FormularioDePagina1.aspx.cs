@@ -171,6 +171,7 @@ namespace proyectoweb.Views
             //  grupo.nombreGrupo = Request.QueryString["grupo"];
 
             grupo.nombreGrupo = Session["grupo"].ToString();
+            
             grupoVG.grupo_nombre = Session["grupo"].ToString();
             grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
 
@@ -296,6 +297,8 @@ namespace proyectoweb.Views
             InnerRepeater.DataSource = dt6;
             InnerRepeater.DataBind();
         }
+
+
         protected void Unnamed_Command(object sender, CommandEventArgs e)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "popup", "$('#modal_proyecto').modal('show');", true);
