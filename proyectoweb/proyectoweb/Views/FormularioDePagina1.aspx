@@ -262,10 +262,11 @@
                                                 <tbody>
 
                                                     <asp:Repeater ID="RepeaterMiembro" runat="server">
+                                                        <ItemTemplate>
                                                         <%-- 
                                                       <asp:Repeater ID="Repeater2" OnItemDataBound="RepiterItem" runat="server">--%>
                                                         <%-- <asp:Repeater ID="RepeaterMiembro" OnItemCommand="RepiterItemCommand" runat="server">--%>
-                                                        <ItemTemplate>
+                                                     
                                                             <tr>
 
                                                                 <td><%#Eval("nom_usuario") %> </td>
