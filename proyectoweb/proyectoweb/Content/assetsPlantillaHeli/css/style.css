@@ -2109,7 +2109,7 @@ table {
 }
 
 .section-bg-45 {
-    background-image: url(../images/background/bg_47.jpg)
+    background-image: url('../images/image_8.jpg');
 }
 
 .section-bg-46 {
@@ -2141,7 +2141,7 @@ table {
 }
 
 .section-bg-53 {
-    background-image: url(../images/background/bg_55.jpg)
+    background-image: url('../images/image_8.jpg');
 }
 
 .section-bg-54 {
@@ -3555,10 +3555,10 @@ table {
     }
 
 .service-carousel .owl-controls {
-    position: absolute;
+    position: inherite;
     bottom: 0;
     right: 0;
-    height: 80px
+    height: 1px
 }
 
     .service-carousel .owl-controls .owl-buttons .owl-next, .service-carousel .owl-controls .owl-buttons .owl-prev {

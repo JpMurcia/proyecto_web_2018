@@ -15,37 +15,47 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
 {
     public partial class Index : System.Web.UI.Page
     {
-
-        Grupo_inve_semillero grupo = new Grupo_inve_semillero();
-        //Grupo_inve_semillero semillero = new Grupo_inve_semillero();
-        grupo_investigacion grupoVG = new grupo_investigacion();
-        grupo_investigacion semillero = new grupo_investigacion();
-        modelUsuario user = new modelUsuario();
-        usuario user1 = new usuario();
-        Models.ModelosViewGroup.proyecto proyec = new Models.ModelosViewGroup.proyecto();
-        FormularioDepaginaController controlador = new FormularioDepaginaController();
-
+        grupo mod_grupo = new grupo();
+        grupo_investigacion mod_gi = new grupo_investigacion();
+        DataTable DT_Grupo;
+        soporta noticia = new soporta();
+        NoticiaController nt = new NoticiaController();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-
-
+                llenarNoticias();
+                llenarInfo();
+                llenarProyectos();
+                
             }
 
         }
 
-        public void llenarDatos()
+        public void llenarInfo()
         {
+            mod_gi.idGrupoInvestigacion = "111";
+            DT_Grupo = mod_grupo.consultarGrupo(mod_gi);
+            Label_Somos.Text = DT_Grupo.Rows[0]["nom_grupo"].ToString();
+            Label_Somos_Desc.Text = DT_Grupo.Rows[0]["quien_somos_grupo"].ToString();
+
 
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
+        public void llenarProyectos()
         {
+            mod_gi.idGrupoInvestigacion = "111";
+            DT_Grupo = mod_grupo.consultarProyectosAct(mod_gi);
+            Repeater1.DataSource = DT_Grupo;
+            Repeater1.DataBind();
 
         }
-        protected void LeerNoticia_Click(object sender, EventArgs e)
-        {
+
+        public void llenarNoticias(){
+            noticia.id_grupo = "111";
+            DT_Grupo = nt.consulNoticias(noticia);
+            Repeater2.DataSource = DT_Grupo;
+            Repeater2.DataBind();
 
         }
     }
