@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Web, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -1120,6 +1124,7 @@
     <Content Include="Views\permisos.aspx" />
     <Content Include="Views\CrearPagina.aspx" />
     <Content Include="Views\principal.aspx" />
+    <Content Include="Views\Reportes\Vista_Report.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\IndexHeli.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Miembros.aspx" />
@@ -1276,6 +1281,19 @@
     <Compile Include="Views\principal.aspx.designer.cs">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reportes\reportNoticia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportNoticia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\Vista_Report.aspx.cs">
+      <DependentUpon>Vista_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\Vista_Report.aspx.designer.cs">
+      <DependentUpon>Vista_Report.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1332,6 +1350,11 @@
     <Compile Include="Views\ViewsUser\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reportes\ConjuntoDeDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1345,6 +1368,17 @@
     <Content Include="Views\ViewsPlantillaHeli\plantlillaHeli.Master" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Reportes\ConjuntoDeDatos.xsc">
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reportes\ConjuntoDeDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConjuntoDeDatos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reportes\ConjuntoDeDatos.xss">
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1357,6 +1391,15 @@
       <Project>{cdd22746-21ab-4528-ad52-fad38616a738}</Project>
       <Name>soporteMongo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Reportes\reportNoticia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportNoticia.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

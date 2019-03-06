@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConjuntoDeDatos" targetNamespace="http://tempuri.org/ConjuntoDeDatos.xsd" xmlns:mstns="http://tempuri.org/ConjuntoDeDatos.xsd" xmlns="http://tempuri.org/ConjuntoDeDatos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConjuntoDeDatos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConjuntoDeDatos" msprop:Generator_UserDSName="ConjuntoDeDatos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NoticiaReport" msprop:Generator_TableClassName="NoticiaReportDataTable" msprop:Generator_TableVarName="tableNoticiaReport" msprop:Generator_TablePropName="NoticiaReport" msprop:Generator_RowDeletingName="NoticiaReportRowDeleting" msprop:Generator_RowChangingName="NoticiaReportRowChanging" msprop:Generator_RowEvHandlerName="NoticiaReportRowChangeEventHandler" msprop:Generator_RowDeletedName="NoticiaReportRowDeleted" msprop:Generator_UserTableName="NoticiaReport" msprop:Generator_RowChangedName="NoticiaReportRowChanged" msprop:Generator_RowEvArgName="NoticiaReportRowChangeEvent" msprop:Generator_RowClassName="NoticiaReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="nom_proyecto" msprop:Generator_ColumnVarNameInTable="columnnom_proyecto" msprop:Generator_ColumnPropNameInRow="nom_proyecto" msprop:Generator_ColumnPropNameInTable="nom_proyectoColumn" msprop:Generator_UserColumnName="nom_proyecto" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_publica" msprop:Generator_ColumnVarNameInTable="columnFecha_publica" msprop:Generator_ColumnPropNameInRow="Fecha_publica" msprop:Generator_ColumnPropNameInTable="Fecha_publicaColumn" msprop:Generator_UserColumnName="Fecha_publica" type="xs:string" minOccurs="0" />
+              <xs:element name="Proyecto_x0020_Vinculado" msprop:Generator_ColumnVarNameInTable="columnProyecto_Vinculado" msprop:Generator_ColumnPropNameInRow="Proyecto_Vinculado" msprop:Generator_ColumnPropNameInTable="Proyecto_VinculadoColumn" msprop:Generator_UserColumnName="Proyecto Vinculado" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
