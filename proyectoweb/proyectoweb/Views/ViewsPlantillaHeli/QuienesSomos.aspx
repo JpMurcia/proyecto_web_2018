@@ -1,64 +1,72 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeli/plantlillaHeli.Master" AutoEventWireup="true" CodeBehind="IndexHeli.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeli/plantlillaHeli.Master" AutoEventWireup="true" CodeBehind="QuienesSomos.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.QuienesSomos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
     <div id="main">
-				<div class="section section-bg-53 section-cover pt-10 pb-10">
+				<div class="section section-cover pt-10 pb-10" style="background-image:<%#Eval("id_grupo_invest")%> ">
+
 					<div class="bg-overlay"></div>
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="text-center">
-                                    <asp:Label ID="QuienesSomos_Titulo" Text="GRUPO DE INVESTIGACIÒN" runat="server" CssClass="fz-70 white"/>
+                                    <asp:Label ID="QuienesSomos_Titulo"  runat="server" CssClass="fz-70 white"/>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="section pt-10 pb-10">
+				<div runat="server" id="quienesSomosDiv" visible="true" class="section pt-10 pb-10">
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="text-center">
                                         <asp:Label ID="QuienesSomos_desc_Titulo" Text="<b>¿Quiènes  Somos?</b>" runat="server" CssClass="section-title dark pt-3 mb-2" />
 										<div class="mb-2"></div>
-										<p id="QuienesSomos_desc">We are creative brains, artistic mind and enthusiastic people, we bring you the best minimal theme&nbsp;– Heli Studio. You will not be disappointed because we want to boost your business and be an element of your success. From its stunning design, robust options and numerous features, Heli wordpress theme is strong backed by customer acclaiming.</p>
+										<p>
+                                            <asp:Label runat="server" ID="QuienesSomos_desc" />
+                                           </p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="bg-gray-3 p-5 mb-5">
+					<div runat="server" id="misionDiv" class="bg-gray-3 p-5 mb-5">
 										<h3 class="fz-20 fw-normal white">MISIÒN</h3>
-										<p id="Mision" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									</div>
-					<div class="section">
+										<p >
+                                            <asp:Label runat="server" ID="mision" />
+                                           </p></div>
+					<div runat="server" id="visionDiv" class="section">
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col-sm-12 p-0">
 									<div class="bg-dark p-5 mb-5">
 										<h3 class="fz-20 fw-normal white">Vision</h3>
-										<p id="Vision" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<p id="Vision" class="white">
+                                            <asp:Label ID="vision" runat="server" />
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="section bg-gray pt-10 pb-10">
+					<div runat="server" id="justificacionDiv" class="section bg-gray pt-10 pb-10">
 						<div class="container">
 							<div class="row">
 										<div class="bg-light p-5 mb-5">
 												<h3 class="fz-20 fw-normal">Justificaciòn</h3>
-												<p id="justificacion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
+												<p id="justificacion">
+                                                    <asp:Label ID="just" runat="server" />
+
+												</p></div>
 								
 								
 							</div>
 						</div>
 					</div>
-					<div class="section section-bg-12 section-fixed">
+					<div runat="server" id="objetivoDiv" visible="true" class="section section-bg-12 section-fixed">
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-6 pr-0 pl-0 pt-10 pb-10 bg-white">
@@ -71,8 +79,7 @@
 											</div>
 										</div>
 										<div class="desc">
-                                            <asp:Label ID="objetivo" Text="Responds elegantly to various screen sizes and has been tested to work across devices, from the largest of desktops to modern smartphone.
-										t" runat="server" />
+                                            <asp:Label ID="objetivo" runat="server" />
 
 										</div>
 									</div>

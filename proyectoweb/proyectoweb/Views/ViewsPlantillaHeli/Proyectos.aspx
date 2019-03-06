@@ -26,63 +26,31 @@
 								<div class="tm-grid-wrapper" data-type="masonry" data-xs-columns="1" data-sm-columns="2" data-lg-columns="3" data-gutter="10">
 									<div class="tm-grid has-animation">
 										<div class="grid-sizer"></div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media"><img src="../../Content/assetsLogin/img/bg8.jpg" alt=""/>
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_1_large.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Project Minimal</a></h3>
-												<div class="cate"><a href="#">Branding</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
+										 <asp:Repeater ID="Repeater3" runat="server">
+                                        <ItemTemplate>
+                                        <div class="portfolio-item grid-item masonry-item">
 											<div class="media">
-                                                <img src="../../Content/assetsLogin/img/bg9.jpg" />
+                                                <asp:Image runat="server"   id="imagenProyecto" ImageUrl='<%#Eval("url_image_proyec") %>' alt=""/>
 												<div class="overlay-wrapper">
 													<div class="overlay"></div>
-													<div class="popup">
+                                                   <div class="popup">
 														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_2_large.jpg">
+															<a  href="images/project/grid/project_2_large.jpg">
 																<i class="pe-7s-search"></i>
-															</a>
 														</div>
 													</div>
-												</div>
+                                                    </div>
 											</div>
 											<div class="content">
-												<h3><a href="portfolio-detail.html">Geometric Form</a></h3>
-												<div class="cate"><a href="#">Branding</a></div>
-											</div>
-										</div>
-										<div class="portfolio-item grid-item masonry-item">
-											<div class="media">
-                                                <img src="../../Content/assetsLogin/img/bg5.jpg" />
-												<div class="overlay-wrapper">
-													<div class="overlay"></div>
-													<div class="popup">
-														<div class="popup-inner">
-															<a class="prettyphoto" data-rel="prettyPhoto[gallery]" href="images/project/grid/project_3_large.jpg">
-																<i class="pe-7s-search"></i>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="content">
-												<h3><a href="portfolio-detail.html">Beautifully simple</a></h3>
-												<div class="cate"><a href="#">Branding</a>, <a href="#">Print</a></div>
+												<h3  ><a   href="portfolio-detail.html"><asp:Label ID="Nombre_Proyecto"  Text='<%#Eval("nom_proyecto") %>' runat="server"/>
+											</a></h3>
+                                                <h3><a href="portfolio-detail.html">Visitar
+											</a></h3>
 											</div>
 										</div>
 										
+										</ItemTemplate>
+                                    </asp:Repeater>
 									</div>
 								</div>
 							</div>

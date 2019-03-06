@@ -29,17 +29,16 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form runat="server">
 		<div class="search-form-container-full">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-7 offset-sm-3 search-wrap">
 						<div class="text-center middle">
-							<form id="form1"  class="search-form">
 								<input type="search" class="search-field" value="" name="s" placeholder="¿Que estas buscando?" />
 								<button class="button-search">
 									<i class="pe-7s-search"></i>
 								</button>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -139,11 +138,16 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-7 col-md-12">
-							<img src="images/logo2.svg" alt="Heli" />
+							<img runat="server" id="imagenContact" src="images/logo2.svg" alt="Heli" />
 							<div class="office">
-								<p><i class="pe-7s-call"></i> (61 2) 9251 5600 </p>
-								<p><i class="pe-7s-mail-open-file"></i> email@domain.com</p>
-								<p><i class="pe-7s-map-2"></i> No.200 Josecph, Canada 10020</p>
+								<p><i class="pe-7s-call"></i>
+                                    <asp:Label ID="telefonoGrupo" runat="server" /> </p>
+								<p><i class="pe-7s-mail-open-file"></i> 
+                                    <asp:Label ID="emailGrupo" runat="server" />
+								</p>
+								<p><i class="pe-7s-map-2"></i> 
+                                    <asp:Label ID="DirGrupo" runat="server" />
+								</p>
 							</div>
 							<div class="mb-5 d-block d-md-block d-lg-none"></div>
 						</div>
@@ -220,7 +224,7 @@
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.migration.min.js"></script>
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.parallax.min.js"></script>
-    
+    </form>
 
     </body>
 </html>

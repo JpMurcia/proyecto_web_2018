@@ -57,8 +57,6 @@ namespace proyectoweb.Models.ModelosViewGroup
               ParameterDirection.Input
               ));
             return conect.ExecuteProcedure("proye_crearte_proced", p);
-
-
         }
 
         public DataTable consul_proyecto(proyecto obj)

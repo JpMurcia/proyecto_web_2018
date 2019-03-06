@@ -5,9 +5,6 @@
 
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 
-<!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:51:59 GMT -->
-<!-- Added by HTTrack -->
-<!-- /Added by HTTrack -->
 <head runat="server">
     <title>ViewGroup
 
@@ -27,10 +24,6 @@
     <link href="../../Content/assetsLogin/demo/vertical-nav.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/fonts/css8393.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/MisEstilos.css" rel="stylesheet" />
-
-    <!-- Google Tag Manager -->
-
-
 
 
     <script>(function (w, d, s, l, i) {
