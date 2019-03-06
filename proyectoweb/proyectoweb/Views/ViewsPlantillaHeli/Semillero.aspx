@@ -25,40 +25,45 @@
 						</div>
 					</div>
 				</div>
-				<div class="section pt-10 pb-10">
+				<div id="QuineSomosDiv" runat="server" class="section pt-10 pb-10">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="text-center">
                                     <asp:Label ID="QuienesSomos_desc_Titulo_Semillero" Text="<b>¿Quiènes  Somos?</b>" runat="server" CssClass="section-title dark pt-3 mb-2" />
 										<div class="mb-2"></div>
-									<p id="QuienesSomos_desc_Semillero">We are creative brains, artistic mind and enthusiastic people, we bring you the best minimal theme&nbsp;– Heli Studio. You will not be disappointed because we want to boost your business and be an element of your success. From its stunning design, robust options and numerous features, Heli wordpress theme is strong backed by customer acclaiming.</p>
+                                    
+									<p id="QuienesSomos_desc_Semillero"> <asp:Label runat="server" ID ="QuinesSemillero"></asp:Label> </p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="bg-gray-3 p-5 mb-5">
+				<div id="MisionDiv" runat="server" class="bg-gray-3 p-5 mb-5">
 									<h3 class="fz-20 fw-normal white">MISIÒN</h3>
-									<p id="Mision_Semillero" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    
+									<p id="Mision_Semillero" class="white">  <asp:Label ID="MisionSemillero" runat="server"></asp:Label></p>
 								</div>
-				<div class="section">
+				<div id="VisionDiv" runat="server" class="section">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-sm-12 p-0">
 								<div class="bg-dark p-5 mb-5">
 									<h3 class="fz-20 fw-normal white">Vision</h3>
+
+                                     <asp:Label ID="VisionSemillero" runat="server"></asp:Label>
 									<p id="Vision_Semillero" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="section bg-gray pt-10 pb-10">
+				<div id="JustificacionDiv" runat="server" class="section bg-gray pt-10 pb-10">
 					<div class="container">
 						<div class="row">
 									<div class="bg-light p-5 mb-5">
 											<h3 class="fz-20 fw-normal">Justificaciòn</h3>
+                                         <asp:Label ID="JustificacionSemillero" runat="server"></asp:Label>
 											<p d="justificacion_Semillero">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 										</div>
 							
@@ -66,7 +71,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="section section-bg-12 section-fixed">
+				<div   id="objetivoDiv"   runat="server"  class="section section-bg-12 section-fixed">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-6 pr-0 pl-0 pt-10 pb-10 bg-white">

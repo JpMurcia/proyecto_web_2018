@@ -33,7 +33,8 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
         }
 
         public void llenarInfo()
-        {
+        { 
+
             mod_gi.idGrupoInvestigacion = "111";
             DT_Grupo = mod_grupo.consultarGrupo(mod_gi);
             Label_Somos.Text = DT_Grupo.Rows[0]["nom_grupo"].ToString();

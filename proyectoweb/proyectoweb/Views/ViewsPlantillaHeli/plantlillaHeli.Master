@@ -85,36 +85,42 @@
 												<a href="IndexHeli.aspx">Principal</a>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="QuienesSomos.aspx">¿Quiènes Somos?</a>
-											</li>
-											<li class="menu-item-has-children mega-menu">
-												<a href="Proyectos.aspx">Proyectos</a>
-											</li>
-											<li class="menu-item-has-children">
-												<a href="Blog.aspx">Blog</a>
-											</li>
-											<li class="menu-item-has-children mega-menu">
-												<a href="#">Semilleros</a>
-												<ul class="sub-menu">
-													<div class="col-sm-3">
-																	<div class="column-inner">
-																		<ul class="menu">
-																			<li><a href="Semillero.aspx">Semillero #1</a></li>
-																			<li><a href="Semillero.aspx">Semillero #2</a></li>
-																			<li><a href="Semillero.aspx">Semillero #3</a></li>
-																			<li><a href="Semillero.aspx">Semillero #4</a></li>
-																		</ul>
-																	</div>
-																</div>
-												</ul>
-											</li>
-											<li class="menu-item-has-children">
-												<a href="Miembros.aspx">Miembros</a>
-											</li>
-										</ul>
-									</div>
-								</nav>
-							</div>
+                                                <a href="QuienesSomos.aspx">¿Quiènes Somos?</a>
+                                            </li>
+                                            <li class="menu-item-has-children mega-menu">
+                                                <a href="Proyectos.aspx">Proyectos</a>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="Blog.aspx">Blog</a>
+                                            </li>
+                                            <li class="menu-item-has-children mega-menu">
+                                                <a href="#">Semilleros</a>
+                                                <ul class="sub-menu">
+                                                    <div class="col-sm-3">
+                                                        <div class="column-inner">
+                                                            <ul class="menu">
+
+                                                                <asp:Repeater ID="SemilleroMenu" runat="server">
+                                                                    <ItemTemplate>
+
+                                                                        <li><a href="Semillero.aspx?IdSemillero=<%#Eval("id_grupo_invest") %>"><%#Eval("nom_grupo")%></a></li>
+                                                                    </ItemTemplate>
+                                                                </asp:Repeater>
+
+
+                                                                <li><a href="Semillero.aspx">Semillero #4</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="Miembros.aspx">Miembros</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
 						</div>
 						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
 							<div class="header-icon header-icon-search d-none d-lg-block">
