@@ -133,7 +133,7 @@ REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`
 	(111, 10, '2019-03-04', 1, 1),
 	(112, 11, '2019-03-04', 2, 1),
 	(112, 12, '2019-03-04', 2, 1),
-	(112, 13, '2019-03-04', 2, 1),
+	(112, 13, '2019-03-04', 2, 0),
 	(112, 14, '2019-03-04', 2, 1),
 	(112, 24, '2019-03-04', 2, 1),
 	(113, 11, '2019-03-04', 2, 1),
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `pagina_propia` (
   PRIMARY KEY (`id_Pagina Propia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_propia: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_propia: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_propia` DISABLE KEYS */;
 REPLACE INTO `pagina_propia` (`id_Pagina Propia`, `Nom_grupo`, `Contenido`, `Creadores`, `Acredicimiento`, `Logo`, `descrip`) VALUES
 	(666, 'Viewgroup', 'ViewGroup es una plataforma para la gestiòn de grupos de investigaciòn en la universidad de la Amazonia, en esta plataforma los coordinadores de cada grupo pueden crear y publicar la pagina web del mismo, publicar noticias, crear actividades y demas ingresando unos pequeños datos, de esta manera cualquier persona puede buede visualizar la pagina web una vez este publicada en nuestra plataforma con solo presioar clic al boton visitar del card del grupo de investigacion.', 'Juan Pablo Murcia \r\nBrayane Esneider Alvarez Valencia ', NULL, '../../Content/assetsLogin/img/bg0.jpg', 'Software para la vizualizacion de grupos de investigación de la Universidad de la Amazonia');
@@ -324,18 +324,19 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~9 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
 REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
 	(20, 11, '2019-03-04', 1),
-	(20, 13, '2019-03-04', 1),
-	(21, 13, '2019-03-04', 1),
+	(20, 13, '2019-03-04', 0),
+	(21, 13, '2019-03-04', 0),
 	(22, 11, '2019-03-04', 1),
 	(25, 14, '2019-03-04', 1),
 	(26, 14, '2019-03-04', 1),
 	(27, 24, '2019-03-04', 1),
 	(28, 24, '2019-03-04', 1),
-	(29, 24, '2019-03-04', 1);
+	(29, 24, '2019-03-04', 1),
+	(40, 24, '2019-03-05', 1);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
@@ -356,8 +357,12 @@ CREATE TABLE IF NOT EXISTS `soporte` (
   CONSTRAINT `fk_soporte_Categoria1` FOREIGN KEY (`Categoria_id_Categoria`) REFERENCES `categoria` (`id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.soporte: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.soporte: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `soporte` DISABLE KEYS */;
+REPLACE INTO `soporte` (`id_soporte`, `url_imagene`, `titulo_soporte`, `descrip_soperte`, `estado_soporte`, `Fecha_publica`, `Categoria_id_Categoria`, `fk_proyecto`) VALUES
+	(6, '~/Content/Soporte/dasdasd.png', 'Parte Electronica', 'se observa una bajkljdfklskfak, donde se conectara con una pantallita mas mela wey', '1', '2019-03-05', NULL, 28),
+	(7, '~/Content/Soporte/dasacvcvsd.jpg', 'Alevinos ', 'pescaditos dsfdffdfds pescaditos  fsdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescaditos sdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescaditos sdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescadito', '1', '2019-01-05', NULL, 28),
+	(8, '~/Content/Soporte/vxcvcxvasdad.png', 'Visibilidad de la vista Bien chida', 'pero mira que mona esta ', '1', '2019-02-05', NULL, 26);
 /*!40000 ALTER TABLE `soporte` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_has_menu
@@ -441,18 +446,21 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nom_usuario` varchar(255) DEFAULT NULL,
   `url_foto_usuario` varchar(255) DEFAULT NULL,
   `email_usaurio` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id_usuario`)
+  `fk_programa` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_usuario`),
+  KEY `FK_usuario_programa` (`fk_programa`),
+  CONSTRAINT `FK_usuario_programa` FOREIGN KEY (`fk_programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla viewgroup3.usuario: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`) VALUES
-	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co'),
-	(11, 'Juan camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co'),
-	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co'),
-	(13, 'johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johan@udla.edu.co'),
-	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co'),
-	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co');
+REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`, `fk_programa`) VALUES
+	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co', 1),
+	(11, 'Juan camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co', 1),
+	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co', 1),
+	(13, 'johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johan@udla.edu.co', 3),
+	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co', 3),
+	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co', 4);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
@@ -465,6 +473,20 @@ CREATE TABLE `view_pagina_propia` (
 	`Acredicimiento` VARCHAR(800) NULL COLLATE 'utf8_general_ci',
 	`Logo` VARCHAR(800) NULL COLLATE 'utf8_general_ci'
 ) ENGINE=MyISAM;
+
+-- Volcando estructura para procedimiento viewgroup3.Consultar__Proyecto
+DROP PROCEDURE IF EXISTS `Consultar__Proyecto`;
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Consultar__Proyecto`(
+	IN `idProyecto` INT
+)
+BEGIN
+
+select proyecto.nom_proyecto,proyecto.url_image_proyec, proyecto.proyecto_descrip
+from proyecto 
+where proyecto.id_produc=idProyecto;
+END//
+DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
 DROP PROCEDURE IF EXISTS `proced_consultar_product_semillero`;
@@ -600,14 +622,16 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 
 
 
+
+
 )
 BEGIN
 
-select soporte.url_imagene,soporte.titulo_soporte,soporte.descrip_soperte,soporte.Fecha_publica FROM soporte
+select soporte.url_imagene,soporte.titulo_soporte,soporte.descrip_soperte,soporte.Fecha_publica, proyecto.nom_proyecto, soporte.id_soporte FROM soporte
 inner JOIN proyecto on proyecto.id_produc= soporte.fk_proyecto
 inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
 where soporte.estado_soporte=1 and grupo_invest.id_grupo_invest=id_grupo
-order  by soporte.id_soporte DESC
+order  by soporte.Fecha_publica DESC
 LIMIT 10;
 
 END//
@@ -1012,12 +1036,22 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced`(
 
 
 
+
+
+
+
 )
 BEGIN
 
-select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto FROM proyecto
+select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto ,
+proyecto.proyecto_descrip, proyecto.proyecto_descrip , proyecto.fecha_de_proyecto
+FROM proyecto
+inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
 
-WHERE proyecto.estado_proyecto=1 and proyecto.fk_id_grupo_invest= pk_grupo;
+WHERE proyecto.estado_proyecto=1 and (proyecto.fk_id_grupo_invest= pk_grupo or grupo_invest.fk_grupo_semi =pk_grupo )
+order by proyecto.fecha_de_proyecto ASC
+;
+
 /*
 select 
 proyecto. id_proyecto,
@@ -1070,13 +1104,16 @@ DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_int_proced`(
 	IN `pk_grupo` INT
 
+
 )
 BEGIN
 
-select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto FROM proyecto
+select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto,
+proyecto.proyecto_descrip, proyecto.proyecto_descrip , proyecto.fecha_de_proyecto
+FROM proyecto
+inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
 
-WHERE proyecto.estado_proyecto=0 and proyecto.fk_id_grupo_invest= pk_grupo;
-
+WHERE proyecto.estado_proyecto=0 and (proyecto.fk_id_grupo_invest= pk_grupo or grupo_invest.fk_grupo_semi =pk_grupo );
 
 
 
@@ -1131,6 +1168,88 @@ else
 	
 	insert into grupo_invest_has_usuario values(identificador,id_user,Curdate(),(SELECT (tipo *1)),1);
 end if;
+
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento viewgroup3.p_consul_miebros_total
+DROP PROCEDURE IF EXISTS `p_consul_miebros_total`;
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miebros_total`(
+	IN `pk_grupo` INT
+)
+BEGIN
+
+SELECT  usuario.id_usuario id , usuario.nom_usuario  nom,usuario.url_foto_usuario foto, usuario.email_usaurio email, programa.nom_programa progra
+FROM grupo_invest 
+INNER JOIN grupo_invest AS semillero ON grupo_invest.id_grupo_invest=semillero.fk_grupo_semi
+inner join grupo_invest_has_usuario integra on integra.pkf_id_grupo_invest = semillero.id_grupo_invest
+inner join usuario on usuario.id_usuario = integra.pkf_id_usuario
+inner join programa on programa.id_programa=usuario.fk_programa
+WHERE 
+(semillero.id_grupo_invest = pk_grupo or
+grupo_invest.id_grupo_invest=pk_grupo)
+
+union
+
+SELECT  usuario.id_usuario id ,usuario.nom_usuario nom , usuario.url_foto_usuario foto, usuario.email_usaurio email, programa.nom_programa progra
+FROM grupo_invest 
+INNER JOIN grupo_invest AS semillero ON grupo_invest.id_grupo_invest=semillero.fk_grupo_semi
+inner join proyecto on proyecto.fk_id_grupo_invest=semillero.id_grupo_invest
+inner join proyecto_has_usuario has_p on has_p.pkf_id_proyecto = proyecto.id_produc
+inner join usuario on usuario.id_usuario = has_p.pkf_id_usuario
+inner join programa on programa.id_programa = usuario.fk_programa
+where (semillero.fk_grupo_semi =pk_grupo OR
+grupo_invest.id_grupo_invest = pk_grupo) ;
+-- 
+
+
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento viewgroup3.p_consul_miembro_pag
+DROP PROCEDURE IF EXISTS `p_consul_miembro_pag`;
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miembro_pag`(
+	IN `pk_grupo` INT
+
+
+
+
+
+
+)
+    COMMENT 'sirve para mostrar en la pagina creada todos los mienbros cuando son activos en los trabajos'
+BEGIN
+
+#CONCAT("SQL ", "Tutorial ", "is ", "fun!")
+
+SELECT  usuario.id_usuario id , usuario.nom_usuario  nom,CONCAT("../",usuario.url_foto_usuario)  foto, usuario.email_usaurio email, programa.nom_programa progra
+FROM grupo_invest 
+INNER JOIN grupo_invest AS semillero ON grupo_invest.id_grupo_invest=semillero.fk_grupo_semi
+inner join grupo_invest_has_usuario integra on integra.pkf_id_grupo_invest = semillero.id_grupo_invest
+inner join usuario on usuario.id_usuario = integra.pkf_id_usuario
+inner join programa on programa.id_programa=usuario.fk_programa
+WHERE 
+(semillero.id_grupo_invest = pk_grupo or
+grupo_invest.id_grupo_invest=pk_grupo) and integra.estado =1
+
+union
+
+SELECT  usuario.id_usuario id ,usuario.nom_usuario nom , CONCAT("../",usuario.url_foto_usuario)  foto, usuario.email_usaurio email, programa.nom_programa progra
+FROM grupo_invest 
+INNER JOIN grupo_invest AS semillero ON grupo_invest.id_grupo_invest=semillero.fk_grupo_semi
+inner join proyecto on proyecto.fk_id_grupo_invest=semillero.id_grupo_invest
+inner join proyecto_has_usuario has_p on has_p.pkf_id_proyecto = proyecto.id_produc
+inner join usuario on usuario.id_usuario = has_p.pkf_id_usuario
+inner join programa on programa.id_programa = usuario.fk_programa
+where (semillero.fk_grupo_semi =pk_grupo OR
+grupo_invest.id_grupo_invest = pk_grupo) and has_p.estado=1;
+-- 
+
+
+
+
 
 END//
 DELIMITER ;

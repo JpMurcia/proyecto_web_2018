@@ -1135,9 +1135,11 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ActividadController.cs" />
+    <Compile Include="Controllers\BlogControllers.cs" />
     <Compile Include="Controllers\FormularioDepaginaController.cs" />
     <Compile Include="Controllers\indexController.cs" />
     <Compile Include="Controllers\loginController.cs" />
+    <Compile Include="Controllers\miebro_pag_Controller.cs" />
     <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\permisoController.cs" />
     <Compile Include="Controllers\PermisosController.cs" />

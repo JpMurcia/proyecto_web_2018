@@ -175,7 +175,19 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
+        public DataTable consul_miembro_pagina(grupo_investigacion obj)
+        {
+            List<Parametro> p = new List<Parametro>();
 
+            p.Add(new Parametro(
+               "pk_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+               ));
+
+            return conect.ExecuteProcedure("p_consul_miembro_pag", p);
+        }
 
 
 
@@ -276,6 +288,8 @@ namespace proyectoweb.Models.ModelosViewGroup
             return conect.ExecuteProcedure("proced_create_grupo", p);
 
         }
+
+        
 
     }
 }
