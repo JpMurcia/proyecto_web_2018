@@ -300,14 +300,14 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
 REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
 	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
 	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
-	(22, 'Estacion Meteriologica', NULL, 1, 111, NULL, NULL),
+	(22, 'Estacion Meteriologica', NULL, 1, 111, 'fdsafdsf', '~/Content/imgProyecto/dfcvaewfa.png'),
 	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
 	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
 	(25, 'MDD', NULL, 0, 111, NULL, NULL),
-	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
+	(26, 'Visibilidad', NULL, 1, 111, 'avjsdijfoijasdf', '~/Content/imgProyecto/dasdasd.png'),
 	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
 	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
-	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
+	(29, 'Teletrabajo', NULL, 1, 111, 'dsfdsfsdfdssfdsdsdfsdfdfs', '~/Content/imgProyecto/fsfadfsdf.png'),
 	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
@@ -1040,11 +1040,12 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced`(
 
 
 
+
 )
 BEGIN
 
 select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto ,
-proyecto.proyecto_descrip, proyecto.proyecto_descrip , proyecto.fecha_de_proyecto
+proyecto.proyecto_descrip, proyecto.url_image_proyec , proyecto.fecha_de_proyecto
 FROM proyecto
 inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
 
@@ -1095,6 +1096,24 @@ semillero.grupo_inve_semillero_id_grupo <> semillero.id_grupo ;
 	*/
 
 
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced_pag
+DROP PROCEDURE IF EXISTS `proye_consul_act_proced_pag`;
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced_pag`(
+	IN `pk_grupo` INT
+
+)
+BEGIN
+select proyecto.id_produc,proyecto.nom_proyecto,proyecto.estado_proyecto ,
+proyecto.proyecto_descrip, proyecto.url_image_proyec , proyecto.fecha_de_proyecto
+FROM proyecto
+inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
+
+WHERE proyecto.estado_proyecto=1 and (proyecto.fk_id_grupo_invest= pk_grupo or grupo_invest.fk_grupo_semi =pk_grupo )
+order by proyecto.fecha_de_proyecto ASC;
 END//
 DELIMITER ;
 

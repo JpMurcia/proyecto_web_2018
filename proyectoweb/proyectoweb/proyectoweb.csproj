@@ -892,6 +892,16 @@
     <Content Include="Content\assetsWizard\js\material-bootstrap-wizard.js" />
     <Content Include="Content\Carousel\carousel.css" />
     <Content Include="Content\Carousel\carousel.js" />
+    <Content Include="Content\documentacion\modelo\administrar grupo.png" />
+    <Content Include="Content\documentacion\modelo\gestionar Activida.png" />
+    <Content Include="Content\documentacion\modelo\Gestionar Noticia.png" />
+    <Content Include="Content\documentacion\modelo\informacion adicional.png" />
+    <Content Include="Content\documentacion\modelo\Registrar_paginaVersion final.png" />
+    <Content Include="Content\imgProyecto\02.png" />
+    <Content Include="Content\imgProyecto\05.png" />
+    <Content Include="Content\imgProyecto\10 Template Jas.jpg" />
+    <Content Include="Content\imgProyecto\clothes-png-photoshop-1.png" />
+    <Content Include="Content\imgProyecto\demanda.jpg" />
     <Content Include="Content\Newstyle\Error\styleError404.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
@@ -1034,6 +1044,14 @@
     <Content Include="imagenes\imagen_perfil\micht.jpg" />
     <Content Include="imagenes\imagen_perfil\yisus.jpg" />
     <Content Include="imagenes\semilleros\hola.docx" />
+    <Content Include="Content\documentacion\Actualizar_permizos.bpm" />
+    <Content Include="Content\documentacion\Manual de usuario.docx" />
+    <Content Include="Content\documentacion\Manual de usuario.pdf" />
+    <Content Include="Content\documentacion\modelo\gestionar Activida-convertido.pdf" />
+    <Content Include="Content\documentacion\Registrar_pagina.bpm" />
+    <Content Include="Content\documentacion\Registrar_paginaVersion final.bpm" />
+    <Content Include="Content\documentacion\Reporte_RQSOFT_ WEB.pdf" />
+    <Content Include="Content\documentacion\Reporte_RQSOFT_1239-convertido.docx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\JpMurcia - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\JpMurcia - Web Deploy.pubxml" />
@@ -1103,7 +1121,6 @@
     <Content Include="Views\CrearPagina.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
-    <Content Include="Views\ViewsPlantillaHeli\Contacto.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\IndexHeli.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Miembros.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Proyectos.aspx" />
@@ -1137,6 +1154,7 @@
     <Compile Include="Controllers\ActividadController.cs" />
     <Compile Include="Controllers\BlogControllers.cs" />
     <Compile Include="Controllers\FormularioDepaginaController.cs" />
+    <Compile Include="Controllers\grupo.cs" />
     <Compile Include="Controllers\indexController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\miebro_pag_Controller.cs" />
@@ -1263,13 +1281,6 @@
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ViewsPlantillaHeli\Contacto.aspx.cs">
-      <DependentUpon>Contacto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\ViewsPlantillaHeli\Contacto.aspx.designer.cs">
-      <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\IndexHeli.aspx.cs">
       <DependentUpon>IndexHeli.aspx</DependentUpon>
