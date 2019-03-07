@@ -72,7 +72,10 @@ namespace proyectoweb.Views
         }
         DataTable hola = new DataTable();
 
-        DataTable hola3 = new DataTable();
+        pagina_web pag = new pagina_web();
+
+
+    DataTable hola3 = new DataTable();
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
@@ -155,8 +158,15 @@ namespace proyectoweb.Views
 
             }
 
-            string hola23 = "1";
+          
 
+            pag.idgrupo = grupoVG.idGrupoInvestigacion.ToString();
+            pag.idplantilla = "1";
+
+           
+
+            controlador.create_paginaWeb(pag);
+            string hola23 = "1";
             Response.Redirect("principal.aspx");
 
         }

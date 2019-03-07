@@ -106,6 +106,20 @@ namespace proyectoweb.Controllers
         {
             return proyec.consul_proyecto(pro);
         }
+
+
+
+        pagina_web pagWeb = new pagina_web();
+
+
+        public DataTable create_paginaWeb(pagina_web pag) {
+
+            return pagWeb.CrearPagina(pag);
+
+        }
+
+
+
     }
 }
  
