@@ -90,7 +90,7 @@ namespace proyectoweb.Views
                         b.nom_usuario = datoRegreso.Rows[0]["nombreeee"].ToString();
                         b.url_foto_usuario = datoRegreso.Rows[0]["foto_perfil"].ToString();
                         b.correo = datoRegreso.Rows[0]["correo"].ToString();
-
+                        b.programa = datoRegreso.Rows[0]["pro"].ToString();
                         grupoSIGEPI.nombreGrupo = datoRegreso.Rows[0]["su_grupo"].ToString();
                         DataTable datos_grupo = controlador.consultarInforGrupo(grupoSIGEPI);
 

@@ -165,7 +165,7 @@ namespace proyectoweb.Views
 
            
 
-            controlador.create_paginaWeb(pag);
+           DataTable holawqe3 = controlador.create_paginaWeb(pag);
             string hola23 = "1";
             Response.Redirect("principal.aspx");
 

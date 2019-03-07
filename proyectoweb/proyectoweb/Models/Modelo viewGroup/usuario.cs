@@ -53,7 +53,14 @@ namespace proyectoweb.Models.ModelosViewGroup
                ParameterDirection.Input
                ));
 
-           
+            p.Add(new Parametro(
+              "fk_programa",
+              obj.programa,
+              "VARCHAR",
+              ParameterDirection.Input
+              ));
+
+
             return conect.ExecuteProcedure("proced_create_usuario", p);
 
         }
