@@ -30,7 +30,7 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
            
             //  proyec.fk_grupo = Session["id_grupo"].ToString();
             grupoVG.idGrupoInvestigacion="111";
-            noticia.id_grupo = "111";
+            noticia.id_grupo = Session["IdGrupo_pag"].ToString(); 
             //DataTable dt = controlador.consultarProyectoActController(grupoVG);
             //DataTable dt2 = controlador.consultarProyectoInacController(grupoVG);
 

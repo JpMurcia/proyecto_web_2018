@@ -20,8 +20,10 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
         {
             if (!IsPostBack)
             {
-                mod_gi.idGrupoInvestigacion = Request.QueryString["IdGrupo"].ToString();
-              //  mod_gi.idGrupoInvestigacion = "111";
+                //mod_gi.idGrupoInvestigacion = Request.QueryString["IdGrupo"].ToString();
+                //  mod_gi.idGrupoInvestigacion = "111";
+                //Session["IdGrupo_pag"] = mod_gi.idGrupoInvestigacion.ToString();
+                mod_gi.idGrupoInvestigacion = Session["IdGrupo_pag"].ToString();
                 dtG = mod_grupo.consultarGrupo(mod_gi);
                 imagenContact.Src = dtG.Rows[0]["url_logo_grupo"].ToString();
                 emailGrupo.Text = dtG.Rows[0]["email_grupo"].ToString();

@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.5.21 - MySQL Community Server (GPL)
--- Server OS:                    Win64
--- HeidiSQL Version:             10.1.0.5464
+-- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,13 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Dumping database structure for sigepi
-DROP DATABASE IF EXISTS `sigepi`;
+-- Volcando estructura de base de datos para sigepi
 CREATE DATABASE IF NOT EXISTS `sigepi` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `sigepi`;
 
--- Dumping structure for table sigepi.grupo_inve_semillero
-DROP TABLE IF EXISTS `grupo_inve_semillero`;
+-- Volcando estructura para tabla sigepi.grupo_inve_semillero
 CREATE TABLE IF NOT EXISTS `grupo_inve_semillero` (
   `id_grupo` int(11) NOT NULL,
   `nom_grupo` varchar(600) DEFAULT NULL,
@@ -36,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `grupo_inve_semillero` (
   CONSTRAINT `FK_grupo_inve_semillero_grupo_inve_semillero` FOREIGN KEY (`grupo_inve_semillero_id_grupo`) REFERENCES `grupo_inve_semillero` (`id_grupo`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.grupo_inve_semillero: ~9 rows (approximately)
+-- Volcando datos para la tabla sigepi.grupo_inve_semillero: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_inve_semillero` DISABLE KEYS */;
 REPLACE INTO `grupo_inve_semillero` (`id_grupo`, `nom_grupo`, `sigla_signif_grupo`, `objetivo_grupo`, `programa_grupo`, `url_logo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `grupo_inve_semillero_id_grupo`) VALUES
 	(111, 'Giecom', 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', NULL, 'Ingenieria de Sistema', '../imagenes/grupos/giecom.jpg', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', NULL, 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', 111),
@@ -50,8 +48,7 @@ REPLACE INTO `grupo_inve_semillero` (`id_grupo`, `nom_grupo`, `sigla_signif_grup
 	(121, 'Semillero de programacion', NULL, 'Elevar el nivel de algoritmia ', 'Ingenieria de Sistema', '../imagenes/semilleros/semillero_programacion.png', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', NULL, NULL, 111);
 /*!40000 ALTER TABLE `grupo_inve_semillero` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.integrante_has_grupo_inve_semillero
-DROP TABLE IF EXISTS `integrante_has_grupo_inve_semillero`;
+-- Volcando estructura para tabla sigepi.integrante_has_grupo_inve_semillero
 CREATE TABLE IF NOT EXISTS `integrante_has_grupo_inve_semillero` (
   `usuario_id_usuario` int(11) NOT NULL,
   `grupo_inve_semillero_id_grupo` int(11) NOT NULL,
@@ -61,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `integrante_has_grupo_inve_semillero` (
   CONSTRAINT `FK_integrante_has_grupo_inve_semillero_usuario` FOREIGN KEY (`usuario_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.integrante_has_grupo_inve_semillero: ~21 rows (approximately)
+-- Volcando datos para la tabla sigepi.integrante_has_grupo_inve_semillero: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `integrante_has_grupo_inve_semillero` DISABLE KEYS */;
 REPLACE INTO `integrante_has_grupo_inve_semillero` (`usuario_id_usuario`, `grupo_inve_semillero_id_grupo`) VALUES
 	(10, 111),
@@ -87,8 +84,7 @@ REPLACE INTO `integrante_has_grupo_inve_semillero` (`usuario_id_usuario`, `grupo
 	(14, 121);
 /*!40000 ALTER TABLE `integrante_has_grupo_inve_semillero` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.proyecto
-DROP TABLE IF EXISTS `proyecto`;
+-- Volcando estructura para tabla sigepi.proyecto
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `nom_proyecto` varchar(500) DEFAULT NULL,
@@ -97,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   PRIMARY KEY (`id_proyecto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.proyecto: ~21 rows (approximately)
+-- Volcando datos para la tabla sigepi.proyecto: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
 REPLACE INTO `proyecto` (`id_proyecto`, `nom_proyecto`, `fecha_proyecto`, `estado_proyecto`) VALUES
 	(20, 'SIGEPI', '2013-11-11', 0),
@@ -123,8 +119,7 @@ REPLACE INTO `proyecto` (`id_proyecto`, `nom_proyecto`, `fecha_proyecto`, `estad
 	(40, 'Proyecto de un semillero', '2019-02-23', 0);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.proyecto_has_grupo_inve_semillero
-DROP TABLE IF EXISTS `proyecto_has_grupo_inve_semillero`;
+-- Volcando estructura para tabla sigepi.proyecto_has_grupo_inve_semillero
 CREATE TABLE IF NOT EXISTS `proyecto_has_grupo_inve_semillero` (
   `proyecto_id_proyecto` int(11) NOT NULL,
   `grupo_inve_semillero_id_grupo` int(11) NOT NULL,
@@ -134,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_grupo_inve_semillero` (
   CONSTRAINT `FK_proyecto_has_grupo_inve_semillero_proyecto` FOREIGN KEY (`proyecto_id_proyecto`) REFERENCES `proyecto` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.proyecto_has_grupo_inve_semillero: ~21 rows (approximately)
+-- Volcando datos para la tabla sigepi.proyecto_has_grupo_inve_semillero: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_grupo_inve_semillero` DISABLE KEYS */;
 REPLACE INTO `proyecto_has_grupo_inve_semillero` (`proyecto_id_proyecto`, `grupo_inve_semillero_id_grupo`) VALUES
 	(20, 111),
@@ -160,15 +155,14 @@ REPLACE INTO `proyecto_has_grupo_inve_semillero` (`proyecto_id_proyecto`, `grupo
 	(40, 121);
 /*!40000 ALTER TABLE `proyecto_has_grupo_inve_semillero` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.tipo_usuario
-DROP TABLE IF EXISTS `tipo_usuario`;
+-- Volcando estructura para tabla sigepi.tipo_usuario
 CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_tipo_usuario` int(11) NOT NULL,
   `nom_tipo_usuario` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_tipo_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.tipo_usuario: ~3 rows (approximately)
+-- Volcando datos para la tabla sigepi.tipo_usuario: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
 REPLACE INTO `tipo_usuario` (`id_tipo_usuario`, `nom_tipo_usuario`) VALUES
 	(1, 'Lider'),
@@ -176,8 +170,7 @@ REPLACE INTO `tipo_usuario` (`id_tipo_usuario`, `nom_tipo_usuario`) VALUES
 	(3, 'estudiante');
 /*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.usuario
-DROP TABLE IF EXISTS `usuario`;
+-- Volcando estructura para tabla sigepi.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int(11) NOT NULL,
   `email_usuario` varchar(45) NOT NULL,
@@ -191,32 +184,31 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_tipo_usuario` FOREIGN KEY (`fk_tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.usuario: ~19 rows (approximately)
+-- Volcando datos para la tabla sigepi.usuario: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 REPLACE INTO `usuario` (`id_usuario`, `email_usuario`, `nom_usuario`, `contra_usuario`, `url_foto_usuario`, `Programa`, `fk_tipo_usuario`) VALUES
-	(10, 'h.ing@udla.edu.co', 'heriberto', 'giecom', '1 - copia (1).png', 'Sistemas', 1),
-	(11, 'a.leal@udla.edu.co', 'antonio', 'contra_antorio', '1 - copia (1).png', 'Sistemas', 2),
-	(12, 'c.carlos@udla.edu.co', 'carlos', '12345', '1 - copia (1).png', 'Sistemas', 2),
-	(13, 'c.carlos2@udla.edu.co', 'carlos2', '12345', '1 - copia (1).png', 'Sistemas', 2),
-	(14, 'b.yisus@udla.edu.co', 'brayan', 'yisus', '1 - copia (1).png', 'Sistemas', 2),
-	(15, 'd.doctor@udla.edu.co', 'Doctor Quimico', 'quimico', '1 - copia (1).png', 'Quimica', 1),
-	(16, 'm.agilar@udla.edu.co', 'micht', 'giecom1', '1 - copia (1).png', 'Quimica', 2),
-	(17, 'j.alcalde@udla.edu.co', 'alcalde', 'giecom2', '1 - copia (1).png', 'Quimica', 2),
-	(18, 'c.doctors@udla.edu.co', 'quimico', 'quimico', '1 - copia (1).png', 'Quimica', 2),
-	(19, 'c.laura@udla.edu.co', 'laura camila ', 'minato', '1 - copia (1).png', 'Quimica', 2),
-	(20, 'm.ing@udla.edu.co', 'Millan', 'giie', '1 - copia (1).png', 'Sistemas', 1),
-	(21, 'j.juan@udla.edu.co', 'juanes ', 'giie', '1 - copia (1).png', 'Sistemas', 2),
-	(22, 'd.antonio@udla.edu.co', 'johan', 'giie', '1 - copia (1).png', 'Sistemas', 2),
-	(23, 'd.antonieta@udla.edu.co', 'antonieta', 'giie', '1 - copia (1).png', 'Sistemas', 2),
-	(24, 'a.cuellar@udla.edu.co', 'angela', 'cuellar', '1 - copia (1).png', 'Quimica', 2),
-	(25, 'ex.algo@udla.edu.co', 'algo', 'algo', '1 - copia (1).png', 'Sistemas', 3),
-	(26, 'ex.carlos@udla.edu.co', NULL, NULL, '1 - copia (1).png', 'Sistemas', 3),
-	(27, 'ex.kamilo@udla.edu.co', 'kamilo', 'kamilo', '1 - copia (1).png', 'Sistemas', 3),
-	(28, 'ex.@udla.edu.co', NULL, NULL, '1 - copia (1).png', 'Sistemas', 3);
+	(10, 'h.ing@udla.edu.co', 'heriberto', 'giecom', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 1),
+	(11, 'a.leal@udla.edu.co', 'Juan Camilo', 'contra_antorio', '../imagenes/imagen_perfil/kamilo.jpg', 'Sistemas', 2),
+	(12, 'c.carlos@udla.edu.co', 'carlos', '12345', '../imagenes/imagen_perfil/carlos.jpg', 'Sistemas', 2),
+	(13, 'c.carlos2@udla.edu.co', 'johan', '12345', '../imagenes/imagen_perfil/johan.jpg', 'Sistemas', 2),
+	(14, 'b.yisus@udla.edu.co', 'brayan', 'yisus', '../imagenes/imagen_perfil/yisus.jpg', 'Sistemas', 2),
+	(15, 'd.doctor@udla.edu.co', 'Doctor Quimico', 'quimico', '../imagenes/imagen_perfil/1 - copia (1).png', 'Quimica', 1),
+	(16, 'm.agilar@udla.edu.co', 'micht', 'giecom1', '../imagenes/imagen_perfil/1 - copia (1).png', 'Quimica', 2),
+	(17, 'j.alcalde@udla.edu.co', 'alcalde', 'giecom2', '../imagenes/imagen_perfil/1 - copia (1).png', 'Quimica', 2),
+	(18, 'c.doctors@udla.edu.co', 'quimico', 'quimico', '../imagenes/imagen_perfil/1 - copia (1).png', 'Quimica', 2),
+	(19, 'c.laura@udla.edu.co', 'laura camila ', 'minato', '../imagenes/imagen_perfil/1 - copia (1).png', 'Quimica', 2),
+	(20, 'm.ing@udla.edu.co', 'Millan', 'giie', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 1),
+	(21, 'j.juan@udla.edu.co', 'juanes ', 'giie', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 2),
+	(22, 'd.antonio@udla.edu.co', 'johan', 'giie', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 2),
+	(23, 'd.antonieta@udla.edu.co', 'antonieta', 'giie', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 2),
+	(24, 'a.cuellar@udla.edu.co', 'angela', 'cuellar', '../imagenes/imagen_perfil/anyela.jpg', 'Quimica', 2),
+	(25, 'ex.algo@udla.edu.co', 'algo', 'algo', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 3),
+	(26, 'ex.carlos@udla.edu.co', NULL, NULL, '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 3),
+	(27, 'ex.kamilo@udla.edu.co', 'kamilo', 'kamilo', '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 3),
+	(28, 'ex.@udla.edu.co', NULL, NULL, '../imagenes/imagen_perfil/1 - copia (1).png', 'Sistemas', 3);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
--- Dumping structure for table sigepi.usuario_has_proyecto
-DROP TABLE IF EXISTS `usuario_has_proyecto`;
+-- Volcando estructura para tabla sigepi.usuario_has_proyecto
 CREATE TABLE IF NOT EXISTS `usuario_has_proyecto` (
   `usuario_id_usuario` int(11) NOT NULL,
   `proyecto_id_proyecto` int(11) NOT NULL,
@@ -226,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `usuario_has_proyecto` (
   CONSTRAINT `FK_usuario_has_proyecto_usuario` FOREIGN KEY (`usuario_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table sigepi.usuario_has_proyecto: ~31 rows (approximately)
+-- Volcando datos para la tabla sigepi.usuario_has_proyecto: ~31 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario_has_proyecto` DISABLE KEYS */;
 REPLACE INTO `usuario_has_proyecto` (`usuario_id_usuario`, `proyecto_id_proyecto`) VALUES
 	(11, 20),
@@ -262,9 +254,8 @@ REPLACE INTO `usuario_has_proyecto` (`usuario_id_usuario`, `proyecto_id_proyecto
 	(18, 39);
 /*!40000 ALTER TABLE `usuario_has_proyecto` ENABLE KEYS */;
 
--- Dumping structure for view sigepi.view_grupo_investi
-DROP VIEW IF EXISTS `view_grupo_investi`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_grupo_investi
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_grupo_investi` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
 	`sigla_signif_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -276,34 +267,30 @@ CREATE TABLE `view_grupo_investi` (
 	`quien_somos_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci'
 ) ENGINE=MyISAM;
 
--- Dumping structure for view sigepi.view_miembro_semillero
-DROP VIEW IF EXISTS `view_miembro_semillero`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_miembro_semillero
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_miembro_semillero` (
 	`nom_usuario` VARCHAR(45) NULL COLLATE 'utf8_general_ci',
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci'
 ) ENGINE=MyISAM;
 
--- Dumping structure for view sigepi.view_miembro_x
-DROP VIEW IF EXISTS `view_miembro_x`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_miembro_x
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_miembro_x` (
 	`nom_usuario` VARCHAR(45) NULL COLLATE 'utf8_general_ci',
 	`id_usuario` INT(11) NOT NULL,
 	`proyecto_id_proyecto` INT(11) NOT NULL
 ) ENGINE=MyISAM;
 
--- Dumping structure for view sigepi.view_proyectos_x
-DROP VIEW IF EXISTS `view_proyectos_x`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_proyectos_x
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_proyectos_x` (
 	`nom_proyecto` VARCHAR(500) NULL COLLATE 'utf8_general_ci',
 	`estado_proyecto` TINYINT(4) NULL
 ) ENGINE=MyISAM;
 
--- Dumping structure for view sigepi.view_semilleros
-DROP VIEW IF EXISTS `view_semilleros`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_semilleros
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_semilleros` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
 	`sigla_signif_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -315,9 +302,8 @@ CREATE TABLE `view_semilleros` (
 	`quien_somos_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci'
 ) ENGINE=MyISAM;
 
--- Dumping structure for view sigepi.view_semillero_x
-DROP VIEW IF EXISTS `view_semillero_x`;
--- Creating temporary table to overcome VIEW dependency errors
+-- Volcando estructura para vista sigepi.view_semillero_x
+-- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_semillero_x` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
 	`sigla_signif_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -329,8 +315,7 @@ CREATE TABLE `view_semillero_x` (
 	`quien_somos_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci'
 ) ENGINE=MyISAM;
 
--- Dumping structure for procedure sigepi.proced_consul_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `nombre` varchar(45)
@@ -364,8 +349,7 @@ grupo_inve_semillero.nom_grupo=nombre;
 end//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_grupo_has_usu
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_has_usu`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_grupo_has_usu
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_has_usu`(
 	IN `id_usuario` INT
@@ -383,8 +367,7 @@ where pertenece.usuario_id_usuario=id_usuario;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_miembros_semi
-DROP PROCEDURE IF EXISTS `proced_consul_miembros_semi`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_miembros_semi
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembros_semi`(
 	IN `nom_grupo` VARCHAR(500)
@@ -409,8 +392,7 @@ ORDER by semillero.id_grupo;
 end//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_miembro_simple
-DROP PROCEDURE IF EXISTS `proced_consul_miembro_simple`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_miembro_simple
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembro_simple`(
 	IN `nom_grupo` VARCHAR(500)
@@ -435,8 +417,7 @@ ORDER by usuario.id_usuario;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_proyecto
-DROP PROCEDURE IF EXISTS `proced_consul_proyecto`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_proyecto
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyecto`(
 	IN `id_grupo` INT
@@ -501,8 +482,7 @@ semillero.grupo_inve_semillero_id_grupo <> semillero.id_grupo ;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_proyec_act
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_act`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_proyec_act
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_act`(
 	IN `nombre` VARCHAR(500)
@@ -532,8 +512,7 @@ and proyecto.estado_proyecto=1;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_proyec_inac
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_inac`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_proyec_inac
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_inac`(
 	IN `nombre` VARCHAR(500)
@@ -563,8 +542,7 @@ and proyecto.estado_proyecto=0;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_proye_user_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_proye_user_grupo`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_proye_user_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proye_user_grupo`(
 	IN `grupo_perte` VARCHAR(50),
@@ -584,8 +562,7 @@ WHERE grupo.nom_grupo=grupo_perte AND proyecto.id_proyecto=id_proyec;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_semilleros
-DROP PROCEDURE IF EXISTS `proced_consul_semilleros`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_semilleros
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semilleros`(
 	IN `nombre` VARCHAR(50)
@@ -618,8 +595,7 @@ grupo_inve_semillero.nom_grupo=nombre;
 end//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_semi_pag
-DROP PROCEDURE IF EXISTS `proced_consul_semi_pag`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_semi_pag
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semi_pag`(
 	IN `nombre` VARCHAR(500)
@@ -662,8 +638,7 @@ grupo_inve_semillero.nom_grupo=nombre ;
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_consul_user_proye_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_user_proye_grupo`;
+-- Volcando estructura para procedimiento sigepi.proced_consul_user_proye_grupo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_proye_grupo`(
 	IN `grupo_perte` INT,
@@ -692,8 +667,7 @@ where grupo.grupo_inve_semillero_id_grupo=grupo_perte AND usuario.id_usuario=id_
 END//
 DELIMITER ;
 
--- Dumping structure for procedure sigepi.proced_validar_user
-DROP PROCEDURE IF EXISTS `proced_validar_user`;
+-- Volcando estructura para procedimiento sigepi.proced_validar_user
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_validar_user`(
 	IN `email_usuari` varchar(45),
@@ -809,41 +783,35 @@ else
 end//
 DELIMITER ;
 
--- Dumping structure for view sigepi.view_grupo_investi
-DROP VIEW IF EXISTS `view_grupo_investi`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_grupo_investi
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_grupo_investi`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_grupo_investi` AS select `sigepi`.`grupo_inve_semillero`.`nom_grupo` AS `nom_grupo`,`sigepi`.`grupo_inve_semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`sigepi`.`grupo_inve_semillero`.`objetivo_grupo` AS `objetivo_grupo`,`sigepi`.`grupo_inve_semillero`.`programa_grupo` AS `programa_grupo`,`sigepi`.`grupo_inve_semillero`.`mision_grupo` AS `mision_grupo`,`sigepi`.`grupo_inve_semillero`.`vision_grupo` AS `vision_grupo`,`sigepi`.`grupo_inve_semillero`.`justif_grupo` AS `justif_grupo`,`sigepi`.`grupo_inve_semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from `sigepi`.`grupo_inve_semillero` where (`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_grupo_investi` AS select `sigepi`.`grupo_inve_semillero`.`nom_grupo` AS `nom_grupo`,`sigepi`.`grupo_inve_semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`sigepi`.`grupo_inve_semillero`.`objetivo_grupo` AS `objetivo_grupo`,`sigepi`.`grupo_inve_semillero`.`programa_grupo` AS `programa_grupo`,`sigepi`.`grupo_inve_semillero`.`mision_grupo` AS `mision_grupo`,`sigepi`.`grupo_inve_semillero`.`vision_grupo` AS `vision_grupo`,`sigepi`.`grupo_inve_semillero`.`justif_grupo` AS `justif_grupo`,`sigepi`.`grupo_inve_semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from `sigepi`.`grupo_inve_semillero` where (`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`);
 
--- Dumping structure for view sigepi.view_miembro_semillero
-DROP VIEW IF EXISTS `view_miembro_semillero`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_miembro_semillero
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_semillero`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_miembro_semillero` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`semillero`.`nom_grupo` AS `nom_grupo` from ((`sigepi`.`grupo_inve_semillero` `semillero` join `sigepi`.`integrante_has_grupo_inve_semillero` `integra` on((`integra`.`grupo_inve_semillero_id_grupo` = `semillero`.`id_grupo`))) join `sigepi`.`usuario` on((`sigepi`.`usuario`.`id_usuario` = `integra`.`usuario_id_usuario`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_semillero` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`semillero`.`nom_grupo` AS `nom_grupo` from ((`sigepi`.`grupo_inve_semillero` `semillero` join `sigepi`.`integrante_has_grupo_inve_semillero` `integra` on((`integra`.`grupo_inve_semillero_id_grupo` = `semillero`.`id_grupo`))) join `sigepi`.`usuario` on((`sigepi`.`usuario`.`id_usuario` = `integra`.`usuario_id_usuario`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
--- Dumping structure for view sigepi.view_miembro_x
-DROP VIEW IF EXISTS `view_miembro_x`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_miembro_x
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_miembro_x` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`sigepi`.`usuario`.`id_usuario` AS `id_usuario`,`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` AS `proyecto_id_proyecto` from (((`sigepi`.`usuario` join `sigepi`.`usuario_has_proyecto` on((`sigepi`.`usuario`.`id_usuario` = `sigepi`.`usuario_has_proyecto`.`usuario_id_usuario`))) join `sigepi`.`proyecto` on((`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`proyecto`.`id_proyecto` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto`))) where (`sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo` = 111) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_x` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`sigepi`.`usuario`.`id_usuario` AS `id_usuario`,`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` AS `proyecto_id_proyecto` from (((`sigepi`.`usuario` join `sigepi`.`usuario_has_proyecto` on((`sigepi`.`usuario`.`id_usuario` = `sigepi`.`usuario_has_proyecto`.`usuario_id_usuario`))) join `sigepi`.`proyecto` on((`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`proyecto`.`id_proyecto` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto`))) where (`sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo` = 111);
 
--- Dumping structure for view sigepi.view_proyectos_x
-DROP VIEW IF EXISTS `view_proyectos_x`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_proyectos_x
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_proyectos_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_proyectos_x` AS select `sigepi`.`proyecto`.`nom_proyecto` AS `nom_proyecto`,`sigepi`.`proyecto`.`estado_proyecto` AS `estado_proyecto` from ((`sigepi`.`grupo_inve_semillero` join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`))) join `sigepi`.`proyecto` on((`sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) where (`sigepi`.`grupo_inve_semillero`.`nom_grupo` = 'giecom') ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_proyectos_x` AS select `sigepi`.`proyecto`.`nom_proyecto` AS `nom_proyecto`,`sigepi`.`proyecto`.`estado_proyecto` AS `estado_proyecto` from ((`sigepi`.`grupo_inve_semillero` join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`))) join `sigepi`.`proyecto` on((`sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) where (`sigepi`.`grupo_inve_semillero`.`nom_grupo` = 'giecom');
 
--- Dumping structure for view sigepi.view_semilleros
-DROP VIEW IF EXISTS `view_semilleros`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_semilleros
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semilleros`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_semilleros` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semilleros` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
--- Dumping structure for view sigepi.view_semillero_x
-DROP VIEW IF EXISTS `view_semillero_x`;
--- Removing temporary table and create final VIEW structure
+-- Volcando estructura para vista sigepi.view_semillero_x
+-- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semillero_x`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_semillero_x` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where ((`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) and (`semillero`.`grupo_inve_semillero_id_grupo` = 111)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semillero_x` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where ((`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) and (`semillero`.`grupo_inve_semillero_id_grupo` = 111));
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

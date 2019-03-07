@@ -281,11 +281,13 @@ namespace proyectoweb.Views.Reportes {
             
             private global::System.Data.DataColumn columnCodigo;
             
-            private global::System.Data.DataColumn columnnom_proyecto;
+            private global::System.Data.DataColumn columnTitulo;
             
-            private global::System.Data.DataColumn columnFecha_publica;
+            private global::System.Data.DataColumn columnDetalle;
             
-            private global::System.Data.DataColumn columnProyecto_Vinculado;
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnVinculado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -330,25 +332,33 @@ namespace proyectoweb.Views.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nom_proyectoColumn {
+            public global::System.Data.DataColumn TituloColumn {
                 get {
-                    return this.columnnom_proyecto;
+                    return this.columnTitulo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Fecha_publicaColumn {
+            public global::System.Data.DataColumn DetalleColumn {
                 get {
-                    return this.columnFecha_publica;
+                    return this.columnDetalle;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Proyecto_VinculadoColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnProyecto_Vinculado;
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn VinculadoColumn {
+                get {
+                    return this.columnVinculado;
                 }
             }
             
@@ -389,13 +399,14 @@ namespace proyectoweb.Views.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NoticiaReportRow AddNoticiaReportRow(string Codigo, string nom_proyecto, string Fecha_publica, string Proyecto_Vinculado) {
+            public NoticiaReportRow AddNoticiaReportRow(string Codigo, string Titulo, string Detalle, string Fecha, string Vinculado) {
                 NoticiaReportRow rowNoticiaReportRow = ((NoticiaReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Codigo,
-                        nom_proyecto,
-                        Fecha_publica,
-                        Proyecto_Vinculado};
+                        Titulo,
+                        Detalle,
+                        Fecha,
+                        Vinculado};
                 rowNoticiaReportRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowNoticiaReportRow);
                 return rowNoticiaReportRow;
@@ -419,9 +430,10 @@ namespace proyectoweb.Views.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnCodigo = base.Columns["Codigo"];
-                this.columnnom_proyecto = base.Columns["nom_proyecto"];
-                this.columnFecha_publica = base.Columns["Fecha_publica"];
-                this.columnProyecto_Vinculado = base.Columns["Proyecto Vinculado"];
+                this.columnTitulo = base.Columns["Titulo"];
+                this.columnDetalle = base.Columns["Detalle"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnVinculado = base.Columns["Vinculado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -429,12 +441,14 @@ namespace proyectoweb.Views.Reportes {
             private void InitClass() {
                 this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigo);
-                this.columnnom_proyecto = new global::System.Data.DataColumn("nom_proyecto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnom_proyecto);
-                this.columnFecha_publica = new global::System.Data.DataColumn("Fecha_publica", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_publica);
-                this.columnProyecto_Vinculado = new global::System.Data.DataColumn("Proyecto Vinculado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProyecto_Vinculado);
+                this.columnTitulo = new global::System.Data.DataColumn("Titulo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTitulo);
+                this.columnDetalle = new global::System.Data.DataColumn("Detalle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDetalle);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnVinculado = new global::System.Data.DataColumn("Vinculado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVinculado);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -593,50 +607,65 @@ namespace proyectoweb.Views.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string nom_proyecto {
+            public string Titulo {
                 get {
                     try {
-                        return ((string)(this[this.tableNoticiaReport.nom_proyectoColumn]));
+                        return ((string)(this[this.tableNoticiaReport.TituloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nom_proyecto\' de la tabla \'NoticiaReport\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'NoticiaReport\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNoticiaReport.nom_proyectoColumn] = value;
+                    this[this.tableNoticiaReport.TituloColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Fecha_publica {
+            public string Detalle {
                 get {
                     try {
-                        return ((string)(this[this.tableNoticiaReport.Fecha_publicaColumn]));
+                        return ((string)(this[this.tableNoticiaReport.DetalleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha_publica\' de la tabla \'NoticiaReport\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Detalle\' de la tabla \'NoticiaReport\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNoticiaReport.Fecha_publicaColumn] = value;
+                    this[this.tableNoticiaReport.DetalleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Proyecto_Vinculado {
+            public string Fecha {
                 get {
                     try {
-                        return ((string)(this[this.tableNoticiaReport.Proyecto_VinculadoColumn]));
+                        return ((string)(this[this.tableNoticiaReport.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Proyecto Vinculado\' de la tabla \'NoticiaReport\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'NoticiaReport\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNoticiaReport.Proyecto_VinculadoColumn] = value;
+                    this[this.tableNoticiaReport.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Vinculado {
+                get {
+                    try {
+                        return ((string)(this[this.tableNoticiaReport.VinculadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Vinculado\' de la tabla \'NoticiaReport\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableNoticiaReport.VinculadoColumn] = value;
                 }
             }
             
@@ -654,38 +683,50 @@ namespace proyectoweb.Views.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnom_proyectoNull() {
-                return this.IsNull(this.tableNoticiaReport.nom_proyectoColumn);
+            public bool IsTituloNull() {
+                return this.IsNull(this.tableNoticiaReport.TituloColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnom_proyectoNull() {
-                this[this.tableNoticiaReport.nom_proyectoColumn] = global::System.Convert.DBNull;
+            public void SetTituloNull() {
+                this[this.tableNoticiaReport.TituloColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsFecha_publicaNull() {
-                return this.IsNull(this.tableNoticiaReport.Fecha_publicaColumn);
+            public bool IsDetalleNull() {
+                return this.IsNull(this.tableNoticiaReport.DetalleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetFecha_publicaNull() {
-                this[this.tableNoticiaReport.Fecha_publicaColumn] = global::System.Convert.DBNull;
+            public void SetDetalleNull() {
+                this[this.tableNoticiaReport.DetalleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsProyecto_VinculadoNull() {
-                return this.IsNull(this.tableNoticiaReport.Proyecto_VinculadoColumn);
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableNoticiaReport.FechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetProyecto_VinculadoNull() {
-                this[this.tableNoticiaReport.Proyecto_VinculadoColumn] = global::System.Convert.DBNull;
+            public void SetFechaNull() {
+                this[this.tableNoticiaReport.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsVinculadoNull() {
+                return this.IsNull(this.tableNoticiaReport.VinculadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetVinculadoNull() {
+                this[this.tableNoticiaReport.VinculadoColumn] = global::System.Convert.DBNull;
             }
         }
         

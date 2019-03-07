@@ -463,7 +463,7 @@
                                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                     <div class="fileinput-new thumbnail img-raised">
                                         <%-- Aqui se ubica la imagen del miembro--%>
-                                        <img id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                        <img  height="300"  id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                 </div>

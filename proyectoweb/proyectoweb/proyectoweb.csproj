@@ -2256,6 +2256,7 @@
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\Reportes\Vista_Report.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
+    <Content Include="Views\ViewsPlantillaHeli\DetalleNoticia.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\DetalleProyecto.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\IndexHeli.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Miembros.aspx" />
@@ -2431,6 +2432,13 @@
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeli\DetalleNoticia.aspx.cs">
+      <DependentUpon>DetalleNoticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeli\DetalleNoticia.aspx.designer.cs">
+      <DependentUpon>DetalleNoticia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\DetalleProyecto.aspx.cs">
       <DependentUpon>DetalleProyecto.aspx</DependentUpon>
