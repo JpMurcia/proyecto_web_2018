@@ -12,7 +12,7 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
 {
     public partial class plantlillaHeli : System.Web.UI.MasterPage
     {
-
+        Pagina_Heli_MasterController controlador = new Pagina_Heli_MasterController();
         grupo mod_grupo = new grupo();
         grupo_investigacion mod_gi = new grupo_investigacion();
         DataTable dtG;
@@ -27,6 +27,14 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
                 emailGrupo.Text = dtG.Rows[0]["email_grupo"].ToString();
                 telefonoGrupo.Text = dtG.Rows[0]["telefo_grupo"].ToString();
                 DirGrupo.Text = dtG.Rows[0]["direcc_grupo"].ToString();
+                DataTable dt = controlador.consultarsemilleroControllerVG(mod_gi);
+                string hola = "";
+                SemilleroMenu.DataSource = dt;
+                SemilleroMenu.DataBind();
+
+
+
+
             }
 
         }

@@ -147,7 +147,7 @@
 									</div>
 									<div class="counter-content">
 										<h5 class="counter-desc white">Visitas</h5>
-										<h2 class="counter-digit white" data-from="0" data-to="68" data-speed="5000">68</h2>
+										<h2 class="counter-digit white" data-from="0" data-to="49" id="contador" runat="server" data-speed="5000"></h2>
 									</div>
 								</div>
 							</div>
