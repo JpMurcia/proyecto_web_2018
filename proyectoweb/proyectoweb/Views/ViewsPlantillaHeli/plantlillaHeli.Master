@@ -75,7 +75,7 @@
 							<div class="row">
 								<div class="site-branding">
 									<a class="normal_logo" href="index.html" rel="home">
-                                        <asp:Image runat="server" ID="icono" />
+										<img src="images/logo.svg" alt="Heli" />
 									</a>
 								</div>
 								<nav class="main-navigation d-none d-lg-block">
@@ -106,6 +106,9 @@
                                                                         <li><a href="Semillero.aspx?IdSemillero=<%#Eval("id_grupo_invest") %>"><%#Eval("nom_grupo")%></a></li>
                                                                     </ItemTemplate>
                                                                 </asp:Repeater>
+
+
+                                                                <li><a href="Semillero.aspx">Semillero #4</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -120,12 +123,9 @@
                             </div>
 						</div>
 						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
-							
-                                <span>
-
-                                    <a class="btn-shop" href="../ViewsUser/Index.aspx" ><span>ViewGroup</span></a>
-							</span>
-                                   
+							<div class="header-icon header-icon-search d-none d-lg-block">
+								<i class="pe-7s-search"></i>
+							</div>
 							<div class="header-icon header-icon-canvas menu-button d-none d-lg-block">
 								<span></span>
 							</div>

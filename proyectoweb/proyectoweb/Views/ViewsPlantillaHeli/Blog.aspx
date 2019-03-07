@@ -42,8 +42,7 @@
                                             <div class="cate">
                                                <asp:Label ID="Fecha" Text="" runat="server" /><a href="#">Blog</a>
                                             </div>
-                                            <h3  id="Titulo_proyec" runat="server"  ><a href="DetalleNoticia.aspx?IdNoticia=<%#Eval("id_soporte") %>">
-                                                <asp:Label ID="nom_noticia" Text='<%#Eval("titulo_soporte")%>' runat="server" /></a></h3>
+                                            <h3  id="Titulo_proyec" runat="server"  ><a href="blog-detail.html" ><asp:Label ID="nom_noticia" Text='<%#Eval("titulo_soporte")%>' runat="server" /></a></h3>
                                           <h6>
                                               Proyecto relacionado:
                                              <asp:Label ID="nom_proye_relac" Text='<%#Eval("nom_proyecto")%>' runat="server" />
