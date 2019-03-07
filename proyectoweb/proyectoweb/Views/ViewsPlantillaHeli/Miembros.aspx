@@ -15,10 +15,10 @@
 
                                     <div class="item row">
                                         <div class="col-md-6">
-                                            <img id="foto_perfil" runat="server" src='<%#Eval("foto")%>' />
+                                            <img id="foto_perfil" runat="server" src='<%#Eval("foto")%>' width="430" />
                                         </div>
                                         <div class="col-md-6">
-                                            <h2 class="title text-uppercase"><b><%#Eval("nom")%></b>Alvarez</h2>
+                                            <h2 class="title text-uppercase"><b><%#Eval("nom")%></b></h2>
                                             <div class="content">
                                                 <h2 class="entry-title">
                                                     <a class="white text-uppercase" href="portfolio-detail.html"><%#Eval("email")%></a>

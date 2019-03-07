@@ -27,8 +27,8 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
                 emailGrupo.Text = dtG.Rows[0]["email_grupo"].ToString();
                 telefonoGrupo.Text = dtG.Rows[0]["telefo_grupo"].ToString();
                 DirGrupo.Text = dtG.Rows[0]["direcc_grupo"].ToString();
+                icono.ImageUrl= dtG.Rows[0]["url_logo_grupo"].ToString();
                 DataTable dt = controlador.consultarsemilleroControllerVG(mod_gi);
-                string hola = "";
                 SemilleroMenu.DataSource = dt;
                 SemilleroMenu.DataBind();
 
