@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.grupo_invest: ~4 rows (approximately)
+-- Dumping data for table viewgroup3.grupo_invest: ~6 rows (approximately)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
 REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
 	(111, 'Giecom', NULL, NULL, NULL, '../imagenes/grupos/giecom.jpg', 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', '', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', NULL, 1),
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.grupo_invest_has_usuario: ~10 rows (approximately)
+-- Dumping data for table viewgroup3.grupo_invest_has_usuario: ~16 rows (approximately)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
 REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
 	(111, 10, '2019-03-04', 1, 1),
@@ -252,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
   CONSTRAINT `fk_pagina_web_plantilla1` FOREIGN KEY (`fk_id_plantilla`) REFERENCES `plantilla` (`id_plantilla`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.pagina_web: ~1 rows (approximately)
+-- Dumping data for table viewgroup3.pagina_web: ~2 rows (approximately)
 /*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
 REPLACE INTO `pagina_web` (`id_pagina`, `url_pagina`, `fk_id_plantilla`, `grupo_invest_id_grupo_invest`, `estado_pag`) VALUES
 	(1, NULL, 1, 111, 1),
@@ -309,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   CONSTRAINT `FK_proyecto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.proyecto: ~11 rows (approximately)
+-- Dumping data for table viewgroup3.proyecto: ~17 rows (approximately)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
 REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
 	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
@@ -344,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.proyecto_has_usuario: ~10 rows (approximately)
+-- Dumping data for table viewgroup3.proyecto_has_usuario: ~25 rows (approximately)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
 REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
 	(20, 11, '2019-03-04', 1),
@@ -487,7 +487,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_programa` FOREIGN KEY (`fk_programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table viewgroup3.usuario: ~6 rows (approximately)
+-- Dumping data for table viewgroup3.usuario: ~11 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`, `fk_programa`) VALUES
 	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co', 1),

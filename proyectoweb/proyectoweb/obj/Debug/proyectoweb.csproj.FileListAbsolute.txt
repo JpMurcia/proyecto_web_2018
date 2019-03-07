@@ -435,3 +435,32 @@ C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\Crys
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportSource.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.Shared.dll
 C:\Users\Giecom_strix\Desktop\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.Web.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportSource.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.Shared.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.Web.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\soporteMongo.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Driver.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Bson.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Driver.Core.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\stdole.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\DnsClient.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\System.Buffers.dll
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\soporteMongo.pdb
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Driver.xml
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Bson.xml
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\MongoDB.Driver.Core.xml
+C:\Users\repap\Documents\Repositorios GIT\proyecto_web_2018\proyectoweb\proyectoweb\bin\DnsClient.xml
