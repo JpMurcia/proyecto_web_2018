@@ -11,34 +11,27 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb.Views.Reportes
 {
-    public partial class Vista_Report : System.Web.UI.Page
+    public partial class Vista_report_general : System.Web.UI.Page
     {
-          
+
         grupo_investigacion grupovg = new grupo_investigacion();
         NoticiaController control = new NoticiaController();
         soporta noticia = new soporta();
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-             Conexion conect = new Conexion();
+            Conexion conect = new Conexion();
 
             noticia.id_grupo = "111";
 
-            DataTable dt1 = control.ResporteGrupoNotica(noticia);
-           Reportes.NoticasGrupoReport objR = new Reportes.NoticasGrupoReport();
+            DataTable dt1 = control.ResporteGeneral();
+            Reportes.ReportGeneral objR = new Reportes.ReportGeneral();
 
             objR.SetDataSource(dt1);
             CrystalReportViewer1.ReportSource = objR;
             CrystalReportViewer1.Width = 800;
             CrystalReportViewer1.Height = 800;
-
-
-
-
         }
-
-        
-
     }
 }

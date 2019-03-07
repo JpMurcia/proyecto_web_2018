@@ -2186,6 +2186,8 @@
     <Content Include="Content\documentacion\Registrar_paginaVersion final.bpm" />
     <Content Include="Content\documentacion\Reporte_RQSOFT_ WEB.pdf" />
     <Content Include="Content\documentacion\Reporte_RQSOFT_1239-convertido.docx" />
+    <Content Include="Content\Manual de usuario.docx" />
+    <Content Include="ApplicationInsights.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\JpMurcia - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\JpMurcia - Web Deploy.pubxml" />
@@ -2215,12 +2217,19 @@
     <Content Include="imagenes\semilleros\quimica.PNG" />
     <Content Include="imagenes\semilleros\sara.jpg" />
     <Content Include="imagenes\semilleros\semillero_programacion.png" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -2255,6 +2264,7 @@
     <Content Include="Views\CrearPagina.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\Reportes\Vista_Report.aspx" />
+    <Content Include="Views\Reportes\Vista_report_general.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\DetalleNoticia.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\DetalleProyecto.aspx" />
@@ -2413,10 +2423,21 @@
     <Compile Include="Views\principal.aspx.designer.cs">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reportes\reportNoticia.cs">
+    <Compile Include="Views\Reportes\ConjuntoReprtGeneral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>reportNoticia.rpt</DependentUpon>
+      <DependentUpon>ConjuntoReprtGeneral.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\NoticasGrupoReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoticasGrupoReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\ReportGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportGeneral.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\Reportes\Vista_Report.aspx.cs">
@@ -2425,6 +2446,13 @@
     </Compile>
     <Compile Include="Views\Reportes\Vista_Report.aspx.designer.cs">
       <DependentUpon>Vista_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\Vista_report_general.aspx.cs">
+      <DependentUpon>Vista_report_general.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reportes\Vista_report_general.aspx.designer.cs">
+      <DependentUpon>Vista_report_general.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
@@ -2525,6 +2553,17 @@
     <Content Include="Views\Reportes\ConjuntoDeDatos.xss">
       <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Reportes\ConjuntoReprtGeneral.xsc">
+      <DependentUpon>ConjuntoReprtGeneral.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reportes\ConjuntoReprtGeneral.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConjuntoReprtGeneral.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reportes\ConjuntoReprtGeneral.xss">
+      <DependentUpon>ConjuntoReprtGeneral.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2542,9 +2581,13 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Reportes\reportNoticia.rpt">
+    <EmbeddedResource Include="Views\Reportes\NoticasGrupoReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reportNoticia.cs</LastGenOutput>
+      <LastGenOutput>NoticasGrupoReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reportes\ReportGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportGeneral.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

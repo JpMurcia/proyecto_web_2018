@@ -67,6 +67,19 @@ namespace proyectoweb.Controllers
 
         }
 
+        public DataTable ResporteGrupoNotica(soporta noti)
+        {
+
+            return noticia.consultar_ReporteNoticia(noti);
+
+        }
+
+        public DataTable ResporteGeneral()
+        {
+
+            return noticia.consultar_ReporteGeneral();
+
+        }
 
 
     }

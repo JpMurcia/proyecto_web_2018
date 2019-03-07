@@ -62,6 +62,12 @@
                                     <span class="sidebar-normal">Noticias </span>
                                 </a>
                             </li>
+                             <li class="nav-item ">
+                                <a class="nav-link" target="_blank" href="Reportes/Vista_report_general.aspx">
+                                    <span class="sidebar-mini">G </span>
+                                    <span class="sidebar-normal">General </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

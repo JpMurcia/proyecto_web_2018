@@ -164,6 +164,40 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
+        public DataTable consultar_ReporteNoticia(soporta obj)
+        {
+
+
+            List<Parametro> p = new List<Parametro>();
+
+            p.Add(new Parametro(
+             "id_grupo",
+             obj.id_grupo,
+             "VARCHAR",
+             ParameterDirection.Input
+             ));
+
+
+
+            return conect.ExecuteProcedure("proced_report_Noticias", p);
+
+        }
+
+        public DataTable consultar_ReporteGeneral()
+        {
+
+
+            List<Parametro> p = new List<Parametro>();
+
+           
+
+
+
+            return conect.ExecuteProcedure("Reporte_General", p);
+
+        }
+
+
 
 
     }
