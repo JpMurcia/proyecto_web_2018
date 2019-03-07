@@ -35,16 +35,16 @@
 													<div class="overlay"></div>
                                                    <div class="popup">
 														<div class="popup-inner">
-															<a  href="images/project/grid/project_2_large.jpg">
+															<a  href="DetalleProyecto.aspx?IdProyecto=<%#Eval("id_produc") %>">
 																<i class="pe-7s-search"></i>
 														</div>
 													</div>
                                                     </div>
 											</div>
 											<div class="content">
-												<h3  ><a   href="portfolio-detail.html"><asp:Label ID="Nombre_Proyecto"  Text='<%#Eval("nom_proyecto") %>' runat="server"/>
+												<h3  ><a   href="DetalleProyecto.aspx?IdProyecto=<%#Eval("id_produc") %>"><asp:Label ID="Nombre_Proyecto"  Text='<%#Eval("nom_proyecto") %>' runat="server"/>
 											</a></h3>
-                                                <h3><a href="portfolio-detail.html">Visitar
+                                                <h3><a href="DetalleProyecto.aspx?IdProyecto=<%#Eval("id_produc") %>">Visitar
 											</a></h3>
 											</div>
 										</div>
