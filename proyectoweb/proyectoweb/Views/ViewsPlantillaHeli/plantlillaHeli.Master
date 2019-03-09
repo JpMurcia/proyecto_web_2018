@@ -74,8 +74,11 @@
 						<div class="col-10 col-md-10 col-lg-10 col-xl-10 pl-0">
 							<div class="row">
 								<div class="site-branding">
-									<a class="normal_logo" href="index.html" rel="home">
-                                        <asp:Image runat="server" ID="icono" />
+									<a class="normal_logo" href="IndexHeli.aspx" rel="home">
+                                      <asp:Image runat="server" ID="icono"  Width="100" Height="50"/>
+                                       <%-- <img src="../../Content/assetsLogin/img/bg8.jpg"  ID="ImagenIcono" runat="server"   />--%>
+
+                                        
 									</a>
 								</div>
 								<nav class="main-navigation d-none d-lg-block">
@@ -88,10 +91,22 @@
                                                 <a href="QuienesSomos.aspx">¿Quiènes Somos?</a>
                                             </li>
                                             <li class="menu-item-has-children mega-menu">
-                                                <a href="Proyectos.aspx">Proyectos</a>
+                                                <a href="#">Proyectos</a>
+                                                <ul class="sub-menu">
+                                                    <div class="col-sm-3">
+                                                        <div class="column-inner">
+                                                            <ul class="menu">
+                                                                 <li><a href="Proyectos.aspx">Proyectos en Curso</a></li>
+                                                                 <li><a href="ProyectosTerminados.aspx">Proyectos Terminados</a></li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </ul>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a href="Blog.aspx">Blog</a>
+
                                             </li>
                                             <li class="menu-item-has-children mega-menu">
                                                 <a href="#">Semilleros</a>
@@ -147,7 +162,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-7 col-md-12">
-							<img runat="server" id="imagenContact" src="images/logo2.svg" alt="Heli" />
+						<%--	<img runat="server" id="imagenContact" src="images/logo2.svg" alt="Heli" />--%>
 							<div class="office">
 								<p><i class="pe-7s-call"></i>
                                     <asp:Label ID="telefonoGrupo" runat="server" /> </p>

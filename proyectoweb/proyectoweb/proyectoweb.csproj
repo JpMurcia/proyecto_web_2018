@@ -2798,6 +2798,7 @@
     <Content Include="Views\ViewsPlantillaHeli\IndexHeli.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Miembros.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Proyectos.aspx" />
+    <Content Include="Views\ViewsPlantillaHeli\ProyectosTerminados.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\QuienesSomos.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Semillero.aspx" />
     <Content Include="Views\ViewsUser\Index.aspx" />
@@ -3029,6 +3030,13 @@
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Proyectos.aspx.designer.cs">
       <DependentUpon>Proyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeli\ProyectosTerminados.aspx.cs">
+      <DependentUpon>ProyectosTerminados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeli\ProyectosTerminados.aspx.designer.cs">
+      <DependentUpon>ProyectosTerminados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\QuienesSomos.aspx.cs">
       <DependentUpon>QuienesSomos.aspx</DependentUpon>

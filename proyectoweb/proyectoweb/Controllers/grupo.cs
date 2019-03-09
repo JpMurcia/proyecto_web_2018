@@ -24,5 +24,11 @@ namespace proyectoweb.Controllers
 
             return grupoinv.consultarproductos(grupo);
         }
+
+        public DataTable consultarProyectosInt(grupo_investigacion grupo)
+        {
+
+            return grupoinv.consultarProyectoInac(grupo);
+        }
     }
 }

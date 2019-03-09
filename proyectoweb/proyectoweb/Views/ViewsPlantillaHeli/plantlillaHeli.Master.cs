@@ -25,17 +25,20 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
                 //Session["IdGrupo_pag"] = mod_gi.idGrupoInvestigacion.ToString();
                 mod_gi.idGrupoInvestigacion = Session["IdGrupo_pag"].ToString();
                 dtG = mod_grupo.consultarGrupo(mod_gi);
-                imagenContact.Src = dtG.Rows[0]["url_logo_grupo"].ToString();
+                //imagenContact.Src = dtG.Rows[0]["url_logo_grupo"].ToString();
                 emailGrupo.Text = dtG.Rows[0]["email_grupo"].ToString();
                 telefonoGrupo.Text = dtG.Rows[0]["telefo_grupo"].ToString();
                 DirGrupo.Text = dtG.Rows[0]["direcc_grupo"].ToString();
-                icono.ImageUrl= dtG.Rows[0]["url_logo_grupo"].ToString();
+                //icono.ImageUrl= dtG.Rows[0]["url_logo_grupo"].ToString();
+
+               // ImagenIcono.Src = "../" + dtG.Rows[0]["url_logo_grupo"].ToString();
+                icono.ImageUrl = "../" + dtG.Rows[0]["url_logo_grupo"].ToString();
+                //imagenContact.Src = "../" + dtG.Rows[0]["url_logo_grupo"].ToString();
                 DataTable dt = controlador.consultarsemilleroControllerVG(mod_gi);
                 SemilleroMenu.DataSource = dt;
                 SemilleroMenu.DataBind();
 
-
-
+               
 
             }
 
