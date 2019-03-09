@@ -2792,6 +2792,13 @@
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\Reportes\Vista_Report.aspx" />
     <Content Include="Views\Reportes\Vista_report_general.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PBlog.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PContacto.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PIndexHeli.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PMiembros.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PProyectos.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PQuienesSomos.aspx" />
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PSemillero.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\Blog.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\DetalleNoticia.aspx" />
     <Content Include="Views\ViewsPlantillaHeli\DetalleProyecto.aspx" />
@@ -2982,6 +2989,62 @@
     <Compile Include="Views\Reportes\Vista_report_general.aspx.designer.cs">
       <DependentUpon>Vista_report_general.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PBlog.aspx.cs">
+      <DependentUpon>PBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PBlog.aspx.designer.cs">
+      <DependentUpon>PBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PContacto.aspx.cs">
+      <DependentUpon>PContacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PContacto.aspx.designer.cs">
+      <DependentUpon>PContacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PIndexHeli.aspx.cs">
+      <DependentUpon>PIndexHeli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PIndexHeli.aspx.designer.cs">
+      <DependentUpon>PIndexHeli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PMiembros.aspx.cs">
+      <DependentUpon>PMiembros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PMiembros.aspx.designer.cs">
+      <DependentUpon>PMiembros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PplantlillaHeli.Master.cs">
+      <DependentUpon>PplantlillaHeli.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PplantlillaHeli.Master.designer.cs">
+      <DependentUpon>PplantlillaHeli.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PProyectos.aspx.cs">
+      <DependentUpon>PProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PProyectos.aspx.designer.cs">
+      <DependentUpon>PProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PQuienesSomos.aspx.cs">
+      <DependentUpon>PQuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PQuienesSomos.aspx.designer.cs">
+      <DependentUpon>PQuienesSomos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PSemillero.aspx.cs">
+      <DependentUpon>PSemillero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ViewsPlantillaHeliPrevisualizar\PSemillero.aspx.designer.cs">
+      <DependentUpon>PSemillero.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewsPlantillaHeli\Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3068,7 +3131,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Soporte\" />
-    <Folder Include="Views\Act\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -3076,7 +3138,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\ViewsPlantillaHeli\plantlillaHeli.Master" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Reportes\ConjuntoDeDatos.xsc">
       <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </Content>
@@ -3118,6 +3179,7 @@
     <Content Include="Views\Reportes\ConjuntoReprtGeneral.xss">
       <DependentUpon>ConjuntoReprtGeneral.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\ViewsPlantillaHeliPrevisualizar\PplantlillaHeli.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

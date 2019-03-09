@@ -5,9 +5,6 @@
 
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 
-<!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 17:51:59 GMT -->
-<!-- Added by HTTrack -->
-<!-- /Added by HTTrack -->
 <head runat="server">
     <title>ViewGroup
 
@@ -27,10 +24,6 @@
     <link href="../../Content/assetsLogin/demo/vertical-nav.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/fonts/css8393.css" rel="stylesheet" />
     <link href="../../Content/assetsLogin/css/MisEstilos.css" rel="stylesheet" />
-
-    <!-- Google Tag Manager -->
-
-
 
 
     <script>(function (w, d, s, l, i) {
@@ -116,180 +109,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="main main-raised">
-        <div class="section section-gray">
-            <h1>Programa academico</h1>
-            <div class="container">
-                <div class="row blog">
-                    <div class="col-md-12">
-                        <div id="blogCarousel" class="carousel slide" data-ride="carousel">
 
-                            <ol class="carousel-indicators">
-                                <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#blogCarousel" data-slide-to="1"></li>
-                            </ol>
 
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
 
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/giecom.jpg" />
-                                                        </a>
+                <div class="section section-gray">
+                    <h1>Paginas Publicadas</h1>
+                    <div class="container">
+                        <div class="row blog">
+                            <div class="col-md-12">
+                                <div id="blogCarousel" class="carousel slide" data-ride="carousel">
 
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                                        <!--    <li data-target="#blogCarousel" data-slide-to="1"></li> -->
+                                    </ol>
+                                    
+       
+                                    <!-- Carousel items -->
 
-                                                </div>
+                                    <div class="carousel-inner">
 
-                                                <%--      <img src="../../Content/assetsLogin/img/bg10.jpg" alt="Image" style="max-width: 100%;">--%>
-                                            </a>
 
+                                        <div class="carousel-item active">
+                                            <div class="row">
+
+
+                                                <asp:Repeater ID="RepeaterPaginas" runat="server">
+                                                    <ItemTemplate>
+
+                                                        <div class="col-md-3">
+                                                            <a href="#">
+                                                                <div class="card card-profile" style="width: 300px; height: 400px">
+                                                                    <div class="card-header card-avatar  ">
+                                                                        <a href="../ViewsPlantillaHeli/IndexHeli.aspx">
+                                                                            <img id="ImagenGrupo" src='<%#Eval("url_logo_grupo") %>' />
+                                                                        </a>
+
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">
+                                                                            <asp:Label runat="server" ID="nombre_grupo"></asp:Label>
+                                                                           <%#Eval("nom_grupo") %></h4>
+                                                                        <p>
+                                                                            <asp:Label runat="server" ID="SiglasGrupo"></asp:Label>
+                                                                            <%#Eval("siglas_signif_grupo") %>
+                                                                        </p>
+                                                                        <button type="button" class="btn btn-success mr-auto ">
+                                                                            <a href="../ViewsPlantillaHeli/IndexHeli.aspx?IdGrupo=<%#Eval("id_grupo")%>">Visitar </a>
+                                                                        </button>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <%--      <img src="../../Content/assetsLogin/img/bg10.jpg" alt="Image" style="max-width: 100%;">--%>
+                                                            </a>
+
+                                                        </div>
+                                                        <hr />
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+
+
+                                            </div>
+                                            <!--.row-->
                                         </div>
-                                        <hr />
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/picardie.png" />
-                                                        </a>
 
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
 
-                                                </div>
 
-                                                <%--      <img src="../../Content/assetsLogin/img/bg10.jpg" alt="Image" style="max-width: 100%;">--%>
-                                            </a>
-                                        </div>
-                                        <hr />
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/giee.png" />
-                                                        </a>
+                                        <!--.item-->
 
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
-
-                                                </div>
-
-                                                <%--      <img src="../../Content/assetsLogin/img/bg10.jpg" alt="Image" style="max-width: 100%;">--%>
-                                            </a>
-                                        </div>
-                                        <hr />
+                                        <!--.item-->
 
                                     </div>
-                                    <!--.row-->
+                           <!--.carousel-inner-->
                                 </div>
-                                <!--.item-->
-
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/giecom.jpg" />
-                                                        </a>
-
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
-
-                                                </div>
-                                            </a>
-
-                                        </div>
-                                        <hr />
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/picardie.png" />
-                                                        </a>
-
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr />
-                                        <div class="col-md-3">
-                                            <a href="#">
-                                                <div class="card card-profile" style="width: 300px; height: 400px">
-                                                    <div class="card-header card-avatar  ">
-                                                        <a href="#pablo">
-                                                            <img src="../../Content/assetsAdministracion/img/giee.png" />
-                                                        </a>
-
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">GIECOM</h4>
-                                                        <p>
-                                                            Esta grupo de investigacion se enfoca en muchas cosas :v  
-                                                        </p>
-                                                        <button type="button" class="btn btn-success mr-auto ">Visitar</button>
-                                                    </div>
-
-                                                </div>
-
-                                                <%--      <img src="../../Content/assetsLogin/img/bg10.jpg" alt="Image" style="max-width: 100%;">--%>
-                                            </a>
-                                        </div>
-                                        <hr />
-                                    </div>
-                                    <!--.row-->
-                                </div>
-                                <!--.item-->
-
+                                <!--.Carousel-->
                             </div>
-                            <!--.carousel-inner-->
                         </div>
-                        <!--.Carousel-->
                     </div>
                 </div>
-            </div>
-        </div>
+
+           
 
 
         <div class="contactus-1 section-image" style="background-image: url('./assets/img/examples/city.jpg')">

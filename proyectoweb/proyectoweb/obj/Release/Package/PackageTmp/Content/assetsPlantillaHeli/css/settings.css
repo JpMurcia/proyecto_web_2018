@@ -186,12 +186,15 @@ website:   	http://www.themepunch.com
 .group_ov_hidden 	{	overflow:hidden}
 
 .tp-simpleresponsive img,
-.rev_slider img{
-	max-width:none !important;	
-	transition: none;
-	margin:0px;
-	padding:0px;
-	border:none;
+.rev_slider img {
+    max-width: none !important;
+    transition: none;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(10%);
+    background-color:#333;
 }
 
 .rev_slider .no-slides-text{

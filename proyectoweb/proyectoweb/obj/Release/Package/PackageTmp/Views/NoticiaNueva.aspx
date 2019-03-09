@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+   <%-- <form runat="server">--%>
     <div class="content">
         <div class="container-fluid">
             <div class="header text-center">
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-</form>
+<%--</form>--%>
     <script src="../Content/assetsAdministracion/js/FileUpload.js"></script>
 
 </asp:Content>
