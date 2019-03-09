@@ -74,6 +74,9 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
 
                 JustificacionSemillero.Text = dt.Rows[0]["justif_grupo"].ToString();
             }
+
+            ImagenSemillero.Src = "../"+dt.Rows[0]["url_logo_grupo"].ToString();
+
             string hola ="dsadd";
         }
     }

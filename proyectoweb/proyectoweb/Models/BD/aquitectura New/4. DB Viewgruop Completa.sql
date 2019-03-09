@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versión del servidor:         5.7.21-log - MySQL Community Server (GPL)
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             9.5.0.5196
+-- HeidiSQL Versión:             10.1.0.5464
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -13,12 +13,10 @@
 
 
 -- Volcando estructura de base de datos para viewgroup3
-DROP DATABASE IF EXISTS `viewgroup3`;
 CREATE DATABASE IF NOT EXISTS `viewgroup3` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `viewgroup3`;
 
 -- Volcando estructura para tabla viewgroup3.actividad
-DROP TABLE IF EXISTS `actividad`;
 CREATE TABLE IF NOT EXISTS `actividad` (
   `id_Actividad` int(11) NOT NULL,
   `nom_actividad` varchar(255) DEFAULT NULL,
@@ -35,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `actividad` (
 /*!40000 ALTER TABLE `actividad` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.auditoria
-DROP TABLE IF EXISTS `auditoria`;
 CREATE TABLE IF NOT EXISTS `auditoria` (
   `id_auditoria` int(11) NOT NULL,
   `nom_grupo` varchar(45) DEFAULT NULL,
@@ -49,7 +46,6 @@ CREATE TABLE IF NOT EXISTS `auditoria` (
 /*!40000 ALTER TABLE `auditoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.categoria
-DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_Categoria` int(11) NOT NULL,
   `id_nom_categoria` varchar(45) DEFAULT NULL,
@@ -62,7 +58,6 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.facultad
-DROP TABLE IF EXISTS `facultad`;
 CREATE TABLE IF NOT EXISTS `facultad` (
   `id_facultad` int(11) NOT NULL,
   `nom_facultad` varchar(45) DEFAULT NULL,
@@ -77,7 +72,6 @@ REPLACE INTO `facultad` (`id_facultad`, `nom_facultad`) VALUES
 /*!40000 ALTER TABLE `facultad` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest
-DROP TABLE IF EXISTS `grupo_invest`;
 CREATE TABLE IF NOT EXISTS `grupo_invest` (
   `id_grupo_invest` int(11) NOT NULL,
   `nom_grupo` varchar(255) DEFAULT NULL,
@@ -107,13 +101,12 @@ REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `tel
 	(111, 'Giecom', NULL, NULL, NULL, '../imagenes/grupos/giecom.jpg', 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', '', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', NULL, 1),
 	(112, 'Alecout', NULL, NULL, NULL, '(NULL)', 1, '', 'crear contador de alevinos', '', '', '', '', 111, 1),
 	(113, 'Giecom Semillero', NULL, NULL, NULL, '../imagenes/semilleros/giecom.jpg', 1, '', '', '', '', '', '', 111, 1),
-	(117, 'ECQ', 'quimica', 'asdad', 'asdsadasd', '../imagenes/grupos/quimica.png', 1, 'Estrategias Computacionales en Química', '', 'La misión del grupo de investigación ¿Estrategias Computacionales en Química¿ es ampliar el conocimiento sobre los sistemas químicos empleando simulaciones computacionales. El grupo promueve la formación de talento humano con la capacidad de emplear los modelos computacionales modernos y desarrollar nuevas metodologías teóricas. Los proyectos de investigación están enfocados en proponer, predecir, analizar y aplicar las propiedades físicas, químicas y biológicas de compuestos químicos de interés regional, nacional o mundial.', 'Para el año 2020 nuestro grupo se habrá consolidado como uno de los grupos líderes en Colombia en el área de la química computacional. Contará con un amplio número de estudiantes de pregrado y posgrado. Los proyectos realizados por el grupo estarán estrechamente relacionados con estudios experimentales de punta, en el marco de colaboraciones interdisciplinares.', '', '', NULL, 4),
-	(118, 'ESTRATEGÍAS COMPUTACIONALES ', NULL, NULL, NULL, '../imagenes/semilleros/quimica.png', 1, '', 'El semillero de investigación Estrategias Computacionales a puesto atención a los problemas de la región amazónica intentando brindar soluciones mediante la utilización de herramienta informáticas propias de la química, los cuales en la mayoría son libre acceso, generando propuesta de de investigación de bahjo costos de financiación pero de gran interés para la región amazónica.', 'El semillero de investigación Estrategias Computacionales, buscamos la generación de nuevos conocimientos utilizando una gran variedad de herramientas computacionales de libre acceso que pueden ser de gran utilidad para la predicción de las propiedades físicas y químicas de compuestos desconocidos o difíciles de caracterizar experimentalmente, así como el análisis de las propiedades físicas y químicas de compuestos existentes, interpretando información experimental o prediciendo propiedades aún no determinadas', 'El semillero Estrategias Computacionales familiarizar a sus nuevos integrantes con las herramientas computaciones de interés químico y corroborando los resultados teóricos obtenidos con los datos experimentales reportados en la literatura. Actualmente nuestro semillero está enfocado en el estudio de la resistencia del vector del dengue, chicunguya y Zica, Aedes aegyty, utilizando para ello tanto herramientas experimentales como teóricas. Esperando obtener resultados que puedan ser de utilidad para la solución de los problemas de salud pública.', '', '', 117, 4),
-	(121, 'Semillero de programacion', NULL, NULL, NULL, '../imagenes/semilleros/semillero_programacion.png', 1, '', 'Elevar el nivel de algoritmia ', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', '', 111, 1);
+	(117, 'ECQ', NULL, NULL, NULL, '../imagenes/grupos/quimica.png', 1, 'Estrategias Computacionales en Química', '', 'La misión del grupo de investigación ¿Estrategias Computacionales en Química¿ es ampliar el conocimiento sobre los sistemas químicos empleando simulaciones computacionales. El grupo promueve la formación de talento humano con la capacidad de emplear los modelos computacionales modernos y desarrollar nuevas metodologías teóricas. Los proyectos de investigación están enfocados en proponer, predecir, analizar y aplicar las propiedades físicas, químicas y biológicas de compuestos químicos de interés regional, nacional o mundial.', 'Para el año 2020 nuestro grupo se habrá consolidado como uno de los grupos líderes en Colombia en el área de la química computacional. Contará con un amplio número de estudiantes de pregrado y posgrado. Los proyectos realizados por el grupo estarán estrechamente relacionados con estudios experimentales de punta, en el marco de colaboraciones interdisciplinares.', '', '', NULL, 4),
+	(118, 'ESTRATEGÍAS COMPUTACIONALES ', NULL, NULL, NULL, '../imagenes/semilleros/quimica.png', 1, '', 'El semillero de investigación Estrategias Computacionales a puesto atención a los problemas de la región amazónica intentando brindar soluciones mediante la utilización de herramienta informáticas propias de la química, los cuales en la mayoría son libre acceso, generando propuesta de de investigación de bahjo costos de financiación pero de gran interés para la región amazónica.', 'El semillero de investigación Estrategias Computacionales, buscamos la generación de nuevos conocimientos utilizando una gran variedad de herramientas computacionales de libre acceso que pueden ser de gran utilidad para la predicción de las propiedades físicas y químicas de compuestos desconocidos o difíciles de caracterizar experimentalmente, así como el análisis de las propiedades físicas y químicas de compuestos existentes, interpretando información experimental o prediciendo propiedades aún no determinadas', 'El semillero Estrategias Computacionales familiarizar a sus nuevos integrantes con las herramientas computaciones de interés químico y corroborando los resultados teóricos obtenidos con los datos experimentales reportados en la literatura. Actualmente nuestro semillero está enfocado en el estudio de la resistencia del vector del dengue, chicunguya y Zica, Aedes aegyty, utilizando para ello tanto herramientas experimentales como teóricas. Esperando obtener resultados que puedan ser de utilidad para la solución de los problemas de salud pública.', '', 'fdssafsddfssdfsdf', 117, 4),
+	(121, 'Semillero de programacion', NULL, NULL, NULL, '../imagenes/semilleros/Sprogramacion.png', 1, '', 'Elevar el nivel de algoritmia ', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', '', 111, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest_has_usuario
-DROP TABLE IF EXISTS `grupo_invest_has_usuario`;
 CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   `pkf_id_grupo_invest` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -132,26 +125,25 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
 -- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~16 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
 REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
-	(111, 10, '2019-03-04', 1, 1),
-	(112, 11, '2019-03-04', 2, 1),
-	(112, 12, '2019-03-04', 2, 1),
-	(112, 13, '2019-03-04', 2, 0),
-	(112, 14, '2019-03-04', 2, 1),
-	(112, 24, '2019-03-04', 2, 1),
-	(113, 11, '2019-03-04', 2, 1),
-	(113, 14, '2019-03-04', 2, 1),
-	(117, 15, '2019-03-07', 1, 1),
-	(118, 16, '2019-03-07', 2, 1),
-	(118, 17, '2019-03-07', 2, 1),
-	(118, 18, '2019-03-07', 2, 1),
-	(118, 19, '2019-03-07', 2, 1),
-	(118, 24, '2019-03-07', 2, 1),
-	(121, 12, '2019-03-04', 2, 1),
-	(121, 14, '2019-03-04', 2, 1);
+	(111, 10, '2019-03-08', 1, 1),
+	(112, 11, '2019-03-08', 2, 1),
+	(112, 12, '2019-03-08', 2, 1),
+	(112, 13, '2019-03-08', 2, 1),
+	(112, 14, '2019-03-08', 2, 1),
+	(112, 24, '2019-03-08', 2, 1),
+	(113, 11, '2019-03-08', 2, 1),
+	(113, 14, '2019-03-08', 2, 1),
+	(117, 15, '2019-03-08', 1, 1),
+	(118, 16, '2019-03-08', 2, 1),
+	(118, 17, '2019-03-08', 2, 1),
+	(118, 18, '2019-03-08', 2, 1),
+	(118, 19, '2019-03-08', 2, 1),
+	(118, 24, '2019-03-08', 2, 1),
+	(121, 12, '2019-03-08', 2, 1),
+	(121, 14, '2019-03-08', 2, 1);
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades
-DROP TABLE IF EXISTS `habilidades`;
 CREATE TABLE IF NOT EXISTS `habilidades` (
   `id_Habilidades` int(11) NOT NULL,
   `nom_Habili` varchar(45) DEFAULT NULL,
@@ -164,7 +156,6 @@ CREATE TABLE IF NOT EXISTS `habilidades` (
 /*!40000 ALTER TABLE `habilidades` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades_has_usuario
-DROP TABLE IF EXISTS `habilidades_has_usuario`;
 CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
   `pkf_id_Habilidades` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -181,7 +172,6 @@ CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
 /*!40000 ALTER TABLE `habilidades_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.menu
-DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
   `id_menu` int(11) NOT NULL,
   `nom_menu` varchar(45) DEFAULT NULL,
@@ -212,14 +202,13 @@ REPLACE INTO `menu` (`id_menu`, `nom_menu`, `id_menu_padre`, `url_pagina`, `icon
 	(14, 'Crear Actividad', '12', NULL, 'date_range ', NULL, '1'),
 	(15, 'Modificar Actividad', '12', NULL, 'grid_on', NULL, NULL),
 	(16, 'Eliminar Actividad ', '12', NULL, 'grid_on', NULL, NULL),
-	(17, 'Reporte', NULL, NULL, 'grid_on', 'reporte interno de los grupos', 'null'),
+	(17, 'Reporte', NULL, NULL, 'grid_on', 'reporte interno de los grupos', '1'),
 	(18, 'Grupos', NULL, NULL, 'grid_on', NULL, NULL),
 	(19, 'Pagina', '2', NULL, 'grid_on', 'consulta pagina 1', NULL),
 	(20, 'Reporte de grupos', NULL, NULL, 'grid_on', 'super administrador', NULL);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.pagina_propia
-DROP TABLE IF EXISTS `pagina_propia`;
 CREATE TABLE IF NOT EXISTS `pagina_propia` (
   `id_Pagina Propia` int(11) NOT NULL,
   `Nom_grupo` varchar(800) DEFAULT NULL,
@@ -231,14 +220,13 @@ CREATE TABLE IF NOT EXISTS `pagina_propia` (
   PRIMARY KEY (`id_Pagina Propia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_propia: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_propia: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_propia` DISABLE KEYS */;
 REPLACE INTO `pagina_propia` (`id_Pagina Propia`, `Nom_grupo`, `Contenido`, `Creadores`, `Acredicimiento`, `Logo`, `descrip`) VALUES
 	(666, 'Viewgroup', 'ViewGroup es una plataforma para la gestiòn de grupos de investigaciòn en la universidad de la Amazonia, en esta plataforma los coordinadores de cada grupo pueden crear y publicar la pagina web del mismo, publicar noticias, crear actividades y demas ingresando unos pequeños datos, de esta manera cualquier persona puede buede visualizar la pagina web una vez este publicada en nuestra plataforma con solo presioar clic al boton visitar del card del grupo de investigacion.', 'Juan Pablo Murcia \r\nBrayane Esneider Alvarez Valencia ', NULL, '../../Content/assetsLogin/img/bg0.jpg', 'Software para la vizualizacion de grupos de investigación de la Universidad de la Amazonia');
 /*!40000 ALTER TABLE `pagina_propia` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.pagina_web
-DROP TABLE IF EXISTS `pagina_web`;
 CREATE TABLE IF NOT EXISTS `pagina_web` (
   `id_pagina` int(11) NOT NULL,
   `url_pagina` varchar(255) DEFAULT NULL,
@@ -256,11 +244,12 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
 /*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
 REPLACE INTO `pagina_web` (`id_pagina`, `url_pagina`, `fk_id_plantilla`, `grupo_invest_id_grupo_invest`, `estado_pag`) VALUES
 	(1, NULL, 1, 111, 1),
-	(2, NULL, 1, 117, 1);
+	(2, NULL, 1, 111, 1),
+	(3, NULL, 1, 111, 1),
+	(4, NULL, 1, 117, 1);
 /*!40000 ALTER TABLE `pagina_web` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.plantilla
-DROP TABLE IF EXISTS `plantilla`;
 CREATE TABLE IF NOT EXISTS `plantilla` (
   `id_plantilla` int(11) NOT NULL,
   `nom_plantilla` varchar(255) DEFAULT NULL,
@@ -268,14 +257,13 @@ CREATE TABLE IF NOT EXISTS `plantilla` (
   PRIMARY KEY (`id_plantilla`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.plantilla: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.plantilla: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `plantilla` DISABLE KEYS */;
 REPLACE INTO `plantilla` (`id_plantilla`, `nom_plantilla`, `url_imagen`) VALUES
 	(1, 'Heli', NULL);
 /*!40000 ALTER TABLE `plantilla` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.programa
-DROP TABLE IF EXISTS `programa`;
 CREATE TABLE IF NOT EXISTS `programa` (
   `id_programa` int(11) NOT NULL,
   `nom_programa` varchar(45) DEFAULT NULL,
@@ -288,14 +276,13 @@ CREATE TABLE IF NOT EXISTS `programa` (
 -- Volcando datos para la tabla viewgroup3.programa: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `programa` DISABLE KEYS */;
 REPLACE INTO `programa` (`id_programa`, `nom_programa`, `fk_id_facultad`) VALUES
-	(1, 'Sistemas', 1),
-	(2, 'Agrocologica', 1),
-	(3, 'Alimento', 1),
+	(1, 'Ingenieria de Sistemas', 1),
+	(2, 'Ingenieria de Agrocologica', 1),
+	(3, 'Ingenieria de Alimento', 1),
 	(4, 'Quimica', 2);
 /*!40000 ALTER TABLE `programa` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto
-DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_produc` int(11) NOT NULL,
   `nom_proyecto` varchar(600) DEFAULT NULL,
@@ -314,25 +301,24 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
 REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
 	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
 	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
-	(22, 'Estacion Meteriologica', NULL, 1, 111, 'fdsafdsf', '~/Content/imgProyecto/dfcvaewfa.png'),
+	(22, 'Estacion Meteriologica', NULL, 1, 111, 'fdafddffds', '~/Content/imgProyecto/dasdasd.png'),
 	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
 	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
 	(25, 'MDD', NULL, 0, 111, NULL, NULL),
-	(26, 'Visibilidad', NULL, 1, 111, 'avjsdijfoijasdf', '~/Content/imgProyecto/dasdasd.png'),
+	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
 	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
 	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
-	(29, 'Teletrabajo', NULL, 1, 111, 'dsfdsfsdfdssfdsdsdfsdfdfs', '~/Content/imgProyecto/fsfadfsdf.png'),
+	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
 	(34, ' Estudio computacional del espectro UV-Vis de moléculas orgánicas conjugadas con posibles aplicaciones en celdas solares orgánicas ', NULL, 0, 117, NULL, NULL),
 	(35, 'Investigación, desarrollo e innovación: Desarrollo de sensores potenciométricos basados en terpiridinas', NULL, 0, 117, NULL, NULL),
 	(36, 'Estudio teórico del espectro UV-Vis de moléculas orgánicas derivadas del diestirilbenceno ', NULL, 0, 117, NULL, NULL),
-	(37, 'Diseño de compuestos potencialmente activos frente a la enfermedad de Chagas por medio de un análisis de la relación estructura actividad (QSAR) ', NULL, 1, 117, 'Molecula de dopamina bein chida no?', '~/Content/imgProyecto/gettyimages-461942643-170667a.jpg'),
-	(38, ' Evaluación teórica de la resistencia del Aedes aegypti frente a distintos insecticidas por medio de métodos mecano-cuánticos de tipo ab-initio y del teoría del funcional de la densidad (DFT) ', NULL, 1, 117, 'enzima de varias enzima', '~/Content/imgProyecto/enzimas-825x510.jpg'),
-	(39, 'Determinación del origen del café por medio de espectroscopía infrarroja ', NULL, 1, 117, 'Se supone que eso es es nuectro ADN.... de Mutante oooh', '~/Content/imgProyecto/Las-enzimas1-750x500.jpg'),
+	(37, 'Diseño de compuestos potencialmente activos frente a la enfermedad de Chagas por medio de un análisis de la relación estructura actividad (QSAR) ', NULL, 1, 117, 'ey esto no es aqui', '~/Content/imgProyecto/images.png'),
+	(38, ' Evaluación teórica de la resistencia del Aedes aegypti frente a distintos insecticidas por medio de métodos mecano-cuánticos de tipo ab-initio y del teoría del funcional de la densidad (DFT) ', NULL, 1, 117, 'fsafsdf', '~/Content/imgProyecto/LogoRqSoft.png'),
+	(39, 'Determinación del origen del café por medio de espectroscopía infrarroja ', NULL, 1, 117, NULL, NULL),
 	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto_has_usuario
-DROP TABLE IF EXISTS `proyecto_has_usuario`;
 CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   `pkf_id_proyecto` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -344,38 +330,36 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~25 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~24 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
 REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
-	(20, 11, '2019-03-04', 1),
-	(20, 13, '2019-03-04', 0),
-	(21, 13, '2019-03-04', 0),
-	(22, 11, '2019-03-04', 1),
-	(25, 14, '2019-03-04', 1),
-	(26, 14, '2019-03-04', 1),
-	(27, 24, '2019-03-04', 1),
-	(28, 24, '2019-03-04', 1),
-	(29, 24, '2019-03-04', 1),
-	(34, 18, '2019-03-07', 1),
-	(34, 19, '2019-03-07', 1),
-	(34, 24, '2019-03-07', 1),
-	(35, 18, '2019-03-07', 1),
-	(35, 19, '2019-03-07', 1),
-	(36, 18, '2019-03-07', 1),
-	(36, 19, '2019-03-07', 1),
-	(37, 16, '2019-03-07', 1),
-	(37, 18, '2019-03-07', 1),
-	(37, 19, '2019-03-07', 1),
-	(38, 16, '2019-03-07', 1),
-	(38, 18, '2019-03-07', 1),
-	(39, 16, '2019-03-07', 1),
-	(39, 17, '2019-03-07', 1),
-	(39, 18, '2019-03-07', 1),
-	(40, 24, '2019-03-05', 1);
+	(20, 11, '2019-03-08', 1),
+	(20, 13, '2019-03-08', 1),
+	(21, 13, '2019-03-08', 1),
+	(22, 11, '2019-03-08', 1),
+	(25, 14, '2019-03-08', 1),
+	(26, 14, '2019-03-08', 1),
+	(27, 24, '2019-03-08', 1),
+	(28, 24, '2019-03-08', 1),
+	(29, 24, '2019-03-08', 1),
+	(34, 18, '2019-03-08', 1),
+	(34, 19, '2019-03-08', 1),
+	(34, 24, '2019-03-08', 1),
+	(35, 18, '2019-03-08', 1),
+	(35, 19, '2019-03-08', 1),
+	(36, 18, '2019-03-08', 1),
+	(36, 19, '2019-03-08', 1),
+	(37, 16, '2019-03-08', 1),
+	(37, 18, '2019-03-08', 1),
+	(37, 19, '2019-03-08', 1),
+	(38, 16, '2019-03-08', 1),
+	(38, 18, '2019-03-08', 1),
+	(39, 16, '2019-03-08', 1),
+	(39, 17, '2019-03-08', 1),
+	(39, 18, '2019-03-08', 1);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
-DROP TABLE IF EXISTS `soporte`;
 CREATE TABLE IF NOT EXISTS `soporte` (
   `id_soporte` int(11) NOT NULL,
   `url_imagene` varchar(255) DEFAULT NULL,
@@ -392,19 +376,11 @@ CREATE TABLE IF NOT EXISTS `soporte` (
   CONSTRAINT `fk_soporte_Categoria1` FOREIGN KEY (`Categoria_id_Categoria`) REFERENCES `categoria` (`id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.soporte: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.soporte: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `soporte` DISABLE KEYS */;
-REPLACE INTO `soporte` (`id_soporte`, `url_imagene`, `titulo_soporte`, `descrip_soperte`, `estado_soporte`, `Fecha_publica`, `Categoria_id_Categoria`, `fk_proyecto`) VALUES
-	(6, '~/Content/Soporte/dasdasd.png', 'Parte Electronica', 'se observa una bajkljdfklskfak, donde se conectara con una pantallita mas mela wey', '1', '2019-03-05', NULL, 28),
-	(7, '~/Content/Soporte/dasacvcvsd.jpg', 'Alevinos ', 'pescaditos dsfdffdfds pescaditos  fsdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescaditos sdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescaditos sdfsdf pescaditos dsfdffdfds pescaditos  pescaditos dsfdffdfds pescadito', '1', '2019-01-05', NULL, 28),
-	(8, '~/Content/Soporte/vxcvcxvasdad.png', 'Visibilidad de la vista Bien chida', 'pero mira que mona esta ', '1', '2019-02-05', NULL, 26),
-	(9, '~/Content/Soporte/250px-DNA_Repair.jpg', 'Eso es una CELULA, no es un celular e.e ', 'bonita imagen no?', '1', '2019-03-07', NULL, 37),
-	(10, '~/Content/Soporte/conjunto-de-enzimas.jpg', 'Fase de Enzaimas', 'En esta fase se puede observar que hay como mínimo 12 enzima de un  entre el otro ', '1', '2019-03-07', NULL, 39),
-	(11, '~/Content/Soporte/istockphoto-693002858-1024x1024.jpg', 'Kawai', 'imagen Kawaiii xq estoy tranochado', '1', '2019-03-07', NULL, 39);
 /*!40000 ALTER TABLE `soporte` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_has_menu
-DROP TABLE IF EXISTS `tipo_has_menu`;
 CREATE TABLE IF NOT EXISTS `tipo_has_menu` (
   `pk_fk_tipo_usuario` int(11) NOT NULL,
   `pk_fk_menu` int(11) NOT NULL,
@@ -461,7 +437,6 @@ REPLACE INTO `tipo_has_menu` (`pk_fk_tipo_usuario`, `pk_fk_menu`, `fecha_menu`) 
 /*!40000 ALTER TABLE `tipo_has_menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_usuario
-DROP TABLE IF EXISTS `tipo_usuario`;
 CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_rol` int(11) NOT NULL,
   `nom_rol` varchar(45) DEFAULT NULL,
@@ -478,7 +453,6 @@ REPLACE INTO `tipo_usuario` (`id_rol`, `nom_rol`) VALUES
 /*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.usuario
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int(11) NOT NULL,
   `nom_usuario` varchar(255) DEFAULT NULL,
@@ -494,20 +468,19 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`, `fk_programa`) VALUES
 	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co', 1),
-	(11, 'Juan camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co', 1),
+	(11, 'antonio', '../imagenes/imagen_perfil/1 - copia (1).png', 'a.leal@udla.edu.co', 1),
 	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co', 1),
-	(13, 'johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johan@udla.edu.co', 3),
-	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co', 3),
+	(13, 'Johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johant@udla.edu.co', 1),
+	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co', 1),
 	(15, 'Doctor Quimico', '../imagenes/imagen_perfil/1 - copia (1).png', 'd.doctor@udla.edu.co', 4),
-	(16, 'micht', '../imagenes/imagen_perfil/1 - copia (1).png', 'm.agilar@udla.edu.co', 1),
-	(17, 'alcalde', '../imagenes/imagen_perfil/1 - copia (1).png', 'j.alcalde@udla.edu.co', 1),
+	(16, 'micht', '../imagenes/imagen_perfil/micht.jpg', 'm.agilar@udla.edu.co', 4),
+	(17, 'alcalde', '../imagenes/imagen_perfil/1 - copia (1).png', 'j.alcalde@udla.edu.co', 4),
 	(18, 'quimico', '../imagenes/imagen_perfil/1 - copia (1).png', 'c.doctors@udla.edu.co', 4),
 	(19, 'laura camila ', '../imagenes/imagen_perfil/1 - copia (1).png', 'c.laura@udla.edu.co', 4),
 	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co', 4);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
-DROP VIEW IF EXISTS `view_pagina_propia`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_pagina_propia` (
 	`Nom_grupo` VARCHAR(800) NULL COLLATE 'utf8_general_ci',
@@ -518,7 +491,6 @@ CREATE TABLE `view_pagina_propia` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista viewgroup3.view_pag_grupo
-DROP VIEW IF EXISTS `view_pag_grupo`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_pag_grupo` (
 	`id_pagina` INT(11) NOT NULL,
@@ -530,25 +502,7 @@ CREATE TABLE `view_pag_grupo` (
 	`id_grupo_invest` INT(11) NOT NULL
 ) ENGINE=MyISAM;
 
--- Volcando estructura para procedimiento viewgroup3.Consultar_noticia
-DROP PROCEDURE IF EXISTS `Consultar_noticia`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Consultar_noticia`(
-	IN `id_noticia` INT
-
-)
-BEGIN
-
-select soporte.url_imagene,soporte.titulo_soporte,soporte.descrip_soperte,soporte.Fecha_publica, proyecto.nom_proyecto, soporte.id_soporte from soporte inner join
-proyecto on soporte.fk_proyecto= proyecto.id_produc
-where soporte.id_soporte=id_noticia;
-
-
-END//
-DELIMITER ;
-
 -- Volcando estructura para procedimiento viewgroup3.Consultar__Proyecto
-DROP PROCEDURE IF EXISTS `Consultar__Proyecto`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Consultar__Proyecto`(
 	IN `idProyecto` INT
@@ -562,7 +516,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
-DROP PROCEDURE IF EXISTS `proced_consultar_product_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
@@ -602,7 +555,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `id_grupo` INT
@@ -621,7 +573,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo_id
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_id`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
 BEGIN
@@ -634,7 +585,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_menu_view
-DROP PROCEDURE IF EXISTS `proced_consul_menu_view`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
@@ -657,7 +607,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_semillero
-DROP PROCEDURE IF EXISTS `proced_consul_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero`(
 	IN `pk_grupo` INT
@@ -685,7 +634,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_soport_pag_not
-DROP PROCEDURE IF EXISTS `proced_consul_soport_pag_not`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 	IN `id_grupo` INT
@@ -711,7 +659,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_user
-DROP PROCEDURE IF EXISTS `proced_consul_user`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 	IN `id_user` INT
@@ -741,23 +688,23 @@ else
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_consul_user_date
-DROP PROCEDURE IF EXISTS `proced_consul_user_date`;
+-- Volcando estructura para procedimiento viewgroup3.proced_consul_user_datos
 DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_date`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_datos`(
 	IN `id_user` INT
+
 
 )
 BEGIN
 
-SELECT usuario.id_usuario,  usuario.nom_usuario,usuario.url_foto_usuario from usuario
+SELECT usuario.id_usuario,  usuario.nom_usuario,usuario.url_foto_usuario, programa.nom_programa  from usuario
+inner join programa on programa.id_programa = usuario.fk_programa
 WHERE usuario.id_usuario=id_user;
 
 END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_grupo
-DROP PROCEDURE IF EXISTS `proced_create_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
 	IN `id_grupo` INT,
@@ -807,7 +754,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_pagina_web
-DROP PROCEDURE IF EXISTS `proced_create_pagina_web`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_pagina_web`(
 	IN `fk_grupo` INT,
@@ -838,7 +784,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_semillero
-DROP PROCEDURE IF EXISTS `proced_create_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
 	IN `id_semillero` INT,
@@ -869,7 +814,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_soport_not
-DROP PROCEDURE IF EXISTS `proced_create_soport_not`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_soport_not`(
 	IN `pk_fk_produc` INT,
@@ -898,7 +842,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_usuario
-DROP PROCEDURE IF EXISTS `proced_create_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_usuario`(
 	IN `id_user` INT,
@@ -924,7 +867,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_delete_soport
-DROP PROCEDURE IF EXISTS `proced_delete_soport`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_delete_soport`(
 	IN `id_soport` INT
@@ -939,7 +881,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_registra_produc
-DROP PROCEDURE IF EXISTS `proced_registra_produc`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_registra_produc`(
 	IN `nom_producto` VARCHAR(500),
@@ -968,31 +909,7 @@ insert into producto VALUES((num+1),nom_producto,fecha_de_produc,estado_produc,p
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.proced_report_Noticias
-DROP PROCEDURE IF EXISTS `proced_report_Noticias`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_report_Noticias`(
-	IN `id_grupo` INT
-
-)
-BEGIN
-select 
-soporte.id_soporte as Codigo ,
-soporte.titulo_soporte as Titulo,
-soporte.descrip_soperte as Detalle,
-soporte.Fecha_publica as Fecha,
- proyecto.nom_proyecto as Vinculado
-
-FROM soporte
-inner JOIN proyecto on proyecto.id_produc= soporte.fk_proyecto
-inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
-where soporte.estado_soporte=1 and grupo_invest.id_grupo_invest=id_grupo
-order  by soporte.Fecha_publica DESC;
-END//
-DELIMITER ;
-
 -- Volcando estructura para procedimiento viewgroup3.proced_update_grupo
-DROP PROCEDURE IF EXISTS `proced_update_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_grupo`(
 	IN `id_grupo` INT,
@@ -1030,7 +947,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_update_proyecto
-DROP PROCEDURE IF EXISTS `proced_update_proyecto`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_proyecto`(
 	IN `id_proyec` INT,
@@ -1046,7 +962,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_update_soport
-DROP PROCEDURE IF EXISTS `proced_update_soport`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_soport`(
 	IN `id_soport` INT,
@@ -1068,7 +983,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_view_consul_paginas
-DROP PROCEDURE IF EXISTS `proced_view_consul_paginas`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_view_consul_paginas`()
 BEGIN
@@ -1079,7 +993,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proyec_semi_trabajo_consul
-DROP PROCEDURE IF EXISTS `proyec_semi_trabajo_consul`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proyec_semi_trabajo_consul`(
 	IN `grupo_perte` INT,
@@ -1111,7 +1024,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced
-DROP PROCEDURE IF EXISTS `proye_consul_act_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced`(
 	IN `pk_grupo` INT
@@ -1182,7 +1094,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced_pag
-DROP PROCEDURE IF EXISTS `proye_consul_act_proced_pag`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced_pag`(
 	IN `pk_grupo` INT
@@ -1200,7 +1111,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_int_proced
-DROP PROCEDURE IF EXISTS `proye_consul_int_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_int_proced`(
 	IN `pk_grupo` INT
@@ -1222,7 +1132,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_crearte_proced
-DROP PROCEDURE IF EXISTS `proye_crearte_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_crearte_proced`(
 	IN `id_proyec` INT,
@@ -1244,7 +1153,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_inser_enlases_usuario
-DROP PROCEDURE IF EXISTS `proye_inser_enlases_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_inser_enlases_usuario`(
 	IN `tipo` VARCHAR(50),
@@ -1274,7 +1182,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.p_consul_miebros_total
-DROP PROCEDURE IF EXISTS `p_consul_miebros_total`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miebros_total`(
 	IN `pk_grupo` INT
@@ -1309,7 +1216,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.p_consul_miembro_pag
-DROP PROCEDURE IF EXISTS `p_consul_miembro_pag`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miembro_pag`(
 	IN `pk_grupo` INT
@@ -1355,35 +1261,7 @@ grupo_invest.id_grupo_invest = pk_grupo) and has_p.estado=1;
 END//
 DELIMITER ;
 
--- Volcando estructura para procedimiento viewgroup3.Reporte_General
-DROP PROCEDURE IF EXISTS `Reporte_General`;
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Reporte_General`()
-BEGIN
-select 
-g.nom_grupo as Grupo,
-
-proyecto.nom_proyecto as Vinculado,
-soporte.id_soporte as Codigo ,
-soporte.titulo_soporte as Noticia,
-soporte.descrip_soperte as Detalle,
-soporte.Fecha_publica as Fecha
-
-
-FROM grupo_invest g
-
-inner join proyecto on proyecto.fk_id_grupo_invest=g.id_grupo_invest
-
-inner JOIN soporte on proyecto.id_produc= soporte.fk_proyecto
-
-where soporte.estado_soporte=1 
-order  by soporte.Fecha_publica DESC;
-
-END//
-DELIMITER ;
-
 -- Volcando estructura para procedimiento viewgroup3.update_proye_enlases_usuario
-DROP PROCEDURE IF EXISTS `update_proye_enlases_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `update_proye_enlases_usuario`(
 	IN `id_user` INT,
@@ -1412,7 +1290,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.vista_apropia
-DROP PROCEDURE IF EXISTS `vista_apropia`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_apropia`()
 BEGIN
@@ -1423,7 +1300,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.vista_pagina_propia
-DROP PROCEDURE IF EXISTS `vista_pagina_propia`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_pagina_propia`(
 	IN `nada` INT
@@ -1436,13 +1312,11 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
-DROP VIEW IF EXISTS `view_pagina_propia`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_pagina_propia`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pagina_propia` AS select `pagina_propia`.`Nom_grupo` AS `Nom_grupo`,`pagina_propia`.`Contenido` AS `Contenido`,`pagina_propia`.`Creadores` AS `Creadores`,`pagina_propia`.`Acredicimiento` AS `Acredicimiento`,`pagina_propia`.`Logo` AS `Logo` from `pagina_propia`;
 
 -- Volcando estructura para vista viewgroup3.view_pag_grupo
-DROP VIEW IF EXISTS `view_pag_grupo`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_pag_grupo`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pag_grupo` AS select `pagina_web`.`id_pagina` AS `id_pagina`,`pagina_web`.`fk_id_plantilla` AS `fk_id_plantilla`,`pagina_web`.`grupo_invest_id_grupo_invest` AS `id_grupo`,`grupo_invest`.`nom_grupo` AS `nom_grupo`,concat('../',`grupo_invest`.`url_logo_grupo`) AS `url_logo_grupo`,`grupo_invest`.`siglas_signif_grupo` AS `siglas_signif_grupo`,`grupo_invest`.`id_grupo_invest` AS `id_grupo_invest` from ((`plantilla` join `pagina_web` on((`pagina_web`.`fk_id_plantilla` = `plantilla`.`id_plantilla`))) join `grupo_invest` on((`pagina_web`.`grupo_invest_id_grupo_invest` = `grupo_invest`.`id_grupo_invest`))) where (`pagina_web`.`estado_pag` = 1) order by `pagina_web`.`id_pagina` desc;

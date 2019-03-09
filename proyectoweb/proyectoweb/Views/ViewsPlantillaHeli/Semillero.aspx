@@ -16,7 +16,7 @@
 										<li data-index="rs-21"  >
 											
 											<!-- MAIN IMAGE -->
-											<img src="../../Content/assetsLogin/img/bg8.jpg" alt="" title="" width="1920" height="1100" data-lazyload="images/slider/slider_24.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="150" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" />
+											<img src="../../Content/assetsLogin/img/bg8.jpg" alt=""   ID="ImagenSemillero" runat="server"  title="" width="1920" height="1100" data-lazyload="images/slider/slider_24.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="150" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" />
 
 										</li>
 									 </ul>
@@ -51,8 +51,8 @@
 								<div class="bg-dark p-5 mb-5">
 									<h3 class="fz-20 fw-normal white">Vision</h3>
 
-                                     <asp:Label ID="VisionSemillero" runat="server"></asp:Label>
-									<p id="Vision_Semillero" class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                     
+									<p id="Vision_Semillero" class="white">   <asp:Label ID="VisionSemillero" runat="server"></asp:Label>       </p>
 								</div>
 							</div>
 						</div>

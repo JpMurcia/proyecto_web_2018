@@ -256,7 +256,7 @@
 
                                                         <th>Nombre</th>
                                                         <th class="text-right">Propiedades</th>
-                                                        <th class="text-right">Publico</th>
+                                                        <%--<th class="text-right">Publico</th>--%>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -290,13 +290,13 @@
 
                                                                 </td>
 
-                                                                <td class="td-actions text-right ">
+                                                               <%-- <td class="td-actions text-right ">
                                                                     <div class="togglebutton">
                                                                         <label>
                                                                             <input type="checkbox" id="s<%#Eval("nom_usuario") %>" checked="" value="1">
                                                                         </label>
                                                                     </div>
-                                                                </td>
+                                                                </td>--%>
                                                             </tr>
                                                         </ItemTemplate>
                                                     </asp:Repeater>
@@ -470,15 +470,20 @@
                                 <div class="info info-horizontal">
                                     <div class="description">
                                 <%--        <asp:TextBox runat="server"  ID="nombre_miembro"></asp:TextBox>--%>
-                                        <h4 class="info-title"><asp:Label  ID="nom_miebro" runat="server" /> </h4>
-                                        <h3 class="info-text"><asp:Label  ID="programa_miembro" runat="server" /> </h3>
+                                        <h3 class="info-title"><asp:Label  ID="nom_miebro" runat="server" /> </h3>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-5 mr-auto">
+                                <h5 class="info-text">Programa:   <asp:Label  ID="programa_miembro" runat="server" /> </h5>
                                 <table class="table">
                                     <thead>
+
+                                        
                                         <tr>
+                                            
+                                           
                                             <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="">
                                             </asp:TextBox>
                                             <p id="hola"></p>
@@ -568,7 +573,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <asp:LinkButton runat="server" type="button" CssClass="btn btn-primary" ID="Guardar_proyec" OnClick="Guardar_proyec_Click" >Save changes</asp:LinkButton>
+                         <asp:Button type="button" CssClass="btn btn-primary" OnClick="Guardar_proyec_Click" runat="server" ID="Button1" Text="Guardar Cambios" />
+       <%--                 <asp:LinkButton runat="server" type="button" CssClass="btn btn-primary" ID="Guardar_proyec" OnClick="Guardar_proyec_Click" >Save changes</asp:LinkButton>--%>
                     </div>
                 </div>
             </div>
