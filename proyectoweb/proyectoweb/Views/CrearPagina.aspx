@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/administracion.Master" AutoEventWireup="true" CodeBehind="CrearPagina.aspx.cs" Inherits="proyectoweb.Views.principal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/administracion.Master" AutoEventWireup="true" CodeBehind="CrearPagina.aspx.cs" Inherits="proyectoweb.Views.CrearPagina" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -18,8 +18,8 @@
                                 <h3 class="card-title" align="Center">Grupos de investigación</h3>
                             </div>
                             <div class="col-md-4 ml-auto mr-auto">
-                                <div class="card card-profile">
-                                    <div class="card-avatar">
+                                <div class="card card-profile" style="width: 300px; height: 400px">
+                                    <div class="card-header card-avatar ">
                                         <a href="#pablo">
                                        <%--     <asp:Image ID="Image1" runat="server" />--%>
                                          <%--    <img runat="server" id="imagenDeGrupo" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid" />--%>

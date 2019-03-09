@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace proyectoweb.Views
 {
-    public partial class principal : System.Web.UI.Page
+    public partial class CrearPagina : System.Web.UI.Page
     {
         grupo_investigacion grupoVG = new grupo_investigacion();
 
@@ -21,6 +21,23 @@ namespace proyectoweb.Views
 
 
         public void llenar() {
+
+
+
+            string hola = Session["url_logo"].ToString();
+
+            string hola2 = Session["tipo"].ToString();
+            //Session["tipo"] = b.fk_tipo_user;
+            //Session["grupo"] = grupoVG.grupo_nombre;
+            //Session["id_grupo"] = grupoVG.idGrupoInvestigacion;
+
+          //  Session["url_logo"] = grupoVG.urlLogo;
+
+            string hola3 = Session["grupo"].ToString();
+
+            imagenGrupo.Src = Session["url_logo"].ToString();
+
+            string hola4 = Session["tipo"].ToString(); 
 
           //  grupoVG.urlLogo = Session["url_logo"].ToString();
             //Image1.ImageUrl = Session["url_logo"].ToString();

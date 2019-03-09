@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeli/plantlillaHeli.Master" AutoEventWireup="true" CodeBehind="Miembros.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.Miembros" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeli/plantlillaHeli.Master"
+    AutoEventWireup="true" CodeBehind="Miembros.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.Miembros" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

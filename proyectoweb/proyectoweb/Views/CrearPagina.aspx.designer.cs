@@ -10,7 +10,7 @@
 namespace proyectoweb.Views {
     
     
-    public partial class principal {
+    public partial class CrearPagina {
         
         /// <summary>
         /// Control imagenGrupo.

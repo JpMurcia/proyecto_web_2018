@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="plantlillaHeli.master.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeli.plantlillaHeli" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="plantlillaHeli.master.cs"
+    Inherits="proyectoweb.Views.ViewsPlantillaHeli.plantlillaHeli" %>
 
 <!DOCTYPE html>
 
