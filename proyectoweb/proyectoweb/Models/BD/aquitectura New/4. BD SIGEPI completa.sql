@@ -13,12 +13,10 @@
 
 
 -- Volcando estructura de base de datos para sigepi
-DROP DATABASE IF EXISTS `sigepi`;
 CREATE DATABASE IF NOT EXISTS `sigepi` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `sigepi`;
 
 -- Volcando estructura para tabla sigepi.grupo_inve_semillero
-DROP TABLE IF EXISTS `grupo_inve_semillero`;
 CREATE TABLE IF NOT EXISTS `grupo_inve_semillero` (
   `id_grupo` int(11) NOT NULL,
   `nom_grupo` varchar(600) DEFAULT NULL,
@@ -51,7 +49,6 @@ REPLACE INTO `grupo_inve_semillero` (`id_grupo`, `nom_grupo`, `sigla_signif_grup
 /*!40000 ALTER TABLE `grupo_inve_semillero` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.integrante_has_grupo_inve_semillero
-DROP TABLE IF EXISTS `integrante_has_grupo_inve_semillero`;
 CREATE TABLE IF NOT EXISTS `integrante_has_grupo_inve_semillero` (
   `usuario_id_usuario` int(11) NOT NULL,
   `grupo_inve_semillero_id_grupo` int(11) NOT NULL,
@@ -88,7 +85,6 @@ REPLACE INTO `integrante_has_grupo_inve_semillero` (`usuario_id_usuario`, `grupo
 /*!40000 ALTER TABLE `integrante_has_grupo_inve_semillero` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.proyecto
-DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `nom_proyecto` varchar(500) DEFAULT NULL,
@@ -124,7 +120,6 @@ REPLACE INTO `proyecto` (`id_proyecto`, `nom_proyecto`, `fecha_proyecto`, `estad
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.proyecto_has_grupo_inve_semillero
-DROP TABLE IF EXISTS `proyecto_has_grupo_inve_semillero`;
 CREATE TABLE IF NOT EXISTS `proyecto_has_grupo_inve_semillero` (
   `proyecto_id_proyecto` int(11) NOT NULL,
   `grupo_inve_semillero_id_grupo` int(11) NOT NULL,
@@ -161,7 +156,6 @@ REPLACE INTO `proyecto_has_grupo_inve_semillero` (`proyecto_id_proyecto`, `grupo
 /*!40000 ALTER TABLE `proyecto_has_grupo_inve_semillero` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.tipo_usuario
-DROP TABLE IF EXISTS `tipo_usuario`;
 CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_tipo_usuario` int(11) NOT NULL,
   `nom_tipo_usuario` varchar(45) DEFAULT NULL,
@@ -177,7 +171,6 @@ REPLACE INTO `tipo_usuario` (`id_tipo_usuario`, `nom_tipo_usuario`) VALUES
 /*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.usuario
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int(11) NOT NULL,
   `email_usuario` varchar(45) NOT NULL,
@@ -216,7 +209,6 @@ REPLACE INTO `usuario` (`id_usuario`, `email_usuario`, `nom_usuario`, `contra_us
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla sigepi.usuario_has_proyecto
-DROP TABLE IF EXISTS `usuario_has_proyecto`;
 CREATE TABLE IF NOT EXISTS `usuario_has_proyecto` (
   `usuario_id_usuario` int(11) NOT NULL,
   `proyecto_id_proyecto` int(11) NOT NULL,
@@ -263,7 +255,6 @@ REPLACE INTO `usuario_has_proyecto` (`usuario_id_usuario`, `proyecto_id_proyecto
 /*!40000 ALTER TABLE `usuario_has_proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para vista sigepi.view_grupo_investi
-DROP VIEW IF EXISTS `view_grupo_investi`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_grupo_investi` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -277,7 +268,6 @@ CREATE TABLE `view_grupo_investi` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista sigepi.view_miembro_semillero
-DROP VIEW IF EXISTS `view_miembro_semillero`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_miembro_semillero` (
 	`nom_usuario` VARCHAR(45) NULL COLLATE 'utf8_general_ci',
@@ -285,7 +275,6 @@ CREATE TABLE `view_miembro_semillero` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista sigepi.view_miembro_x
-DROP VIEW IF EXISTS `view_miembro_x`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_miembro_x` (
 	`nom_usuario` VARCHAR(45) NULL COLLATE 'utf8_general_ci',
@@ -294,7 +283,6 @@ CREATE TABLE `view_miembro_x` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista sigepi.view_proyectos_x
-DROP VIEW IF EXISTS `view_proyectos_x`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_proyectos_x` (
 	`nom_proyecto` VARCHAR(500) NULL COLLATE 'utf8_general_ci',
@@ -302,7 +290,6 @@ CREATE TABLE `view_proyectos_x` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista sigepi.view_semilleros
-DROP VIEW IF EXISTS `view_semilleros`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_semilleros` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -316,7 +303,6 @@ CREATE TABLE `view_semilleros` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista sigepi.view_semillero_x
-DROP VIEW IF EXISTS `view_semillero_x`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_semillero_x` (
 	`nom_grupo` VARCHAR(600) NULL COLLATE 'utf8_general_ci',
@@ -330,7 +316,6 @@ CREATE TABLE `view_semillero_x` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `nombre` varchar(45)
@@ -365,7 +350,6 @@ end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_grupo_has_usu
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_has_usu`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_has_usu`(
 	IN `id_usuario` INT
@@ -384,7 +368,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_miembros_semi
-DROP PROCEDURE IF EXISTS `proced_consul_miembros_semi`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembros_semi`(
 	IN `nom_grupo` VARCHAR(500)
@@ -410,7 +393,6 @@ end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_miembro_simple
-DROP PROCEDURE IF EXISTS `proced_consul_miembro_simple`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_miembro_simple`(
 	IN `nom_grupo` VARCHAR(500)
@@ -436,7 +418,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_proyecto
-DROP PROCEDURE IF EXISTS `proced_consul_proyecto`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyecto`(
 	IN `id_grupo` INT
@@ -502,7 +483,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_proyec_act
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_act`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_act`(
 	IN `nombre` VARCHAR(500)
@@ -533,7 +513,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_proyec_inac
-DROP PROCEDURE IF EXISTS `proced_consul_proyec_inac`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proyec_inac`(
 	IN `nombre` VARCHAR(500)
@@ -564,7 +543,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_proye_user_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_proye_user_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_proye_user_grupo`(
 	IN `grupo_perte` VARCHAR(50),
@@ -585,7 +563,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_semilleros
-DROP PROCEDURE IF EXISTS `proced_consul_semilleros`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semilleros`(
 	IN `nombre` VARCHAR(50)
@@ -619,7 +596,6 @@ end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_semi_pag
-DROP PROCEDURE IF EXISTS `proced_consul_semi_pag`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semi_pag`(
 	IN `nombre` VARCHAR(500)
@@ -663,7 +639,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_consul_user_proye_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_user_proye_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_proye_grupo`(
 	IN `grupo_perte` INT,
@@ -693,7 +668,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.proced_validar_user
-DROP PROCEDURE IF EXISTS `proced_validar_user`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_validar_user`(
 	IN `email_usuari` varchar(45),
@@ -810,7 +784,6 @@ end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento sigepi.p_consul_grupo_perte
-DROP PROCEDURE IF EXISTS `p_consul_grupo_perte`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_grupo_perte`(
 	IN `id_usuario` INT
@@ -846,37 +819,31 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para vista sigepi.view_grupo_investi
-DROP VIEW IF EXISTS `view_grupo_investi`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_grupo_investi`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_grupo_investi` AS select `sigepi`.`grupo_inve_semillero`.`nom_grupo` AS `nom_grupo`,`sigepi`.`grupo_inve_semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`sigepi`.`grupo_inve_semillero`.`objetivo_grupo` AS `objetivo_grupo`,`sigepi`.`grupo_inve_semillero`.`programa_grupo` AS `programa_grupo`,`sigepi`.`grupo_inve_semillero`.`mision_grupo` AS `mision_grupo`,`sigepi`.`grupo_inve_semillero`.`vision_grupo` AS `vision_grupo`,`sigepi`.`grupo_inve_semillero`.`justif_grupo` AS `justif_grupo`,`sigepi`.`grupo_inve_semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from `sigepi`.`grupo_inve_semillero` where (`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_miembro_semillero
-DROP VIEW IF EXISTS `view_miembro_semillero`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_semillero`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_semillero` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`semillero`.`nom_grupo` AS `nom_grupo` from ((`sigepi`.`grupo_inve_semillero` `semillero` join `sigepi`.`integrante_has_grupo_inve_semillero` `integra` on((`integra`.`grupo_inve_semillero_id_grupo` = `semillero`.`id_grupo`))) join `sigepi`.`usuario` on((`sigepi`.`usuario`.`id_usuario` = `integra`.`usuario_id_usuario`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_miembro_x
-DROP VIEW IF EXISTS `view_miembro_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_miembro_x`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_miembro_x` AS select `sigepi`.`usuario`.`nom_usuario` AS `nom_usuario`,`sigepi`.`usuario`.`id_usuario` AS `id_usuario`,`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` AS `proyecto_id_proyecto` from (((`sigepi`.`usuario` join `sigepi`.`usuario_has_proyecto` on((`sigepi`.`usuario`.`id_usuario` = `sigepi`.`usuario_has_proyecto`.`usuario_id_usuario`))) join `sigepi`.`proyecto` on((`sigepi`.`usuario_has_proyecto`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`proyecto`.`id_proyecto` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto`))) where (`sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo` = 111);
 
 -- Volcando estructura para vista sigepi.view_proyectos_x
-DROP VIEW IF EXISTS `view_proyectos_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_proyectos_x`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_proyectos_x` AS select `sigepi`.`proyecto`.`nom_proyecto` AS `nom_proyecto`,`sigepi`.`proyecto`.`estado_proyecto` AS `estado_proyecto` from ((`sigepi`.`grupo_inve_semillero` join `sigepi`.`proyecto_has_grupo_inve_semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `sigepi`.`proyecto_has_grupo_inve_semillero`.`grupo_inve_semillero_id_grupo`))) join `sigepi`.`proyecto` on((`sigepi`.`proyecto_has_grupo_inve_semillero`.`proyecto_id_proyecto` = `sigepi`.`proyecto`.`id_proyecto`))) where (`sigepi`.`grupo_inve_semillero`.`nom_grupo` = 'giecom');
 
 -- Volcando estructura para vista sigepi.view_semilleros
-DROP VIEW IF EXISTS `view_semilleros`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semilleros`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semilleros` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where (`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`);
 
 -- Volcando estructura para vista sigepi.view_semillero_x
-DROP VIEW IF EXISTS `view_semillero_x`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_semillero_x`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `sigepi`.`view_semillero_x` AS select `semillero`.`nom_grupo` AS `nom_grupo`,`semillero`.`sigla_signif_grupo` AS `sigla_signif_grupo`,`semillero`.`objetivo_grupo` AS `objetivo_grupo`,`semillero`.`programa_grupo` AS `programa_grupo`,`semillero`.`mision_grupo` AS `mision_grupo`,`semillero`.`vision_grupo` AS `vision_grupo`,`semillero`.`justif_grupo` AS `justif_grupo`,`semillero`.`quien_somos_grupo` AS `quien_somos_grupo` from (`sigepi`.`grupo_inve_semillero` join `sigepi`.`grupo_inve_semillero` `semillero` on((`sigepi`.`grupo_inve_semillero`.`id_grupo` = `semillero`.`grupo_inve_semillero_id_grupo`))) where ((`semillero`.`id_grupo` <> `semillero`.`grupo_inve_semillero_id_grupo`) and (`semillero`.`grupo_inve_semillero_id_grupo` = 111));

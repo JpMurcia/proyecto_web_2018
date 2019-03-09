@@ -13,12 +13,10 @@
 
 
 -- Volcando estructura de base de datos para viewgroup3
-DROP DATABASE IF EXISTS `viewgroup3`;
 CREATE DATABASE IF NOT EXISTS `viewgroup3` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `viewgroup3`;
 
 -- Volcando estructura para tabla viewgroup3.actividad
-DROP TABLE IF EXISTS `actividad`;
 CREATE TABLE IF NOT EXISTS `actividad` (
   `id_Actividad` int(11) NOT NULL,
   `nom_actividad` varchar(255) DEFAULT NULL,
@@ -35,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `actividad` (
 /*!40000 ALTER TABLE `actividad` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.auditoria
-DROP TABLE IF EXISTS `auditoria`;
 CREATE TABLE IF NOT EXISTS `auditoria` (
   `id_auditoria` int(11) NOT NULL,
   `nom_grupo` varchar(45) DEFAULT NULL,
@@ -49,7 +46,6 @@ CREATE TABLE IF NOT EXISTS `auditoria` (
 /*!40000 ALTER TABLE `auditoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.categoria
-DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_Categoria` int(11) NOT NULL,
   `id_nom_categoria` varchar(45) DEFAULT NULL,
@@ -62,7 +58,6 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.facultad
-DROP TABLE IF EXISTS `facultad`;
 CREATE TABLE IF NOT EXISTS `facultad` (
   `id_facultad` int(11) NOT NULL,
   `nom_facultad` varchar(45) DEFAULT NULL,
@@ -77,7 +72,6 @@ REPLACE INTO `facultad` (`id_facultad`, `nom_facultad`) VALUES
 /*!40000 ALTER TABLE `facultad` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest
-DROP TABLE IF EXISTS `grupo_invest`;
 CREATE TABLE IF NOT EXISTS `grupo_invest` (
   `id_grupo_invest` int(11) NOT NULL,
   `nom_grupo` varchar(255) DEFAULT NULL,
@@ -101,12 +95,19 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
+REPLACE INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
+	(111, 'Giecom', NULL, NULL, NULL, '../imagenes/grupos/giecom.jpg', 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', '', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', NULL, 1),
+	(112, 'Alecout', NULL, NULL, NULL, '(NULL)', 1, '', 'crear contador de alevinos', '', '', '', '', 111, 1),
+	(113, 'Giecom Semillero', NULL, NULL, NULL, '../imagenes/semilleros/giecom.jpg', 1, '', '', '', '', '', '', 111, 1),
+	(114, 'Sara', NULL, NULL, NULL, '../imagenes/semilleros/sara.jpg', 1, '', '', '', '', '', '', 115, 1),
+	(115, 'GIIE', NULL, NULL, NULL, '../imagenes/grupos/GIIE.png', 1, 'GRUPO DE INVESTIGACION EN INFORMATICA EDUCATIVA', 'Construir el grupo de investigación encargado de liderar los procesos investigativos en el área de la informática educativa en la Universidad de la Amazonia, por medio del cual se generen resultados con claridad y pertinencia, representados en productos tales como publicaciones científicas, procesos de formación y trabajos de investigación.', 'Generar procesos de ciencia y tecnologia que contribuyan al desarrollo científico de la informática Educativa en la región Amazónica.', 'El grupo de investigación de desarrollará los elementos constitutivos en el área de la informática educativa de lineas de investigación de la Uniamazonia tales como: Educación Ambiental, Pedagogía y Didáctica, Administración y Educación, etc.', '', '', NULL, 1),
+	(120, 'PICARDIE', NULL, NULL, NULL, '../imagenes/semilleros/picardie.png', 1, 'Producir, Integrar, Compartir para Aprender con Recursos Didácticos E-learning', '', '', '', '', '', 115, 1),
+	(121, 'Semillero de programacion', NULL, NULL, NULL, '../imagenes/semilleros/Sprogramacion.png', 1, '', 'Elevar el nivel de algoritmia ', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', '', 111, 1);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.grupo_invest_has_usuario
-DROP TABLE IF EXISTS `grupo_invest_has_usuario`;
 CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   `pkf_id_grupo_invest` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -122,12 +123,27 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~16 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~15 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
+REPLACE INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
+	(111, 10, '2019-03-09', 1, 1),
+	(112, 11, '2019-03-09', 2, 1),
+	(112, 12, '2019-03-09', 2, 1),
+	(112, 13, '2019-03-09', 2, 1),
+	(112, 14, '2019-03-09', 2, 1),
+	(112, 24, '2019-03-09', 2, 1),
+	(113, 11, '2019-03-09', 2, 1),
+	(113, 14, '2019-03-09', 2, 1),
+	(114, 22, '2019-03-09', 2, 1),
+	(114, 23, '2019-03-09', 2, 1),
+	(114, 24, '2019-03-09', 2, 1),
+	(115, 20, '2019-03-09', 1, 1),
+	(120, 21, '2019-03-09', 2, 1),
+	(121, 12, '2019-03-09', 2, 1),
+	(121, 14, '2019-03-09', 2, 1);
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades
-DROP TABLE IF EXISTS `habilidades`;
 CREATE TABLE IF NOT EXISTS `habilidades` (
   `id_Habilidades` int(11) NOT NULL,
   `nom_Habili` varchar(45) DEFAULT NULL,
@@ -140,7 +156,6 @@ CREATE TABLE IF NOT EXISTS `habilidades` (
 /*!40000 ALTER TABLE `habilidades` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades_has_usuario
-DROP TABLE IF EXISTS `habilidades_has_usuario`;
 CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
   `pkf_id_Habilidades` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -157,7 +172,6 @@ CREATE TABLE IF NOT EXISTS `habilidades_has_usuario` (
 /*!40000 ALTER TABLE `habilidades_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.menu
-DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
   `id_menu` int(11) NOT NULL,
   `nom_menu` varchar(45) DEFAULT NULL,
@@ -195,7 +209,6 @@ REPLACE INTO `menu` (`id_menu`, `nom_menu`, `id_menu_padre`, `url_pagina`, `icon
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.pagina_propia
-DROP TABLE IF EXISTS `pagina_propia`;
 CREATE TABLE IF NOT EXISTS `pagina_propia` (
   `id_Pagina Propia` int(11) NOT NULL,
   `Nom_grupo` varchar(800) DEFAULT NULL,
@@ -214,7 +227,6 @@ REPLACE INTO `pagina_propia` (`id_Pagina Propia`, `Nom_grupo`, `Contenido`, `Cre
 /*!40000 ALTER TABLE `pagina_propia` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.pagina_web
-DROP TABLE IF EXISTS `pagina_web`;
 CREATE TABLE IF NOT EXISTS `pagina_web` (
   `id_pagina` int(11) NOT NULL,
   `url_pagina` varchar(255) DEFAULT NULL,
@@ -228,12 +240,11 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
   CONSTRAINT `fk_pagina_web_plantilla1` FOREIGN KEY (`fk_id_plantilla`) REFERENCES `plantilla` (`id_plantilla`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_web: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_web: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pagina_web` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.plantilla
-DROP TABLE IF EXISTS `plantilla`;
 CREATE TABLE IF NOT EXISTS `plantilla` (
   `id_plantilla` int(11) NOT NULL,
   `nom_plantilla` varchar(255) DEFAULT NULL,
@@ -248,7 +259,6 @@ REPLACE INTO `plantilla` (`id_plantilla`, `nom_plantilla`, `url_imagen`) VALUES
 /*!40000 ALTER TABLE `plantilla` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.programa
-DROP TABLE IF EXISTS `programa`;
 CREATE TABLE IF NOT EXISTS `programa` (
   `id_programa` int(11) NOT NULL,
   `nom_programa` varchar(45) DEFAULT NULL,
@@ -268,7 +278,6 @@ REPLACE INTO `programa` (`id_programa`, `nom_programa`, `fk_id_facultad`) VALUES
 /*!40000 ALTER TABLE `programa` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto
-DROP TABLE IF EXISTS `proyecto`;
 CREATE TABLE IF NOT EXISTS `proyecto` (
   `id_produc` int(11) NOT NULL,
   `nom_proyecto` varchar(600) DEFAULT NULL,
@@ -282,12 +291,27 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   CONSTRAINT `FK_proyecto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto: ~17 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto: ~15 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
+REPLACE INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
+	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
+	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
+	(22, 'Estacion Meteriologica', NULL, 1, 111, NULL, NULL),
+	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
+	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
+	(25, 'MDD', NULL, 0, 111, NULL, NULL),
+	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
+	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
+	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
+	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
+	(30, 'DESARROLLO DE PÁGINA WEB - URUKI EL MANANTIAL', NULL, 0, 115, NULL, NULL),
+	(31, 'Las TIC y Objetos Virtuales de Aprendizaje OVA, para facilitar el aprendizaje de una segunda lengua (Inglés). Proyecto de extensión en la comunidad del barrio Piedrahita en el sector Altos de Capri.', NULL, 0, 115, NULL, NULL),
+	(32, 'Tecnologías de la Información y la Comunicación para generación de cultura de paz a través del uso responsable del Internet y las redes sociales a niños y jóvenes.', NULL, 0, 115, NULL, NULL),
+	(33, 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 1, 115, NULL, NULL),
+	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto_has_usuario
-DROP TABLE IF EXISTS `proyecto_has_usuario`;
 CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   `pkf_id_proyecto` int(11) NOT NULL,
   `pkf_id_usuario` int(11) NOT NULL,
@@ -299,12 +323,26 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~24 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~14 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
+REPLACE INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
+	(20, 11, '2019-03-09', 1),
+	(20, 13, '2019-03-09', 1),
+	(21, 13, '2019-03-09', 1),
+	(22, 11, '2019-03-09', 1),
+	(25, 14, '2019-03-09', 1),
+	(26, 14, '2019-03-09', 1),
+	(27, 24, '2019-03-09', 1),
+	(28, 24, '2019-03-09', 1),
+	(29, 24, '2019-03-09', 1),
+	(30, 21, '2019-03-09', 1),
+	(31, 21, '2019-03-09', 1),
+	(31, 22, '2019-03-09', 1),
+	(32, 22, '2019-03-09', 1),
+	(33, 23, '2019-03-09', 1);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
-DROP TABLE IF EXISTS `soporte`;
 CREATE TABLE IF NOT EXISTS `soporte` (
   `id_soporte` int(11) NOT NULL,
   `url_imagene` varchar(255) DEFAULT NULL,
@@ -326,7 +364,6 @@ CREATE TABLE IF NOT EXISTS `soporte` (
 /*!40000 ALTER TABLE `soporte` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_has_menu
-DROP TABLE IF EXISTS `tipo_has_menu`;
 CREATE TABLE IF NOT EXISTS `tipo_has_menu` (
   `pk_fk_tipo_usuario` int(11) NOT NULL,
   `pk_fk_menu` int(11) NOT NULL,
@@ -383,7 +420,6 @@ REPLACE INTO `tipo_has_menu` (`pk_fk_tipo_usuario`, `pk_fk_menu`, `fecha_menu`) 
 /*!40000 ALTER TABLE `tipo_has_menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_usuario
-DROP TABLE IF EXISTS `tipo_usuario`;
 CREATE TABLE IF NOT EXISTS `tipo_usuario` (
   `id_rol` int(11) NOT NULL,
   `nom_rol` varchar(45) DEFAULT NULL,
@@ -400,7 +436,6 @@ REPLACE INTO `tipo_usuario` (`id_rol`, `nom_rol`) VALUES
 /*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.usuario
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int(11) NOT NULL,
   `nom_usuario` varchar(255) DEFAULT NULL,
@@ -412,12 +447,22 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_programa` FOREIGN KEY (`fk_programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.usuario: ~11 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.usuario: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+REPLACE INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`, `fk_programa`) VALUES
+	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co', 1),
+	(11, 'Juan Camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co', 1),
+	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co', 1),
+	(13, 'Johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johant@udla.edu.co', 1),
+	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co', 1),
+	(20, 'Millan', '../imagenes/imagen_perfil/1 - copia (1).png', 'm.ing@udla.edu.co', 1),
+	(21, 'juanes ', '../imagenes/imagen_perfil/1 - copia (1).png', 'j.juan@udla.edu.co', 1),
+	(22, 'johan', '../imagenes/imagen_perfil/1 - copia (1).png', 'd.antonio@udla.edu.co', 1),
+	(23, 'antonieta', '../imagenes/imagen_perfil/1 - copia (1).png', 'd.antonieta@udla.edu.co', 1),
+	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co', 4);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
-DROP VIEW IF EXISTS `view_pagina_propia`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_pagina_propia` (
 	`Nom_grupo` VARCHAR(800) NULL COLLATE 'utf8_general_ci',
@@ -428,7 +473,6 @@ CREATE TABLE `view_pagina_propia` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para vista viewgroup3.view_pag_grupo
-DROP VIEW IF EXISTS `view_pag_grupo`;
 -- Creando tabla temporal para superar errores de dependencia de VIEW
 CREATE TABLE `view_pag_grupo` (
 	`id_pagina` INT(11) NOT NULL,
@@ -441,7 +485,6 @@ CREATE TABLE `view_pag_grupo` (
 ) ENGINE=MyISAM;
 
 -- Volcando estructura para procedimiento viewgroup3.Consultar__Proyecto
-DROP PROCEDURE IF EXISTS `Consultar__Proyecto`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Consultar__Proyecto`(
 	IN `idProyecto` INT
@@ -455,7 +498,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consultar_product_semillero
-DROP PROCEDURE IF EXISTS `proced_consultar_product_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`(
 	IN `pk_grupo` INT
@@ -495,7 +537,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo
-DROP PROCEDURE IF EXISTS `proced_consul_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo`(
 	IN `id_grupo` INT
@@ -514,7 +555,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_grupo_id
-DROP PROCEDURE IF EXISTS `proced_consul_grupo_id`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
 BEGIN
@@ -527,7 +567,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_menu_view
-DROP PROCEDURE IF EXISTS `proced_consul_menu_view`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_menu_view`(
 	IN `id_rol` INT
@@ -550,7 +589,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_semillero
-DROP PROCEDURE IF EXISTS `proced_consul_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_semillero`(
 	IN `pk_grupo` INT
@@ -578,7 +616,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_soport_pag_not
-DROP PROCEDURE IF EXISTS `proced_consul_soport_pag_not`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_soport_pag_not`(
 	IN `id_grupo` INT
@@ -604,7 +641,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_user
-DROP PROCEDURE IF EXISTS `proced_consul_user`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 	IN `id_user` INT
@@ -635,7 +671,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_consul_user_datos
-DROP PROCEDURE IF EXISTS `proced_consul_user_datos`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user_datos`(
 	IN `id_user` INT
@@ -652,7 +687,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_grupo
-DROP PROCEDURE IF EXISTS `proced_create_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_grupo`(
 	IN `id_grupo` INT,
@@ -702,7 +736,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_pagina_web
-DROP PROCEDURE IF EXISTS `proced_create_pagina_web`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_pagina_web`(
 	IN `fk_grupo` INT,
@@ -733,7 +766,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_semillero
-DROP PROCEDURE IF EXISTS `proced_create_semillero`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_semillero`(
 	IN `id_semillero` INT,
@@ -764,7 +796,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_soport_not
-DROP PROCEDURE IF EXISTS `proced_create_soport_not`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_soport_not`(
 	IN `pk_fk_produc` INT,
@@ -793,7 +824,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_create_usuario
-DROP PROCEDURE IF EXISTS `proced_create_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_usuario`(
 	IN `id_user` INT,
@@ -819,7 +849,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_delete_soport
-DROP PROCEDURE IF EXISTS `proced_delete_soport`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_delete_soport`(
 	IN `id_soport` INT
@@ -834,7 +863,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_registra_produc
-DROP PROCEDURE IF EXISTS `proced_registra_produc`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_registra_produc`(
 	IN `nom_producto` VARCHAR(500),
@@ -863,8 +891,29 @@ insert into producto VALUES((num+1),nom_producto,fecha_de_produc,estado_produc,p
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento viewgroup3.proced_report_Noticias
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_report_Noticias`(
+	IN `id_grupo` INT
+
+)
+BEGIN
+select 
+soporte.id_soporte as Codigo ,
+soporte.titulo_soporte as Titulo,
+soporte.descrip_soperte as Detalle,
+soporte.Fecha_publica as Fecha,
+ proyecto.nom_proyecto as Vinculado
+
+FROM soporte
+inner JOIN proyecto on proyecto.id_produc= soporte.fk_proyecto
+inner join grupo_invest on grupo_invest.id_grupo_invest = proyecto.fk_id_grupo_invest
+where soporte.estado_soporte=1 and grupo_invest.id_grupo_invest=id_grupo
+order  by soporte.Fecha_publica DESC;
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento viewgroup3.proced_update_grupo
-DROP PROCEDURE IF EXISTS `proced_update_grupo`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_grupo`(
 	IN `id_grupo` INT,
@@ -902,7 +951,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_update_proyecto
-DROP PROCEDURE IF EXISTS `proced_update_proyecto`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_proyecto`(
 	IN `id_proyec` INT,
@@ -918,7 +966,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_update_soport
-DROP PROCEDURE IF EXISTS `proced_update_soport`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_update_soport`(
 	IN `id_soport` INT,
@@ -940,7 +987,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proced_view_consul_paginas
-DROP PROCEDURE IF EXISTS `proced_view_consul_paginas`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_view_consul_paginas`()
 BEGIN
@@ -951,7 +997,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proyec_semi_trabajo_consul
-DROP PROCEDURE IF EXISTS `proyec_semi_trabajo_consul`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proyec_semi_trabajo_consul`(
 	IN `grupo_perte` INT,
@@ -983,7 +1028,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced
-DROP PROCEDURE IF EXISTS `proye_consul_act_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced`(
 	IN `pk_grupo` INT
@@ -1054,7 +1098,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_act_proced_pag
-DROP PROCEDURE IF EXISTS `proye_consul_act_proced_pag`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_act_proced_pag`(
 	IN `pk_grupo` INT
@@ -1072,7 +1115,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_consul_int_proced
-DROP PROCEDURE IF EXISTS `proye_consul_int_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_consul_int_proced`(
 	IN `pk_grupo` INT
@@ -1095,7 +1137,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_crearte_proced
-DROP PROCEDURE IF EXISTS `proye_crearte_proced`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_crearte_proced`(
 	IN `id_proyec` INT,
@@ -1117,7 +1158,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.proye_inser_enlases_usuario
-DROP PROCEDURE IF EXISTS `proye_inser_enlases_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proye_inser_enlases_usuario`(
 	IN `tipo` VARCHAR(50),
@@ -1147,7 +1187,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.p_consul_miebros_total
-DROP PROCEDURE IF EXISTS `p_consul_miebros_total`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miebros_total`(
 	IN `pk_grupo` INT
@@ -1182,7 +1221,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.p_consul_miembro_pag
-DROP PROCEDURE IF EXISTS `p_consul_miembro_pag`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `p_consul_miembro_pag`(
 	IN `pk_grupo` INT
@@ -1228,8 +1266,33 @@ grupo_invest.id_grupo_invest = pk_grupo) and has_p.estado=1;
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento viewgroup3.Reporte_General
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Reporte_General`()
+BEGIN
+select 
+g.nom_grupo as Grupo,
+
+proyecto.nom_proyecto as Vinculado,
+soporte.id_soporte as Codigo ,
+soporte.titulo_soporte as Noticia,
+soporte.descrip_soperte as Detalle,
+soporte.Fecha_publica as Fecha
+
+
+FROM grupo_invest g
+
+inner join proyecto on proyecto.fk_id_grupo_invest=g.id_grupo_invest
+
+inner JOIN soporte on proyecto.id_produc= soporte.fk_proyecto
+
+where soporte.estado_soporte=1 
+order  by soporte.Fecha_publica DESC;
+
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento viewgroup3.update_proye_enlases_usuario
-DROP PROCEDURE IF EXISTS `update_proye_enlases_usuario`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `update_proye_enlases_usuario`(
 	IN `id_user` INT,
@@ -1258,7 +1321,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.vista_apropia
-DROP PROCEDURE IF EXISTS `vista_apropia`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_apropia`()
 BEGIN
@@ -1269,7 +1331,6 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento viewgroup3.vista_pagina_propia
-DROP PROCEDURE IF EXISTS `vista_pagina_propia`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `vista_pagina_propia`(
 	IN `nada` INT
@@ -1282,13 +1343,11 @@ END//
 DELIMITER ;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
-DROP VIEW IF EXISTS `view_pagina_propia`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_pagina_propia`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pagina_propia` AS select `pagina_propia`.`Nom_grupo` AS `Nom_grupo`,`pagina_propia`.`Contenido` AS `Contenido`,`pagina_propia`.`Creadores` AS `Creadores`,`pagina_propia`.`Acredicimiento` AS `Acredicimiento`,`pagina_propia`.`Logo` AS `Logo` from `pagina_propia`;
 
 -- Volcando estructura para vista viewgroup3.view_pag_grupo
-DROP VIEW IF EXISTS `view_pag_grupo`;
 -- Eliminando tabla temporal y crear estructura final de VIEW
 DROP TABLE IF EXISTS `view_pag_grupo`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pag_grupo` AS select `pagina_web`.`id_pagina` AS `id_pagina`,`pagina_web`.`fk_id_plantilla` AS `fk_id_plantilla`,`pagina_web`.`grupo_invest_id_grupo_invest` AS `id_grupo`,`grupo_invest`.`nom_grupo` AS `nom_grupo`,concat('../',`grupo_invest`.`url_logo_grupo`) AS `url_logo_grupo`,`grupo_invest`.`siglas_signif_grupo` AS `siglas_signif_grupo`,`grupo_invest`.`id_grupo_invest` AS `id_grupo_invest` from ((`plantilla` join `pagina_web` on((`pagina_web`.`fk_id_plantilla` = `plantilla`.`id_plantilla`))) join `grupo_invest` on((`pagina_web`.`grupo_invest_id_grupo_invest` = `grupo_invest`.`id_grupo_invest`))) where (`pagina_web`.`estado_pag` = 1) order by `pagina_web`.`id_pagina` desc;
