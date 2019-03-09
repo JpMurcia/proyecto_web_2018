@@ -166,13 +166,22 @@ namespace proyectoweb.Views {
         protected global::System.Web.UI.HtmlControls.HtmlImage imagen_perfil;
         
         /// <summary>
-        /// Control nombre_miembro.
+        /// Control nom_miebro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre_miembro;
+        protected global::System.Web.UI.WebControls.Label nom_miebro;
+        
+        /// <summary>
+        /// Control programa_miembro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label programa_miembro;
         
         /// <summary>
         /// Control nom_usaurioMostrar.

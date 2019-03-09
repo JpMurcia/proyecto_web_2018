@@ -463,14 +463,15 @@
                                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                     <div class="fileinput-new thumbnail img-raised">
                                         <%-- Aqui se ubica la imagen del miembro--%>
-                                        <img id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
+                                        <img  height="300"  id="imagen_perfil" runat="server" src="../Content/assetsLogin/img/faces/card-profile1-square.jpg" />
                                     </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
                                 </div>
                                 <div class="info info-horizontal">
                                     <div class="description">
-                                        <asp:TextBox runat="server" disabled="disabled" ID="nombre_miembro"></asp:TextBox>
-                                        <h4 class="info-title"><%#Eval("nom_usuario") %></h4>
+                                <%--        <asp:TextBox runat="server"  ID="nombre_miembro"></asp:TextBox>--%>
+                                        <h4 class="info-title"><asp:Label  ID="nom_miebro" runat="server" /> </h4>
+                                        <h3 class="info-text"><asp:Label  ID="programa_miembro" runat="server" /> </h3>
                                     </div>
                                 </div>
                             </div>
@@ -479,7 +480,6 @@
                                     <thead>
                                         <tr>
                                             <asp:TextBox runat="server" disabled="disabled" type="text" ID="nom_usaurioMostrar" class="form-control" TextMode="multiline" placeholder="">
-
                                             </asp:TextBox>
                                             <p id="hola"></p>
 
@@ -527,9 +527,8 @@
                     <div class="modal-body">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                        <asp:Button type="button" CssClass="tn btn-primary" OnClick="Button_Miembro" runat="server" ID="guardar" Text="Guardar Cambios" />
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <asp:Button type="button" CssClass="btn btn-primary" OnClick="Button_Miembro" runat="server" ID="guardar" Text="Guardar Cambios" />
                     </div>
                 </div>
             </div>

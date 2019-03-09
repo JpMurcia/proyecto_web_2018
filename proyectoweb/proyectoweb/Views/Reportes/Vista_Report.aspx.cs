@@ -25,8 +25,8 @@ namespace proyectoweb.Views.Reportes
 
             noticia.id_grupo = "111";
 
-            DataTable dt1 = control.consulNoticias(noticia);
-            Reportes.reportNoticia objR = new Reportes.reportNoticia();
+            DataTable dt1 = control.ResporteGrupoNotica(noticia);
+           Reportes.NoticasGrupoReport objR = new Reportes.NoticasGrupoReport();
 
             objR.SetDataSource(dt1);
             CrystalReportViewer1.ReportSource = objR;

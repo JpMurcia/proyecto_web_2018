@@ -170,6 +170,7 @@ namespace proyectoweb.Views
                             miembro.url_foto_usuario= dato_miembros.Rows[i]["url_foto_usuario"].ToString();
                             miembro.correo= dato_miembros.Rows[i]["email_usuario"].ToString();
                             miembro.fk_tipo_user = dato_miembros.Rows[i]["fk_tipo_usuario"].ToString();
+                            miembro.programa = dato_miembros.Rows[i]["Programa"].ToString();
                             miembro.grupo = grupoVG.idGrupoInvestigacion.ToString();
 
 

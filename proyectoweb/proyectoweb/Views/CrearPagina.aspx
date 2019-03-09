@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Aqui inicia el contenido de la vista mis paginas-->
-    <form id="form3" runat="server">
+   <%-- <form id="form3" runat="server">--%>
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -17,7 +17,6 @@
                                 <h2 class="card-title">Mis Paginas</h2>
                                 <h3 class="card-title" align="Center">Grupos de investigación</h3>
                             </div>
-
                             <div class="col-md-4 ml-auto mr-auto">
                                 <div class="card card-profile">
                                     <div class="card-avatar">
@@ -55,16 +54,17 @@
                                                                         <h3 class="card-title">PLANTILLA NÙMERO 1</h3>
                                                                     </a>
                                                                     <div class="stats text-center">
-                                                                            <a class="btn btn-info" target="_blank" href="ViewsPlantillaHeli/IndexHeli.aspx">
-                                                                            <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
-                                                                            </a>
+                                                                             <a class="btn btn-info" target="_blank" href="Previa/tk-themes.net/html-heli/demo/index.html">
+                                                                                  <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
+                                                                                                                   </a> 
+                                                                           
                                                                     </div>
                                                                 </div>
 
                                                             </div>
                                                             <div class="form-check form-check-radio col-md-3 content-center form-check-inline ml-auto mr-auto" ">
                                                                 <label class="form-check-label">
-                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Selecionar
+                                                                    <input required class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Selecionar
                                                                      <span class="circle">
                                                                          <span class="check"></span>
                                                                      </span>
@@ -93,7 +93,7 @@
                                                             <h3 class="card-title">PLANTILLA NÙMERO 2</h3>
                                                         </a>
                                                         <div class="stats text-center">
-                                                            <button class="btn btn-info">
+                                                            <button class="btn btn-info"  target="_blank" href="VistaPrevia/tk-themes.net/html-heli/demo/index.html">
                                                                 <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
                                                             </button>
                                                         </div>
@@ -101,7 +101,7 @@
                                                 </div>
                                                          <div class="form-check form-check-radio form-check-inline col-md-3 ml-auto mr-auto">
                                                     <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                                                        <input required class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
                                                         Seleccionar 
                                                      <span class="circle">
                                                          <span class="check"></span>
@@ -131,5 +131,5 @@
                 </div>
             </div>
         </div>
-    </form>
+   <%-- </form>--%>
 </asp:Content>

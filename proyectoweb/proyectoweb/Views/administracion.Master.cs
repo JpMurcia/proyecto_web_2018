@@ -111,6 +111,19 @@ namespace proyectoweb.Views
 
             // grupo.justificacion = dt.Rows[0]["justif_grupo"].ToString();
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Session["grupo"]="";
+            Session["id_grupo"] = "";
+            Session["tipo"]="";
+            Session["url_logo"] = "";
+            Session["nom"] = "";
+           string hola = Session["url_logo"].ToString();
+            Response.Redirect("ViewsUser/Index.aspx");
+
+
+        }
     }
     public class menuMostrar
     {

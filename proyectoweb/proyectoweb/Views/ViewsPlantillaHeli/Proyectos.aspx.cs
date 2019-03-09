@@ -22,7 +22,7 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
 
         public void llenarProyectos()
         {
-            mod_gi.idGrupoInvestigacion = "111";
+            mod_gi.idGrupoInvestigacion = Session["IdGrupo_pag"].ToString(); 
             DT_Grupo = mod_grupo.consultarProyectosAct(mod_gi);
             Repeater3.DataSource = DT_Grupo;
             Repeater3.DataBind();

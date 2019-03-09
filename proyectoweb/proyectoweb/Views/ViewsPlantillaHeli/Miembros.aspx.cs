@@ -23,7 +23,7 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
         miebro_pag_Controller controlador = new miebro_pag_Controller();
 
         public void llenar( ) {
-            grupoVG.idGrupoInvestigacion = "111";
+            grupoVG.idGrupoInvestigacion = Session["IdGrupo_pag"].ToString(); 
 
             DataTable dt = controlador.consultar_miembros(grupoVG);
 

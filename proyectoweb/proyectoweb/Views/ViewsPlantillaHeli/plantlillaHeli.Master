@@ -122,8 +122,11 @@
 						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
 							
                                 <span>
-
-                                    <a class="btn-shop" href="../ViewsUser/Index.aspx" ><span>ViewGroup</span></a>
+                                    
+                                        <a class="btn-shop"  runat="server"  >
+                                        <span> <asp:Button OnClick="CerrarSesion" Text="ViewGroup" runat="server" />  </span></a>
+                                   
+                                    
 							</span>
                                    
 							<div class="header-icon header-icon-canvas menu-button d-none d-lg-block">

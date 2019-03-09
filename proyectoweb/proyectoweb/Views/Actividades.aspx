@@ -16,7 +16,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10 ml-auto mr-auto">
-                            <form runat="server">
+                          <%--  <form runat="server">--%>
                                 <div class="card card-calendar">
                                     <div class="card-body ">
                                         <a href="#" id="btnInit" class="btn btn-secondary">Initialise database!</a>
@@ -26,7 +26,7 @@
 
 
                                 </div>
-                            </form>
+                           <%-- </form>--%>
                         </div>
                     </div>
                 </div>

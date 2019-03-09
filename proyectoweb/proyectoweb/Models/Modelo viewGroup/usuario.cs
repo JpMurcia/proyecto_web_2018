@@ -130,7 +130,7 @@ namespace proyectoweb.Models.ModelosViewGroup
                 ));
           
 
-            return conect.ExecuteProcedure("proced_consul_user_date", p);
+            return conect.ExecuteProcedure("proced_consul_user_datos", p);
 
 
 

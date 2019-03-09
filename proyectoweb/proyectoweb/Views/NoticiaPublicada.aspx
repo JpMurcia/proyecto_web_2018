@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
+   <%-- <form runat="server">--%>
 <div class="content">
     <div class="container-fluid">
   <div class="row">
@@ -36,7 +36,7 @@
                   <td><%#Eval("nom_proyecto") %></td>
                   <td><%#Eval("Fecha_publica") %></td>
                   <td class="td-actions text-right">
-                      <a href="NoticiaNueva.aspx?Id=<%#Eval("id_produc") %>" class="btn btn-success" ><i class="material-icons">edit</i></a>
+                      <a href="NoticiaNueva.aspx?Id=<%#Eval("id_soporte") %>" class="btn btn-success" ><i class="material-icons">edit</i></a>
                   <asp:LinkButton ID="EliminarNoticia" runat="server" OnCommand="EliminarNoticia_Command" CssClass="btn btn-danger" CommandArgument='<% #Eval("id_soporte") %>' >
                           <i class="material-icons">close</i>
                       </asp:LinkButton>
@@ -55,5 +55,5 @@
   </div>
         </div>
     </div>
-        </form>
+      <%--  </form>--%>
 </asp:Content>

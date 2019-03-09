@@ -21,6 +21,7 @@
 
 </head>
 <body>
+    <form runat="server">
     <div class="wrapper ">
 
         <div class="sidebar" data-color="green" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
@@ -46,9 +47,9 @@
 
                 <li class="nav-item ">
                     <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-                        <i class="material-icons">group</i>
+                        <i class="material-icons">grid_on</i>
                         <p>
-                            Grupos
+                            Reportes
                         </p>
                     </a>
 
@@ -57,28 +58,33 @@
 
                             <%-- para repetidor de grupos  --%>
                             <li class="nav-item ">
-                                <a class="nav-link" href="forms/regular.html">
-                                    <span class="sidebar-mini">NP </span>
-                                    <span class="sidebar-normal">Nueva Plantilla </span>
-                                </a>            
-                           </li>
+                                <a class="nav-link" target="_blank" href="Reportes/Vista_Report.aspx">
+                                    <span class="sidebar-mini">NO </span>
+                                    <span class="sidebar-normal">Noticias </span>
+                                </a>
+                            </li>
+                             <li class="nav-item ">
+                                <a class="nav-link" target="_blank" href="Reportes/Vista_report_general.aspx">
+                                    <span class="sidebar-mini">G </span>
+                                    <span class="sidebar-normal">General </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
 
-                 
+
                 <asp:Repeater ID="Padre" runat="server">
                     <ItemTemplate>
-                 
-                         <li class="nav-item ">
+
+                        <li class="nav-item ">
                             <a class="nav-link" href='<%#Eval("url_pagina")%>'>
                                 <i class="material-icons"><%#Eval("icono")%></i>
                                 <p>
                                     <%#Eval("nom_menu") %>
-                                    
                                 </p>
                             </a>
-                         </li>
+                        </li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
@@ -91,7 +97,11 @@
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <a class="navbar-brand" href="../../../material-kit-pro/FormularioDePagina.html">Tablero</a>
+                        
                     </div>
+                    <asp:Button OnClick="Unnamed_Click" Text="Cerrar Sesion" CssClass="btn btn-danger" runat="server" />
+                    <%--<button class="btn btn-danger">Cerrar sesion
+                    </button>--%>
             </nav>
             <!-- End Navbar -->
 
@@ -116,9 +126,7 @@
             </div>
         </div>
     </div>
-
-
-</body>
+     
 
 
 <script src="]/Content/assetsAdministracion/js/material-dashboard.min40a0.js"></script>
@@ -139,9 +147,9 @@
 <script src="/Content/assetsAdministracion/js/plugins/arrive.min.js"></script>
 <script src="/Content/assetsAdministracion/js/core/popper.min.js"></script>
 <script src="/Content/assetsAdministracion/js/core/jquery.min.js"></script>
-    
+
 <script src="../Content/assetsAdministracion/js/plugins/fullcalendar.min.js"></script>
-    <script src="../Content/assetsAdministracion/js/Propio.js"></script>
+<script src="../Content/assetsAdministracion/js/Propio.js"></script>
 <script src="/Content/assetsAdministracion/js/core/bootstrap-material-design.min.js"></script>
 
 <script src="/Content/assetsLogin/js/buttons.js"></script>
@@ -158,7 +166,9 @@
 <script src="/Content/assetsLogin/js/core/popper.min.js"></script>
 
 
+           </form>
 
+</body>
 <asp:contentplaceholder id="ScriptsContent" runat="server">
     </asp:contentplaceholder>
 </html>

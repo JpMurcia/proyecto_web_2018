@@ -17,7 +17,8 @@ namespace proyectoweb.Views.ViewsPlantillaHeli
         DataTable DT_Grupo;
         protected void Page_Load(object sender, EventArgs e)
         {
-            mod_gi.idGrupoInvestigacion = "111";
+            string hola = Session["IdGrupo_pag"].ToString();
+            mod_gi.idGrupoInvestigacion = Session["IdGrupo_pag"].ToString();
             DT_Grupo = mod_grupo.consultarGrupo(mod_gi);
             QuienesSomos_Titulo.Text = DT_Grupo.Rows[0]["nom_grupo"].ToString();
 

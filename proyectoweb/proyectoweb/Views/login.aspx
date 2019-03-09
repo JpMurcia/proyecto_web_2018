@@ -38,14 +38,13 @@
                             <p class="description text-center">Bienvenido</p>
                             <div class="card-body">
 
-
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="material-icons">mail</i>
                                         </span>
                                     </div>
-                                    <asp:TextBox runat="server" type="text" class="form-control" placeholder="Usuario" ID="usuarioNombre"></asp:TextBox>
+                                    <asp:TextBox runat="server" TextMode="Email" MaxLength="25"  class="form-control" placeholder="Usuario" ID="usuarioNombre" required></asp:TextBox>
                                 </div>
 
                                 <div class="input-group">
@@ -54,7 +53,7 @@
                                             <i class="material-icons">lock_outline</i>
                                         </span>
                                     </div>
-                                    <asp:TextBox runat="server" type="password" class="form-control" placeholder="Password..." ID="usuarioContrasena"></asp:TextBox>
+                                    <asp:TextBox runat="server" TextMode="Password" MaxLength="25"  class="form-control" placeholder="Password..." ID="usuarioContrasena" required></asp:TextBox>
 
                                 </div>
 
