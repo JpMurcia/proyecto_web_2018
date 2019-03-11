@@ -54,7 +54,7 @@
                                                                         <h3 class="card-title">PLANTILLA NÙMERO 1</h3>
                                                                     </a>
                                                                     <div class="stats text-center">
-                                                                             <a class="btn btn-info" target="_blank" href="Previa/tk-themes.net/html-heli/demo/index.html">
+                                                                             <a class="btn btn-info" target="_blank" href="ViewsPlantillaHeliPrevisualizar/PIndexHeli.aspx">
                                                                                   <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
                                                                                                                    </a> 
                                                                            
@@ -93,7 +93,7 @@
                                                             <h3 class="card-title">PLANTILLA NÙMERO 2</h3>
                                                         </a>
                                                         <div class="stats text-center">
-                                                            <button class="btn btn-info"  target="_blank" href="VistaPrevia/tk-themes.net/html-heli/demo/index.html">
+                                                            <button class="btn btn-info"  target="_blank" href="ViewsPlantillaHeliPrevisualizar/PIndexHeli.aspx">
                                                                 <i class="material-icons">pageview</i>Preevizualizar<div class="ripple-container"></div>
                                                             </button>
                                                         </div>

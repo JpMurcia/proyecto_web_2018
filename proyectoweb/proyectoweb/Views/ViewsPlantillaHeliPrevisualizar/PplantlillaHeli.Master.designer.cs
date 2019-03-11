@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace proyectoweb.Views.ViewsPlantillaHeliPrevisualizar {
+namespace proyectoweb.Views.ViewsPlantillaHeliPrevisualizar.PplantlillaHeli {
     
     
-    public partial class PplantlillaHeli {
+    public partial class Master {
         
         /// <summary>
         /// Control head.

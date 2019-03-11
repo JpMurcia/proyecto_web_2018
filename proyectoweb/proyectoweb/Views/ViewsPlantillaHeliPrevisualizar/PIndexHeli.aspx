@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeliPrevisualizar/PplantlillaHeli.Master" AutoEventWireup="true" CodeBehind="PIndexHeli.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeliPrevisualizar.PIndex" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/ViewsPlantillaHeliPrevisualizar/PplantlillaHeli.Master" AutoEventWireup="true" CodeBehind="PIndexHeli.aspx.cs" Inherits="proyectoweb.Views.ViewsPlantillaHeliPrevisualizar.PIndexHeli" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

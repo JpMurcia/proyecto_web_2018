@@ -45,7 +45,7 @@
             <ul class="nav">
 
 
-                <li class="nav-item ">
+            <%--    <li class="nav-item ">
                     <a class="nav-link" data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">grid_on</i>
                         <p>
@@ -56,14 +56,14 @@
                     <div class="collapse" id="formsExamples">
                         <ul class="nav">
 
-                            <%-- para repetidor de grupos  --%>
-                            <li class="nav-item ">
+                          
+                            <li id="Particular" runat="server" class="nav-item ">
                                 <a class="nav-link" target="_blank" href="Reportes/Vista_Report.aspx">
                                     <span class="sidebar-mini">NO </span>
                                     <span class="sidebar-normal">Noticias </span>
                                 </a>
                             </li>
-                             <li class="nav-item ">
+                             <li id="General" runat="server" class="nav-item ">
                                 <a class="nav-link" target="_blank" href="Reportes/Vista_report_general.aspx">
                                     <span class="sidebar-mini">G </span>
                                     <span class="sidebar-normal">General </span>
@@ -71,7 +71,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li>--%>
 
 
                 <asp:Repeater ID="Padre" runat="server">

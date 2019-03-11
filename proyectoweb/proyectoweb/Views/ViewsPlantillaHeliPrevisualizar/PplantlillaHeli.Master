@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PplantlillaHeli.Master.cs"
-    Inherits="proyectoweb.Views.ViewsPlantillaHeliPrevisualizar.PplantlillaHeli" %>
+    Inherits="proyectoweb.Views.ViewsPlantillaHeliPrevisualizar.PplantlillaHeli.Master" %>
 
 <!DOCTYPE html>
 
@@ -234,7 +234,7 @@
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.migration.min.js"></script>
 		<script src="../../Content/assetsPlantillaHeli/js/extensions/revolution.extension.parallax.min.js"></script>
-    
+    </body>
 
     
 </html>

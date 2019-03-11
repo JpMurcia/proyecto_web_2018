@@ -289,7 +289,22 @@ namespace proyectoweb.Models.ModelosViewGroup
 
         }
 
-        
+        public DataTable validar_paginaPublicada(grupo_investigacion obj)
+        {
+
+            List<Parametro> p = new List<Parametro>();
+            p.Add(new Parametro(
+                "id_grupo",
+                obj.idGrupoInvestigacion,
+                "VARCHAR",
+                ParameterDirection.Input
+                ));
+
+            return conect.ExecuteProcedure("validar_pagina", p);
+
+        }
+
+
 
     }
 }

@@ -21,7 +21,7 @@ namespace proyectoweb.Views
         {
 
         }
-
+        DataTable Consul_dato = new DataTable();
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             usuario b = new usuario();//VG
@@ -49,7 +49,7 @@ namespace proyectoweb.Views
 
                     b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
 
-                    DataTable Consul_dato = controlador.Consultar(b);
+                    Consul_dato = controlador.Consultar(b);
 
                     grupoVG.grupo_nombre = datoRegreso.Rows[0]["su_grupo"].ToString();
                     grupoVG.idGrupoInvestigacion= datoRegreso.Rows[0]["id_grupo"].ToString();
@@ -224,9 +224,33 @@ namespace proyectoweb.Views
                 }
                 else
                 {
-                    b.fk_tipo_user = "2";
+                    b.idUsuario = datoRegreso.Rows[0]["usuari"].ToString();
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+
+
+
+
+
+                    Consul_dato = controlador.Consultar(b);
+
+
+                    Session["tipo"] = Consul_dato.Rows[0]["idtipo"].ToString();
+                    Session["nomtipo"] = Consul_dato.Rows[0]["tipo"].ToString();
+
+                    if (Session["nomtipo"].ToString().Equals( "Super aministrador"))
+                    {
+
+                        Response.Redirect("principal.aspx");
+
+                    }
+                    else {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "modalError();", true);
+                    }
+
+                       
+                   
+
+                    
                 }
 
              

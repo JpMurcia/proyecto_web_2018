@@ -10,6 +10,6 @@
 namespace proyectoweb.Views.ViewsPlantillaHeliPrevisualizar {
     
     
-    public partial class PIndex {
+    public partial class PIndexHeli {
     }
 }

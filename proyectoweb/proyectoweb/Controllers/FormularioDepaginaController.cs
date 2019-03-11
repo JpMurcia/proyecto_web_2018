@@ -118,6 +118,13 @@ namespace proyectoweb.Controllers
 
         }
 
+        public DataTable validar_paginaWeb(grupo_investigacion grupo)
+        {
+
+            return grupoVG.validar_paginaPublicada(grupo);
+
+        }
+
 
 
     }

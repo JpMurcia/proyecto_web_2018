@@ -162,7 +162,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <button type="button" class="btn  btn-success">Actualizar</button>
+                          <%--  <button type="button" class="btn  btn-success">Actualizar</button>--%>
 
                         </div>
                     </div>

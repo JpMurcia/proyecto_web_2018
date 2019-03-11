@@ -41,7 +41,10 @@ namespace proyectoweb.Views
             }
             else {
 
+
+
                 llenarmenu();
+
                 
             }
 
@@ -58,6 +61,12 @@ namespace proyectoweb.Views
 
             menuD.fk_rol = Session["tipo"].ToString();
 
+            //if (Session["tipo"].ToString) {
+
+            //}
+
+           // General.Visible = false;
+            //Particular.Visible = false;
 
 
             dt = menuD.consultar_menu_view(menuD);

@@ -90,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <hr />
     <hr />
 
-    <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('../../Content/assetsLogin/img/bg0.jpg');">
+    <div class="page-header header-filter clear-filter" data-parallax="true" id="imagenFondo" runat="server" style="background-image: url('../../Content/assetsLogin/img/bg0.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">

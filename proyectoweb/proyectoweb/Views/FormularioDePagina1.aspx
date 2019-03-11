@@ -430,7 +430,10 @@
                                 <div class="pull-right">
                                     <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
                                     <%--<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />--%>
-                                    <asp:Button runat="server" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Finish" />
+                                    <asp:Button runat="server" ID="bottonPublicar" OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Publicar" />
+
+                                     <asp:Button runat="server" ID="bottonActualizar"  OnClick="Unnamed_Click" class='btn btn-finish btn-fill btn-danger btn-wd' Text="Actualizar" />
+
                                 </div>
 
                                 <div class="pull-left">

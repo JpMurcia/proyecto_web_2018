@@ -23,7 +23,7 @@ namespace proyectoweb.Views.Reportes
            
              Conexion conect = new Conexion();
 
-            noticia.id_grupo = "111";
+            noticia.id_grupo = Session["id_grupo"].ToString();
 
             DataTable dt1 = control.ResporteGrupoNotica(noticia);
            Reportes.NoticasGrupoReport objR = new Reportes.NoticasGrupoReport();

@@ -30,6 +30,8 @@ namespace proyectoweb.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+           
             if (!IsPostBack)
             {
                 if (Request.Files["ImagenProyecto"] != null)
@@ -76,6 +78,7 @@ namespace proyectoweb.Views
 
 
     DataTable hola3 = new DataTable();
+
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             grupoVG.idGrupoInvestigacion = Session["id_grupo"].ToString();
@@ -158,14 +161,23 @@ namespace proyectoweb.Views
 
             }
 
-          
+            DataTable dt_existe = controlador.validar_paginaWeb(grupoVG);
 
             pag.idgrupo = grupoVG.idGrupoInvestigacion.ToString();
             pag.idplantilla = "1";
 
-           
+            if (dt_existe.Rows[0]["mensaje"].ToString().Equals("no wey"))
+            {
+                DataTable holawqe3 = controlador.create_paginaWeb(pag);
+                string hola = "sdds";
+            }
+            else
+            {
+                
+            }
 
-           DataTable holawqe3 = controlador.create_paginaWeb(pag);
+
+          
             string hola23 = "1";
             Response.Redirect("principal.aspx");
 
@@ -180,6 +192,8 @@ namespace proyectoweb.Views
         {
             //  grupo.nombreGrupo = Request.QueryString["grupo"];
 
+          
+
             grupo.nombreGrupo = Session["grupo"].ToString();
             
             grupoVG.grupo_nombre = Session["grupo"].ToString();
@@ -187,6 +201,18 @@ namespace proyectoweb.Views
 
             Console.Write("epa hijuemadre");
 
+            DataTable dt_existe = controlador.validar_paginaWeb(grupoVG);
+
+            if (dt_existe.Rows[0]["mensaje"].ToString().Equals("no wey")) {
+                bottonActualizar.Visible = false;
+                bottonPublicar.Visible = true;
+            }
+            else {
+                bottonActualizar.Visible = true;
+                bottonPublicar.Visible = false;
+            }
+
+           
 
 
 
