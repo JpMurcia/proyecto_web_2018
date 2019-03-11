@@ -191,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_tipo_usuario` FOREIGN KEY (`fk_tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla sigepi.usuario: ~20 rows (aproximadamente)
+-- Volcando datos para la tabla sigepi.usuario: ~19 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id_usuario`, `email_usuario`, `nom_usuario`, `contra_usuario`, `url_foto_usuario`, `Programa`, `fk_tipo_usuario`) VALUES
 	(10, 'h.ing@udla.edu.co', 'heriberto', 'giecom', '../imagenes/imagen_perfil/1 - copia (1).png', 'Ingenieria de Sistemas', 1),

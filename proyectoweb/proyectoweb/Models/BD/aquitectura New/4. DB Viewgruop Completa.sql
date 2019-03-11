@@ -52,7 +52,9 @@ CREATE TABLE IF NOT EXISTS `auditoria_noticia` (
 INSERT INTO `auditoria_noticia` (`id_auditoria_noti`, `nom_grupo`, `nom_proyecto`, `nom_noticia`, `descrip_noticia`, `accion`, `fecha_accion`) VALUES
 	(1, 'GIIE', 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', ' Cambio', '2019-03-10'),
 	(2, 'GIIE', 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 'sdfds', ' Cambio', '2019-03-10'),
-	(3, 'GIIE', 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 'sdfds', ' Cambio', '2019-03-10');
+	(3, 'GIIE', 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 'sdfds', ' Cambio', '2019-03-10'),
+	(4, 'Giecom', 'Teletrabajo', 'Actualizacion de la base datas #Teletrabajo', 'Es una base de datos recursiva bien chida ', 'registro', '2019-03-11'),
+	(5, 'Giecom', 'Contador de alevinos ', '', 'sdsadsadsa', 'registro', '2019-03-11');
 /*!40000 ALTER TABLE `auditoria_noticia` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.auditoria_pag
@@ -122,12 +124,13 @@ CREATE TABLE IF NOT EXISTS `grupo_invest` (
   CONSTRAINT `FK_grupo_invest_programa` FOREIGN KEY (`fk_id_Programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest` DISABLE KEYS */;
 INSERT INTO `grupo_invest` (`id_grupo_invest`, `nom_grupo`, `email_grupo`, `telefo_grupo`, `direcc_grupo`, `url_logo_grupo`, `estado_grupo`, `siglas_signif_grupo`, `objetivo_grupo`, `mision_grupo`, `vision_grupo`, `justif_grupo`, `quien_somos_grupo`, `fk_grupo_semi`, `fk_id_Programa`) VALUES
-	(114, 'Sara', NULL, NULL, NULL, '../imagenes/semilleros/sara.jpg', 1, '', '', '', '', '', '', 115, 1),
-	(115, 'GIIE', 'nuevo correo', NULL, NULL, '../imagenes/grupos/GIIE.png', 1, 'GRUPO DE INVESTIGACION EN INFORMATICA EDUCATIVA', 'Construir el grupo de investigación encargado de liderar los procesos investigativos en el área de la informática educativa en la Universidad de la Amazonia, por medio del cual se generen resultados con claridad y pertinencia, representados en productos tales como publicaciones científicas, procesos de formación y trabajos de investigación.', 'Generar procesos de ciencia y tecnologia que contribuyan al desarrollo científico de la informática Educativa en la región Amazónica.', 'El grupo de investigación de desarrollará los elementos constitutivos en el área de la informática educativa de lineas de investigación de la Uniamazonia tales como: Educación Ambiental, Pedagogía y Didáctica, Administración y Educación, etc.', '', '', NULL, 1),
-	(120, 'PICARDIE', NULL, NULL, NULL, '../imagenes/semilleros/picardie.png', 1, 'Producir, Integrar, Compartir para Aprender con Recursos Didácticos E-learning', '', '', '', '', '', 115, 1),
+	(111, 'Giecom', NULL, '12213243234', 'dsadsdsad', '../imagenes/grupos/giecom.jpg', 1, 'Gestión del Conocimiento, Electrónica, Informática y Comunicaciones ', '', 'GIECOM está comprometido con la generación de conocimiento científico y tecnológico, mediante el trabajo multidisciplinario en las áreas de gestión del conocimiento, comunicación, electrónica e informática, de tal manera que los resultados promuevan el crecimiento y formación de los investigadores, así como el desarrollo tecnológico en la región Amazónica, realizando alianzas estratégicas con diferentes empresas, las cuales se beneficien de nuestros logros alcanzados y de igual forma ayuden a la financiación de los diferentes proyectos a realizar.', 'Para el año 2018, GIECOM se consolidará como un grupo de investigación reconocido a nivel nacional e internacional en la generación de conocimiento en áreas de gestión del conocimiento, comunicación, electrónica e informática, contando con un personal altamente cualificado y generando proyectos multidisciplinarios que fortalezcan el desarrollo empresarial de la Región, promoviendo los proyectos que se desarrollan a las instituciones o empresas para un mutuo beneficio.', '', 'La fecha de creacion del grupo de investigacion fue en el Año 2007, por el cual se adquirio unas unidades Académicas a la facultad de Ingeniería y su programa Ingeniería de Sistemas. Sus Líneas de Investigación estan bien definidas como son la Inteligencia Artificial, el Desarrollo de Software y en el área de control.', NULL, 1),
+	(112, 'Alecout', NULL, NULL, NULL, '(NULL)', 1, '', 'crear contador de alevinos', '', '', '', '', 111, 1),
+	(113, 'Giecom Semillero', NULL, NULL, NULL, '../imagenes/semilleros/giecom.jpg', 1, '', '', '', '', '', '', 111, 1),
+	(121, 'Semillero de programacion', NULL, NULL, NULL, '../imagenes/semilleros/Sprogramacion.png', 1, '', 'Elevar el nivel de algoritmia ', 'El Semillero de Programación de la Universidad de la Amazonia tiene como misión promover la participación de estudiantes en eventos de programación competitiva del orden nacional e internacional, propiciando espacios académicos donde por medio del aprendizaje colaborativo se desarrollen habilidades investigativas y se fortalezcan los conocimientos en estrategias de programación, todo basado en la lectura y comprensión del inglés como idioma utilizado mundialmente en estos procesos.', 'El Semillero de Programación proyecta para el 2020 representar a la Universidad de la Amazonia en competencias de programación ACM-ICPC a nivel nacional, regional y mundial, obteniendo resultados que destaquen la labor que de manera comprometida y articulada se genera desde la institución.', '', '', 111, 1),
 	(666, 'Admi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2);
 /*!40000 ALTER TABLE `grupo_invest` ENABLE KEYS */;
 
@@ -148,15 +151,19 @@ CREATE TABLE IF NOT EXISTS `grupo_invest_has_usuario` (
   CONSTRAINT `FK_grupo_invest_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.grupo_invest_has_usuario: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` DISABLE KEYS */;
 INSERT INTO `grupo_invest_has_usuario` (`pkf_id_grupo_invest`, `pkf_id_usuario`, `fecha`, `fk_tipo_usuario`, `estado`) VALUES
-	(114, 22, '2019-03-10', 2, 1),
-	(114, 23, '2019-03-10', 2, 1),
-	(114, 24, '2019-03-10', 2, 1),
-	(115, 20, '2019-03-10', 1, 1),
-	(120, 21, '2019-03-10', 2, 1),
-	(666, 555, NULL, 5, 1);
+	(111, 10, '2019-03-11', 1, 1),
+	(112, 11, '2019-03-11', 2, 1),
+	(112, 12, '2019-03-11', 2, 1),
+	(112, 13, '2019-03-11', 2, 0),
+	(112, 14, '2019-03-11', 2, 1),
+	(112, 24, '2019-03-11', 2, 1),
+	(113, 11, '2019-03-11', 2, 1),
+	(113, 14, '2019-03-11', 2, 1),
+	(121, 12, '2019-03-11', 2, 1),
+	(121, 14, '2019-03-11', 2, 1);
 /*!40000 ALTER TABLE `grupo_invest_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.habilidades
@@ -261,11 +268,10 @@ CREATE TABLE IF NOT EXISTS `pagina_web` (
   CONSTRAINT `fk_pagina_web_plantilla1` FOREIGN KEY (`fk_id_plantilla`) REFERENCES `plantilla` (`id_plantilla`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.pagina_web: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.pagina_web: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `pagina_web` DISABLE KEYS */;
 INSERT INTO `pagina_web` (`id_pagina`, `url_pagina`, `fk_id_plantilla`, `grupo_invest_id_grupo_invest`, `estado_pag`) VALUES
-	(1, NULL, 1, 115, 0),
-	(2, NULL, 1, 115, 1);
+	(1, NULL, 1, 111, 1);
 /*!40000 ALTER TABLE `pagina_web` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.plantilla
@@ -318,13 +324,20 @@ CREATE TABLE IF NOT EXISTS `proyecto` (
   CONSTRAINT `FK_proyecto_grupo_invest` FOREIGN KEY (`fk_id_grupo_invest`) REFERENCES `grupo_invest` (`id_grupo_invest`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
 INSERT INTO `proyecto` (`id_produc`, `nom_proyecto`, `fecha_de_proyecto`, `estado_proyecto`, `fk_id_grupo_invest`, `proyecto_descrip`, `url_image_proyec`) VALUES
-	(30, 'DESARROLLO DE PÁGINA WEB - URUKI EL MANANTIAL', NULL, 0, 115, NULL, NULL),
-	(31, 'Las TIC y Objetos Virtuales de Aprendizaje OVA, para facilitar el aprendizaje de una segunda lengua (Inglés). Proyecto de extensión en la comunidad del barrio Piedrahita en el sector Altos de Capri.', NULL, 0, 115, NULL, NULL),
-	(32, 'Tecnologías de la Información y la Comunicación para generación de cultura de paz a través del uso responsable del Internet y las redes sociales a niños y jóvenes.', NULL, 0, 115, NULL, NULL),
-	(33, 'CHARLA EDUCATIVA SOBRE LAS REDES SOCIALES', NULL, 1, 115, NULL, NULL);
+	(20, 'SIGEPI', NULL, 0, 111, NULL, NULL),
+	(21, 'RQSOFT', NULL, 0, 111, NULL, NULL),
+	(22, 'Estacion Meteriologica', NULL, 1, 111, NULL, NULL),
+	(23, 'Prototipo De Un Sistema Para La Gestión De Los Procesos Electorales De La Universidad De La Amazonia', NULL, 0, 111, NULL, NULL),
+	(24, 'Semillero De Programacion', NULL, 0, 111, NULL, NULL),
+	(25, 'MDD', NULL, 0, 111, NULL, NULL),
+	(26, 'Visibilidad', NULL, 1, 111, NULL, NULL),
+	(27, 'Mercado Campesino', NULL, 0, 111, NULL, NULL),
+	(28, 'Contador de alevinos ', NULL, 1, 111, NULL, NULL),
+	(29, 'Teletrabajo', NULL, 1, 111, NULL, NULL),
+	(40, 'Proyecto de un semillero', NULL, 0, 121, NULL, NULL);
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.proyecto_has_usuario
@@ -340,14 +353,18 @@ CREATE TABLE IF NOT EXISTS `proyecto_has_usuario` (
   CONSTRAINT `FK_proyecto_has_usuario_usuario` FOREIGN KEY (`pkf_id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.proyecto_has_usuario: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `proyecto_has_usuario` DISABLE KEYS */;
 INSERT INTO `proyecto_has_usuario` (`pkf_id_proyecto`, `pkf_id_usuario`, `fecha`, `estado`) VALUES
-	(30, 21, '2019-03-10', 1),
-	(31, 21, '2019-03-10', 1),
-	(31, 22, '2019-03-10', 1),
-	(32, 22, '2019-03-10', 1),
-	(33, 23, '2019-03-10', 1);
+	(20, 11, '2019-03-11', 1),
+	(20, 13, '2019-03-11', 0),
+	(21, 13, '2019-03-11', 0),
+	(22, 11, '2019-03-11', 1),
+	(25, 14, '2019-03-11', 1),
+	(26, 14, '2019-03-11', 1),
+	(27, 24, '2019-03-11', 1),
+	(28, 24, '2019-03-11', 1),
+	(29, 24, '2019-03-11', 1);
 /*!40000 ALTER TABLE `proyecto_has_usuario` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.soporte
@@ -368,13 +385,11 @@ CREATE TABLE IF NOT EXISTS `soporte` (
   CONSTRAINT `fk_soporte_Categoria1` FOREIGN KEY (`Categoria_id_Categoria`) REFERENCES `categoria` (`id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.soporte: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.soporte: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `soporte` DISABLE KEYS */;
 INSERT INTO `soporte` (`id_soporte`, `url_imagene`, `titulo_soporte`, `descrip_soperte`, `estado_soporte`, `Fecha_publica`, `Categoria_id_Categoria`, `fk_proyecto`) VALUES
-	(1, '', 'CABIO', 'OE', 'dssssssssssssss', NULL, NULL, 33),
-	(2, 'cambio', 'aaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', '1', NULL, NULL, 33),
-	(3, NULL, 'soportenom', 'descio sopor', '1', NULL, NULL, 33),
-	(4, NULL, 'saaaaa', 'dddddd', NULL, NULL, NULL, 33);
+	(1, '~/Content/Soporte/WhatsApp Image 2019-03-08 at 6.49.40 PM (1).jpeg', 'Actualizacion de la base datas #Teletrabajo', 'Es una base de datos recursiva bien chida ', '1', '2019-03-11', NULL, 29),
+	(2, '~/Content/Soporte/enzimas-825x510.jpg', '', 'sdsadsadsa', '1', '2019-03-11', NULL, 28);
 /*!40000 ALTER TABLE `soporte` ENABLE KEYS */;
 
 -- Volcando estructura para tabla viewgroup3.tipo_has_menu
@@ -450,15 +465,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_programa` FOREIGN KEY (`fk_programa`) REFERENCES `programa` (`id_programa`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla viewgroup3.usuario: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla viewgroup3.usuario: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id_usuario`, `nom_usuario`, `url_foto_usuario`, `email_usaurio`, `fk_programa`) VALUES
-	(20, 'Millan', '../imagenes/imagen_perfil/1 - copia (1).png', 'm.ing@udla.edu.co', 1),
-	(21, 'juanes ', '../imagenes/imagen_perfil/1 - copia (1).png', 'j.juan@udla.edu.co', 1),
-	(22, 'johan', '../imagenes/imagen_perfil/1 - copia (1).png', 'd.antonio@udla.edu.co', 1),
-	(23, 'antonieta', '../imagenes/imagen_perfil/1 - copia (1).png', 'd.antonieta@udla.edu.co', 1),
+	(10, 'heriberto', '../imagenes/imagen_perfil/1 - copia (1).png', 'h.ing@udla.edu.co', 1),
+	(11, 'Juan Camilo', '../imagenes/imagen_perfil/kamilo.jpg', 'a.leal@udla.edu.co', 1),
+	(12, 'carlos', '../imagenes/imagen_perfil/carlos.jpg', 'c.carlos@udla.edu.co', 1),
+	(13, 'Johan', '../imagenes/imagen_perfil/johan.jpg', 'j.johant@udla.edu.co', 1),
+	(14, 'brayan', '../imagenes/imagen_perfil/yisus.jpg', 'b.yisus@udla.edu.co', 1),
 	(24, 'angela', '../imagenes/imagen_perfil/anyela.jpg', 'a.cuellar@udla.edu.co', 4),
-	(555, 'JpMurcia', NULL, 'jp@admin.com', 1);
+	(555, 'jp', NULL, NULL, 1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para vista viewgroup3.view_pagina_propia
@@ -535,7 +551,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consultar_product_semillero`
 
 
 
+
 )
+    COMMENT 'Ya no se utiliza'
 BEGIN
 
 select producto.id_produc, producto.nom_producto, "producto" as tipo  from producto
@@ -580,6 +598,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS `proced_consul_grupo_id`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_grupo_id`()
+    COMMENT 'tampoco sirve'
 BEGIN
 
 select grupo_invest.id_grupo_invest FROM grupo_invest
@@ -680,6 +699,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_consul_user`(
 
 
 
+
 )
 BEGIN
 
@@ -689,7 +709,7 @@ BEGIN
 
  if ( (select COUNT(*) from usuario usu
  where id_user= usu.id_usuario) =0) then
-	select "no wey" as mensaje;
+	select "no wey" as mensaje, "nada" as tipo, "nada" as idtipo;
 else 
  	select "siii wey si existe :D" as mensaje, tipo_usuario.nom_rol as tipo, tipo_usuario.id_rol as idtipo
 	 from usuario 
@@ -777,6 +797,8 @@ DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `proced_create_pagina_web`(
 	IN `fk_grupo` INT,
 	IN `fk_plantilla` INT
+
+
 
 
 )
@@ -1513,7 +1535,7 @@ set nom_grupo = (SELECT grupo_invest.nom_grupo FROM grupo_invest where NEW.grupo
 
 SET num =(select IFNULL(MAX(auditoria_pag.id_auditoria),0) FROM auditoria_pag);
 
-insert into auditoria_pag values (num,nom_grupo, (SELECT CURDATE() ) ,Eliminacion);
+insert into auditoria_pag values (num,nom_grupo, (SELECT CURDATE() ) ,"Eliminacion");
 
 
 
@@ -1528,14 +1550,14 @@ DELIMITER //
 CREATE TRIGGER `tr_be_ins_pag` BEFORE INSERT ON `pagina_web` FOR EACH ROW BEGIN
 
 
-   Declare num int;    
-declare nom_grupo varchar(60);
-
-set nom_grupo = (SELECT grupo_invest.nom_grupo FROM grupo_invest where NEW.grupo_invest_id_grupo_invest = grupo_invest.id_grupo_invest); 
-
-SET num =(select IFNULL(MAX(auditoria_pag.id_auditoria),0) FROM auditoria_pag);
-
-insert into auditoria_pag values (num,nom_grupo, (SELECT CURDATE() ) ,Creacion);
+-- Declare num int;
+-- declare nom_grupo varchar(60);
+-- 
+-- set nom_grupo = (SELECT grupo_invest.nom_grupo FROM grupo_invest where NEW.grupo_invest_id_grupo_invest = grupo_invest.id_grupo_invest);
+-- 
+-- SET num =(select IFNULL(MAX(auditoria_pag.id_auditoria),0) FROM auditoria_pag);
+-- 
+-- insert into auditoria_pag values (num+1,nom_grupo, (SELECT CURDATE() ) ,Creacion);
 
 END//
 DELIMITER ;
